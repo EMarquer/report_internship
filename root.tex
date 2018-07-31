@@ -1,0 +1,47 @@
+\documentclass[pidr]{univreport}
+\usepackage{makeidx}
+\usepackage{titletoc}
+\usepackage[backend=bibtex,backref=true,hyperref=true,sorting=nyt]{biblatex}
+\usepackage{csquotes}
+\usepackage{etoc}
+\usepackage{reportcomands}
+
+\DefineBibliographyStrings{french}{%
+	bibliography = {Bibliographie / Webographie},
+}
+
+\addbibresource{bibs/institute,bibs/g5k}
+\input{data/metadata.tex}
+\input{data/glossary.tex}
+
+\makeindex
+
+\begin{document}
+	
+\etocdepthtag.toc{mtchapter}
+\etocsettagdepth{mtchapter}{subsection}
+\etocsettagdepth{mtappendix}{none}
+{%----- Frontix -----
+	\input{parts/cover.tex}
+	\cleardoublepage
+	\input{parts/preface.tex}
+	\cleardoublepage
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	\input{parts/toc.tex}
+	\cleardoublepage
+}
+
+{%----- Content -----
+	\input{parts/chapters/intro.tex}\cleardoublepage
+	\input{parts/chapters/workplace.tex}\cleardoublepage
+	\input{parts/chapters/project.tex}\cleardoublepage
+	\input{parts/chapters/realisation.tex}\cleardoublepage
+	\input{parts/chapters/conclusion.tex}\cleardoublepage
+}
+
+{%----- Appendix -----
+	\input{parts/appendix.tex}
+	%\input{parts/abstract.tex}
+}
+\end{document}

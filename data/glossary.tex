@@ -1,0 +1,154 @@
+%\newacronym{svm}{SVM}{support vector machine}
+%\newacronym[description={description}]{label}{short}}{long}}
+%sort={empty set}, long, longplural, plural
+%to use it you call \gls{svm}, \glspl{}, \Gls, \Glspl, \acrlong{label}, 
+%\acrfull{label}
+
+%\newglossaryentry{potato}{name={potato},plural={potatoes}, 
+%	description={starchy tuber}}
+
+%\newglossaryentry{dl}{name={DL},plural={potatoes}, 
+%	description={starchy tuber}}
+\newglossary[eng]{entity}{end}{edt}{Entités, Instituts et ???} % TODO need better name
+
+\makenoidxglossaries
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Institues, Entities                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{loria}{
+	type=entity,
+	name={LORIA},
+	description={Laboratoire Lorrain d'Informatique et ses Applications},
+	first={Laboratoire Lorrain d'Informatique et ses Applications (LORIA)}}
+\newglossaryentry{cnrs}{
+	type=entity,
+	name={CNRS},
+	description={Centre National de la Recherche Scientifique},
+	first={Centre National de la Recherche Scientifique (CNRS)}}
+\newglossaryentry{inria}{
+	type=entity,
+	name={INRIA},
+	description={Institut National de Recherche en Informatique et en Automatique},
+	first={Institut National de Recherche en Informatique et en Automatique (INRIA)}}
+\newglossaryentry{ul}{
+	type=entity,
+	name={UL},
+	description={Université de Lorraine},
+	first={Université de Lorraine (UL)}}
+\newglossaryentry{synalp}{
+	type=entity,
+	name={SYNALP},
+	description={},
+	first={SyNaLP (Symbolic and statistical NLP)}}
+\newglossaryentry{papud}{
+	type=entity,
+	name={PAPUD},
+	description={},
+	first={PAPUD (???)}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Machine Learning                                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglosacr{ml}{ML}
+{%
+	L'Apprentissage Automatique (\foreign{Machine Learning} en anglais) est un 
+	ensemble de "méthodes [statistiques] permettant à une machine (au sens 
+	large) d'évoluer par un processus systématique, et ainsi de remplir des 
+	tâches difficiles ou problématiques par des moyens algorithmiques plus 
+	classiques". \cite{wikiml} 
+	%https://fr.wikipedia.org/wiki/Apprentissage_automatique
+	%TODO describe Machine Learning
+}{Apprentissage Profond (\foreign{Machine Learning} en anglais, ML)}
+
+\newglosacrsee{dl}{DL}
+{%
+	L'Apprentissage Profond (\foreign{Deep Learning} en anglais) est 
+	une méthode de Machine Learning utilisant la technique des réseaux de 
+	neurones. %https://fr.wikipedia.org/wiki/Apprentissage_profond
+	%TODO describe DL
+}{Apprentissage Profond (\foreign{Deep Learning} en anglais, DL)}
+{ml}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Neural Networks                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglosacr{nn}{NN}
+{%
+	Un Réseau de Neurones Artificiels (\foreign{Neural Network} en 
+	anglais) est %TODO describe NN %\cite{wikinn}
+}{Réseau de Neurones Artificiels (\foreign{Neural Network} en anglais, NN)}
+
+\newglosacrsee{rnn}{RNN}
+{%
+	Un Réseau de Neurones Artificiels Récurrents, plus 
+	simplement Réseau de Neurones Récurrents (\foreign{Recurrent Neural 
+	Network} en anglais) est un réseau de neurones artificiels suivant une 
+	architecture dite récurrente.
+	\newline
+	Ce genre de réseau est utilisé pour travailler avec des séquences d'entrées 
+	et/ou de sorties; il y a transmission d'information entre chaque élément de 
+	la séquence. \cite{wikirnn}
+	%TODO describe RNN
+}{Réseau de Neurones Récurrents (\foreign{Recurrent Neural Network} en anglais, RNN)}
+{nn}
+
+\newglosacrsee{msnn}{MSNN}
+{%
+	%TODO describe MSNN
+	%https://en.wikipedia.org/wiki/Language_model
+}{Réseau de Neurones Récurrents Multi-Échelles (\foreign{Multi-Scale Recurrent Neural Network} en anglais, MSNN)}
+{rnn}
+
+\newglosacrsee{gmsnn}{GMSNN}
+{%
+	(le nombre de couches augmente selon le nombre d'entrées)
+	%TODO describe GMSNN
+	%https://en.wikipedia.org/wiki/Language_model
+}{Réseau de Neurones Récurrents Multi-Échelles Croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}
+{msnn}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Language Models                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglosacr{lm}{LM}
+{%
+	Un Modèle de la Langue (\foreign{Language Model} en anglais) est une "distribution de probabilité sur une séquence de mots [ou de caractères]", 
+	utilisé pour estimer la probabilité d'apparition du prochain mot.
+	Autrement dit, c'est une représentation servant à prédire le prochain mot à partir des mots précédents. \cite{wikilm}
+	%TODO describe LM
+	%https://en.wikipedia.org/wiki/Language_model
+}{Modèle de la Langue (\foreign{Language Model} en anglais, LM)}
+
+\newglosacrsee{char-lm}{Char-LM}
+{%
+	{Un Modèle de la Langue au niveau du Caractère (\foreign{Character-level Language Model} en anglais) est un Modèle de la Langue qui prédit non pas le prochain mot à partir des mots précédents, mais le prochain caractère à partir des caractères précédents}
+	%TODO describe LM
+}{Modèle de la Langue au niveau du Caractère (\foreign{Character-level Language Model} en anglais, Char-LM)}
+{lm}
+
+\newglosacrsee{char-gmsnn-lm}{Char-GMSNN-LM}
+{%
+	Un Modèle du Langage au niveau du Caractère basé sur un Réseau de Neurones 
+	Multi-Échelles Croissant. C'est un modèle du langage basé sur un réseau de 
+	neurones artificiels. Ce réseau de neurones est un GMSNN utilisé comme Char-LM.}
+{Modèle du Langage au niveau du Caractère basé sur un Réseau de Neurones Multi-Échelles Croissant (\foreign{Character-level Growing Multi-Scale Language Model} en anglais, Char-LM)}
+{char-lm,gmsnn}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Other technical expressions                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{methodes statistiques}{
+	name={méthodes statistiques},
+	description={}}
+\newglossaryentry{matrice}{
+name={matrice},
+plural={matrices},
+description={}
+}
+\newglosacrsee{gpu}{GPU}
+{%
+	Un processeur graphique (\foreign{Graphical Processing Unit} en anglais) est un composant d'ordinateur spécialisé, qui montre d'excellentes performances dans les calculs impliquant des matrices (ex. : images)\glsadd{matrice}
+}{processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU)}
+{matrice}

@@ -1,0 +1,30 @@
+\ifglsentryexists{dl}{}%
+{%
+\gls@defglossaryentry{dl}%
+{%
+name={\glsentrylong {dl}\space (\acronymfont {\glsentryshort {dl}})},%
+sort={Apprentissage Profond (\foreign {Deep Learning})},%
+type={main},%
+first={DL},%
+firstplural={DLs},%
+text={DL},%
+plural={DLs},%
+description={},%
+descriptionplural={},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Apprentissage Profond (\protect \emph  {Deep Learning})},%
+longplural={Apprentissage Profond (\protect \emph  {Deep Learning})s},%
+short={DL},%
+shortplural={DLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

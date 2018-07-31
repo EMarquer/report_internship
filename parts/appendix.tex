@@ -1,0 +1,45 @@
+
+\appendix
+%\pagenumbering{Alph}
+%\setcounter{page}{1}
+%\renewcommand{\thesubsection}{\Roman{subsection}}
+%\renewcommand{\thesection}{\Roman{section}}
+%\addtocontents{toc}{\protect\pagebreak}
+\addcontentsline{toc}{chapter}{Annexes}
+%\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\part*{Annexes}
+
+\cleardoublepage
+
+\etocdepthtag.toc{mtappendix}
+\etocsettagdepth{mtchapter}{none}
+\etocsettagdepth{mtappendix}{subsection}
+\etoctocstyle{1}{Table des annexes}
+
+\tableofcontents
+\cleardoublepage
+
+
+% Bibliographie
+\input{parts/appendix/bibliography.tex}\cleardoublepage
+% Liste des figure
+\listoffigures\cleardoublepage
+% Liste des tables
+\listoftables\cleardoublepage
+% Liste des figure
+\lstlistoflistings\cleardoublepage
+\cleardoublepage
+% Index, Lexique
+\input{parts/appendix/glossary.tex}
+\cleardoublepage
+\chapter{Rapports d'avancement du premier projet}
+\cleardoublepage
+
+\chapter{Rapports d'avancement du projet \gls{papud}}
+\cleardoublepage
+
+\chapter{Copie de la convention de stage}
+\cleardoublepage
+
+\chapter{Copie de l'avenant à la convention de stage}
+\cleardoublepage
