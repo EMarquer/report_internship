@@ -1,6 +1,8 @@
 \RequirePackage{makeidx}
-\RequirePackage[xindy,acronym,toc,nopostdot]{glossaries}
+\RequirePackage[xindy,acronym,section,nopostdot]{glossaries}
 \setacronymstyle{long-short-desc}
+\RequirePackage{array}
+\RequirePackage{tabularx}
 
 \renewcommand{\seename}{voir}
 \newcommand{\foreign}[1]{\emph{#1}}
@@ -8,27 +10,27 @@
 \newcommand{\newglos}[3]
 {%
 	% The glossary entry the acronym links to   
-	\newglossaryentry{#1-g}{name={#2},
+	\newglossaryentry{#1-g}{name={#2}, text={#2},
 		description={#3}}}
 
 \newcommand{\newglosacr}[4]
 {%
 	% The glossary entry the acronym links to   
-	\newglossaryentry{#1-g}{name={#2},
+	\newglossaryentry{#1-g}{name={#2}, text={#2},
 		description={#3}}
 %
 	% Define the acronym and use the see= option
-	\newglossaryentry{#1}{type=\acronymtype, name={#2}, 
+	\newglossaryentry{#1}{type=\acronymtype, name={#2}, text={#2},
 	description={}, first={#4\glsadd{#1-g}}, see=[Glossaire:]{#1-g}}}
 
 \newcommand{\newglosacrsee}[5]
 {%
 	% The glossary entry the acronym links to   
-	\newglossaryentry{#1-g}{name={#2},
+	\newglossaryentry{#1-g}{name={#2}, text={#2},
 		description={#3}, see={#5}}
 %
 	% Define the acronym and use the see= option
-	\newglossaryentry{#1}{type=\acronymtype, name={#2}, 
+	\newglossaryentry{#1}{type=\acronymtype, name={#2}, text={#2}, 
 		description={}, first={#4\glsadd{#1-g}}, see=[Glossaire:]{#1-g}}}
 
 \newcommand{\printixgls}
@@ -38,9 +40,33 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{listings}
+\RequirePackage{textcase}
 %\lstinputlisting{source_filename.py}
 %\lstinputlisting[language=Python]{source_filename.py}
 %\lstinputlisting[language=Python, firstline=37, lastline=45]{source_filename.py}
+
+\newcommand{\listsname}{Listes des tables, des figures et des fragments de code}
+\newcommand{\lists}{
+	\clearpage
+	\chapter{\listsname}
+	\section*{\listtablename}
+	\@starttoc{lot}
+	\section*{\listfigurename}
+	\@starttoc{lof}
+	\section*{\lstlistlistingname}
+	\@starttoc{lol}
+}
+
+\newcommand{\termsname}{Glossaire, accronymes et noms d'entités}
+\newcommand{\terms}{
+	\clearpage
+	\chapter{\termsname}
+	\printnoidxglossary[type=main]
+	\newpage
+	\printnoidxglossary[type=\acronymtype]
+	\newpage
+	\printnoidxglossary[type=entity]
+}
 
 \newcommand{\setlistingname}[3]{%
 	\renewcommand\lstlistingname{#1}
@@ -52,7 +78,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\listoffigures}{\begingroup
-	\tocsection
-	\tocfile{\listfigurename}{lof}
-	\endgroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\interfootnotelinepenalty=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{report}[1]{\section{#1}
+	\hrule}{\newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\medpoint{\textperiodcentered}

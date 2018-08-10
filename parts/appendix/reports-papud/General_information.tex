@@ -1,0 +1,58 @@
+\section*{General information}
+
+\subsection{Corpus}
+
+\subsubsection{firsttest}
+
+\paragraph{Baseline accuracy}
+
+True baseline accuracy (for char \lstinline!-!): training 0.443; valid
+0.414; test 0.423
+
+\begin{longtable}[]{@{}llll@{}}
+\hline
+char & training & valid & test\tabularnewline
+\hline
+\endhead
+\lstinline!-! & \textbf{0.443} & \textbf{0.414} & \textbf{0.423}\tabularnewline
+\lstinline! ! & 0.064&0.067&0.063\tabularnewline
+\lstinline!a! & 0.021&0.022&0.023\tabularnewline
+\lstinline!0! & 0.015&0.013&0.011\tabularnewline
+\lstinline!<unk>! & 0.0&0.0&0.0\tabularnewline
+\hline
+\end{longtable}
+
+\subsection{Grid-5000}
+
+To develop and train the model, we are using Grid-5000 computers
+clusters. For specific information on Grid-5000, see
+\href{https://www.grid5000.fr/}{https://www.grid5000.fr/}.
+
+\subsubsection{GPU-equipped nodes}
+
+Due to the properties of neural networks models, it is really efficient
+to use GPUs to train them.
+
+Here are the main GPU-equipped nodes of Grid-5000:
+
+\begin{longtable}[]{@{}rcrrcc@{}}
+\hline
+Nodes & GPU & Graphical memory & RAM & Production & CUDA\tabularnewline
+\hline
+\endhead
+graphique-1 & 2 x Nvidia Titan Black & 2 x 6GB & 64GB & X &
+2880\tabularnewline
+graphique-2/6 & 2 x Nvidia GTX 980 & 2 x 4GB & 64GB & X &
+2048\tabularnewline
+graphite-1/4 & Intel Xeon Phi 7120P & 16GB & 256GB & & ?\tabularnewline
+grele-1/14 & 2 x Nvidia GTX 1080 Ti & 2 x 11GB & 128GB & X &
+3584\tabularnewline
+grimani-1/6 & 2 x Nvidia Tesla K40M & 2 x 12GB & 64GB & X &
+2880\tabularnewline
+\hline
+\end{longtable}
+
+\section*{{[}NOT TESTED YET{]} Model conversion}
+
+See 
+\href{https://github.com/ysh329/deep-learning-model-convertor}{https://github.com/ysh329/deep-learning-model-convertor}

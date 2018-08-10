@@ -1,52 +1,56 @@
-\chapter{Projet\label{ch:Projet}}
-\include{parts/chapters/project/terminology}
+\chapter{Projet\label{ch:projet}}
+%il est utile de rappeler à cet endroit les raisons de la mission, notament les enjeux économiques. Ne pas oublier les facteurs humains et techniques, sans compter l’organisation du travail en termes de planification des tâches et de gestion de projet. C’est après ce cadrage qu’il sera possible de passer aux détails du travail.
 
-\section[short title]{Du char-lstm au char-gmsnn}
+\section{Architecture innovante de réseau de neurones pour l'élaboration de modèle du langage}
+\subsection{Contexte}
+Nous avons vus dans le \autoref{ch:sci_framework} les techniques générales du \gls{dl} % TODO bref résumé
+
+Nous nous plaçons ici dans le contexte de la réalisations de \gls{lm}.
+% TODO bref résumé SOA
+Les modèles actuels, généralement basés sur les \gls{rnn}, atteignent de très bonnes performances. % TODO ajouter sources
+Les modèles basés sur les caractères se montrent particulièrement flexibles, car ces modèles "apprennent" les mots, à la place de se reposer sur des dictionnaires très volumineux, qui ont des difficultés à gérer les fautes et les mots nouveaux.
+
+Cependant, peu de ces modèles profitent réellement de l'abondance des données disponibles.
+deux éléments responsables:
+ lourd pré-traitement nécessaire, * plus de données ==> très très lourd
+ peu ou pas d'amélioration de performance, pour plus de temps pour entraîner -> inutile
+%C'est généralement parce qu'un lourd pré-traitement est nécessaire, ou car l'amélioration des performances n'est pas à la hauteur de l'augmentation du coût calculatoire.
+
+\subsubsection*{Problèmes de mémoire}
+Une des raison du manque d'augmentation de performance, typique des \gls{rnn}, est la limite de rappel d'informations en \og mémoire\fg{} (dans ses états cachés).
+Par exemple, un \gls{rnn} classique conserve en mémoire des informations datant d'au plus 20 entrées auparavant; un \gls{gru} peut se rappel d'informations vielles de plus de 100 entrées; et un \gls{lstm} dépasse difficilement les 200 entrées.
+
+De nombreuses tentatives ont été faite de résoudre ce problème, par exemple en changeant l'architecture du \gls{nn} (ex: \gls{gru}, \gls{lstm}), ou en augmentant le réseau avec des mécanismes comme ce que l'on appelle mécanismes attentionnels, ou avec de la mémoire explicite.
+
+\subsection*{Solution}
+L'architecture proposée 
+
+\subsubsection*{Passer à l'échelle}
+L'élément 
+
+\subsubsection*{Adapter le modèle à un volume potentiellement infini de données}
+Objectif secondaire
+
+\subsubsectionbreak
+
+Du char-lstm au char-gmsnn
 
 
 
-see https://itea3.org/project/papud.html
+
+Par la suite, nous désignerons ce projet par \og \gls{project_gmsnn}\fg{}.
+
+
+\clearpage
+\section{\Glsname{project_papud}\label{sec:projet:papud}}
+Le \gls{project_papud} est comme présenté précédemment, un pr
+
+\subsection*{Contexte}
+Nous avons vu que parmi les secteurs d'activité de \gls{bull}, les serveurs et autres systèmes de traitent de gros volumes de données sont très présents.
 
 
 
 
+Par la suite, nous désignerons ce projet par \og \glsname{project_papud}\fg{}.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Autre section}
-
-Green dreams none so dutiful, tread lightly here, sed do spearwife mulled wine
-sandsilk labore et dolore magna aliqua. Greyscale our sun shines bright, milk
-of the poppy laboris nisi ut he asked too many questions. Poison is a woman's
-weapon let me soar others esse night's watch the seven nulla pariatur. Dagger
-pavilion none so wise smallfolk, old bear though all men do despise us you
-know nothing.
-
-
-\subsection{Première sous-section}
-
-\subsubsection{Première sous-sous section}
-
-Exemple d'illustration :
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=10cm]{logos/ul.png}
-	\caption{Logo de L'UL}
-	\label{fig:logo-ul}
-\end{figure}
-
-La Figure~\ref{fig:logo-ul} représente le logo de \reportSchool{}.
-
-Ceci est une référence bibliographique~\cite{GOT4}.
+% TODO

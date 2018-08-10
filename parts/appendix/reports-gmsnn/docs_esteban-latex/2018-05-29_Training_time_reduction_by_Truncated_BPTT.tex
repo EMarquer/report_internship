@@ -1,0 +1,99 @@
+% !TeX spellcheck = en_US
+\section*{Analysis and implementation of improved Truncated-BPTT training
+algorithm}
+
+Implementation report
+
+by E. Marquer, 2018/05/29\\
+Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+Last update (implementation of explicit history to solve memory leaks
+problem) solved memory problems, leaving the time consumption problem
+(hundreds of hours for a single epoch).
+
+As the most time-consuming process is the backpropagation, the most
+evident way to reduce time consumption is to improve the training
+strategy.
+
+One of the possible optimization is the Truncated Backpropagation
+Through Time (Truncated-BPTT or TBPTT).
+
+\subsection{Notations}
+
+The following notations are from {an introduction article on BPTT} \autocite{bptt-intro}:
+
+\begin{quote}
+\begin{itemize}
+\item
+  \textbf{TBPTT(n,n)}: Updates are performed at the end of the sequence
+  across all timesteps in the sequence (e.g. classical BPTT).
+\item
+  \textbf{TBPTT(1,n)}: timesteps are processed one at a time followed by
+  an update that covers all timesteps seen so far (e.g.~classical TBPTT
+  by Williams and Peng).
+\item
+  \textbf{TBPTT(k1,1)}: The network likely does not have enough temporal
+  context to learn, relying heavily on internal state and inputs.
+\item
+  \textbf{TBPTT(k1,k2)}, where k1\textless{}k2\textless{}n: Multiple
+  updates are performed per sequence which can accelerate training.
+\item
+  \textbf{TBPTT(k1,k2)}, where k1=k2: A common configuration where a
+  fixed number of timesteps are used for both forward and backward-pass
+  timesteps (e.g.~10s to 100s).
+\end{itemize}
+\end{quote}
+
+The base implementation of the model, using the
+\lstinline!(sequence_length, batch_size, values)! model for the inputs
+(and outputs), is already an implementation of the \textbf{TBPTT(n,n)}
+algorithm.
+
+What would improve a lot time efficiency is to implement a
+\textbf{TBPTT(k1,k2)} algorithm.
+
+\subsection{Algorithm}\label{algorithm}
+
+The algorithm can decompose into 4 steps: 1. Present a sequence of
+\emph{k1} timesteps of input and output pairs to the network. 2. Compute
+loss across the \emph{k2} last timesteps. 3. Backpropagate loss 4.
+Update weights
+
+\subsection{Pseudo-python code}\label{pseudo-python-code}
+
+\subsubsection{Old algorithm}\label{old-algorithm}
+
+\begin{lstlisting}[language=Python]
+for sequence in sequences:
+    # 1. Present a sequence of *n* timesteps of input to the network.
+    output, hidden = model.forward(sequence.input, hidden)
+    
+    # 2. Compute loss across the *n* timesteps.
+    loss = criterion(output, sequence.targets)
+    
+    # 3. Backpropagate loss
+    loss.backward()
+    
+    # 4. Update weights
+    optimizer.step()
+\end{lstlisting}
+
+\subsubsection{New algorithm}\label{new-algorithm}
+
+\begin{lstlisting}[language=Python]
+for sequence in sequences:
+    # 1. Present a sequence of *k1* timesteps of input to the network.
+    output, hidden = model.forward(sequence.input, hidden)
+    
+    # 2. Compute loss across the *k2* last timesteps.
+    loss = criterion(output[:-k2], sequence.targets[:-k2])
+    
+    # 3. Backpropagate loss
+    loss.backward()
+    
+    # 4. Update weights
+    optimizer.step()
+\end{lstlisting}
+

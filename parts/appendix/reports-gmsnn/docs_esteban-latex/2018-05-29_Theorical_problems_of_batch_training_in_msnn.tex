@@ -1,0 +1,163 @@
+% !TeX spellcheck = en_US
+\section*{Analysis of batch training in msnn}
+
+Analysis report
+
+by E. Marquer, 2018/05/29, Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+A common method to improve training time of a RNN is the batch based
+training, but MSNN are highly dependent on past history and continuity.
+This training strategy is based on passing simultaneously multiple
+inputs to the network. Training with 3 batches is equivalent to a
+parallel training over 3 corpora composed of respectively every 1st batch,
+every 2nd batch, and every 3rd batch. It necessitates the splitting of
+the corpus, and doing so breaks the continuity between the different
+parts. As such, it would be difficult to use the batch based training
+for MSNN.
+
+\subsection{Bacthifying strategies}\label{bacthifying-strategies}
+
+There are multiple batchifying strategies, here explained with the
+Alphabet as a corpus.
+
+MSNN is currently trained with the BPTT (and Truncated-BPTT) algorithm.
+By passing multiple sequences, there are two possible batchifying: 
+\begin{itemize}
+	\item batchifying across each sequence of the corpus;
+	\item batchifying across the
+	corpus then sequence of the corpus.
+\end{itemize}
+
+\subsubsection{No batchifying}\label{table 1}
+
+\paragraph{Table 1}
+
+\begin{tabular}[]{|r|lllllllllllllll|}
+\hline
+Batch\textbackslash Timestep & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & \ldots & 24 & 25 & 26\\
+\hline
+1 & A & B & C & D & E & F & G & H & I & J & K & \ldots & X & Y & Z\\
+\hline
+\end{tabular}
+
+\subsubsection{BPTT sequence-wide batchifying}\label{table 2}
+
+Example with a BPTT sequence length of 3 (first inputs of the sequence are in bold):
+
+\paragraph{Table 2}
+
+\begin{tabular}[]{|r|llllllllllllll|}
+\hline
+Batch\textbackslash Timestep & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14\\
+\hline
+1 & \textbf{A} & B & C & \textbf{G} & H & I & \textbf{M} & N & O &
+\textbf{S} & T & U & \textbf{Y} & Z\\
+2 & \textbf{D} & E & F & \textbf{J} & K & L & \textbf{P} & Q & R &
+\textbf{V} & W & X & &\\
+\hline
+\end{tabular}
+
+\subsubsection{Corpus-wide batchifying}\label{table 3}
+
+\paragraph{Table 3}
+
+\begin{tabular}[]{|r|lllllllllllll|}
+\hline
+Batch\textbackslash Timestep & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 &
+13\\
+\hline
+1 & A & B & C & D & E & F & G & H & I & J & K & L & M\\
+2 & N & O & P & Q & R & S & T & U & V & W & X & Y & Z\\
+\hline
+\end{tabular}
+
+\subsubsection{Other batchifying strategies}\label{table 4}
+
+Other batchifying strategies exists, mostly by spreading the corpus along the batch dimension and not the timestep dimension.
+
+One such strategy would be:
+
+\paragraph{Table 4}
+\begin{tabular}[]{|r|lllllllllllll|}
+	\hline
+	Batch\textbackslash Timestep & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 &
+	13\\
+	\hline
+	1 & A & C & E & G & I & K & M & O & Q & S & U & W & Y\\
+	2 & B & D & F & H & J & L & N & P & R & T & V & X & Z\\
+	\hline
+\end{tabular}
+
+\subsection{Analysis of the different
+strategies}
+
+\subsubsection{Spreading the corpus along the batch
+dimension}
+
+The worst possible strategies seem to be
+\ref{table 4}{spreading
+the corpus along the batch dimension}: each input of the corpus is a
+succession of characters separated by a gap of the length of the batch
+dimension, so:
+\begin{itemize}
+	\item the input is always incomplete, as the different batches do not interact with each other;
+	\item the batches are full of discontinuity;
+	\item the network is not reusable for any number of batches and input.
+\end{itemize}
+
+\subsubsection{Sequence batchifying}\label{sequence-batchifying}
+
+Then there is the {BPTT sequence-wide batchifying}. In each sequence, the batches are internally coherent, but between sequences, the batches are discontinued (C\textbar{}G, F\textbar{}J, \ldots{}). Moreover, if the first layers' input are internally coherent, upper layers are subjected as similar input as presented in \ref{table 4}, and the problems of the corresponding strategy is back.
+
+\subsubsection{Corpus batchifying}\label{corpus-batchifying}
+
+The last and best strategy is the
+{Corpus-wide
+batchifying}. Even if this one need the pre-processing of the corpus, it
+offers a lot of advantages:
+\begin{itemize}
+	\item the input is not discontinued, even in the last layer;
+	\item the network is usable for any number of batches, as such strategy is equivalent to a parallel training over distinct corpi, each composed of a part of the original corpus;
+	\item the only layers really affected by the remaining discontinuity are the last ones, as over multiple epochs, they would only get the same part of the corpus and would not be able to extract info from the whole corpus:
+\end{itemize}
+	
+\paragraph{Table 5}
+\begin{tabular}[]{|r|lllll|}
+	\hline
+	Batch\textbackslash Epoch & 1 & 2 & 3 & 4 & \ldots{} \\
+	\hline
+	1 & Part 1 & Part 1 & Part 1 & Part 1 & \ldots{} \\
+	2 & Part 2 & Part 2 & Part 2 & Part 2 & \ldots{} \\
+	3 & Part 3 & Part 3 & Part 3 & Part 3 & \ldots{} \\
+	\hline
+\end{tabular}
+
+This last discontinuity can be solved by a rotation of the batches
+across multiple epochs:
+
+\paragraph{Table 6}
+\begin{tabular}[]{|r|lllll|}
+	\hline
+	Batch\textbackslash Epoch & 1 & 2 & 3 & 4 & \ldots{} \\
+	\hline
+	1 & Part 1 & Part 2 & Part 3 & Part 1 & \ldots{} \\
+	2 & Part 2 & Part 3 & Part 1 & Part 2 & \ldots{} \\
+	3 & Part 3 & Part 1 & Part 2 & Part 3 & \ldots{} \\
+	\hline
+\end{tabular}
+
+But that solution leaves the problem of the hidden state, which contains
+important information, and exists in multiple different exemplary, one
+for each batch. Another consequence is the need of n*epochs, for n
+batches, to accumulate equivalent history.
+
+\subsection{Conclusion}
+
+Corpus-wide batchifying seems to be the best of all batchifying
+strategies, but it still presents multiple downsides:
+\begin{itemize}
+\item  the existence of multiple parallel ``memory'';
+\item the need of n*epochs, for n batches, to accumulate equivalent ``memory'' for each batch compared to non-batchified training.
+\end{itemize}

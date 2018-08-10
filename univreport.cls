@@ -143,7 +143,7 @@
 
 \def\ufrlogo{\includegraphics[height=1.5cm]{logos/ufr_mi.jpg}}
 \def\ullogo{\includegraphics[height=1.5cm]{logos/ul_txt.png}}
-\def\idmclogo{\includegraphics[height=1.5cm]{logos/idmc.png}}
+\def\idmclogo{\includegraphics[height=1.5cm]{logos/idmc.jpg}}
 \def\cnrslogo{\includegraphics[height=1.5cm]{logos/cnrs.png}}
 \def\lorialogo{\includegraphics[height=1.5cm]{logos/loria.jpg}}
 

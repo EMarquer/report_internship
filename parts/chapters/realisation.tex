@@ -1,4 +1,32 @@
-\chapter{Exemples Listings}
+\chapter{Réalisation}
+% l’ordre de présentation le plus logique est souvent l’ordre chronologique dans lequel les tâches ont été accomplies. Il faut présenter les points forts en distinguant nettement l’existant et la plus-value apportée par le stagiaire. Si des solutions ont été envisagées, mais non retenues, il peut être intéressant de les présenter en expliquant pourquoi elles ont été abandonnées. C’est toute la chaîne, de la prise de connaissance du problème à la solution apportée, qui doit être déroulée.
+
+% Cette partie débouche nécessairement sur des résultats qu’il faut énoncer en précisant leurs exploitations actuelles ou à venir. Il faut annoncer clairement ce qui a été réalisé ou non par rapport à la mission de départ. Cette partie peut être complétée par des propositions personnelles du stagiaire pour prolonger son travail, et même par des critiques positives de son environnement de travail.
+
+% Tentative plan
+%5.1. recherche doc
+%5.2. patch "reimplement"
+%5.3. build "growing"
+%5.4. optimise "growing"
+%5.5. conclusions on "growing" and "awd"
+%5.6. preparing "papud" \& basic model
+%5.7. understanding strange comportment \& preparing corpus
+%5.8. conclusions on "papud"
+
+\section{\Glsentrytext{project_gmsnn}} % TODO nommer ce projet
+\subsection{Recherche documentaire} % lib, tutos, concepts
+\subsection{Étude et ré-implémentation simplifiée du modèle \gls{soa}} % reprise sur de l'existant, découverte de la lib
+\subsection{Implémentation du nouveau modèle basique} % reprise sur de l'existant
+\subsection{Optimisation et amélioration du nouveau modèle}
+\subsection{Conclusions}
+
+\section{\Glsentrytext{project_papud}}
+\subsection{Recherche documentaire} % lib, tutos, concepts
+\subsection{Ré-implémentation simplifiée du modèle \glsentrytext{soa}} % reprise sur de l'existant, découverte de la lib
+\subsection{Implémentation du nouveau modèle basique} % reprise sur de l'existant
+\subsection{Optimisation et amélioration du nouveau modèle}
+\subsection{Conclusions}
+
 
 Il est aisé d'insérer du code dans un rapport. Il suffit de définir le langage, la légende à afficher et enfin un Label pour pouvoir y faire référence. Le résultat est donnée dans le listing \ref{lst:premierExemple}. Il est également possible de changer les couleurs, pour cela il faut éditer le lstset dans la classe tnreport.cls.
 
@@ -31,53 +59,3 @@ pP->DefineVar("z", &ZVar);
 \clearpage
 Il est également possible d'afficher du code directement depuis un fichier source, le résultat de cette opération est visible dans le listing \ref{lst:fromSrc}
 %\lstinputlisting[language=c++,caption={Affichage depuis le fichier source},label={lst:fromSrc}]{figures/sourceCode.cpp}
-
-De nombreux languages sont supportés : \\
-ABAP2,4, ACSL, Ada4, Algol4, Ant, Assembler2,4, Awk4, bash, Basic2,4, C\#5, C++4, C4, Caml4, Clean, Cobol4, Comal, csh, Delphi, Eiffel, Elan, erlang, Euphoria, Fortran4, GCL, Gnuplot, Haskell, HTML, IDL4, inform, Java4, JVMIS, ksh, Lisp4, Logo, Lua2, make4, Mathematica1,4, Matlab, Mercury, MetaPost, Miranda, Mizar, ML, Modelica3, Modula-2, MuPAD, NASTRAN, Oberon-2, Objective C5 , OCL4, Octave, Oz, Pascal4, Perl, PHP, PL/I, Plasm, POV, Prolog, Promela, Python, R, Reduce, Rexx, RSL, Ruby, S4, SAS, Scilab, sh, SHELXL, Simula4, SQL, tcl4, TeX4, VBScript, Verilog, VHDL4, VRML4, XML, XSLT.
-\clearpage
-Il est néanmoins possible de définir le sien, il faudra alors ajouter dans la classe tnreport.cls du code resemblant au listing \ref{lst:defLang}. On y définit les différents mots-clés, ainsi que les délimiteurs des chaines de caractère et des commentaires.
-\begin{lstlisting}[language=Tex, caption={Syntaxe définition d'un langage}, label={lst:defLang}]
-\lstdefinelanguage{amf}
-{keywords=
-{
-xml,
-amf,
-volume,
-material,
-coordinates,
-vertices,
-vertex,
-triangle,
-x,
-y,
-z,
-v1,
-v2,
-v3,
-mesh,
-object,
-constellation,
-metadata,
-color,
-texmap,
-texture,
-utex1,
-utex2,
-utex3,
-instance,
-deltax,
-deltay,
-deltaz,
-r,
-g,
-b,
-rx,
-ry,
-rz,
-composite
-},
-sensitive=false,
-morestring=[b]",
-comment=[s]{<!--}{-->}
-}
-\end{lstlisting}

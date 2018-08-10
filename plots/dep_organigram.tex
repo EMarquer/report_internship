@@ -1,0 +1,45 @@
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+\tikzset{
+  basic/.style  = {draw, rounded corners=2pt, thin, text width=10em, drop shadow, rectangle},
+  root/.style   = {basic, align=center,
+                   fill=blue!30},
+  level 1/.style={sibling distance=12em, level distance=5em},
+  level 2/.style = {basic, align=center, fill=green!30},
+  level 3/.style = {basic, rounded corners=2pt, thin, align=left, fill=pink!60, text width=16em, yshift=-2em}
+}
+
+\begin{tikzpicture}[
+  edge from parent path={[->](\tikzparentnode.south) -- ++(0,-0.5em)
+			-| (\tikzchildnode.north)},
+  >=latex]
+
+% root of the the initial tree, level 1
+\node[root](loria) {LORIA}
+% The first level, as children of the initial tree
+  child {node[level 2] (c1) {D\'{e}partement 1:\\Algorithmique, calcul, image et g\'{e}om\'{e}trie}}
+  child {node[level 2] (c2) {D\'{e}partement 2:\\M\'{e}thodes formelles}}
+  child {node[level 2] (c3) {D\'{e}partement 3:\\R\'{e}seaux, syst\`{e}mes et services}}
+  child {node[level 2, fill=green!60!] (c4) {D\'{e}partement 4:\\Traitement automatique des langues et des connaissances}}
+  child {node[level 2] (c5) {D\'{e}partement 5:\\Syst\`{e}mes complexes, intelligence artificielle et robotique}};
+
+% The second level, relatively positioned nodes
+\begin{scope}[every node/.style={level 3}]
+% \node [below of = c1, xshift=1em] (c11) {Setting shape};
+% \node [below of = c11] (c12) {Choosing color};
+% \node [below of = c12] (c13) {Adding shading};
+\node [below of = c4, xshift=5em, yshift=-0.75em] (c41) {CELLO:\\\textit{Computational Epistemic Logic in LOrraine}};
+\node [below of = c41] (c42) {MULTISPEECH:\\Analyse, perception et reconnaissance automatique de la parole};
+\node [below of = c42] (c43) {ORPAILLEUR:\\Extraction et représentation de connaissances};
+\node [below of = c43] (c44) {READ:\\Reconnaissance de l’écriture \& analyse de documents};
+\node [below of = c44] (c45) {SMarT:\\\textit{Statistical Machine Translation \& Speech Modelization and Text}};
+\node [below of = c45, yshift=0.5em] (c46) {SEMAGRAMME:\\Linguistique computationnelle};
+\node [below of = c46, fill=red!40] (c47) {SYNALP:\\Traitement automatique des langues naturelles par méthode statistique et symbolique};
+\end{scope}
+
+% lines from each level 1 node to every one of its "children"
+% \foreach \value in {1,...,5}
+%   \draw[->] (loria.south) -| (c\value.north);
+\foreach \value in {1,...,7}
+  \draw[->] (c4.208) |- (c4\value.west);
+\end{tikzpicture}

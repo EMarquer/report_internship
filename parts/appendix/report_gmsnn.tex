@@ -1,0 +1,91 @@
+%Les rapports ici présenté ont été écrit en langage \gls{md}, plus spécifiquement dans le dialecte nommé \foreign{Gitlab-flavored Markdown}.
+%Ce dialecte supporte des éléments comme l'intégration d'images, de formules, de fragments de codes entre autres fonctionnalités.
+%Ces spécificités en font un langage idéal pour écrire des rapports exploitants ces fonctionnalités et destinés à être lus au format informatique.
+%De plus
+
+\section{Informations sur les rapports contenus dans la présente annexe} \label{report_infos}
+Les sections suivantes contiennent les rapports intermédiaires fournis à notre maître de stage au cours du \gls{project_gmsnn}.
+
+\subsection{Format d'origine des rapports}
+Le langage \gls{md}, plus spécifiquement dans le dialecte nommé \gls{git_md}, fournit une syntaxe facile à lire et à écrire.%\foreign{Gitlab-flavored Markdown}.
+Il permet la rédaction de documents agrémentés entre autres d'images, de formules, de tableaux et de fragments de codes.
+Enfin, l'affichage du \gls{git_md} est supporté par \gls{gitlab}. % TODO améliorer phrase
+
+Ces particularités en font un langage de premier choix pour l'écriture de rapports destinés à être lus au format informatique directement sur \gls{gitlab}.
+
+\subsection{Transcription des rapports}
+L'intégration des rapports intermédiaires dans ce rapport à nécessité l'adaptation du contenu en \gls{git_md} au format papier.
+
+Certains éléments n'ont pas pu être transcrit tels-quels, en particulier les liens, et les tableaux et images de grand taille.
+
+\subsection{Contenu et langue des rapports}
+Le contenu des rapports n'a été ni modifié ni corrigé, et est livré en anglais tel qu'écrit à l'origine.
+
+L'anglais à été choisi comme langue de rédaction des rapports pour maintenir la cohérence avec le code, écrit et documenté en anglais lui aussi, et avec la littérature, principalement rédigée en anglais.
+Ce choix évite aussi d'alourdir le contenu déjà complexe des documents avec des traductions maladroites de termes techniques. %TODO Je met fraiment ca ?
+
+\newpage
+\begin{report}{Étude des problèmes de mémoire}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-23_memory_problems.tex}
+\end{report}
+\begin{report}{Sauvegarde du modèle}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-24_model_saving.tex}
+\end{report}
+\begin{report}{Solution tentative pour les fuites mémoires}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-28_Tentative_solution_for_memory_leak.tex}
+\end{report}
+\begin{report}{Problèmes théoriques liés à l'entraînement batch par batch}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-29_Theorical_problems_of_batch_training_in_msnn.tex}
+\end{report}
+\begin{report}{Tentative de réduction du temps de calcul par utilisation de l'algorithme d'entraînement \og\foreign{Truncated BPTT}\fg{}}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-29_Training_time_reduction_by_Truncated_BPTT.tex}
+\end{report}
+\begin{report}{Entraînement couche par couche}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-06-25_layer_by_layer_training.tex}
+\end{report}
+
+
+\begin{report}{Premier test du modèle réimplémenté}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-04-26_test_run_detrnn.tex}
+\end{report}
+\begin{report}{Premier entraînement complet du modèle réimplémenté}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-04-27_test_run_detrnn.tex}
+\end{report}
+\begin{report}{Premier entraînement à 50 époques du modèle réimplémenté}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-04-30_test_run_detrnn_50.tex}
+\end{report}
+\begin{report}{Premier test du modèle multi-échelles}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-05-03_test_run_msnn_4.tex}
+\end{report}
+\begin{report}{Comparaison des stratégies de fusion des résultats des différentes couches}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-05-16_test_run_msnn_4.tex}
+\end{report}
+\begin{report}{Test des effets du changement de taille des paquets (\foreign{batch})}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-05-16_test_run_msnn_4_batch_16.tex}
+\end{report}
+
+
+\begin{report}{Entraînement sur le corpus complet avec beaucoup de temps alloué}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/2018-06-11_long_run_result.tex}
+\end{report}
+%\begin{report}{Changement de stratégie de gestion d'historique}
+	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/2018-06-12_change_history.tex}
+%\end{report}
+%\begin{report}{Test de l'implémentation des \foreign{batchs}}
+	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/2018-06-13_long_run_batch_1_2.tex}
+%\end{report}
+%\begin{report}{}
+	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018-06-15_batch_1_2.tex}
+%\end{report}
+%\begin{report}{}
+	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/2018-06-19_b1a8.tex}
+%\end{report}
+%\begin{report}{}
+	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/2018-06-25_lbl_b2b3_l.tex}
+%\end{report}
+
+
+
+
+
+%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/}

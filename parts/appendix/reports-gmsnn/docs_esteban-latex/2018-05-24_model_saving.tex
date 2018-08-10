@@ -1,0 +1,296 @@
+\section{Analysis and implementation of job save and
+restart}
+
+Implementation report
+
+by E. Marquer, 2018/05/24\\
+Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+As the jobs are taking longer than an hour per epoch, it has become
+necessary to keep an image of the model, the training parameters and the
+current state of the model to be able to interrupt training when needed.
+
+Multiple choices are available:
+\begin{itemize}
+\item an easy but heavy serialisation (pickle) of the whole system;
+\item a ``full'' save of the model and parameters, excluding everything that can be recomputed easily;
+\item a ``partial'' save of the model, removing a part of the less important
+information.
+\end{itemize}
+
+\subsection{\texorpdfstring{\textbf{End solution: saving using pytorch
+utilities}}{End solution: saving using pytorch utilities}}
+
+The saving solution currently implemented is the
+\lstinline!torch.save(trainer, file)! and
+\lstinline!trainer = torch.load(file)! and the alternatie version
+\lstinline!trainer = torch.load(file, map_location=lambda storage, loc: storage)!
+allowing the loading of a CUDA model out of CUDA.
+
+This solution posed a number of problems when it was first tested
+(internal non-parameter atributes where not correctly saved and loaded),
+that is why it was not considered at first.
+
+But a more recent try resulted in a perfect result, replacing the need
+of a custom serialisation system.
+
+\subsection{Full serialisation}
+
+This kind of serialisation is done thanks the \lstinline!pickle!
+package, on the whole Trainer object.
+
+\begin{lstlisting}[language=Python]
+import pickle
+
+def load(filename: str) -> object:
+    with open(filename, 'rb') as f:
+        return pickle.load(f)
+
+def save(filename: str, trainer: object) -> None:
+    with open(filename, 'wb') as f:
+        pickle.dump(trainer, f)
+\end{lstlisting}
+
+\subsection{Full save}
+
+\subsubsection{Elements to save}
+
+\begin{itemize}
+\item
+  Corpus file name
+\item
+  \lstinline!cuda_on!
+\item
+  \lstinline!batch_size!
+\item
+  Trainer
+
+  \begin{itemize}
+  \item
+    Model (see specific points)
+  \item
+    \lstinline!self.epoch! current epoch
+  \item
+    \lstinline!self.batch! and \lstinline!self.i! current position in
+    training epoch
+  \item
+    \lstinline!self.start_time! needs a litle work: storing the elapsed
+    time, and when loading, remove elapsed time from load time
+  \item
+    \lstinline!self.log_interval!
+  \item
+    \lstinline!self.save_interval!
+  \item
+    \lstinline!self.bptt!
+  \item
+    \lstinline!self.nwords!
+  \item
+    \lstinline!self.repackage_interval!
+  \item
+    \lstinline!self.repackage_strategy!
+  \item
+    \lstinline!self.reset_growth!
+  \item
+    \lstinline!self.reset_hidden!
+  \item
+    \lstinline!self.epochs!
+  \item
+    \lstinline!self.save_folder!
+  \end{itemize}
+\item
+  Model (MSNN)
+
+  \begin{itemize}
+  \item
+    \lstinline!self.training!
+  \item
+    input layer (embeddings) using \lstinline!torch.save(self.emb, f)!
+    and \lstinline!torch.load(f)!
+  \item
+    MSNN (see specific points)
+  \item
+    output layer (linear)
+  \end{itemize}
+\item
+  MSNN
+
+  \begin{itemize}
+  \item
+    Final
+
+    \begin{itemize}
+    \item
+      \lstinline!self.input_size!
+    \item
+      \lstinline!self.hidden_size!
+    \item
+      \lstinline!self.growth_factor!
+    \item
+      \lstinline!self.batch_size!
+    \item
+      \lstinline!self.cuda_on!
+    \item
+      \lstinline!self.layer_id!
+    \item
+      \lstinline!self.max_detach!
+    \item
+      \lstinline!self.repackage_strategy!
+    \item
+      \lstinline!self.max_layers!
+    \end{itemize}
+  \item
+    Next MSNN
+  \item
+    \lstinline!self.detach_count!
+  \item
+    \lstinline!self.rnn!
+  \item
+    \lstinline!self.hidden!
+  \item
+    \lstinline!self.seq_count!
+  \item
+    \lstinline!self.detach_count!
+  \item
+    \lstinline!self.transmitted_output!
+  \item
+    \lstinline!self.transmitted_hidden!
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Elements to forget and
+recreate}
+
+\begin{itemize}
+\item
+  Trainer
+
+  \begin{itemize}
+  \item
+    Corpus
+
+    \begin{itemize}
+    \item
+      Corpus file name is needed
+    \end{itemize}
+  \item
+    Optimizer: reasign learning rate, weight\_decay and model's
+    parameters (create after model is loaded) using
+    \lstinline!torch.optim.SGD(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)!
+  \item
+    Criterion: \lstinline!criterion = torch.nn.CrossEntropyLoss()!
+  \item
+    \lstinline!self.layers! using
+    \lstinline!self.model.msnn.get_layers()! (create after model is
+    loaded)
+  \item
+    \lstinline!self.train_data! using
+    \lstinline!batchify(corpus.train, batch_size, cuda_on)!
+  \item
+    \lstinline!self.val_data! using
+    \lstinline!batchify(corpus.valid, batch_size, cuda_on)!
+  \item
+    \lstinline!self.plotdata! using
+    \lstinline!{"Epoch": None, "Layer": None, "Frac": None}! and
+    \lstinline!self.init_plotter()! (perhaps with a new file, otherwise
+    in append mode without cleaning the file)
+  \item
+    \lstinline!self.msnn_backup!, sould be empty if the new backup
+    system (using the \lstinline!with! statement) is implemented
+  \end{itemize}
+\item
+  Model
+
+  \begin{itemize}
+  \item
+    None
+  \end{itemize}
+\item
+  MSNN
+
+  \begin{itemize}
+  \item
+    \lstinline!self.tensors!
+  \end{itemize}
+\end{itemize}
+
+\subsection{Partial save}
+
+The elements to keep are the same as with the Full save, except: -
+hidden states and transmitted output are to be detached
+
+\subsection{Other things that need to be added to interrupt and resume
+job}
+
+\subsubsection{Methods to interrupt and resume epoch loop and training
+loop}
+
+\paragraph{Interruption strategy}
+
+Interruption can be done by:
+\begin{itemize}
+\item saving the state at specific timestep;
+\item saving automatically when shutting down.
+\end{itemize}
+
+The second option isn't realy realistic, as an interuption wouldn't
+allow a big enough margin to save the model. Even thought, it could be
+added to allow manual interruption at certain timesteps (smaller than
+the ones implemented in the first option).
+
+As the first option is the only viable one, multiple timesteps are
+possible, from the shortest to the longest:
+\begin{itemize}
+\item after each operation (example: after forward pass, and after backward pass, and after optimization \ldots{});
+\item after each sequence;
+\item after \emph{n} sequences;
+\item  after each epoch;
+\item  after \emph{n} epochs;
+\item  after the whole training.
+\end{itemize}
+
+Option {[}1.{]} is not viable, as it would consume a lot of time
+relative to each computation for the sole writing process. Option
+{[}3.{]}, of which option {[}2.{]} is a specific case, allows both a
+fine granulation with only a minimal loss if anything were to occur, and
+a reduced burden computation-wise. From option {[}4.{]} onward, the save
+time is negligible, and even if the granulation is mediocre, it offers
+fine milestones for specific usage (usage of an already trained mode for
+example).
+
+Currently, at creation time, with no history, the model save file is
+about 770MB.
+
+What will be implemented is thoe third option, saving the model after
+\emph{n} sequences.
+
+\paragraph{Resume strategy}\label{resume-strategy}
+
+It will be necessary to adapt the training loodps a little to allow
+resuming at any sequence in any epoch.
+
+\subsection{Other methods implemented}\label{other-methods-implemented}
+
+\subsubsection{\texorpdfstring{Method using \texttt{with} keyword for
+backup system, during
+evaluation}{Method using with keyword for backup system, during evaluation}}\label{method-using-with-keyword-for-backup-system-during-evaluation}
+
+\begin{lstlisting}[language=Python]
+class BackupContextManager:
+    def __init__(self, model: DetRNN):
+        self.model = model
+        
+    def __enter__(self):
+        # Backing up training linked data
+        self.msnn_backup = self.model.msnn.backup()
+
+    def __exit__(self, type, value, traceback):
+        # Restoring training linked data
+        self.model.msnn.restore(self.msnn_backup)
+
+
+with BackupContextManager(model):
+    """Do computations"""
+\end{lstlisting}
+

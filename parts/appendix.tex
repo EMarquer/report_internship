@@ -5,9 +5,9 @@
 %\renewcommand{\thesubsection}{\Roman{subsection}}
 %\renewcommand{\thesection}{\Roman{section}}
 %\addtocontents{toc}{\protect\pagebreak}
-\addcontentsline{toc}{chapter}{Annexes}
+
 %\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
-\part*{Annexes}
+\part*{Annexes\addcontentsline{toc}{chapter}{Annexes}}
 
 \cleardoublepage
 
@@ -23,23 +23,33 @@
 % Bibliographie
 \input{parts/appendix/bibliography.tex}\cleardoublepage
 % Liste des figure
-\listoffigures\cleardoublepage
+%\listoffigures%\cleardoublepage
 % Liste des tables
-\listoftables\cleardoublepage
+%\listoftables%\cleardoublepage
 % Liste des figure
-\lstlistoflistings\cleardoublepage
+%\lstlistoflistings
+\lists
 \cleardoublepage
-% Index, Lexique
-\input{parts/appendix/glossary.tex}
+\terms
 \cleardoublepage
-\chapter{Rapports d'avancement du premier projet}
+\captionsetup[figure]{list=no}
+\captionsetup[table]{list=no}
+\renewcommand\arraystretch{1.5}
+\chapter{Rapports d'avancement du \glsentrytext{project_gmsnn}}
+\input{parts/appendix/report_gmsnn}
 \cleardoublepage
 
-\chapter{Rapports d'avancement du projet \gls{papud}}
+\chapter{Rapports d'avancement du \glsentrytext{project_papud}}
+\input{parts/appendix/report_papud}
 \cleardoublepage
 
+\captionsetup[figure]{list=yes}
+\captionsetup[table]{list=yes}
+\renewcommand\arraystretch{1}
 \chapter{Copie de la convention de stage}
+\includepdf[pages=-]{parts/appendix/convention.pdf}
 \cleardoublepage
 
 \chapter{Copie de l'avenant à la convention de stage}
-\cleardoublepage
+\includepdf[pages=-]{parts/appendix/avenant.pdf}
+%\cleardoublepage

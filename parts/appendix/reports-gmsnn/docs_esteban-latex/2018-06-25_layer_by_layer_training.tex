@@ -1,0 +1,103 @@
+% !TeX spellcheck = en_US
+\section*{Layer by layer training}
+
+Analysis report
+
+by E. Marquer, 2018/06/25, Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+Multiple advanced training algorithms use layer ``freezing'', meaning
+that the layer will not be trained.
+
+As it would be interesting to use those algorithms to get the most out
+of the current architecture, a layer ``freezing'' will be implemented.
+To do so, a dummy algorithm will be implemented. This algorithm is a
+naive layer by layer training.
+
+\subsection{Layer by layer training}
+
+This training is used to see if convergence can be sped up, if
+performance can be improved, and if the layered architecture is of any
+use.
+
+\subsubsection{Principle}
+
+The general principle is to train each layer individually, and to
+fine-tune them together frequently.
+
+An iterative presentation would be:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Create a layer
+\item
+  Train the layer alone
+\item
+  Train all the layers together
+\item
+  Restart from {[}1.{]}
+\end{enumerate}
+
+Another way to explain this algorithm is that it is a variation of the
+IM algorithm, were storing the output of the training of a layer is
+replaced by recomputing those results. It removes the drawback of the
+increase in memory usage, while speeding up training(time-wise at least,
+convergence-wise at best).
+
+\newpage
+\paragraph{Example for a 4 layered
+MSNN}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  We train for n epochs the first layer. It is expected to learn a
+  maximum of things of a low level of abstraction and time dependency.
+\item
+  Then, we freeze this layer, and start training a second one over n
+  epochs. It is expected to learn a higher level of abstraction and time
+  dependency form the representations in the first layer's hidden state.
+\item
+  We train those two layers together to fine-tune them.
+\item
+  We then add a third layer, freeze the first two layers, and train the
+  third layer of information extracted from the second layer.
+\item
+  We train the three layers together.
+\item
+  We add a new layer and train it alone.
+\item
+  We train the four layers together.
+\item
+  We train all the layers until the ends of epochs.
+\end{enumerate}
+
+\subsubsection{Speeding up convergence and improving
+performance}
+
+Training each layer individually requires less computation during
+backpropagation. Moreover, by pushing each layer to learn the maximum of
+information it can learn, we can expect each layer to specialize at
+their scale.
+
+A more detailed way to understand the intuition behind that is that a
+layer closer to the data has to learn very basic features. Step by step,
+every layer is constrained to its respective scale (by its memory span
+due to the architecture). Each layer has a minimal set of knowledge to
+learn before benefiting to the whole network. Even if a part of this
+learning is shared over the layers, at least over the first epochs there
+would be nothing to gain but noise by training all the layers together.
+
+Globally, by skipping the ``noisy'' part of the training, a reduction of
+training time (the real computation time, not the number of epochs
+needed) is to be expected. A bonus effect would be a small acceleration
+of convergence, as training would be less noisy.
+
+\subsubsection{Use of the layered
+architecture}
+
+By training the model layer by layer, we can expect to see if training a
+single layer with equivalent parameters would have the same effect (if
+the individual training time is big enough).

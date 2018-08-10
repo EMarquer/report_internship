@@ -1,0 +1,96 @@
+% !TeX spellcheck = en_US
+\section*{Test run of detmsnn.py}
+
+Test report
+
+by E. Marquer, 2018/05/16, Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+Performance test of batch size variation without deeper . Test to do a
+run on 4 epochs, with GPU, of the basic model of MSNN, with concatenated
+output strategy.
+
+\subsection{Paradigm}
+
+This test run of \emph{detmsnn.py}, with INFO level log output, loss per
+percentile and vbpc per epoch, is executed with \emph{cuda}, for 4
+epochs.
+
+The test is done with branch
+\href{https://gitlab.inria.fr/emarquer/awd-lstm-lm/tree/growing}{growing},
+an allocated time of 24h, not interactive
+
+\textbf{/!\textbackslash{} Had to reduce evaluation corpus size down to
+1/1000, to reduce computation time while keeping a big enough corpus to
+compute BPC /!\textbackslash{}}
+
+\subsubsection{Hyperparameters}
+
+\begin{longtable}[]{@{}ll@{}}
+\hline
+Hyperparameter & Value\tabularnewline
+\hline
+\endhead
+nhidden & 920\tabularnewline
+embedsize & 400\tabularnewline
+bptt & 200\tabularnewline
+batch\_size & 16\tabularnewline
+lr & 0.001\tabularnewline
+wdecay & 1.2e-06\tabularnewline
+cuda\_on & True\tabularnewline
+log\_interval & 100\tabularnewline
+save\_interval & 100\tabularnewline
+nepochs & 4\tabularnewline
+max\_seqs & 5\tabularnewline
+\hline
+\end{longtable}
+
+\subsubsection{Node}
+
+OAR\_JOB\_ID=1567202 with GPU grimani-1
+
+Planed job start time: 2018-05-19 02:41:08 Job start time: 2018-05-19
+02:41:08
+
+Estimated job stop time: 2018-05-22 14:41:08
+
+Command used:
+
+\begin{lstlisting}[language=bash]
+oarsub -q production -p "GPU <> 'NO'" -l "nodes=1,walltime=84:00:00" "bash runmsnn.sh"
+\end{lstlisting}
+
+Status verification loop:
+
+\begin{lstlisting}[language=bash]
+let x=0; while [ "true" ]; do echo "$x" $(oarstat -s -j 1567202); let ++x; sleep 120; done
+\end{lstlisting}
+
+\subsection{Results}
+
+Total run time for 4 epochs: with real stop time of ?, the total run
+time of the training is approximately ?h, with only, and a final
+Validation BPC of 3.57.
+
+\subsubsection{Comparative analysis}
+
+\textbf{NO PLOT HERE}
+
+\subsubsection{Plot}
+
+\paragraph{BPC/fraction of corpus}
+
+BPC: BPC per fraction of the corpus (an interval of 1 correspond a
+complete corpus, or an epoch).
+
+Validation BPC: BPC per fraction of the corpus, on the validation
+corpus.
+
+Layers: Number of layers per fraction of the corpus. 
+
+\textbf{NO PLOT HERE}
+
+\subsection{Potential ameliorations \& next steps}
+
+Next step is to continue run time reduction.

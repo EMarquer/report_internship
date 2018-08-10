@@ -3,8 +3,8 @@
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
 %
 \begingroup
 \makeatletter
@@ -16,18 +16,288 @@
   {}
 \endgroup
 
-\sortlist[entry]{nyt/global/}
-  \entry{about_synalp}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{note}{[Online; accessed 30. Jul. 2018]}
-    \field{title}{{Synalp}}
-    \verb{url}
-    \verb http://synalp.loria.fr/pages/about-synalp
-    \endverb
-    \field{year}{2018}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-\endsortlist
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{cadre_theorique}{online}{}
+      \list{organization}{1}{%
+        {Scribbr}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{{Cadre Th{\ifmmode\acute{e}\elseé\fi}orique d'un M{\ifmmode\acute{e}\elseé\fi}moire - Contenu et Exemple}}
+      \field{urlday}{2}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.scribbr.fr/memoire/cadre-theorique-dun-memoire
+      \endverb
+    \endentry
+    \entry{letudiant_presentation_memoire}{online}{}
+      \list{organization}{1}{%
+        {l'Étudiant}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{M{\ifmmode\acute{e}\elseé\fi}moire, rapport de stage : les r{\ifmmode\grave{e}\elseè\fi}gles de pr{\ifmmode\acute{e}\elseé\fi}sentation}}
+      \field{urlday}{3}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.letudiant.fr/jobsstages/nos-conseils/memoire-rapport-de-stage-les-regles-de-presentation.html
+      \endverb
+    \endentry
+    \entry{wiki_ml}{online}{}
+      \list{organization}{1}{%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{{Apprentissage automatique}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://fr.wikipedia.org/wiki/Apprentissage_automatique
+      \endverb
+      \warn{\item Entry 'wiki_ml' (bibs/def.bib): Invalid format '29' of date field 'date' - ignoring}
+    \endentry
+    \entry{organisation_loria}{online}{}
+      \list{organization}{1}{%
+        {LORIA}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{Organisation}}
+      \field{urlday}{3}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.loria.fr/fr/presentation/organisation/
+      \endverb
+    \endentry
+    \entry{org_loria}{online}{}
+      \list{organization}{1}{%
+        {LORIA}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{Organigramme 2017 du Loria}}
+      \field{urlday}{3}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.loria.fr/wp-content/uploads/2016/05/organigramme-2017.pdf
+      \endverb
+    \endentry
+    \entry{about_loria}{online}{}
+      \list{organization}{1}{%
+        {LORIA}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{{Le Loria}}
+      \field{urlday}{31}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.loria.fr
+      \endverb
+    \endentry
+    \entry{about_synalp}{online}{}
+      \list{language}{1}{%
+        {(en anglais)}%
+      }
+      \list{organization}{1}{%
+        {SYNALP}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{{About SYNALP}}
+      \field{urlday}{30}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://synalp.loria.fr/pages/about-synalp
+      \endverb
+    \endentry
+    \entry{wiki_eureka}{online}{}
+      \list{organization}{1}{%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{EUREKA}}
+      \field{urlday}{1}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://fr.wikipedia.org/wiki/EUREKA
+      \endverb
+    \endentry
+    \entry{about_papud}{online}{}
+      \list{language}{1}{%
+        {(en anglais)}%
+      }
+      \list{organization}{1}{%
+        {itea3.org}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{{16037 PAPUD}}
+      \field{urlday}{31}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://itea3.org/project/papud.html
+      \endverb
+    \endentry
+    \entry{bull_produits}{online}{}
+      \list{organization}{1}{%
+        {Atos}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{Produits}}
+      \field{urlday}{1}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://atos.net/fr/produits
+      \endverb
+    \endentry
+    \entry{wiki_lm}{online}{}
+      \list{language}{1}{%
+        {en anglais}%
+      }
+      \list{organization}{1}{%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{{Language model}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Language_model
+      \endverb
+      \warn{\item Entry 'wiki_lm' (bibs/def.bib): Invalid format '27' of date field 'date' - ignoring}
+    \endentry
+    \entry{wiki_md}{online}{}
+      \list{organization}{1}{%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{{Markdown}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://fr.wikipedia.org/wiki/Markdown
+      \endverb
+      \warn{\item Entry 'wiki_md' (bibs/def.bib): Invalid format '19' of date field 'date' - ignoring}
+    \endentry
+    \entry{wiki_rnn}{online}{}
+      \list{organization}{1}{%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau de neurones r{\ifmmode\acute{e}\elseé\fi}currents}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_r%C3%A9currents
+      \endverb
+      \warn{\item Entry 'wiki_rnn' (bibs/def.bib): Invalid format '01' of date field 'date' - ignoring}
+    \endentry
+    \entry{bptt-intro}{article}{}
+      \name{author}{1}{}{%
+        {{hash=915af163e2107106fced5dd3164d9a8e}{%
+           family={Brownlee},
+           familyi={B\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en anglais}%
+      }
+      \strng{namehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Learning Mastery}
+      \field{month}{06}
+      \field{title}{{A Gentle Introduction to Backpropagation Through Time}}
+      \field{urlday}{6}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://machinelearningmastery.com/gentle-introduction-backpropagation-time
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
+

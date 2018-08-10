@@ -1,0 +1,220 @@
+% !TeX spellcheck = en_US
+\section*{Analysis of memory usage}
+
+Analysis report
+
+by E. Marquer, 2018/05/23, Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+Experimental results shows (using \lstinline!nvidia-smi!) an increasing
+memory usage for 4 layers, from an already enormous 3GB to more than
+6GB, causing an out-of-memory error.
+
+The objective of the following computations is to estimate the memory
+consumption of the model, to confirm the hypothesis of a memory leak,
+and verify that the model should not overflow memory.
+
+\subsection{Formulas}
+
+\subsubsection{Tensor and Variable size
+estimation}
+
+Byte size of a tensor is close to 6 times the products of all of its
+dimensions. Byte size of a variable is similar to that of the
+corresponding tensor.
+
+\begin{lstlisting}[language=Python]
+import torch, pickle
+
+# Object to mesure
+o = torch.autograd.Variable(torch.ones(100, 100, 100))
+o = torch.ones(100, 100, 100)
+
+len(pickle.dumps(o, 0)) / (100 * 100 * 100)
+#result = 6
+\end{lstlisting}
+
+\subsubsection{Computations}
+\vspace{-2em}
+\begin{equation}
+\begin{aligned}
+total 
+&= hidden\_states + msnn\_weights + emb\_weights + out\_weights \\\\
+&= detach\_interval * (growth\_factor + 1) * layers * 6 * (hidden\_size * batch\_size * sequence\_length) \\
+& + (((layer - 1) * 8 * hidden\_size * (hidden\_size + 1)) \\
+& + 4 * hidden\_size * (hidden\_size + emb\_size + 2)) * 6  \\
+& + (nwords * (emb\_size + 1)) * 6 \\
+& + (nwords * (layers * hidden\_size)) * 6 \\\\
+&= 6 * (detach\_interval * (growth\_factor + 1) * layers * 
+(hidden\_size * batch\_size * sequence\_length) \\
+& + ((layers - 1) * 8 * hidden\_size * (hidden\_size + 1)) \\
+& + 4 * hidden\_size * (hidden\_size + emb\_size + 2)  \\
+& + (nwords * (emb\_size + 1)) \\
+& + (nwords * (layers * hidden\_size)))
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+hidden\_states &= total\_history * 6 * dim \\
+               &= detach\_interval * (growth\_factor + 1) * layers * 6 * dim \\
+               &= detach\_interval * (growth\_factor + 1) * layers * 6 * \\
+               & (hidden\_size * batch\_size * sequence\_length)
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+msnn\_layer\_weights &= weights\_ih + weights\_hh + bias\_ih + bias\_hh \\
+                     &= 4 * hidden\_size * input\_size + 4 * hidden\_size * hidden\_size \\
+                     & + 4 * hidden\_size + 4 * hidden\_size \\
+                     &= 4 * hidden\_size * (hidden\_size + input\_size + 2) \\
+                     &= \begin{cases}
+                        8 * hidden\_size * (hidden\_size + 1) &\text{for all layers exept the first one} \\
+                        4 * hidden\_size * (hidden\_size + emb\_size + 2)  &\text{for the first layer}
+                        \end{cases}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+msnn\_weights &= msnn\_layer\_weights * layers \\
+              &= ((layers - 1) * 8 * hidden\_size * (hidden\_size + 1))\\
+              & + 4 * hidden\_size * (hidden\_size + emb\_size + 2)
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+emb\_weights &= (bias + weights) * 6 \\
+            &= (nwords * emb\_size + emb\_size))* 6 \\
+            &= (nwords * (emb\_size + 1)) * 6
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+out\_weights = (nwords * (layers * hidden\_size)) * 6
+\end{equation}
+
+\newpage
+\subsubsection{Estimate with basic set of parameters}
+
+\begin{lstlisting}[language=Python]
+detach_interval = 50
+growth_factor = 5
+layers = 7
+hidden_size = 1840 / 4
+batch_size = 2
+sequence_length = 100
+emb_size = 400
+nwords = 205
+
+total = 6 * (detach_interval * (growth_factor + 1) * layers * hidden_size * batch_size * sequence_length + ((layers - 1) * 8 * hidden_size * (hidden_size + 1)) + 4 * hidden_size * (hidden_size + emb_size + 2) + (nwords * (emb_size + 1)) + (nwords * (layers * hidden_size)))
+
+"{}GB {}MB {}kB {}B".format(int(total%(1024**4) / 1024**3), int(total%(1024**3) / 1024**2), int(total%(1024**2) / 1024), int(total%1024))
+# result: '1GB 741MB 614kB 9B'
+\end{lstlisting}
+
+\newpage
+\rotatebox{90}{
+\begin{tabular}{|cccccccc|r|}
+\hline
+detach\_interval & growth\_factor & layers & hidden\_size & batch\_size & sequence\_length & emb\_size & nwords & total\\
+\hline
+50 & 5 & 7 & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 1GB 153MB 68kB 6B\\
+\textbf{100} & 5 & 7 & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 2GB 234MB 579kB 262B\\
+\textbf{200} & 5 & 7 & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 4GB 397MB 577kB 774B\\
+50 & \textbf{10} & 7 & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 2GB 50MB 323kB 390B\\
+50 & 5 & \textbf{6} & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 1008MB 912kB 414B\\
+50 & 5 & \textbf{5} & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 840MB 732kB 822B\\
+50 & 5 & \textbf{4} & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 672MB 553kB 206B\\
+50 & 5 & \textbf{3} & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 504MB 373kB 614B\\
+50 & 5 & \textbf{2} & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 336MB 193kB 1022B\\
+50 & 5 & \textbf{1} & 1840 / 4 & 2 & 200 / batch\_size & 400 & 205 & 168MB 14kB 406B\\
+50 & 5 & 7 & \textbf{1840 / 2} & 2 & 200 / batch\_size & 400 & 205 & 2GB 431MB 598kB 94B\\
+50 & 5 & 7 & \textbf{1840 / 8} & 2 & 200 / batch\_size & 400 & 205 & 573MB 28kB 890B\\
+50 & 5 & 7 & 1840 / 4 & \textbf{1} & \textbf{200 / batch\_size} & 400 & 205 & 1GB 153MB 68kB 6B\\
+50 & 5 & 7 & 1840 / 4 & 2 & \textbf{200} & 400 & 205 & 2GB 234MB 579kB 262B\\
+50 & 5 & 7 & 1840 / 4 & 2 & 200 / batch\_size & \textbf{200} & 205 & 1GB 150MB 743kB 534B\\
+50 & 5 & 7 & 1840 / 4 & 2 & 200 / batch\_size & \textbf{800} & 205 & 1GB 157MB 764kB 998B\\
+50 & 5 & 7 & 1840 / 4 & 2 & 200 / batch\_size & 400 & \textbf{500} & 1GB 159MB 182kB 984B\\
+\hline
+\end{tabular}
+}
+
+\newpage
+\paragraph{Most impactful factors
+(memory-wise)}
+
+\begin{itemize}
+\item
+  \lstinline!detach_interval!: \lstinline!detach_interval * 2! =
+  \lstinline!memory * 2!
+\item
+  \lstinline!growth_factor!: \lstinline!growth_factor * 2! =
+  \lstinline!memory * 2!
+\item
+  \lstinline!hidden_size!: \lstinline!hidden_size * 2! =
+  \lstinline!memory * 2!
+\item
+  \lstinline!batch_size * sequence_length! (number of examples by
+  sequence): \lstinline!batch_size*sequence_length * 2! =
+  \lstinline!memory * 2!
+\item
+  \lstinline!layers!: \lstinline!layers * 2! = \lstinline!layers * 2!
+\end{itemize}
+
+The others factors considered (emb\_size and nwords) have almost no
+impact on memory. It confirms that the most memoryphage element is the
+MSNN. Also, to keep a stable memory usage,
+\lstinline!batch_size * sequence_length! ratio must be kept constant;
+increasing \lstinline!batch_size! while lowering
+\lstinline!sequence_length! can increase processing speed whithout
+impacting memory usage.
+
+\subparagraph{Impact of layer increase}
+\subparagraph*{}\vspace{-2em}{We can notice that the impacts of layers is most noticeable during the
+first phases of training, during the creation of the first layer. Later
+on, the creation frequency of new layers is small, and the change is
+minimal. For example, from 6 to 7 layer, we need \(`12500`\) sequences
+to pass, and the increase of memory of about \(`7/6`\); from 7 to 8
+layer, we need \(`62500`\) sequences to pass, and the increase of memory
+of about \(`8/7`\); from 8 to 9 layer, we need \(`312500`\) sequences to
+pass, and the increase of memory of about \(`9/8`\); and so on.}
+
+\subsubsection{Partial derivatives:}
+
+\begin{lstlisting}
+d = detach_interval
+g = growth_factor
+l = layers
+h = hidden_size
+b = batch_size
+s = sequence_length
+e = emb_size
+n = nwords
+
+complete formula:
+6 * (
+	d * (g + 1) * l * h * b * s +
+	((l - 1) * 8 * h * (h + 1)) +
+	4 * h * (h + e + 2) +
+	(n * (e + 1)) +
+	(n * (l * h))
+)
+
+simplified formula:
+6*(8*l*h^2 + l*d*g*h*b*s + l*d*h*b*s + 8*l*h + l*n*h + 4*e*h + e*n + n - 4*h^2)
+
+partial derivates on given variable:
+d: (6(8*l*h^2 - 4*h^2 + l*d*g*h*b*s + l*d*h*b*s + 8*l*h + 4*e*h + l*n*h + e*n + n))
+g: 6*l*d*h*b*s
+l: 6*(d*h*b*s*(g+1) + 8*h*(h+1) + nh)
+h: 6*(l*d*g*b*s + l*d*b*s + l*n + 16*l*h + 8*l + 4*e - 8*h)
+b: 6*l*d*h*s*(g+1)
+s: 6*l*d*h*b*(g+1)
+e: 0
+n: 6*(l*h+e+1)
+\end{lstlisting}
+

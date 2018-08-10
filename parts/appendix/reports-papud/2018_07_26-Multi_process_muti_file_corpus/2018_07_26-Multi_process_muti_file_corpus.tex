@@ -1,0 +1,183 @@
+\section*{Learning rate optimisation effect
+on}
+
+2018/07/26 - SYNALP - Esteban MARQUER
+
+\subsection{Context}
+
+Given the large amount of data to process, and the way it is structured
+in many small archives, a way to load and pre-process them efficiently
+had to be implemented.
+
+\subsection{Multi-file-multi-process corpus
+concept}
+
+\subsubsection{Multi-process system}
+
+To avoid the need to completely pre-processing the data and storing it,
+and to shift the computational weight of the loading process, the
+different tasks are splitted between multipple processes.
+
+At first, the idea was to use three processes, with one for the loading,
+one for the pre-processing, and the lat one for the transformation into
+tensor. All those process fetch data from a multiprocess-safe queue and
+store the result in an output queue, used by the next process as an
+input.
+
+A representation of the initial concept:
+
+\begin{lstlisting}
+HDD -> Loader -> [raw data queue]
+    -> Processing -> [processed data queue]
+    -> Tensorising -> [tensors queue]
+    -> model
+\end{lstlisting}
+
+Given the performance of that system, the slowest part was the
+processing. Moreover, the processing could be splitted in multiple
+modules: removing the end-of-line characters, replacing paterns by tags
+and splitting into characters, transforming the data via a dictionary,
+and padding/cropping the sequence.
+
+A representation of the modular processing concept:
+
+\begin{lstlisting}
+HDD -> Loader -> [raw Q.]
+    -> Process 1 -> [partially processed Q. 1]
+    -> Process 2 -> [partially processed Q. 2]
+    ...
+    -> Process n -> [processed Q. n]
+    -> Tensorising -> [tensors queue]
+    -> model
+\end{lstlisting}
+
+This architecture allows to change the order of the pre-processing
+modules, and to add or remove some of them.
+
+By splitting those different tasks on multipple processes, an efficient
+processing is achieved. Moreover, it is way easier to add pre-processing
+steps.
+
+\subsubsection{Multi-file system}
+
+By considering a set of files as a single sequence of line, and by
+loading only the one file containing the current data, combined by
+efficient line-by-line sequential reading, a light and fast loading is
+achieved.
+
+\subsection{Tests}
+
+\subsubsection{Paradigm}
+
+While setting up the unitary tests for the corpus implementations, three
+main situations have produced useful insight on the performances of the
+new implementations.
+
+Everything was run on my laptop, with other processes running that may
+have hindered the performance (for example, a heavy IDE).
+
+Process-specific tests were run after every element was proven to do
+their expected job. Those tests added the processes and the data queues
+and information on queue filling and process state.
+
+\subsubsection{Results}
+
+Multiple test were done with very light, light treatment of the data,
+and real-situation training (the training is a way to process the data).
+
+\paragraph{Printing only the status of the process at each
+batch}
+
+Total time per epoch 12 s
+
+\begin{lstlisting}[language=Python]
+{'example': '28032/67923',
+ 'batch': '218/527',
+ 'iterator status':
+   'Process MultiFile status: process: alive; output queue: 1023/1024
+    Process EndLine status: process: alive; output queue: 1023/1024
+    Process Regex status: process: alive; output queue: 1024/1024
+    Process Dictionary status: process: alive; output queue: 2/1024
+    Process CropPad status: process: alive; output queue: 10/1024
+    Process Batch status: process: alive; output queue: 0/32'}
+\end{lstlisting}
+
+\newpage
+\paragraph{Printing the status of the process at each batch and printing
+the
+data}
+
+Total time per epoch 47 s
+
+\begin{lstlisting}[language=Python]
+{'example': '30208/67923',
+ 'batch': '235/527',
+ 'iterator status': 
+   'Process MultiFile status: process: alive; output queue: 1024/1024
+    Process EndLine status: process: alive; output queue: 1024/1024
+    Process Regex status: process: alive; output queue: 1023/1024
+    Process Dictionary status: process: alive; output queue: 916/1024
+    Process CropPad status: process: alive; output queue: 1024/1024
+    Process Batch status: process: alive; output queue: 32/32'}
+\end{lstlisting}
+
+\paragraph{Printing the status of the process at each batch and training
+the
+model}
+
+Total time per epoch about 300 s, the old implementation needed about
+200 s with the corpus full loaded in GPU RAM. CPU usage (usage mainly by
+the program sub-processes): from 60\% to 100\%
+
+\begin{lstlisting}[language=Python]
+{'example': '26800/67923',
+ 'batch': '134/338',
+ 'iterator status':
+   'Process MultiFile status: process: alive; output queue: 1024/1024
+    Process EndLine status: process: alive; output queue: 1022/1024
+    Process Regex status: process: alive; output queue: 1017/1024
+    Process Dictionary status: process: alive; output queue: 905/1024
+    Process CropPad status: process: alive; output queue: 975/1024
+    Process Batch status: process: alive; output queue: 64/64'}
+\end{lstlisting}
+
+\subsection{Conclusions}
+
+The first test shows the without processing the data, we can find where
+the data is ``blocked'', and so find the slowest process in the bunch.
+Here, the slowest process is the transformation into ids.
+
+As it is a simple dicitonnary reading, which is already a very fast
+process in Python, if it is the slowest process of the chain, we can
+conclude that the basic performance of this implementation is very good.
+
+When we do even a tyny bit of processing (like printing the data), the
+data is blocked at the end of the chain, meaning the printing process is
+slower than the loading/pre-processing/tensorising process.
+
+In a true training situation, we can confirm that processing the data is
+slower than pre-processing it. The only process slowing the whole
+training is the transfer to GPU RAM, which is not in a separate process
+yet (due to specificities of pytorch tensor mangement).
+
+The implementation produce equivalent results with multipple files.
+
+Globally, this new implementation should be enough to load and
+preprocess the data for the model, vith both small and large datasets.
+
+\subsection{Next steps and
+improvements}
+
+\begin{itemize}
+\item
+  It should be possible to delegate the transfer to GPU RAM to a
+  specific process (given the explanations on pytorch manual). This
+  should reduce the gap between the speed achieved with pre-loaded data
+  andthe speed of the new corpus system.
+\item
+  The direct next step is to test the new corpus implementation on the
+  computer cluster.
+\item
+  Then, changing the current small corpus by a larger multi-file corpus
+  will be possible.
+\end{itemize}

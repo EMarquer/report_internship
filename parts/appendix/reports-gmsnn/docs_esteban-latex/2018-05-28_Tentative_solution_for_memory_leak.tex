@@ -1,0 +1,66 @@
+% !TeX spellcheck = en_US
+\section*{Analysis of a source of the memory leak problem: the history
+management
+system}
+
+Analysis report
+
+by E. Marquer, 2018/05/28, Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+A big memory leak is present in the model. One of the identified cause
+is a malfunction in the history management system.
+
+\subsection{Problem}
+
+It seems simply detaching a hidden state is not enough:
+
+With a graph:
+\begin{lstlisting}
+                        3.1 --------------------------- 3.2 -->
+                         |                               |
+        2.1 ----------- 2.2 ----------- 2.3 ----------- 2.4 -->
+         |               |               |               |
+1.1 --- 1.2 --- 1.3 --- 1.4 --- 1.5 --- 1.6 --- 1.7 --- 1.8 -->
+\end{lstlisting}
+where all nodes are hidden states, and each layer is a line, with a
+transmission rate of 1 transmission every 2 hidden state.
+
+When detaching every 2 hidden, with \lstinline![i.j]! a detached node,
+the graph becomes:
+
+\begin{lstlisting}
+                        3.1 --------------------------- 3.2 -->
+                         |                               |
+        2.1 ----------- 2.2            [2.3]----------- 2.4 -->
+         |               |                               |
+1.1 --- 1.2    [1.3]--- 1.4    [1.5]--- 1.6    [1.7]--- 1.8 -->
+\end{lstlisting}
+
+But it should be:
+
+\begin{lstlisting}
+                        3.1 --------------------------- 3.2 -->
+                         |                               |
+        2.1 ----------- 2.2            [2.3]----------- 2.4 -->
+                                                         |
+1.1     1.2    [1.3]    1.4    [1.5]--- 1.6    [1.7]--- 1.8 -->
+\end{lstlisting}
+
+Or with a more aggressive strategy:
+
+\newpage
+\begin{lstlisting}
+                        3.1 --------------------------- 3.2 -->
+                                                         |
+        2.1             2.2            [2.3]----------- 2.4 -->
+                                                         |
+1.1     1.2    [1.3]    1.4    [1.5]    1.6    [1.7]--- 1.8 -->
+\end{lstlisting}
+
+\subsection{Solution}
+
+To solve the problem, keeping track of all history is necessary, and
+with the way PyTorch works, it won't be a problem to keep references to
+history before deleting them

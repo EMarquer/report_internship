@@ -1,0 +1,38 @@
+% !TeX spellcheck = en_US
+\section*{Test run of detrnn.py}
+
+Test report
+
+by E. Marquer, 2018/04/26, Synalp and Université de Lorraine
+
+\subsection{Abstract}
+
+Test to see time needed, with GPU and without, to run the basic model of
+DetRNN.
+
+\subsection{Paradigm}
+
+With branch \emph{reimplement}, allocated time 30 min. Test run of
+\emph{detrnn.py} with full log output, with and without \emph{cuda}. It
+does not matter if learning ends, as test is only to get time
+statistics.
+
+\subsubsection{Node}
+
+grimani-2, with GPU
+
+\subsection{Results}
+
+About 3 to 4 batch-sets are computed in 5 minutes without \emph{cuda}.
+About 1 batch-set is computed in 1 s with \emph{cuda}.
+
+Details:
+\begin{itemize}
+	\item without GPU: \href{https://gitlab.inria.fr/emarquer/awd-lstm-lm/blob/reimplement/logs/detrnn2018_4_26-16h39.log}{detrnn2018\_4\_26-16h39.log}
+	\item with GPU: \href{https://gitlab.inria.fr/emarquer/awd-lstm-lm/blob/reimplement/logs/detrnn2018_4_26-16h41.log}{detrnn2018\_4\_26-16h41.log}
+\end{itemize}
+
+\subsection{Potential ameliorations \& next steps}
+
+Next step is to test the state-of-the-art version, but probably only
+with \emph{cuda}.

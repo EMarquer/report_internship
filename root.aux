@@ -21,26 +21,35 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \AC@reset@newl@bel
-\bibstyle{biblatex}
-\bibdata{root-blx,bibs/institute,bibs/g5k}
-\citation{biblatex-control}
-\abx@aux@sortscheme{nyt}
-\abx@aux@refcontext{nyt/global/}
+\abx@aux@sortscheme{none}
+\abx@aux@refcontext{none/global/}
+\abx@aux@cite{cadre_theorique}
+\abx@aux@segm{0}{0}{cadre_theorique}
+\abx@aux@cite{letudiant_presentation_memoire}
+\abx@aux@segm{0}{0}{letudiant_presentation_memoire}
 \@writefile{toc}{\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble }{}}
 \providecommand\@newglossary[4]{}
 \@newglossary{main}{glg}{gls}{glo}
 \@newglossary{acronym}{alg}{acr}{acn}
 \@newglossary{entity}{eng}{end}{edt}
-\@gls@reference{acronym}{ml}{\glsseeformat[Glossaire:]{ml-g}{}}
-\@gls@reference{main}{dl-g}{\glsseeformat[voir]{ml}{}}
-\@gls@reference{acronym}{dl}{\glsseeformat[Glossaire:]{dl-g}{}}
-\@gls@reference{acronym}{nn}{\glsseeformat[Glossaire:]{nn-g}{}}
+\@gls@reference{entity}{synalp}{\glsseeformat[voir]{loria}{}}
+\@gls@reference{entity}{itea3}{\glsseeformat[voir]{eureka}{}}
+\@gls@reference{entity}{project_papud}{\glsseeformat[voir]{papud,itea3}{}}
+\@gls@reference{entity}{project_gmsnn}{\glsseeformat[voir]{papud,itea3}{}}
+\@gls@reference{main}{ml}{\glsseeformat[voir]{papud,itea3}{}}
+\@gls@reference{main}{dl}{\glsseeformat[voir]{ml,nn}{}}
+\@gls@reference{main}{model}{\glsseeformat[voir]{ml}{}}
+\@gls@reference{main}{nn}{\glsseeformat[voir]{ml}{}}
 \@gls@reference{main}{rnn-g}{\glsseeformat[voir]{nn}{}}
 \@gls@reference{acronym}{rnn}{\glsseeformat[Glossaire:]{rnn-g}{}}
 \@gls@reference{main}{msnn-g}{\glsseeformat[voir]{rnn}{}}
 \@gls@reference{acronym}{msnn}{\glsseeformat[Glossaire:]{msnn-g}{}}
 \@gls@reference{main}{gmsnn-g}{\glsseeformat[voir]{msnn}{}}
 \@gls@reference{acronym}{gmsnn}{\glsseeformat[Glossaire:]{gmsnn-g}{}}
+\@gls@reference{main}{gru-g}{\glsseeformat[voir]{rnn}{}}
+\@gls@reference{acronym}{gru}{\glsseeformat[Glossaire:]{gru-g}{}}
+\@gls@reference{main}{lstm-g}{\glsseeformat[voir]{rnn}{}}
+\@gls@reference{acronym}{lstm}{\glsseeformat[Glossaire:]{lstm-g}{}}
 \@gls@reference{acronym}{lm}{\glsseeformat[Glossaire:]{lm-g}{}}
 \@gls@reference{main}{char-lm-g}{\glsseeformat[voir]{lm}{}}
 \@gls@reference{acronym}{char-lm}{\glsseeformat[Glossaire:]{char-lm-g}{}}
@@ -48,6 +57,7 @@
 \@gls@reference{acronym}{char-gmsnn-lm}{\glsseeformat[Glossaire:]{char-gmsnn-lm-g}{}}
 \@gls@reference{main}{gpu-g}{\glsseeformat[voir]{matrice}{}}
 \@gls@reference{acronym}{gpu}{\glsseeformat[Glossaire:]{gpu-g}{}}
+\@gls@reference{acronym}{nlp}{\glsseeformat[Glossaire:]{nlp-g}{}}
 \@writefile{toc}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
 \@writefile{lof}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
 \@writefile{lot}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
@@ -59,94 +69,520 @@
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\etoc@depthtag {mtchapter}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Remerciements}{iii}{Doc-Start}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Avant-propos}{v}{Doc-Start}}
+\@gls@reference{entity}{project_papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{1}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {1.1}Contexte \& Enjeux}{3}{section.1.1}}
-\@gls@reference{acronym}{ml}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
-\@gls@reference{main}{ml-g}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
+\@gls@reference{main}{ml}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {1.2}Objectifs}{3}{section.1.2}}
-\@gls@reference{acronym}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
-\@gls@reference{main}{nn-g}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
-\@gls@reference{acronym}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
-\@gls@reference{acronym}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
 \@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {1.3}Plan}{4}{section.1.3}}
-\@gls@reference{acronym}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
-\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
-\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{3}}
-\citation{about_synalp}
+\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{4}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{4}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{4}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{4}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{4}}
+\abx@aux@cite{wiki_ml}
+\abx@aux@segm{0}{0}{wiki_ml}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {2}Cadre th\IeC {\'e}orique}{5}{chapter.2}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:sci_framework}{{2}{5}{Cadre théorique}{chapter.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.2}\IeC {\'E}l\IeC {\'e}ments th\IeC {\'e}oriques g\IeC {\'e}n\IeC {\'e}raux}{5}{section.2.2}}
+\@gls@reference{main}{dl}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{acronym}{nlp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{nlp-g}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}\Glsentrytext {dl}}{5}{subsection.2.2.1}}
+\@gls@reference{main}{dl}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{ml}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{ml}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\abx@aux@backref{1}{wiki_ml}{0}{5}{5}
+\@gls@reference{main}{ml}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{dl}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}\Glsentrytext {nlp}}{6}{subsection.2.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.3}Concepts et termes fondamentaux}{6}{section.2.3}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
+\@gls@reference{main}{model}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{6}}
+\@gls@reference{main}{model}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{6}}
+\@gls@reference{main}{dl}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}\Glsentrytext {lm}}{6}{subsection.2.3.1}}
+\newlabel{sec:soa}{{2.4}{6}{État de l'art\label {sec:soa}}{section.2.4}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.4}\IeC {\'E}tat de l'art}{6}{section.2.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}\Glsentrytext {project_gmsnn}}{6}{subsection.2.4.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}\Glsentrytext {project_papud}}{6}{subsection.2.4.2}}
+\abx@aux@cite{organisation_loria}
+\abx@aux@segm{0}{0}{organisation_loria}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {3}Pr\IeC {\'e}sentation du laboratoire, de l'\IeC {\'e}quipe et des collaborateurs}{7}{chapter.3}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3.1}Pr\IeC {\'e}sentation du laboratoire et de l'\IeC {\'e}quipe}{7}{section.3.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{7}{subsection.3.1.1}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Le LORIA}{7}{subsection.3.1.2}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@gls@reference{entity}{cnrs}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@gls@reference{entity}{ul}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@gls@reference{entity}{inria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@gls@reference{entity}{areq}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\abx@aux@backref{2}{organisation_loria}{0}{7}{7}
+\abx@aux@cite{org_loria}
+\abx@aux@segm{0}{0}{org_loria}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{7}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Organigramme des d\IeC {\'e}partements du \gls {loria}, et des \IeC {\'e}quipes du d\IeC {\'e}partement 4\relax }}{8}{figure.caption.2}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:dep_org}{{3.1}{8}{Organigramme des départements du \gls {loria}, et des équipes du département 4\relax }{figure.caption.2}{}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}L'\IeC {\'e}quipe SYNALP}{8}{subsection.3.1.3}}
+\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\@gls@reference{entity}{cnrs}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\@gls@reference{entity}{ul}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\@gls@reference{acronym}{nlp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\abx@aux@backref{3}{org_loria}{0}{8}{8}
+\abx@aux@cite{about_loria}
+\abx@aux@segm{0}{0}{about_loria}
 \abx@aux@cite{about_synalp}
 \abx@aux@segm{0}{0}{about_synalp}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du laboratoire et de l'\IeC {\'e}quipe}{5}{chapter.2}}
+\abx@aux@cite{wiki_eureka}
+\abx@aux@segm{0}{0}{wiki_eureka}
+\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{8}}
+\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{acronym}{nlp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{acronym}{lm}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{main}{lm-g}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{main}{formal grammars}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{main}{computational semantics}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{main}{speech processing}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{acronym}{nlp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{acronym}{lm}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{acronym}{nlp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3.2}Pr\IeC {\'e}sentation du projet ITEA3-PAPUD, cas d'utilisation BULL}{9}{section.3.2}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{bull}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{eureka}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}\Glsentrytext {eureka} et ITEA3}{9}{subsection.3.2.1}}
+\@gls@reference{entity}{eureka}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{eureka}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{9}}
+\abx@aux@backref{4}{about_loria}{0}{9}{9}
+\abx@aux@backref{5}{about_synalp}{0}{9}{9}
+\abx@aux@backref{6}{wiki_eureka}{0}{9}{9}
+\abx@aux@cite{about_papud}
+\abx@aux@segm{0}{0}{about_papud}
+\abx@aux@cite{bull_produits}
+\abx@aux@segm{0}{0}{bull_produits}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}\Glsentrytext {project_papud} et cas d'utilisation BULL}{10}{subsection.3.2.2}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{main}{dl}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Informations g\IeC {\'e}n\IeC {\'e}rales sur le projet \gls {papud}, d'apr\IeC {\`e}s le site de \gls {itea3} \autocite {about_papud} \relax }}{10}{table.caption.3}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\newlabel{tab:about_papud}{{3.1}{10}{Informations générales sur le projet \gls {papud}, d'après le site de \gls {itea3} \autocite {about_papud} \relax }{table.caption.3}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}\Glsentrytext {bull}}{10}{subsection.3.2.3}}
+\@gls@reference{entity}{bull}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{atos}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{atos}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{bull}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\abx@aux@backref{8}{bull_produits}{0}{10}{10}
+\abx@aux@segm{0}{0}{about_papud}
+\@gls@reference{main}{data centers}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{main}{cloud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{10}}
+\@gls@reference{entity}{bull}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{11}}
+\@gls@reference{entity}{bull}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{11}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{11}}
+\abx@aux@backref{9}{about_papud}{0}{11}{11}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {4}Projet}{13}{chapter.4}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.1}SYNALP}{5}{section.2.1}}
-\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\@gls@reference{entity}{cnrs}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\@gls@reference{entity}{ul}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\@gls@reference{entity}{synalp}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\abx@aux@backref{1}{about_synalp}{0}{5}{5}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.2}LORIA}{5}{section.2.2}}
-\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\@gls@reference{entity}{cnrs}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\@gls@reference{entity}{ul}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\@gls@reference{entity}{inria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{5}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.3}ITEA3/PAPUD}{5}{section.2.3}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {3}Projet}{7}{chapter.3}}
+\newlabel{ch:projet}{{4}{13}{Projet}{chapter.4}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4.1}Architecture innovante de r\IeC {\'e}seau de neurones pour l'\IeC {\'e}laboration de mod\IeC {\`e}le du langage}{13}{section.4.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Contexte}{13}{subsection.4.1.1}}
+\@gls@reference{main}{dl}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{lm}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{rnn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{main}{rnn-g}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{rnn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{rnn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{gru}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{main}{gru-g}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{lstm}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{main}{lstm-g}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{main}{nn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{gru}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{acronym}{lstm}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{13}}
+\@gls@reference{entity}{project_gmsnn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{14}}
+\@gls@reference{entity}{project_papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{15}}
+\newlabel{sec:projet:papud}{{4.2}{15}{\Glsname {project_papud}\label {sec:projet:papud}}{section.4.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4.2}\Glsname {project_papud}}{15}{section.4.2}}
+\@gls@reference{entity}{project_papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{15}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{15}}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{15}}
+\@gls@reference{entity}{bull}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{15}}
+\@gls@reference{entity}{project_papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{15}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {5}R\IeC {\'e}alisation}{17}{chapter.5}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:Projet}{{3}{7}{Projet}{chapter.3}{}}
-\@input{parts/chapters/project/terminology.aux}
-\citation{GOT4}
-\abx@aux@cite{GOT4}
-\abx@aux@segm{0}{0}{GOT4}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3.2}short title}{9}{section.3.2}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3.3}Autre section}{9}{section.3.3}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Premi\IeC {\`e}re sous-section}{9}{subsection.3.3.1}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Premi\IeC {\`e}re sous-sous section}{9}{subsection.3.3.1}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Logo de L'UL}}{9}{figure.3.1}}
-\newlabel{fig:logo-ul}{{3.1}{9}{Logo de L'UL}{figure.3.1}{}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {4}Exemples Listings}{11}{chapter.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5.1}\Glsentrytext {project_gmsnn}}{17}{section.5.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Recherche documentaire}{17}{subsection.5.1.1}}
+\@gls@reference{main}{soa}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{17}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}\IeC {\'E}tude et r\IeC {\'e}-impl\IeC {\'e}mentation simplifi\IeC {\'e}e du mod\IeC {\`e}le \gls {soa}}{17}{subsection.5.1.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Impl\IeC {\'e}mentation du nouveau mod\IeC {\`e}le basique}{17}{subsection.5.1.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Optimisation et am\IeC {\'e}lioration du nouveau mod\IeC {\`e}le}{17}{subsection.5.1.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}Conclusions}{17}{subsection.5.1.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5.2}\Glsentrytext {project_papud}}{17}{section.5.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Recherche documentaire}{17}{subsection.5.2.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}R\IeC {\'e}-impl\IeC {\'e}mentation simplifi\IeC {\'e}e du mod\IeC {\`e}le \IeC {\'e}tat de l'art}{17}{subsection.5.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Impl\IeC {\'e}mentation du nouveau mod\IeC {\`e}le basique}{17}{subsection.5.2.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Optimisation et am\IeC {\'e}lioration du nouveau mod\IeC {\`e}le}{17}{subsection.5.2.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Conclusions}{17}{subsection.5.2.5}}
+\newlabel{lst:premierExemple}{{5.1}{17}{Premier Exemple}{lstlisting.5.1}{}}
+\@writefile{lol}{\defcounter {refsection}{0}\relax }\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.1}Premier Exemple}{17}{lstlisting.5.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{21}{chapter.6}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{lst:premierExemple}{{4.1}{11}{Premier Exemple}{lstlisting.4.1}{}}
-\@writefile{lol}{\defcounter {refsection}{0}\relax }\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}Premier Exemple}{11}{lstlisting.4.1}}
-\newlabel{lst:defLang}{{4.2}{13}{Syntaxe définition d'un langage}{lstlisting.4.2}{}}
-\@writefile{lol}{\defcounter {refsection}{0}\relax }\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.2}Syntaxe d\IeC {\'e}finition d'un langage}{13}{lstlisting.4.2}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{15}{chapter.5}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Annexes}{17}{chapter.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Annexes}{23}{part*.4}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\etoc@depthtag {mtappendix}}
-\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{19}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Bibliographie / Webographie}{21}{appendix*.4}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Liste des illustrations}{23}{appendix*.5}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Liste des tableaux}{25}{appendix*.6}}
-\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{27}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Entit\IeC {\'e}s, Instituts et ???}{29}{section*.8}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Acronymes}{30}{section*.10}}
-\citation{wikiml}
-\abx@aux@cite{wikiml}
-\abx@aux@segm{0}{0}{wikiml}
-\citation{wikirnn}
-\abx@aux@cite{wikirnn}
-\abx@aux@segm{0}{0}{wikirnn}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Glossaire}{31}{section*.12}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {A}Bibliographie / Webographie}{27}{appendix.A}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {B}Listes des tables, des figures et des fragments de code}{29}{appendix.B}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{29}}
+\@gls@reference{entity}{itea3}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{29}}
+\@gls@reference{entity}{loria}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{29}}
+\abx@aux@segm{0}{0}{wiki_ml}
+\abx@aux@cite{wiki_lm}
+\abx@aux@segm{0}{0}{wiki_lm}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {C}Glossaire, accronymes et noms d'entit\IeC {\'e}s}{31}{appendix.C}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\abx@aux@backref{25}{wiki_ml}{0}{31}{31}
 \@gls@reference{main}{matrice}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{31}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {A}Rapports d'avancement du premier projet}{33}{appendix.A}}
+\abx@aux@backref{26}{wiki_lm}{0}{31}{31}
+\abx@aux@cite{wiki_md}
+\abx@aux@segm{0}{0}{wiki_md}
+\abx@aux@cite{wiki_rnn}
+\abx@aux@segm{0}{0}{wiki_rnn}
+\abx@aux@backref{28}{wiki_rnn}{0}{32}{32}
+\abx@aux@backref{27}{wiki_md}{0}{32}{32}
+\abx@aux@segm{0}{0}{wiki_eureka}
+\@gls@reference{entity}{eureka}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{34}}
+\abx@aux@backref{29}{wiki_eureka}{0}{34}{34}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {D}Rapports d'avancement du projet GMSNN}{35}{appendix.D}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {B}Rapports d'avancement du projet \gls {papud}}{35}{appendix.B}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.1}Informations sur les rapports contenus dans la pr\IeC {\'e}sente annexe}{35}{section.D.1}}
+\newlabel{report_infos}{{D.1}{35}{Informations sur les rapports contenus dans la présente annexe}{section.D.1}{}}
+\@gls@reference{entity}{project_gmsnn}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.1.1}Format d'origine des rapports}{35}{subsection.D.1.1}}
+\@gls@reference{main}{md}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
+\@gls@reference{main}{git_md}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
+\@gls@reference{main}{git_md}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
+\@gls@reference{entity}{gitlab}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
+\@gls@reference{entity}{gitlab}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.1.2}Transcription des rapports}{35}{subsection.D.1.2}}
+\@gls@reference{main}{git_md}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.1.3}Contenu et langue des rapports}{35}{subsection.D.1.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.2}\IeC {\'E}tude des probl\IeC {\`e}mes de m\IeC {\'e}moire}{36}{section.D.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.2.1}Abstract}{36}{subsection.D.2.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.2.2}Formulas}{36}{subsection.D.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Tensor and Variable size estimation}{36}{subsection.D.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Computations}{37}{lstnumber.-1.8}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Estimate with basic set of parameters}{38}{equation.D.2.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Most impactful factors (memory-wise)}{40}{lstnumber.-2.13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subparagraph}{Impact of layer increase}{40}{lstnumber.-2.13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Partial derivatives:}{40}{lstnumber.-2.13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.3}Sauvegarde du mod\IeC {\`e}le}{41}{section.D.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.4}Analysis and implementation of job save and restart}{41}{section.D.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.4.1}Abstract}{41}{subsection.D.4.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.4.2}\textbf  {End solution: saving using pytorch utilities}}{41}{subsection.D.4.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.4.3}Full serialisation}{41}{subsection.D.4.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.4.4}Full save}{42}{subsection.D.4.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Elements to save}{42}{subsection.D.4.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Elements to forget and recreate}{43}{subsection.D.4.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.4.5}Partial save}{43}{subsection.D.4.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.4.6}Other things that need to be added to interrupt and resume job}{43}{subsection.D.4.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Methods to interrupt and resume epoch loop and training loop}{43}{subsection.D.4.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Interruption strategy}{43}{subsection.D.4.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Resume strategy}{44}{subsection.D.4.6}}
+\newlabel{resume-strategy}{{D.4.6}{44}{Resume strategy}{subsection.D.4.6}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.4.7}Other methods implemented}{44}{subsection.D.4.7}}
+\newlabel{other-methods-implemented}{{D.4.7}{44}{Other methods implemented}{subsection.D.4.7}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Method using \texttt  {with} keyword for backup system, during evaluation}{44}{subsection.D.4.7}}
+\newlabel{method-using-with-keyword-for-backup-system-during-evaluation}{{D.4.7}{44}{\texorpdfstring {Method using \texttt {with} keyword for backup system, during evaluation}{Method using with keyword for backup system, during evaluation}}{subsection.D.4.7}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.5}Solution tentative pour les fuites m\IeC {\'e}moires}{45}{section.D.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.5.1}Abstract}{45}{subsection.D.5.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.5.2}Problem}{45}{subsection.D.5.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.5.3}Solution}{46}{subsection.D.5.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.6}Probl\IeC {\`e}mes th\IeC {\'e}oriques li\IeC {\'e}s \IeC {\`a} l'entra\IeC {\^\i }nement batch par batch}{47}{section.D.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.6.1}Abstract}{47}{subsection.D.6.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.6.2}Bacthifying strategies}{47}{subsection.D.6.2}}
+\newlabel{bacthifying-strategies}{{D.6.2}{47}{Bacthifying strategies}{subsection.D.6.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{No batchifying}{47}{subsection.D.6.2}}
+\newlabel{table 1}{{D.6.2}{47}{No batchifying}{subsection.D.6.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Table 1}{47}{subsection.D.6.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{BPTT sequence-wide batchifying}{47}{subsection.D.6.2}}
+\newlabel{table 2}{{D.6.2}{47}{BPTT sequence-wide batchifying}{subsection.D.6.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Table 2}{47}{subsection.D.6.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Corpus-wide batchifying}{48}{subsection.D.6.2}}
+\newlabel{table 3}{{D.6.2}{48}{Corpus-wide batchifying}{subsection.D.6.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Table 3}{48}{subsection.D.6.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Other batchifying strategies}{48}{subsection.D.6.2}}
+\newlabel{table 4}{{D.6.2}{48}{Other batchifying strategies}{subsection.D.6.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Table 4}{48}{subsection.D.6.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.6.3}Analysis of the different strategies}{48}{subsection.D.6.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Spreading the corpus along the batch dimension}{48}{subsection.D.6.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Sequence batchifying}{48}{subsection.D.6.3}}
+\newlabel{sequence-batchifying}{{D.6.3}{48}{Sequence batchifying}{subsection.D.6.3}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Corpus batchifying}{48}{subsection.D.6.3}}
+\newlabel{corpus-batchifying}{{D.6.3}{48}{Corpus batchifying}{subsection.D.6.3}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Table 5}{49}{subsection.D.6.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Table 6}{49}{subsection.D.6.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.6.4}Conclusion}{49}{subsection.D.6.4}}
+\abx@aux@cite{bptt-intro}
+\abx@aux@segm{0}{0}{bptt-intro}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.7}Tentative de r\IeC {\'e}duction du temps de calcul par utilisation de l'algorithme d'entra\IeC {\^\i }nement \FB@og  \emph  {Truncated BPTT}\FB@fg  \relax {}}{50}{section.D.7}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.7.1}Abstract}{50}{subsection.D.7.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.7.2}Notations}{50}{subsection.D.7.2}}
+\abx@aux@backref{30}{bptt-intro}{0}{50}{50}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.7.3}Algorithm}{51}{subsection.D.7.3}}
+\newlabel{algorithm}{{D.7.3}{51}{Algorithm}{subsection.D.7.3}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.7.4}Pseudo-python code}{51}{subsection.D.7.4}}
+\newlabel{pseudo-python-code}{{D.7.4}{51}{Pseudo-python code}{subsection.D.7.4}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Old algorithm}{51}{subsection.D.7.4}}
+\newlabel{old-algorithm}{{D.7.4}{51}{Old algorithm}{subsection.D.7.4}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{New algorithm}{51}{lstnumber.-10.12}}
+\newlabel{new-algorithm}{{D.7.4}{51}{New algorithm}{lstnumber.-10.12}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.8}Entra\IeC {\^\i }nement couche par couche}{52}{section.D.8}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.8.1}Abstract}{52}{subsection.D.8.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.8.2}Layer by layer training}{52}{subsection.D.8.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Principle}{52}{subsection.D.8.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Example for a 4 layered MSNN}{53}{Item.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Speeding up convergence and improving performance}{53}{Item.12}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Use of the layered architecture}{53}{Item.12}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.9}Premier test du mod\IeC {\`e}le r\IeC {\'e}impl\IeC {\'e}ment\IeC {\'e}}{54}{section.D.9}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.9.1}Abstract}{54}{subsection.D.9.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.9.2}Paradigm}{54}{subsection.D.9.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Node}{54}{subsection.D.9.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.9.3}Results}{54}{subsection.D.9.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.9.4}Potential ameliorations \& next steps}{54}{subsection.D.9.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.10}Premier entra\IeC {\^\i }nement complet du mod\IeC {\`e}le r\IeC {\'e}impl\IeC {\'e}ment\IeC {\'e}}{55}{section.D.10}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.10.1}Abstract}{55}{subsection.D.10.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.10.2}Paradigm}{55}{subsection.D.10.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Node}{55}{subsection.D.10.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.10.3}Results}{55}{subsection.D.10.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Plot}{56}{subsection.D.10.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Details}{56}{figure.caption.9}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.10.4}Potential ameliorations \& next steps}{56}{subsection.D.10.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.11}Premier entra\IeC {\^\i }nement \IeC {\`a} 50 \IeC {\'e}poques du mod\IeC {\`e}le r\IeC {\'e}impl\IeC {\'e}ment\IeC {\'e}}{57}{section.D.11}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.11.1}Abstract}{57}{subsection.D.11.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.11.2}Paradigm}{57}{subsection.D.11.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Node}{57}{subsection.D.11.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.11.3}Results}{58}{subsection.D.11.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Plot}{58}{subsection.D.11.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{BPC/fraction of corpus}{58}{subsection.D.11.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{ValBPC/epoch}{59}{figure.caption.10}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Loss}{60}{figure.caption.11}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Logs}{60}{figure.caption.12}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.11.4}Potential ameliorations \& next steps}{60}{subsection.D.11.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.12}Premier test du mod\IeC {\`e}le multi-\IeC {\'e}chelles}{61}{section.D.12}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.12.1}Abstract}{61}{subsection.D.12.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.12.2}Paradigm}{61}{subsection.D.12.2}}
+\gdef \LT@i {\LT@entry 
+    {1}{87.20387pt}\LT@entry 
+    {2}{40.37999pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Hyperparameters}{62}{lstnumber.-12.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Node}{62}{table.D.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.12.3}Results}{62}{subsection.D.12.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Comparative analysis}{63}{subsection.D.12.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Plot}{63}{figure.caption.13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{BPC/fraction of corpus}{63}{figure.caption.13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{ValBPC/epoch}{63}{figure.caption.14}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Loss}{63}{figure.caption.15}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Logs}{64}{figure.caption.16}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.12.4}Potential ameliorations \& next steps}{64}{subsection.D.12.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.13}Comparaison des strat\IeC {\'e}gies de fusion des r\IeC {\'e}sultats des diff\IeC {\'e}rentes couches}{65}{section.D.13}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.13.1}Abstract}{65}{subsection.D.13.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.13.2}Paradigm}{65}{subsection.D.13.2}}
+\gdef \LT@ii {\LT@entry 
+    {1}{87.20387pt}\LT@entry 
+    {2}{40.37999pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Hyperparameters}{67}{subsection.D.13.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Node}{67}{table.D.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.13.3}Results}{67}{subsection.D.13.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Comparative analysis}{68}{subsection.D.13.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Plot}{68}{figure.caption.17}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{BPC/fraction of corpus}{68}{figure.caption.17}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.13.4}Potential ameliorations \& next steps}{69}{subsection.D.13.4}}
+\gdef \LT@iii {\LT@entry 
+    {1}{87.20387pt}\LT@entry 
+    {2}{40.37999pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.14}Test des effets du changement de taille des paquets (\emph  {batch})}{70}{section.D.14}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.14.1}Abstract}{70}{subsection.D.14.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.14.2}Paradigm}{70}{subsection.D.14.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Hyperparameters}{70}{subsection.D.14.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Node}{71}{table.D.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.14.3}Results}{71}{subsection.D.14.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Comparative analysis}{71}{subsection.D.14.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Plot}{71}{subsection.D.14.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{BPC/fraction of corpus}{71}{subsection.D.14.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.14.4}Potential ameliorations \& next steps}{71}{subsection.D.14.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {D.15}Entra\IeC {\^\i }nement sur le corpus complet avec beaucoup de temps allou\IeC {\'e}}{72}{section.D.15}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.15.1}Abstract}{72}{subsection.D.15.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.15.2}Results}{72}{subsection.D.15.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Memory}{72}{subsection.D.15.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{BPC / Validation BPC}{73}{figure.caption.21}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Job restart}{74}{figure.caption.22}}
+\newlabel{job-restart}{{D.15.2}{74}{Job restart}{figure.caption.22}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {D.15.3}Next steps}{74}{subsection.D.15.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {E}Rapports d'avancement du projet PAPUD}{79}{appendix.E}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\@gls@reference{entity}{papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{35}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {C}Copie de la convention de stage}{37}{appendix.C}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.1}Informations sur les documents contenus dans la pr\IeC {\'e}sente annexe}{79}{section.E.1}}
+\@gls@reference{entity}{project_papud}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{79}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.1.1}Format d'origine, transcription et contenu des rapports}{79}{subsection.E.1.1}}
+\@gls@reference{main}{git_md}{\glsnoidxdisplayloc{}{page}{glsnumberformat}{79}}
+\gdef \LT@iv {\LT@entry 
+    {2}{32.84999pt}\LT@entry 
+    {1}{51.25197pt}\LT@entry 
+    {2}{39.59999pt}\LT@entry 
+    {2}{33.59999pt}}
+\gdef \LT@v {\LT@entry 
+    {2}{74.74794pt}\LT@entry 
+    {2}{126.91197pt}\LT@entry 
+    {1}{104.0879pt}\LT@entry 
+    {2}{44.016pt}\LT@entry 
+    {1}{66.16794pt}\LT@entry 
+    {1}{38.08798pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.2}Informations g\IeC {\'e}n\IeC {\'e}rales}{80}{section.E.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.2.1}Corpus}{80}{subsection.E.2.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{firsttest}{80}{subsection.E.2.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Baseline accuracy}{80}{subsection.E.2.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.2.2}Grid-5000}{80}{subsection.E.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{GPU-equipped nodes}{80}{subsection.E.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.3}R\IeC {\'e}sultats de l'impl\IeC {\'e}mentation basique}{82}{section.E.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.3.1}Paradigm}{82}{subsection.E.3.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Model architecture}{82}{subsection.E.3.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.3.2}Results}{82}{subsection.E.3.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{GPU memory usage}{82}{subsection.E.3.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Computation time}{82}{figure.caption.27}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Loss and accuracy}{82}{figure.caption.27}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.3.3}Improvements and next steps}{83}{subsection.E.3.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Mini-batch}{83}{subsection.E.3.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Dynamic corpus}{83}{subsection.E.3.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.4}Paquets (\emph  {batchs}) simultan\IeC {\'e}s}{84}{section.E.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.4.1}Paradigm}{84}{subsection.E.4.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.4.2}Results}{85}{subsection.E.4.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{GPU memory usage}{85}{subsection.E.4.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Loss and accuracy}{85}{figure.caption.29}}
+\gdef \LT@vi {\LT@entry 
+    {2}{146.84258pt}\LT@entry 
+    {2}{152.84258pt}\LT@entry 
+    {2}{146.84258pt}}
+\gdef \LT@vii {\LT@entry 
+    {2}{217.26028pt}\LT@entry 
+    {2}{217.26028pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Computation time}{86}{table.E.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.4.3}Conclusion}{87}{subsection.E.4.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.4.4}Improvements and next steps}{87}{subsection.E.4.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Dynamic corpus}{87}{subsection.E.4.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Buffer size}{87}{subsection.E.4.4}}
+\gdef \LT@viii {\LT@entry 
+    {2}{217.26028pt}\LT@entry 
+    {2}{217.26028pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.5}Analyse du pic de performance}{88}{section.E.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.5.1}Problem}{88}{subsection.E.5.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.5.2}Analysis}{88}{subsection.E.5.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Examples of Kernel messages}{88}{subsection.E.5.2}}
+\gdef \LT@ix {\LT@entry 
+    {2}{97.54784pt}\LT@entry 
+    {2}{129.36761pt}\LT@entry 
+    {2}{123.36761pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Repartition of match in the corpus}{89}{lstnumber.-19.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Percentages of match in each part of the corpus}{89}{table.E.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.5.3}Conclusion(s)}{90}{subsection.E.5.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Kernel messages}{91}{subsection.E.5.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Memory addresses and hexadecimal codes}{91}{subsection.E.5.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.5.4}Improvements and next steps}{91}{subsection.E.5.4}}
+\gdef \LT@x {\LT@entry 
+    {2}{217.26028pt}\LT@entry 
+    {2}{217.26028pt}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.6}Rapport de la r\IeC {\'e}union avec les autres membres du projet}{92}{section.E.6}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.6.1}Main points}{92}{subsection.E.6.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.6.2}Improvements and next steps}{93}{subsection.E.6.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.7}Optimisation du taux d'apprentissage}{94}{section.E.7}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.7.1}General information}{94}{subsection.E.7.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.7.2}Optimisation process}{94}{subsection.E.7.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.7.3}Results}{95}{subsection.E.7.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.7.4}Additional information}{96}{subsection.E.7.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.7.5}Improvements and next steps}{96}{subsection.E.7.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.8}Effets de l'optimisation du taux d'apprentissage}{98}{section.E.8}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.8.1}Context}{98}{subsection.E.8.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.8.2}Results}{98}{subsection.E.8.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.8.3}Conclusion}{99}{subsection.E.8.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.8.4}Improvements and next steps}{99}{subsection.E.8.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.9}Taille de \emph  {batch} binaire}{100}{section.E.9}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.9.1}Context}{100}{subsection.E.9.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.9.2}Paradigm}{100}{subsection.E.9.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.9.3}Results}{100}{subsection.E.9.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.9.4}Conclusion}{101}{subsection.E.9.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.9.5}Next steps and improvements}{101}{subsection.E.9.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {E.10}Performances du lecteru de corpus multi-fichiers multi-processus}{102}{section.E.10}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.10.1}Context}{102}{subsection.E.10.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.10.2}Multi-file-multi-process corpus concept}{102}{subsection.E.10.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Multi-process system}{102}{subsection.E.10.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Multi-file system}{103}{lstnumber.-23.7}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.10.3}Tests}{103}{subsection.E.10.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Paradigm}{103}{subsection.E.10.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Results}{103}{subsection.E.10.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Printing only the status of the process at each batch}{103}{subsection.E.10.3}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Printing the status of the process at each batch and printing the data}{104}{lstnumber.-24.9}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {paragraph}{Printing the status of the process at each batch and training the model}{104}{lstnumber.-25.9}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.10.4}Conclusions}{104}{subsection.E.10.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {E.10.5}Next steps and improvements}{105}{subsection.E.10.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {F}Copie de la convention de stage}{107}{appendix.F}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {D}Copie de l'avenant \IeC {\`a} la convention de stage}{39}{appendix.D}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {G}Copie de l'avenant \IeC {\`a} la convention de stage}{113}{appendix.G}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
 \abx@aux@refcontextdefaultsdone
-\abx@aux@defaultrefcontext{0}{about_synalp}{nyt/global/}
+\abx@aux@defaultrefcontext{0}{cadre_theorique}{none/global/}
+\abx@aux@defaultrefcontext{0}{letudiant_presentation_memoire}{none/global/}
+\abx@aux@defaultrefcontext{0}{wiki_ml}{none/global/}
+\abx@aux@defaultrefcontext{0}{organisation_loria}{none/global/}
+\abx@aux@defaultrefcontext{0}{org_loria}{none/global/}
+\abx@aux@defaultrefcontext{0}{about_loria}{none/global/}
+\abx@aux@defaultrefcontext{0}{about_synalp}{none/global/}
+\abx@aux@defaultrefcontext{0}{wiki_eureka}{none/global/}
+\abx@aux@defaultrefcontext{0}{about_papud}{none/global/}
+\abx@aux@defaultrefcontext{0}{bull_produits}{none/global/}
+\abx@aux@defaultrefcontext{0}{wiki_lm}{none/global/}
+\abx@aux@defaultrefcontext{0}{wiki_md}{none/global/}
+\abx@aux@defaultrefcontext{0}{wiki_rnn}{none/global/}
+\abx@aux@defaultrefcontext{0}{bptt-intro}{none/global/}
 \ttl@finishall

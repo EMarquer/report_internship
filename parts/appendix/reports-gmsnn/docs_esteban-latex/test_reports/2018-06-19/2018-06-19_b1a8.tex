@@ -1,0 +1,180 @@
+\section{Run over more than 50 epochs with varied batch
+size}\label{run-over-more-than-50-epochs-with-varied-batch-size}
+
+Test report
+
+by E. Marquer, 2018/06/19 Synalp and Université de Lorraine
+
+\subsection{Abstract}\label{abstract}
+
+The test is composed of 4 runs on grele, with: - bptt 200, batch-size 1
+- bptt 100, batch-size 2 - bptt 50, batch-size 4 - bptt 25, batch-size 8
+
+Run has been interrupted by an overflow of disk space due to the
+detailed logs; next runs will used reduced logs.
+
+Run time per epoch varies from 30 to 7 min.
+
+\subsubsection{Shared parameters}\label{shared-parameters}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+parameter & value\tabularnewline
+\midrule
+\endhead
+corpus & enwik8reduced\tabularnewline
+history\_strategy & layer-constant-length\tabularnewline
+max\_history & 25\tabularnewline
+bptt & \emph{variable}\tabularnewline
+batch\_size & \emph{variable}\tabularnewline
+epochs & 4\tabularnewline
+lr & 1e-3\tabularnewline
+weight\_decay & 1.2e-6\tabularnewline
+epochs & 4\tabularnewline
+valid\_len & 500,000\tabularnewline
+log\_interval & 500\tabularnewline
+save\_interval & 500\tabularnewline
+memory\_interval & 100\tabularnewline
+hidden\_size & 460\tabularnewline
+embed\_size & 400\tabularnewline
+growth\_factor & 5\tabularnewline
+rnn\_type & RNN\tabularnewline
+reset\_hidden & False\tabularnewline
+reset\_growth & True\tabularnewline
+cuda\_on & True\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Results}\label{results}
+
+At the end of each epoch, we see a spike in BPC, due to the first
+evaluation of the epoch (BPC is reinitialised to 0, causing a spike).
+With any number of batch, while keeping the
+\lstinline!bptt * batch_size! ratio, BPC and Validation BPC do not vary.
+
+Even with 200 epochs, with batch size of 1, there is no trace of
+over-fitting.
+
+\subsubsection{Epoch run time:}\label{epoch-run-time}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+Epoch & Run time b=1 & Run time b=2 & Run time b=4 & Run time
+b=8\tabularnewline
+\midrule
+\endhead
+1 & 30 min & 21 min & 18 min & 19 min\tabularnewline
+10 & 21 min & 14 min & 14 min & 17 min\tabularnewline
+\textgreater{}15 & 7 min & 7 min & 8 min & 11 min\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Epoch 1 & Epoch 10 & Epoch 15\tabularnewline
+\midrule
+\endhead
+\includegraphics{b1a8_batch_epoch_1.png} &
+\includegraphics{b1a8_batch_epoch_10.png} &
+\includegraphics{b1a8_batch_epoch_15.png}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Run time can be split over two set of epochs: before, and after the 15th
+epoch. Before the 15th epoch, run is faster with more batches, with the
+exception of batch-size 8, which is slower than batch-size 2 and 4.
+After the 15th epoch, run is slower with more batches.
+
+To optimize run time, it is necessary to balance run time before 15
+epochs. If a high number of batches is planed (\textgreater{}50),
+between 2 and 4 batches are preferable, because the run time after epoch
+15 has a lot of impact on global run time; however, if only a few epochs
+are planed (\textless{}20), a high number of batches is preferable, as
+run time before epoch 15 is the most important.
+
+With current corpus, 2, 3 or 4 batches are the most interesting setup.
+
+Decrease in run time is most probably due to the history of the upper
+layers, that needs multiple epochs to fill.
+
+\subsubsection{Plots}\label{plots}
+
+\paragraph{BPC}\label{bpc}
+
+\begin{figure}
+\centering
+\includegraphics{b1a8_frac.png}
+\caption{Full data}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{b1a8_200.png}
+\caption{Full data}
+\end{figure}
+
+\paragraph{Memory}\label{memory}
+
+\begin{figure}
+\centering
+\includegraphics{b1a8_memory.png}
+\caption{Full data}
+\end{figure}
+
+\paragraph{Run time (in seconds)}\label{run-time-in-seconds}
+
+\begin{figure}
+\centering
+\includegraphics{b1a8_time.png}
+\caption{Run time}
+\end{figure}
+
+\subparagraph{Epoch run time}\label{epoch-run-time-1}
+
+\begin{figure}
+\centering
+\includegraphics{b1a8_epoch.png}
+\caption{Epoch run time}
+\end{figure}
+
+\subsection{Next steps}\label{next-steps}
+
+\begin{itemize}
+\tightlist
+\item
+  Independent impact of batch number and sequence length:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Run with fixed batch number and varying sequence length
+  \item
+    Run with fixed sequence length and varying batch number
+  \end{itemize}
+\item
+  Impact of corpus length on optimal number of batch and sequences:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Run with varying sequence length and varying batch number over the
+    full length corpus
+  \end{itemize}
+\item
+  Number of parameters:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Increase the hidden layer size
+  \end{itemize}
+\item
+  {[}Future{]} Transmission rate impact:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Compare optimal values of parameters, and BPC reached with varying
+    transmission rate
+  \end{itemize}
+\end{itemize}
