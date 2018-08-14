@@ -25,64 +25,64 @@ L'anglais à été choisi comme langue de rédaction des rapports pour maintenir
 Ce choix évite aussi d'alourdir le contenu déjà complexe des documents avec des traductions maladroites de termes techniques. %TODO Je met fraiment ca ?
 
 \newpage
-\begin{report}{Étude des problèmes de mémoire}
+\begin{report}{Étude des problèmes de mémoire}\label{subsec:memuse}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-23_memory_problems.tex}
 \end{report}
-\begin{report}{Sauvegarde du modèle}
+\begin{report}{Sauvegarde du modèle}\label{subsec:save}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-24_model_saving.tex}
 \end{report}
-\begin{report}{Solution tentative pour les fuites mémoires}
+\begin{report}{Solution tentative pour les fuites mémoires}\label{subsec:memleak}\label{subsec:hist}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-28_Tentative_solution_for_memory_leak.tex}
 \end{report}
-\begin{report}{Problèmes théoriques liés à l'entraînement batch par batch}
+\begin{report}{Problèmes théoriques liés à l'entraînement batch par batch}\label{subsec:batch}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-29_Theorical_problems_of_batch_training_in_msnn.tex}
 \end{report}
-\begin{report}{Tentative de réduction du temps de calcul par utilisation de l'algorithme d'entraînement \og\foreign{Truncated BPTT}\fg{}}
+\begin{report}{Tentative de réduction du temps de calcul par utilisation de l'algorithme d'entraînement \og\foreign{Truncated BPTT}\fg{}}\label{subsec:tbptt}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-05-29_Training_time_reduction_by_Truncated_BPTT.tex}
 \end{report}
-\begin{report}{Entraînement couche par couche}
+\begin{report}{Entraînement couche par couche}\label{subsec:lbl}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/2018-06-25_layer_by_layer_training.tex}
 \end{report}
 
 
-\begin{report}{Premier test du modèle réimplémenté}
+\begin{report}{Premier test du modèle réimplémenté}\label{subsec:testreimp_1}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-04-26_test_run_detrnn.tex}
 \end{report}
-\begin{report}{Premier entraînement complet du modèle réimplémenté}
+\begin{report}{Premier entraînement complet du modèle réimplémenté}\label{subsec:testreimp_2}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-04-27_test_run_detrnn.tex}
 \end{report}
-\begin{report}{Premier entraînement à 50 époques du modèle réimplémenté}
+\begin{report}{Premier entraînement à 50 époques du modèle réimplémenté}\label{subsec:testreimp_3}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-04-30_test_run_detrnn_50.tex}
 \end{report}
-\begin{report}{Premier test du modèle multi-échelles}
+\begin{report}{Premier test du modèle multi-échelles}\label{subsec:testms}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-05-03_test_run_msnn_4.tex}
 \end{report}
-\begin{report}{Comparaison des stratégies de fusion des résultats des différentes couches}
+\begin{report}{Comparaison des stratégies de fusion des résultats des différentes couches}\label{subsec:addcat}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-05-16_test_run_msnn_4.tex}
 \end{report}
-\begin{report}{Test des effets du changement de taille des paquets (\foreign{batch})}
+\begin{report}{Test des effets du changement de taille des paquets (\foreign{batch})}\label{subsec:batch_1}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-05-16_test_run_msnn_4_batch_16.tex}
 \end{report}
 
 
-\begin{report}{Entraînement sur le corpus complet avec beaucoup de temps alloué}
+\begin{report}{Entraînement sur le corpus complet avec beaucoup de temps alloué}\label{subsec:long_train}
 	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/2018-06-11_long_run_result.tex}
 \end{report}
-%\begin{report}{Changement de stratégie de gestion d'historique}
-	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/2018-06-12_change_history.tex}
-%\end{report}
-%\begin{report}{Test de l'implémentation des \foreign{batchs}}
-	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/2018-06-13_long_run_batch_1_2.tex}
-%\end{report}
-%\begin{report}{}
-	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018-06-15_batch_1_2.tex}
-%\end{report}
-%\begin{report}{}
-	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/2018-06-19_b1a8.tex}
-%\end{report}
-%\begin{report}{}
-	%\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/2018-06-25_lbl_b2b3_l.tex}
-%\end{report}
+\begin{report}{Changement de stratégie de gestion d'historique}\label{subsec:change_history}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/2018-06-12_change_history.tex}
+\end{report}
+\begin{report}{Test de l'implémentation des \foreign{batchs}}\label{subsec:test_batch}\label{subsec:batch_2}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/2018-06-13_long_run_batch_1_2.tex}
+\end{report}
+\begin{report}{Test des performances des \foreign{batchs}}\label{subsec:test_batch_perf}\label{subsec:batch_3}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018-06-15_batch_1_2.tex}
+\end{report}
+\begin{report}{Test des performances des \foreign{batchs} sur 50 époques}\label{subsec:test_batch_perf_}\label{subsec:batch_4}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/2018-06-19_b1a8.tex}
+\end{report}
+\begin{report}{Test des performances des différentes améliorations}\label{subsec:test_perf}
+	\input{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/2018-06-25_lbl_b2b3_l.tex}
+\end{report}
 
 
 

@@ -38,13 +38,13 @@ Both RAM and video RAM are still subject to a constant leak in memory.
 But even if it does not show on the plots (scale is too small), logs
 confirm that there is no leak during validation.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/memory.png}
 \caption{Memory usage}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RAM_restart-2.png}
 \caption{RAM third run}
@@ -55,9 +55,9 @@ time to train over \emph{log\_interval} sequences, is mostly
 proportional to CUDA memory usage. The source of the cuda memory leak is
 probably the same as what makes training slower.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[height=.7\textheight]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/frac.png}
+\includegraphics[height=.8\textheight]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/frac.png}
 \caption{Memory and computation time}
 \end{figure}
 
@@ -66,7 +66,7 @@ probably the same as what makes training slower.
 
 BPC and Validation BPC
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/frac_val_bpc.png}
 \caption{BPC}
@@ -79,25 +79,25 @@ BPC and Validation BPC
 When resuming a job, CUDA memory is entirely freed. Same thing can be
 said about RAM.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/memory.png}
 \caption{Memory usage}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RAM.png}
 \caption{RAM first run}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RAM_restart-1.png}
 \caption{RAM second run}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RAM_restart-2.png}
 \caption{RAM third run}

@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>root.bcf</file>
@@ -55,12 +55,12 @@
       <file>biblatex.def</file>
       <file>numeric.bbx</file>
       <file>standard.bbx</file>
-      <file>verbose.cbx</file>
+      <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
       <file>french.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="0">
+  <external package="biblatex" priority="5" active="1">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
@@ -81,7 +81,9 @@
     <requires type="editable">
       <file>bibs/institute.bib</file>
       <file>bibs/report_howto.bib</file>
+      <file>bibs/git.bib</file>
       <file>bibs/msnn.bib</file>
+      <file>bibs/torch.bib</file>
       <file>bibs/def.bib</file>
     </requires>
   </external>

@@ -1,0 +1,33 @@
+\usetikzlibrary{calc}
+\newsavebox\mydictbox
+\savebox\mydictbox{%
+  \includegraphics[width=3em]{/home/emarquer/InternshipSynalp2018/report_internship/images/tool_translate_offline_dictionary.png}
+}
+
+\begin{tikzpicture}[shorten >=2pt,->,draw=black, node distance=7em]
+    \tikzstyle{every pin edge}=[<-,shorten <=2pt]
+	\tikzstyle{module}=[minimum size=3em, fill=gray!50!]
+	\tikzstyle{char}=[module, circle, fill=green!50!]%, label={below:\usebox\mydictbox}]
+	\tikzstyle{text label}=[rectangle, text centered, text width=7em, node distance=5em]
+	\tikzstyle{nn}=[rectangle, module, fill=orange!50!]
+	\tikzstyle{rnn}=[nn, fill=red!50!]
+
+	\node[char] (char) {\$};
+	\node[nn, right of=char] (emb) {Emb};
+	\node[rnn, right of=emb] (rnn) {LSTM};
+	\draw[->] (rnn.north) to [out=90,in=90, looseness=2] ($(rnn.west) + (-0.5,0)$) to [out=-90,in=-90, looseness=2] (rnn.south);
+	\node[nn, right of=rnn] (lin) {Lin};
+	\node[char, right of=lin] (out) {P(\$$_{+1}$)};
+	\draw[->] (char) to (emb);
+	\draw[->] (emb) to (rnn);
+	\draw[->] (rnn) to (lin);
+	\draw[->] (lin) to (out);
+	%\node[char] (char) {\$};
+
+
+    \node[text label, above of=char] (charl) {Caract\`{e}re};
+    \node[text label, above of=emb] (embl) {Encodage du caract\`{e}re};
+    \node[text label, above of=rnn] (rnnl) {RNN};
+    \node[text label, above of=lin] (linl) {Transformation en distribution de probabilit\'{e}};
+    \node[text label, above of=out] (outl) {Probabilit\'{e} d'apparition du prochain caract\`{e}re};
+\end{tikzpicture}

@@ -72,14 +72,97 @@
       \verb{url}
       \verb https://fr.wikipedia.org/wiki/Apprentissage_automatique
       \endverb
-      \warn{\item Entry 'wiki_ml' (bibs/def.bib): Invalid format '29' of date field 'date' - ignoring}
+    \endentry
+    \entry{futura_nn}{online}{}
+      \list{organization}{1}{%
+        {Futura}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau neuronal}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.futura-sciences.com/tech/definitions/informatique-reseau-neuronal-601
+      \endverb
+    \endentry
+    \entry{statsoft-nn}{online}{}
+      \name{author}{1}{}{%
+        {{hash=915af163e2107106fced5dd3164d9a8e}{%
+           family={Brownlee},
+           familyi={B\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Statistica}%
+      }
+      \strng{namehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seaux de Neurones}}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.statsoft.fr/concepts-statistiques/reseaux-de-neurones-automatises/reseaux-de-neurones-automatises.htm
+      \endverb
+    \endentry
+    \entry{datamining-nn}{online}{}
+      \list{organization}{1}{%
+        {OD-Datamining}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{Les r{\ifmmode\acute{e}\elseé\fi}seaux de neurones expliqu{\ifmmode\acute{e}\elseé\fi}s {\ifmmode\grave{a}\elseà\fi} ma fille}}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://od-datamining.com/knwbase/les-reseaux-de-neurones-expliques-a-ma-fille
+      \endverb
+    \endentry
+    \entry{wiki_rnn}{online}{}
+      \list{organization}{1}{%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau de neurones r{\ifmmode\acute{e}\elseé\fi}currents}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_r%C3%A9currents
+      \endverb
     \endentry
     \entry{organisation_loria}{online}{}
       \list{organization}{1}{%
         {LORIA}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
       \field{labeltitlesource}{title}
       \field{month}{08}
       \field{title}{{Organisation}}
@@ -96,8 +179,8 @@
       \list{organization}{1}{%
         {LORIA}%
       }
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
       \field{labeltitlesource}{title}
       \field{month}{08}
       \field{title}{{Organigramme 2017 du Loria}}
@@ -114,8 +197,8 @@
       \list{organization}{1}{%
         {LORIA}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{month}{07}
       \field{title}{{Le Loria}}
@@ -135,8 +218,8 @@
       \list{organization}{1}{%
         {SYNALP}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{month}{07}
       \field{title}{{About SYNALP}}
@@ -153,8 +236,8 @@
       \list{organization}{1}{%
         {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
       }
-      \field{sortinit}{8}
-      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{month}{08}
       \field{title}{{EUREKA}}
@@ -174,8 +257,8 @@
       \list{organization}{1}{%
         {itea3.org}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{month}{07}
       \field{title}{{16037 PAPUD}}
@@ -206,27 +289,156 @@
       \verb https://atos.net/fr/produits
       \endverb
     \endentry
-    \entry{wiki_lm}{online}{}
+    \entry{60MinBlitzTorch}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8ef51a0906e47d2b4472c4e714ed598f}{%
+           family={Chintala},
+           familyi={C\bibinitperiod},
+           given={Soumith},
+           giveni={S\bibinitperiod}}}%
+      }
       \list{language}{1}{%
         {en anglais}%
       }
       \list{organization}{1}{%
-        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+        {PyTorch}%
       }
+      \strng{namehash}{8ef51a0906e47d2b4472c4e714ed598f}
+      \strng{fullhash}{8ef51a0906e47d2b4472c4e714ed598f}
+      \strng{authornamehash}{8ef51a0906e47d2b4472c4e714ed598f}
+      \strng{authorfullhash}{8ef51a0906e47d2b4472c4e714ed598f}
       \field{sortinit}{1}
       \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{07}
-      \field{title}{{Language model}}
-      \field{urlday}{10}
+      \field{month}{08}
+      \field{title}{{Deep Learning with PyTorch: A 60 Minute Blitz}}
+      \field{urlday}{12}
       \field{urlmonth}{8}
       \field{urlyear}{2018}
       \field{year}{2018}
       \field{urldateera}{ce}
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/Language_model
+      \verb http://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html
       \endverb
-      \warn{\item Entry 'wiki_lm' (bibs/def.bib): Invalid format '27' of date field 'date' - ignoring}
+    \endentry
+    \entry{ByExampleTorch}{online}{}
+      \name{author}{1}{}{%
+        {{hash=90edc587e1d523d4e173b1fe6e733445}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en anglais}%
+      }
+      \list{organization}{1}{%
+        {PyTorch}%
+      }
+      \strng{namehash}{90edc587e1d523d4e173b1fe6e733445}
+      \strng{fullhash}{90edc587e1d523d4e173b1fe6e733445}
+      \strng{authornamehash}{90edc587e1d523d4e173b1fe6e733445}
+      \strng{authorfullhash}{90edc587e1d523d4e173b1fe6e733445}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{Learning PyTorch with Examples}}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://pytorch.org/tutorials/beginner/pytorch_with_examples.html
+      \endverb
+    \endentry
+    \entry{Classify}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2327248068d358754e2bba8af05d4222}{%
+           family={Robertson},
+           familyi={R\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en anglais}%
+      }
+      \list{organization}{1}{%
+        {PyTorch}%
+      }
+      \strng{namehash}{2327248068d358754e2bba8af05d4222}
+      \strng{fullhash}{2327248068d358754e2bba8af05d4222}
+      \strng{authornamehash}{2327248068d358754e2bba8af05d4222}
+      \strng{authorfullhash}{2327248068d358754e2bba8af05d4222}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{Classifying Names with a Character-Level RNN}}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html
+      \endverb
+    \endentry
+    \entry{doc_pytorch}{online}{}
+      \list{language}{1}{%
+        {en anglais}%
+      }
+      \list{organization}{1}{%
+        {PyTorch}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{PyTorch 0.4 documentation}}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://pytorch.org/docs/stable/index.html
+      \endverb
+    \endentry
+    \entry{awd_source}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2bcb1b2c74f1dd53259ace692fc64b56}{%
+           family={Merity},
+           familyi={M\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en anglais}%
+      }
+      \strng{namehash}{2bcb1b2c74f1dd53259ace692fc64b56}
+      \strng{fullhash}{2bcb1b2c74f1dd53259ace692fc64b56}
+      \strng{authornamehash}{2bcb1b2c74f1dd53259ace692fc64b56}
+      \strng{authorfullhash}{2bcb1b2c74f1dd53259ace692fc64b56}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{month}{08}
+      \field{title}{{Smerity/awd-lstm-lm}}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://github.com/Smerity/awd-lstm-lm
+      \endverb
     \endentry
     \entry{wiki_md}{online}{}
       \list{organization}{1}{%
@@ -245,26 +457,27 @@
       \verb{url}
       \verb https://fr.wikipedia.org/wiki/Markdown
       \endverb
-      \warn{\item Entry 'wiki_md' (bibs/def.bib): Invalid format '19' of date field 'date' - ignoring}
     \endentry
-    \entry{wiki_rnn}{online}{}
+    \entry{wiki_lm}{online}{}
+      \list{language}{1}{%
+        {en anglais}%
+      }
       \list{organization}{1}{%
         {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labeltitlesource}{title}
-      \field{month}{08}
-      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau de neurones r{\ifmmode\acute{e}\elseé\fi}currents}}
+      \field{month}{07}
+      \field{title}{{Language model}}
       \field{urlday}{10}
       \field{urlmonth}{8}
       \field{urlyear}{2018}
       \field{year}{2018}
       \field{urldateera}{ce}
       \verb{url}
-      \verb https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_r%C3%A9currents
+      \verb https://en.wikipedia.org/wiki/Language_model
       \endverb
-      \warn{\item Entry 'wiki_rnn' (bibs/def.bib): Invalid format '01' of date field 'date' - ignoring}
     \endentry
     \entry{bptt-intro}{article}{}
       \name{author}{1}{}{%
@@ -281,8 +494,8 @@
       \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
       \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
       \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Machine Learning Mastery}
@@ -298,6 +511,7 @@
       \endverb
     \endentry
   \endsortlist
+  \missing{bug}
 \endrefsection
 \endinput
 

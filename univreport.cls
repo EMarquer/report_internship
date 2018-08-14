@@ -25,7 +25,7 @@
 	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
 	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
 	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-	breaklines=true,                 % sets automatic line breaking
+	breaklines=true,                % sets automatic line breaking
 	captionpos=b,                    % sets the caption-position to bottom
 	commentstyle=\color{Orange},    % comment style
 	extendedchars=false,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
@@ -34,7 +34,7 @@
 	keywordstyle=\color{DarkOrchid},       % keyword style
 	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
 	numbersep=5pt,                   % how far the line-numbers are from the code
-	numberstyle=\tiny\color{DarkGray}, % the style that is used for the line-numbers
+	numberstyle=\scriptsize\color{black}, % the style that is used for the line-numbers
 	rulecolor=\color{DarkGray},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
 	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
 	showstringspaces=false,          % underline spaces within strings only

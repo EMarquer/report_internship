@@ -1,27 +1,29 @@
-\section{Run on the same node of RNN-MSNN with different batch
-size}\label{run-on-the-same-node-of-rnn-msnn-with-different-batch-size}
+\section*{Run on the same node of RNN-MSNN with different batch
+size}
 
 Test report
 
-by E. Marquer, 2018/06/15 Synalp and Université de Lorraine
+by E. Marquer, 2018/06/15, Synalp and Université de Lorraine
 
-\subsection{Abstract}\label{abstract}
+\subsection{Abstract}
 
-The test is composed of 2 runs: - id 1583339: batch-size 1, bptt 200 on
-grele-2 - id 1583336: batch-size 2, bptt 100 on grele-1
+The test is composed of 2 runs:
+\begin{itemize}
+\item id 1583339: batch-size 1, bptt 200 on
+grele-2\item id 1583336: batch-size 2, bptt 100 on grele-1
+\end{itemize}
 
 Run time per epoch varies from 28 to 20 min for a single batch and from
 20 to 11 min for two batches.
 
-\subsubsection{Shared parameters}\label{shared-parameters}
+\subsubsection{Shared parameters}
 
 \begin{longtable}[]{@{}ll@{}}
-\toprule
+\hline
 parameter & value\tabularnewline
-\midrule
+\hline
 \endhead
 corpus & enwik8reduced\tabularnewline
-history\_strategy & layer-constant-length\tabularnewline
 max\_history & 25\tabularnewline
 bptt & \emph{variable}\tabularnewline
 batch\_size & \emph{variable}\tabularnewline
@@ -40,10 +42,10 @@ rnn\_type & RNN\tabularnewline
 reset\_hidden & False\tabularnewline
 reset\_growth & True\tabularnewline
 cuda\_on & True\tabularnewline
-\bottomrule
+\hline
 \end{longtable}
 
-\subsection{Results}\label{results}
+\subsection{Results}
 
 At the end of each epoch, we see a spike in BPC, due to the first
 evaluation of the epoch (BPC is reinitialised to 0, causing a spike).
@@ -61,18 +63,18 @@ By removing evaluation time, we can obtain a reasonable and coherent
 (with regard to epoch run time) estimation of training time over a
 sequence.
 
-\subsubsection{Epoch run time:}\label{epoch-run-time}
+\subsubsection{Epoch run time:}
 
 \begin{longtable}[]{@{}lll@{}}
-\toprule
+\hline
 Epoch & Run time b=1 & Run time b=2\tabularnewline
-\midrule
+\hline
 \endhead
 1 & 28 min & 20 min\tabularnewline
 2 & 23 min & 17 min\tabularnewline
 3 & 22 min & 14 min\tabularnewline
 4 & 20 min & 11 min\tabularnewline
-\bottomrule
+\hline
 \end{longtable}
 
 There is a notable decrease in epoch run time (time necessary to run
@@ -85,29 +87,23 @@ loaded in cuda memory.
 Both of them are highly unlikely to cause such a decrease. A more
 precise training time storage may provide an explanation.
 
-\subsubsection{Plots}\label{plots}
+\subsubsection{Plots}
 
-\begin{figure}
-\centering
-\includegraphics{2018_06_15_frac.png}
-\caption{Full data}
+\begin{figure}[H]
+\includegraphics[height=.85\textheight]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018_06_15_frac.png}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics{2018_06_15_memory.png}
-\caption{Memory usage}
+\begin{figure}[H]
+\includegraphics{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018_06_15_memory.png}
 \end{figure}
 
-\subsection{Next steps}\label{next-steps}
+\subsection{Next steps}
 
 \begin{itemize}
-\tightlist
 \item
   Data
 
   \begin{itemize}
-  \tightlist
   \item
     Implement more precise time data saving (epoch run time and training
     run time)
@@ -116,7 +112,6 @@ precise training time storage may provide an explanation.
   Runs (objective: 100 epochs)
 
   \begin{itemize}
-  \tightlist
   \item
     Continue running batches 1 and 2
   \item
@@ -127,7 +122,6 @@ precise training time storage may provide an explanation.
 
   \begin{enumerate}
   \def\labelenumi{\arabic{enumi}.}
-  \tightlist
   \item
     Implement prepared attention module in every layer
   \item

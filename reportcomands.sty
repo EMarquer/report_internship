@@ -1,37 +1,48 @@
+
+\RequirePackage{longtable}
+\RequirePackage{caption}
+\RequirePackage{pdfpages}
+\RequirePackage{subcaption}
+
+\RequirePackage{tikz}
+\RequirePackage{pgf}
+\RequirePackage{pgfplots}
+\RequirePackage{amsmath}
+\RequirePackage[normalem]{ulem}
+\RequirePackage{float}
+
 \RequirePackage{makeidx}
-\RequirePackage[xindy,acronym,section,nopostdot]{glossaries}
+\RequirePackage{titletoc}
+\RequirePackage[backend=biber,backref=true,hyperref=true,sorting=none,citestyle=numeric]{biblatex}%,sorting=nyt, autocite=footnote
+\RequirePackage{csquotes}
+\RequirePackage{etoc}
+\RequirePackage[xindy,acronym,section,style=altlist,nopostdot]{glossaries}%nonumberlist%altlist%long3colheader%nopostdot
 \setacronymstyle{long-short-desc}
 \RequirePackage{array}
 \RequirePackage{tabularx}
 
-\renewcommand{\seename}{voir}
+\renewcommand{\seename}{voir aussi}
 \newcommand{\foreign}[1]{\emph{#1}}
+
+\renewcommand*{\glossaryentrynumbers}[1]{\space p. #1}
+
+\newcommand*{\defref}[1]{Défini \autoref{#1} (\autopageref{#1}).}
 
 \newcommand{\newglos}[3]
 {%
 	% The glossary entry the acronym links to   
-	\newglossaryentry{#1-g}{name={#2}, text={#2},
+	\newglossaryentry{#1}{name={#2}, text={#2},
 		description={#3}}}
 
 \newcommand{\newglosacr}[4]
 {%
 	% The glossary entry the acronym links to   
-	\newglossaryentry{#1-g}{name={#2}, text={#2},
+	\newglossaryentry{#1}{name={#2}, text={#2},
 		description={#3}}
 %
 	% Define the acronym and use the see= option
-	\newglossaryentry{#1}{type=\acronymtype, name={#2}, text={#2},
-	description={}, first={#4\glsadd{#1-g}}, see=[Glossaire:]{#1-g}}}
-
-\newcommand{\newglosacrsee}[5]
-{%
-	% The glossary entry the acronym links to   
-	\newglossaryentry{#1-g}{name={#2}, text={#2},
-		description={#3}, see={#5}}
-%
-	% Define the acronym and use the see= option
-	\newglossaryentry{#1}{type=\acronymtype, name={#2}, text={#2}, 
-		description={}, first={#4\glsadd{#1-g}}, see=[Glossaire:]{#1-g}}}
+	\newglossaryentry{#1-}{type=\acronymtype, name={#2}, text={#2},
+	description={}, first={#4\glsadd{#1}}, see=[Glossaire~:]{#1}}}
 
 \newcommand{\printixgls}
 {\printnoidxglossary[type=entity]

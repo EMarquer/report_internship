@@ -1,18 +1,7 @@
 \documentclass[pidr]{univreport}
-\usepackage{makeidx}
-\usepackage{titletoc}
-\usepackage[backend=biber,backref=true,hyperref=true,sorting=none,citestyle=verbose, autocite=footnote]{biblatex}%,sorting=nyt
-\usepackage{csquotes}
-\usepackage{etoc}
 \usepackage{reportcomands}
-\usepackage{longtable}
-\usepackage{caption}
-\usepackage{pdfpages}
 
-\usepackage{tikz}
-\usepackage{pgf}
-
-\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees,snakes,calc}
 
 \DefineBibliographyStrings{french}{%
 	bibliography = {Bibliographie / Webographie},
@@ -20,7 +9,9 @@
 
 \addbibresource{bibs/institute.bib}
 \addbibresource{bibs/report_howto.bib}
+\addbibresource{bibs/git.bib}
 \addbibresource{bibs/msnn.bib}
+\addbibresource{bibs/torch.bib}
 \addbibresource{bibs/def.bib}
 \nocite{cadre_theorique, letudiant_presentation_memoire}
 
@@ -35,14 +26,11 @@
 \etocsettagdepth{mtchapter}{subsection}
 \etocsettagdepth{mtappendix}{none}
 {%----- Frontix -----
-	\input{parts/cover.tex}
-	\cleardoublepage
-	\input{parts/preface.tex}
-	\cleardoublepage
+	\input{parts/cover.tex}\cleardoublepage
+	%\input{parts/preface.tex}\cleardoublepage
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
-	\input{parts/toc.tex}
-	\cleardoublepage
+	\input{parts/toc.tex}\cleardoublepage
 }
 
 {%----- Content -----
@@ -50,6 +38,7 @@
 	\input{parts/chapters/scientific_framework.tex}\cleardoublepage % cadre scientifique
 	\input{parts/chapters/workplace.tex}\cleardoublepage
 	\input{parts/chapters/project.tex}\cleardoublepage
+	\input{parts/chapters/organisation.tex}\cleardoublepage
 	\input{parts/chapters/realisation.tex}\cleardoublepage
 	\input{parts/chapters/conclusion.tex}\cleardoublepage
 }

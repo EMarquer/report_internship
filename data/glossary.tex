@@ -9,275 +9,210 @@
 
 %\newglossaryentry{dl}{name={DL},plural={potatoes}, 
 %	description={starchy tuber}}
-\newglossary[eng]{entity}{end}{edt}{Entités et sigles} % TODO need better name
+\newglossary[eng]{entity}{end}{edt}{Entités, projets et sigles} % TODO need better name
 
 \makenoidxglossaries
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Institues, Entities                                                        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newglossaryentry{loria}{
-	type=entity,
-	name={LORIA},
-	text={LORIA},
-	description={Laboratoire Lorrain d'Informatique et ses Applications},
-	first={Laboratoire Lorrain d'Informatique et ses Applications (LORIA)}}
-
-\newglossaryentry{cnrs}{
-	type=entity,
-	name={CNRS},
-	text={CNRS},
-	description={Centre National de la Recherche Scientifique},
-	first={Centre National de la Recherche Scientifique (CNRS)}}
-
-\newglossaryentry{inria}{
-	type=entity,
-	name={INRIA},
-	text={INRIA},
-	description={Institut National de Recherche en Informatique et en Automatique},
-	first={Institut National de Recherche en Informatique et en Automatique (INRIA)}}
-
-\newglossaryentry{ul}{
-	type=entity,
-	name={Université de Lorraine},
-	text={Université de Lorraine},
-	description={Université de Lorraine},
-	first={Université de Lorraine (UL)}}
-
-\newglossaryentry{gitlab}{
-	type=entity,
-	name={Gitlab},
-	text={Gitlab},
-	description={Gitlab},
-	first={Gitlab}}
-
-\newglossaryentry{synalp}{
-	type=entity,
-	name={SYNALP},
-	text={SYNALP},
-	description={SYNALP (\foreign{SYmbolic and statistical NAtural Language Processing}) est une équipe de recherche du département 4 du LORIA},
-	first={SYNALP (\foreign{SYmbolic and statistical NAtural Language Processing})},
-	see={loria}}
-
-\newglossaryentry{bull}{
-	type=entity,
-	name={BULL},
-	text={BULL},
-	description={}}
-
-\newglossaryentry{atos}{
-	type=entity,
-	name={ATOS},
-	text={ATOS},
-	description={}}
-
-\newglossaryentry{eureka}{
-	type=entity,
-	name={EUREKA},
-	text={EUREKA},
-	description={\og EUREKA est une initiative européenne, intergouvernementale, destinée à renforcer la compétitivité de l’industrie européenne.\fg{} D'après Wikipedia \autocite{wiki_eureka}.}, %https://fr.wikipedia.org/wiki/EUREKA
-	first={EUREKA}}
-
-\newglossaryentry{itea3}{
-	type=entity,
-	name={ITEA3},
-	text={ITEA3},
-	description={troisième instance d'ITEA (\foreign{Information Technology for European Advancement}), une initiative de recherche, développement et innovation du réseau EUREKA\glsadd{eureka}.},
-	first={ITEA (\foreign{Information Technology for European Advancement})},
-	see=eureka}
-
-\newglossaryentry{papud}{
-	type=entity,
-	name={PAPUD},
-	text={PAPUD},
-	description={\foreign{Profiling and Analysis Platform Using Deep Learning}},
-	first={PAPUD (\foreign{Profiling and Analysis Platform Using Deep Learning})}}
-
-\newglossaryentry{areq}{
-	type=entity,
-	name={AREQ},
-	text={AREQ},
-	description={Assemblée des Responsables des Équipes},
-	first={Assemblée des Responsables des Équipes (AREQ)}}
-
-\newglossaryentry{project_papud}{
-	type=entity,
-	name={projet PAPUD},
-	text={projet PAPUD},
-	description={projet ITEA3-PAPUD, cas d'utilisation BULL},
-	first={projet ITEA3-PAPUD, cas d'utilisation BULL\glsadd{itea3}\glsadd{papud}},
-	see={papud,itea3}}
-
-\newglossaryentry{project_gmsnn}{
-	type=entity,
-	name={{projet GMSNN}},
-	text={{projet GMSNN}},
-	description={{projet basé sur une proposition innovante d'architecture de réseau de neurones, faite par M. Christophe Cerisara}},
-	first={{projet Réseau de Neurones Récurrents Multi-Échelles Croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}},
-	see={papud,itea3}}
+\input{data/gls_entities}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Machine Learning                                                           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newglossaryentry{ml}{
-	name={{apprentissage automatique}},
+	name={{Apprentissage automatique}},
 	text={{apprentissage automatique}},
-	description={{L'apprentissage automatique (\foreign{Machine Learning} en anglais) est un ensemble de \og méthodes [statistiques] permettant à une machine (au sens large) d'évoluer par un processus systématique, et ainsi de remplir des tâches difficiles ou problématiques par des moyens algorithmiques plus classiques\fg{}. D'après Wikipédia \cite{wiki_ml}.}},
-	first={{Apprentissage Automatique (\foreign{Machine Learning} en anglais)}},
-	see={papud,itea3}}
+	description={{\defref{def:ml}}},
+	first={{apprentissage automatique (\foreign{Machine Learning} en anglais)}}}
 
 \newglossaryentry{dl}{
-	name={{apprentissage profond}},
+	name={{Apprentissage profond}},
 	text={{apprentissage profond}},
-	description={{L'apprentissage profond (\foreign{Deep Learning} en anglais), est une méthode d'\glsentrytext{ml} utilisant la technique des réseaux de neurones. %https://fr.wikipedia.org/wiki/Apprentissage_profond
-		}},%TODO describe DL
-	first={{apprentissage profond (\foreign{Deep Learning} en anglais)}},
-	see={ml,nn}}
+	description={{\defref{def:dl}}},
+	first={{apprentissage profond (\foreign{Deep Learning} en anglais)}}}
+
+\newglossaryentry{preprocessing}{
+	name={{Traitement préalable des données}},
+	text={{traitement préalable des données}},
+	description={{\defref{def:preprocessing}}},
+	first={{traitement préalable des données (\foreign{preprocessing} en anglais)}}}
+
 
 \newglossaryentry{model}{
-	name={{modèle}},
+	name={{Modèle}},
 	text={{modèle}},
 	plural={{modèles}},
-	description={{Un modèle en \glsentrytext{ml} est la représentation du monde construite lors de l'apprentissage afin de répondre au problème à résoudre.}},%TODO describe model
-	first={{Apprentissage Profond (\foreign{Deep Learning} en anglais)}},
-	see={ml}}
+	description={{\defref{def:model}}}}
+
+
+\newglossaryentry{pytorch}{
+	name={{PyTorch}},
+	text={{PyTorch}},
+	description={{Librairie Python dédiée à l'apprentissage profond.}}}
+\newglossaryentry{g5k}{
+name={{Grid5000}},
+text={{Grid5000}},
+description={{}}}%TODO
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Neural Networks                                                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{nonlinearite}{
+	name={{Non-linéarité}},
+	text={{non-linéarité}},
+	description={{\defref{def:nonlinearite}}}}
+
 \newglossaryentry{nn}{
-	name={{Réseau de Neurones}},
-	text={{Réseau de Neurones Artificiels}},
-	plural={{Réseaux de Neurones}},
-	description={{Un Réseau de Neurones Artificiels ou Réseau de Neurones (\foreign{Neural Network} en anglais) est %TODO describe NN %\cite{wikinn}
-	}},
-	firstplural={{Réseaux de Neurones Artificiels ou Réseaux de Neurones (\foreign{Neural Networks} en anglais)}},
-	first={{Réseau de Neurones Artificiels ou Réseau de Neurones (\foreign{Neural Network} en anglais)}},
-	see={ml}}
+	sort={{reseau de neurones}},
+	name={{Réseau de neurones}},
+	text={{réseau de neurones artificiels}},
+	plural={{réseaux de neurones}},
+	description={{\defref{def:nn}}},
+	firstplural={{réseaux de neurones artificiels ou réseaux de neurones (\foreign{Neural Networks} en anglais)}},
+	first={{réseau de neurones artificiels ou réseau de neurones (\foreign{Neural Network} en anglais)}}}
 
-\newglosacrsee{rnn}{RNN}
-{%
-	Un Réseau de Neurones Artificiels Récurrents, plus 
-	simplement Réseau de Neurones Récurrents (\foreign{Recurrent Neural 
-	Network} en anglais) est un réseau de neurones artificiels suivant une 
-	architecture dite récurrente.
-	\newline
-	Ce genre de réseau est utilisé pour travailler avec des séquences d'entrées 
-	et/ou de sorties; il y a transmission d'information entre chaque élément de 
-	la séquence. \cite{wiki_rnn}
-	%TODO describe RNN
-}{Réseau de Neurones Récurrents (\foreign{Recurrent Neural Network} en anglais, RNN)}
-{nn}
+\newglossaryentry{module_gmsnn}{
+	sort={{module gmsnn}},
+	name={{Module \glsentrytext{gmsnn}}},
+	text={{module \glsentrytext{gmsnn}}},
+	plural={{modules \glsentrytext{gmsnn}}},
+	description={{Ce module est un \glsentrytext{rnn}. C'est l'objet principal du \glsentrytext{project_gmsnn}}}}
 
-\newglosacrsee{msnn}{MSNN}
-{%
-	%TODO describe MSNN
-	%https://en.wikipedia.org/wiki/Language_model
-}{Réseau de Neurones Récurrents Multi-Échelles (\foreign{Multi-Scale Recurrent Neural Network} en anglais, MSNN)}
-{rnn}
+\newglossaryentry{tensor}{
+	name={{Tenseur}},
+	text={{tenseur}},
+	first={{tenseur (\foreign{tensor} en anglais)}},
+	description={{Un tenseur en \glsentrytext{dl} est un type de \glsentrytext{matrice} particulier adapté à la technique de la \glsentrytext{automatic differentiation}}}}
 
-\newglosacrsee{gmsnn}{GMSNN}
-{%
-	(le nombre de couches augmente selon le nombre d'entrées)
-	%TODO describe GMSNN
-	%https://en.wikipedia.org/wiki/Language_model
-}{Réseau de Neurones Récurrents Multi-Échelles Croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}
-{msnn}
+\newglossaryentry{embedding}{
+	sort={{embedding}},
+	name={{\foreign{embedding}}},
+	text={\foreign{embedding}},
+	plural={\foreign{embeddings}},
+	description={{Un \foreign{embedding} est un \glsentrytext{tensor} particulier produit par un module éponyme. Il est la représentation d'un caractère ou d'un mot.}}}
 
-\newglosacrsee{gru}{GRU}
-{%
-	%TODO describe LSTM
-	%https://en.wikipedia.org/wiki/Language_model
-}{Réseau récurent à porte (\foreign{Gated Recurent Unit} en anglais, GRU)}
-{rnn}
+\newglossaryentry{hidden state}{
+	sort={{etat cache}},
+	name={{État caché}},
+	text={{état caché}},
+	plural={{états cachés}},
+	description={}}
 
-\newglosacrsee{lstm}{LSTM}
-{%
-	%TODO describe LSTM
-	%https://en.wikipedia.org/wiki/Language_model
-}{Réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais, LSTM)}
-{rnn}
+\newglosacr{rnn}{RNN}
+{{\defref{def:rnn}}}
+{réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais, RNN)}
+
+\newglosacr{gmsnn}{GMSNN}
+{{\defref{def:gmsnn}}}
+{Réseau de Neurones Récurrents Multi-Échelles Croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}
+
+\newglosacr{gru}{GRU}
+{{\defref{def:gru}}}
+{Réseau récurent à porte (\foreign{Gated Recurent Unit} en anglais, GRU)}
+
+\newglosacr{lstm}{LSTM}
+{{\defref{def:lstm}}}
+{Réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais, LSTM)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Language Models                                                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newglosacr{lm}{LM}
+\newglosacr{lm}{Modèle de la Langue}
 {%
 	Un Modèle de la Langue (\foreign{Language Model} en anglais) est une \og distribution de probabilité sur une séquence de mots [ou de caractères]\fg{}, 
-	utilisé pour estimer la probabilité d'apparition du prochain mot.
-	Autrement dit, c'est une représentation servant à prédire le prochain mot à partir des mots précédents. D'après Wikipédia \cite{wiki_lm}.
+	utilisé pour estimer la probabilité d'apparition du prochain mot ou caractère.
+	Autrement dit, c'est une représentation servant à prédire le prochain mot à partir des mots précédents. D'après Wikipédia \footfullcite{wiki_lm}.
 	%TODO describe LM
-	%https://en.wikipedia.org/wiki/Language_model
 }{Modèle de la Langue (\foreign{Language Model} en anglais, LM)}
 
-\newglosacrsee{char-lm}{Char-LM}
-{%
-	{Un Modèle de la Langue au niveau du Caractère (\foreign{Character-level Language Model} en anglais) est un Modèle de la Langue qui prédit non pas le prochain mot à partir des mots précédents, mais le prochain caractère à partir des caractères précédents}
+%\newglosacr{char-lm}{Char-LM}
+%{%
+	%{Un Modèle de la Langue au niveau du Caractère (\foreign{Character-level Language Model} en anglais) est un Modèle de la Langue qui prédit non pas le prochain mot à partir des mots précédents, mais le prochain caractère à partir des caractères précédents}
 	%TODO describe LM
-}{Modèle de la Langue au niveau du Caractère (\foreign{Character-level Language Model} en anglais, Char-LM)}
-{lm}
+%}{Modèle de la Langue au niveau du Caractère (\foreign{Character-level Language Model} en anglais, Char-LM)}
 
-\newglosacrsee{char-gmsnn-lm}{Char-GMSNN-LM}
-{%
-	Un Modèle du Langage au niveau du Caractère basé sur un Réseau de Neurones 
-	Multi-Échelles Croissant. C'est un modèle du langage basé sur un réseau de 
-	neurones artificiels. Ce réseau de neurones est un GMSNN utilisé comme Char-LM.}
-{Modèle du Langage au niveau du Caractère basé sur un Réseau de Neurones Multi-Échelles Croissant (\foreign{Character-level Growing Multi-Scale Language Model} en anglais, Char-LM)}
-{char-lm,gmsnn}
+%\newglosacr{char-gmsnn-lm}{Char-GMSNN-LM}
+%{%
+	%Un Modèle du Langage au niveau du Caractère basé sur un Réseau de Neurones Multi-Échelles Croissant. C'est un modèle du langage basé sur un réseau de neurones artificiels. Ce réseau de neurones est un GMSNN utilisé comme Char-LM.}
+%{Modèle du Langage au niveau du Caractère basé sur un Réseau de Neurones Multi-Échelles Croissant (\foreign{Character-level Growing Multi-Scale Language Model} en anglais, Char-LM)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Other technical expressions                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newglossaryentry{methodes statistiques}{
-	name={méthodes statistiques},
+	name={Méthodes statistiques},
 	text={méthodes statistiques},
 	description={}}
 
+\newglossaryentry{automatic differentiation}{
+	name={Différentiation automatique},
+	text={différentiation automatique},
+	description={}}
+
 \newglossaryentry{matrice}{
-name={matrice},
-text={matrice},
-plural={matrices},
-description={}
+	name={Matrice},
+	text={matrice},
+	plural={matrices},
+	description={}
 }
 
-\newglosacrsee{gpu}{GPU}
+\newglosacr{gpu}{GPU}
 {%
-	Un processeur graphique (\foreign{Graphical Processing Unit} en anglais) est un composant d'ordinateur spécialisé, qui montre d'excellentes performances dans les calculs impliquant des matrices (ex. : images)\glsadd{matrice}
+	Un processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU) est un composant d'ordinateur spécialisé, qui montre d'excellentes performances dans les calculs impliquant des matrices (ex. : images)\glsadd{matrice}
 }{processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU)}
-{matrice}
 
-\newglosacr{nlp}{NLP}
-{%
-	Le Traitement Automatique des Langues (\foreign{Natural Language Processing} en anglais, NLP) est une discipline qui s'intéresse au traitement des informations langagières par des moyens formels ou informatiques}
-{Traitement Automatique des Langues (\foreign{Natural Language Processing} en anglais, NLP)}
+\newglossaryentry{nlp}{
+	name={Traitement Automatique des Langues},
+	text={TAL},
+	first={Traitement Automatique des Langues (TAL, \foreign{Natural Language Processing} en anglais)},
+	description={\defref{def:nlp}}}
 
 \newglossaryentry{formal grammars}{
-	name={grammaires formelles},
+	name={Grammaires formelles},
 	text={grammaires formelles},
 	description={}}
 
+\newglossaryentry{weight}{
+	name={Poids},
+	text={poids},
+	description={\defref{def:weight1,def:weight2}}}
+
 \newglossaryentry{computational semantics}{
-	name={sémantique computationnelle},
+	name={Sémantique computationnelle},
 	text={sémantique computationnelle},
 	description={}}
 
 \newglossaryentry{speech processing}{
-	name={traitement de la parole},
+	name={Traitement de la parole},
 	text={traitement de la parole},
 	description={}}
 
 \newglossaryentry{data centers}{
 	sort={data centers},
-	name={\foreign{data-centers}},
+	name={\foreign{Data-centers}},
 	text={\foreign{data-centers}},
 	description={},
 	first={\foreign{data-centers} (infrastructures spécialisées regroupant de nombreux serveurs)}}
 
 \newglossaryentry{cloud}{
 	sort={cloud},
-	name={\foreign{cloud}},
+	name={\foreign{Cloud}},
 	text={\foreign{cloud}},
+	description={}}
+
+\newglossaryentry{parameter}{
+	sort={parametre},
+	name={Paramètre},
+	text={paramètre},
+	description={}}
+
+\newglossaryentry{batch}{
+	sort={batch},
+	name={\foreign{batch}},
+	text={\foreign{batch}},
+	plural={\foreign{batches}},
 	description={}}
 
 \newglossaryentry{soa}{
@@ -290,11 +225,17 @@ description={}
 	sort={Markdown},
 	name={Markdown},
 	text={Markdown},
-	description={\og Markdown est un langage de balisage léger créé en 2004 par John Gruber avec Aaron Swartz. Son but est d'offrir une syntaxe facile à lire et à écrire. Un document balisé par Markdown peut être lu en l'état sans donner l’impression d'avoir été balisé ou formaté par des instructions particulières.\fg{}\autocite{wiki_md}}}
+	description={\og Markdown est un langage de balisage léger [dont le] but est d'offrir une syntaxe facile à lire et à écrire. Un document balisé par Markdown peut être lu en l'état sans donner l’impression d'avoir été balisé ou formaté par des instructions particulières.\fg{} D'après Wikipédia\footfullcite{wiki_md}.}}
 
 \newglossaryentry{git_md}{
 	sort={Gitlab Flavoured Markdown},
 	name={Gitlab Flavoured Markdown},
 	text={Gitlab Flavoured Markdown},
-	description={Le Gitlab Flavoured Markdown est une variante du Markdown supportant des fonctionnalités particulières telles que l'intégration d'images et de cases à cocher}
-	see={gitlab,md}}
+	description={Le Gitlab Flavoured Markdown est une variante du Markdown supportant des fonctionnalités particulières telles que l'intégration d'images et de cases à cocher.}
+	}
+
+\newglossaryentry{bug}{
+	name={{Bogue}},
+	text={{bogue}},
+	plural={{bogues}},
+	description={{Un Bogue (\foreign{bug} en anglais) est \og un défaut de conception d'un programme informatique à l'origine d'un dysfonctionnement.\fg D'après Wikipédia \autocite{bug}}}}

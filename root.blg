@@ -1,29 +1,34 @@
 [0] Config.pm:354> INFO - This is Biber 2.7 (beta)
 [0] Config.pm:357> INFO - Logfile is 'root.blg'
-[21] biber:303> INFO - === ven. août 10, 2018, 16:46:59
-[32] Biber.pm:360> INFO - Reading 'root.bcf'
-[85] Biber.pm:836> INFO - Found 14 citekeys in bib section 0
-[97] Biber.pm:3671> INFO - Processing section 0
+[22] biber:303> INFO - === dim. août 12, 2018, 15:54:29
+[34] Biber.pm:360> INFO - Reading 'root.bcf'
+[86] Biber.pm:836> INFO - Found 23 citekeys in bib section 0
+[96] Biber.pm:3671> INFO - Processing section 0
 [107] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/institute.bib' for section 0
-[108] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
-[112] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/institute.bib'
-[123] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/report_howto.bib' for section 0
-[123] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
-[124] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/report_howto.bib'
+[107] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[111] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/institute.bib'
+[120] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/report_howto.bib' for section 0
+[121] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[122] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/report_howto.bib'
+[123] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/git.bib' for section 0
+[124] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[124] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/git.bib'
+[126] Utils.pm:164> WARN - BibTeX subsystem: /tmp/CdR0_Aw2Ml/git.bib_7177.utf8, line 3, warning: 38 characters of junk seen at toplevel
 [126] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/msnn.bib' for section 0
-[126] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[127] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
 [127] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/msnn.bib'
-[129] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/def.bib' for section 0
-[129] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
-[130] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/def.bib'
-[131] Utils.pm:164> WARN - Entry 'wiki_ml' (bibs/def.bib): Invalid format '29' of date field 'date' - ignoring
-[132] Utils.pm:164> WARN - Entry 'wiki_lm' (bibs/def.bib): Invalid format '27' of date field 'date' - ignoring
-[133] Utils.pm:164> WARN - Entry 'wiki_md' (bibs/def.bib): Invalid format '19' of date field 'date' - ignoring
-[134] Utils.pm:164> WARN - Entry 'wiki_rnn' (bibs/def.bib): Invalid format '01' of date field 'date' - ignoring
-[144] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[144] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[144] Biber.pm:3500> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'fr-FR'
-[144] Biber.pm:3506> INFO - No sort tailoring available for locale 'fr-FR'
-[151] bbl.pm:608> INFO - Writing 'root.bbl' with encoding 'UTF-8'
-[152] bbl.pm:712> INFO - Output to root.bbl
-[152] Biber.pm:110> INFO - WARNINGS: 4
+[131] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/torch.bib' for section 0
+[132] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[133] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/torch.bib'
+[137] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/def.bib' for section 0
+[138] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[139] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/def.bib'
+[139] Utils.pm:164> WARN - Duplicate entry key: 'wiki_lm' in file 'bibs/def.bib', skipping ...
+[143] Utils.pm:164> WARN - I didn't find a database entry for 'bug' (section 0)
+[154] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[155] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[155] Biber.pm:3500> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'fr-FR'
+[155] Biber.pm:3506> INFO - No sort tailoring available for locale 'fr-FR'
+[165] bbl.pm:608> INFO - Writing 'root.bbl' with encoding 'UTF-8'
+[167] bbl.pm:712> INFO - Output to root.bbl
+[167] Biber.pm:110> INFO - WARNINGS: 3

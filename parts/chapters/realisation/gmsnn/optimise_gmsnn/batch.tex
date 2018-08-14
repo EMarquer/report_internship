@@ -1,0 +1,33 @@
+\subsubsection{Entraînement par exemples simultanés ; \Glsentrytext{batch}} \label{subsec:optibatch}
+Une fois le problème des fuites mémoires résolu, la première optimisation mise en place est l'utilisation de \glspl{batch} parallèles.
+
+\paragraph{\gls{batch}}
+Un \gls{batch} (anglais pour lot), est un groupe d'exemples successifs.
+
+Le découpage des données en \glspl{batch} permet de répartir l'apprentissage tout au long de l'étude des données.
+Cela permet d'atteindre de meilleurs performances.
+
+Il s'agit d'une optimisation rependue pour l'entraînement de \glspl{nn}. % TODO ajouter sources
+Elle est souvent couplée à un entraînement simultané sur plusieurs \glspl{batch}.
+
+\paragraph{\Glspl{batch} parallèles}
+Un entraînement par \glspl{batch} parallèles permet de calculer le résultat de plusieurs exemples simultanément.
+On calcule ensuite la différence de chaque résultat avec le résultat attendu correspondant.
+Enfin, on met à jours le \gls{model} en fonction de l'ensemble des exemples.
+Au final, les calculs des résultat sont parallélisé, et le coût de la mise à jour est mis en commun entre plusieurs exemples.
+
+Cela permet de réduire drastiquement le temps de calcul et d'améliorer la qualité de l'entraînement, au prix d'une plus grande utilisation de la mémoire.
+
+\paragraph{Conflit entre les \glspl{batch} parallèles et l'architecture \gls{gmsnn}}
+Cependant, le découpage en \glspl{batch} pose un problème majeur avec l'architecture \gls{gmsnn}~: elle est basée sur la continuité des exemples fournis, et l'utilisation de \glspl{batch} brise la continuité en introduisant un parallélisme.
+
+Une analyse approfondie à permit d'établir une méthode pour contourner et compenser la majorités des aspect du problème.
+
+Voir le rapport de l'annexe \ref{subsec:batch} pour les détails de l'analyse des problèmes théoriques de l'utilisation de \glspl{batch} avec l'architecture \gls{gmsnn}.
+
+Voir l'annexe \ref{subsec:memuse} pour les détails sur l'impact de la taille des \glspl{batch} et du nombre de \glspl{batch} sur la consommation mémoire.
+
+Voir les annexes\ref{subsec:batch_1}, \ref{subsec:batch_2}, \ref{subsec:batch_3} et \ref{subsec:batch_4} pour les rapports des tests sur la rotation des \glspl{batch}.
+
+\paragraph{Conclusion}
+Les problèmes liés à l'utilisation de \glspl{batch} ont été en majorité résolus ou écartés. Après consultation avec notre maître de stage, nous avons décidé d'utiliser l'entraînement par \glspl{batch} malgré les problèmes restants.
