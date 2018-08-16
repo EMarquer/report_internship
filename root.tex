@@ -2,6 +2,7 @@
 \usepackage{reportcomands}
 
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees,snakes,calc}
+\usetikzlibrary{calc,positioning,shapes.multipart,decorations.pathreplacing,shapes.arrows}
 
 \DefineBibliographyStrings{french}{%
 	bibliography = {Bibliographie / Webographie},
@@ -13,6 +14,7 @@
 \addbibresource{bibs/msnn.bib}
 \addbibresource{bibs/torch.bib}
 \addbibresource{bibs/def.bib}
+\addbibresource{bibs/visualdl.bib}
 \nocite{cadre_theorique, letudiant_presentation_memoire}
 
 \input{data/metadata.tex}
@@ -34,13 +36,11 @@
 }
 
 {%----- Content -----
-	\input{parts/chapters/intro.tex}\cleardoublepage
-	\input{parts/chapters/scientific_framework.tex}\cleardoublepage % cadre scientifique
-	\input{parts/chapters/workplace.tex}\cleardoublepage
-	\input{parts/chapters/project.tex}\cleardoublepage
-	\input{parts/chapters/organisation.tex}\cleardoublepage
-	\input{parts/chapters/realisation.tex}\cleardoublepage
-	\input{parts/chapters/conclusion.tex}\cleardoublepage
+	\input{parts/intro.tex}\cleardoublepage
+	\input{parts/scientific_framework.tex}\cleardoublepage % cadre scientifique
+	\input{parts/project_gmsnn}\cleardoublepage
+	\input{parts/project_papud}\cleardoublepage
+	\input{parts/conclusion.tex}\cleardoublepage
 }
 
 {%----- Appendix -----

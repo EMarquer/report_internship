@@ -1,0 +1,12 @@
+\subsection{Sauvegarde, interruption et reprise de l'entraînement}\label{subsec:gmsnn_save}
+Une fonctionnalité s'est très vite détachée comme essentielle~: la sauvegarde du \gls{model} et la reprise de l'entraînement.
+
+En effet, avec des entraînements très lents et donc longs, il était nécessaire de pouvoir suspendre l'entraînement affin de répartir le temps de calcul sur plusieurs session de plusieurs heures. De plus, les sauvegardes permettent de conserver le modèle une fois entraîné.
+
+Le système implémenté permet d'effectuer cycliquement des sauvegarde du modèle ainsi que de l'état de l'entraînement, permettant ainsi une reprise en l'état de l'entraînement.
+
+Pour la réalisation du système, le principal obstacle à été le malfonctionnement initial des outils fournis par \gls{pytorch}.
+Cela à poussé à la conception d'un système de sauvegarde personnalisé mais malheureusement assez complexe.
+Cependant, la mise-à-jour majeure de la librairie qui c'est déroulé à point nommé à résolu le problème, et c'est avec les outils de \gls{pytorch} que le système de sauvegarde à été implémenté.
+
+Voir l'annexe \ref{subsec:save} pour un rapport contenant plus de détail sur le système de sauvegarde.

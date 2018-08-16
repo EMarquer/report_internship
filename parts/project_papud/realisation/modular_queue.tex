@@ -1,0 +1,25 @@
+\section{Mise en place d'un système de gestion de corpus plus puissant}
+La dernière optimisation mise en place est la transformation du système de corpus en une version plus puissante.
+
+\subsection{Fichiers multiples}
+L'étude des données disponibles a révélé une structure en nombreux fichiers successifs.
+Ainsi, à la demande de notre maître de stage, nous avons donné au nouvel outil la capacité à utiliser plusieurs fichiers comme source de données continue.
+Cette fonctionnalité à été implémentée de façon optimisée en temps de calcul et en espace optimisé.
+
+\subsection{Prétraitement modulaire}
+D'autre part, durant le déroulement du projet nous avons remarqué que l'ajout d'une étape de prétraitement était ardue avec l'ancien outil.
+En gardant cela à l'esprit, nous avons développé un système de prétraitement modulaire, dans lequel chaque étape du traitement est séparée et interchangeable.
+Cette architecture permet d'ajouter ou de retirer à volonté des étapes au traitement.
+C'est d'ailleurs lors de l'implémentation de ces modules que le prétraitement mentionnée \autoref{} et \autoref{} à été intégré.
+
+\subsection{Processus multiples}
+Une autre amélioration, tirant profit de l'aspect modulaire du traitement, est l'utilisation de multiples processus en parallèle.
+Chacun d'entre eux est dédié à une étape du prétraitement.
+Cela permet de répartir la charge de travail sur les différents processus, à la façon d'un travail à la chaîne.
+Ainsi, l'outil est beaucoup plus rapide que la version précédente.
+
+\subsection{Performances}
+Le nouvel outil est largement plus rapide et efficace que son prédécesseur.
+De plus, il augmente la facilité d'utilisation et d'entretient.
+
+La description des performances et du fonctionnement en détail de l'outil sont disponibles dans le rapport de l'annexe \ref{anx:multi_process}.

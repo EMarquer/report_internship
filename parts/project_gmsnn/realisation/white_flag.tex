@@ -1,0 +1,33 @@
+\section{Analyse des résultats et arrêt du projet}\label{white_flag}
+% Durant la periode d'optimisations, j'avais préparé plein de trucs
+% Je les ai tous testés: aucun changement de perf, légère opti tps
+
+% Ca + tout "corrompu" par dataset foiré
+
+% + Retour de réunion sur papud
+% => arret du projet et passage sur papud
+% gmsnn opti, mais pas assez performant
+
+\subsection{Analyse des résultats}
+Avec notre maître de stage, nous avons étudié attentivement les résultats des dernières optimisations sur les performances du \gls{model} (voir annexe \ref{subsec:test_perf}). 
+Le résultat le plus dérangeant étant l'absence d'apprentissage des couche supérieures.
+
+À partir des connaissances de la littérature possédées par notre maître de stage et de ce résultat, nous avons conclu que 90\% de l'information nécessaire est apprise par la première échelle du modèle. Les autres échelles ne font qu'améliorer ce résultat, et sont peu utiles tant que la première échelle n'est pas complètement entraînée.
+
+À cela s'ajoute la corruption de l'entraînement par la disparition des espaces, qui nécessiterait non seulement de remanier une partie du code tenue pour acquise, mais aussi de refaire la plupart des tests. % TODO gaffe, c'est moche
+
+\subsection{Conclusions de l'analyse} % TODO gaffe, c'est moche
+La conclusion à laquelle nous sommes arrivés est qu'il aurait fallu recommencer le développement avec un système de gestion des données maîtrisé.
+
+La première étape aurait été de développer un modèle simple, avec une seule échelle, et de le pousser au maximum de ses capacités. Seulement à ce moment là nous aurions pu l'augmenter d'autres échelles.
+
+Il aurait aussi été intéressant de revoir l'architecture pour utiliser un modèle sans récurrences.
+
+Cette conclusion impliquait de recommencer le projet, ou à défaut de le remanier en grande partie.
+
+\subsection{Arrêt du projet et début du projet suivant}
+Au moment de cette analyse, notre maître de stage revenait d'une réunion décisive sur le \gls{project_papud}. % TODO dire quoi (prototype, ...)
+
+Celle-ci avait permis de définir les objectifs du \glsfirst{project_papud} (voir \autoref{ch:project_papud}).
+
+La nécessité de recommencer le \gls{project_gmsnn}, couplée à l'opportunité de mettre les conclusions du projet et les compétences acquises en pratique dans un projet à grande échelle, nous ont mené à interrompre \gls{project_gmsnn} pour consacrer la fin du stage au \gls{project_papud}.

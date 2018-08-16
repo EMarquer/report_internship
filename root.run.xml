@@ -85,6 +85,7 @@
       <file>bibs/msnn.bib</file>
       <file>bibs/torch.bib</file>
       <file>bibs/def.bib</file>
+      <file>bibs/visualdl.bib</file>
     </requires>
   </external>
 </requests>

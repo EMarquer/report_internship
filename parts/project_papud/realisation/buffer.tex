@@ -1,0 +1,16 @@
+\section{Adaptation du système de gestion de corpus au volume de données}
+L'étape suivant l'implémentation du modèle fonctionnel à été l'adaptation du système de gestion de corpus aux grands volumes de données à traiter dans le futur.
+
+Pour cela, un premier prototype à été réalisé.
+Il utilise des mécanismes optimisés du langage Python pour la lecture de fichier.
+L'objectif de ce prototype est de maintenir uniquement une fiable quantité de données en mémoire.
+
+Le principe de fonctionnement est simple~:
+\begin{enumerate}
+	\item on charge en mémoire une portion des données~; \label{itm:1}
+	\item on applique le prétraitement sur ces données~;
+	\item on transfert les données traitées à l'algorythme d'entrainement~;
+	\item on recommence de l'étape \ref{itm:1} avec la portion suivante des données.
+\end{enumerate}
+
+L'intégration de cet outil s'est faite en parallèle de la suite du projet.

@@ -1,0 +1,30 @@
+\chapter{Conclusions sur le \glsentrytext{project_gmsnn}}
+% ccl plus pb mémoire & tps, opti z'oignons (XD) même, 5 min c'est balèze
+\section{Retour sur le travail effectué}
+Ce projet nous à permit d'implémenter une architecture innovante de \gls{nn}, à partir du squelette d'un modèle \gls{soa}.
+Nous avons pus élaborer un prototype suivant les concepts clés de l'architecture proposée, avant de l'améliorer et de l'optimiser.
+
+Pour cela nous avons étudié un domaine technique dans lequel nous avions peu de connaissances~; nous avons manipulé une librairie qui nous était inconnue~;
+nous avons géré des tests durant de plusieurs heures à plusieurs jours sur des machines distantes~; nous avons, enfin, affronté un des obstacles les plus importants dans le développement de \gls{nn}, le problème de l'optimisation.
+
+Bien que le l'architecture \gls{gmsnn} n'ai pas atteint les performances espérées, le modèle produit est robuste, rapide, et peu volumineux.
+De plus, l'algorithme présenté \autoref{subsec:optilbl} à démontré une faiblesse majeure de l'architecture \gls{gmsnn}.
+Enfin, les problèmes rencontrés dans ce projet ont permit de tirer des conclusions très utiles pour de prochains projets~:
+\begin{itemize}
+	\item les \gls{rnn} sont très lents à entraîner~;
+	\item la maîtrise du pré-traitement est fondamentale pour obtenir des bons résultats~;
+	\item pour utiliser une architecture multi-échelle comme celle proposée, il vaut mieux entraîner un modèle simple en premier lieu.
+\end{itemize}\hspace{1em}
+
+C'est d'un commun accord avec notre maître de stage que nous avons décidé de basculer sur le \gls{project_papud}.
+
+En conclusion, le projet à abouti sur le rejet de l'architecture proposée.
+Néanmoins, ce résultat à permit de cerner les principaux écueils de la réalisation d'un \gls{lm} multi-échelle, et à ainsi permit un meilleur déroulement du projet suivant.
+
+
+%%%%
+\section{Apport personnel du projet}
+La réalisation de ce projet nous à permit d'approfondir largement nos connaissances en \gls{dl}, et de nous habituer aux problématique de la création et de l'utilisation de \glspl{nn}.
+
+\section{Discussion et perspectives}
+%TODO

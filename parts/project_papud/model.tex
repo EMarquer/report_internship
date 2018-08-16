@@ -1,0 +1,39 @@
+\chapter{Modèle à réaliser}\label{ch:papud_model}
+Le modèle à réaliser est conçu pour être le plus rapide possible.
+
+Le modèle est un \gls{lm} au niveau du caractère, qui prend une ligne et qui prédit la ligne suivante.
+
+Ainsi, l'entrée du modèle est une ligne de taille fixe de nombres correspondant à des caractères.
+
+La sortie est un tableau à 2 dimensions, qui contient pour chaque caractère prédit une distribution de probailité sur les caractères connus (répertoriés dans le dictionnaire décrit \autoref{def_dict_papud}).
+
+% TODO dessin archi de base
+
+\section{Utilisation d'un \glsentrytext{nn} basique}
+Comme présenté dans le \autoref{ch:project_papud}, un \gls{nn} basique, intégralement connecté (comme celui présenté dans la \autoref{fig:nn}), à été choisi pour le modèle.
+
+Étant le \gls{nn} le plus simple, il est extrêmement rapide à entraîner.
+
+\section{Réduction de la taille de l'entrée}
+Comme écrit plus haut, l'entrée du modèle est une ligne de caractères.
+Pour chacun d'entre eux, comme dans le modèle \gls{gmsnn}, est transformé en un \gls{tensor} par un module d' \gls{embedding}. % TODO autoref ver def embedding
+
+Grâce à une opération appelée \og \foreign{max-pooling} \fg{}, qui correspond à prendre pou chaque case du tenseur final le 
+
+\section{Lien avec l'état de l'art}
+Il à été récemment montré que les \gls{lm} basés sur une séquence \og \gls{embedding} - \foreign{max-pooling} - \gls{nn} intégralement connecté \fg{}
+ont des performances %TODO enlever si on récupère pas les sources
+
+
+%%%%%%%%%%%
+%
+%Modèle ultra-rapide au niveau caractere:
+%
+%un embedding par caractere
+%embedding de la ligne = max-pool des embeddings des caracteres
+%
+%
+%Training: predire X_{t+d}
+%
+%plutot que d'utiliser un RNN pour generer X_{t+d} (trop lent), on accelere en generant avec un simple fully-connected
+%une ligne de taille fixe (il faudra pad/cut)

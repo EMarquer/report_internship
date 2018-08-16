@@ -4,29 +4,62 @@
   \includegraphics[width=3em]{/home/emarquer/InternshipSynalp2018/report_internship/images/tool_translate_offline_dictionary.png}
 }
 
+% \begin{tikzpicture}[shorten >=2pt,->,draw=black!50, node distance=7em]
+%     \tikzstyle{every pin edge}=[<-,shorten <=2pt]
+% 	\tikzstyle{module}=[minimum size=3em, fill=gray!50!]
+% 	\tikzstyle{char}=[module, circle, fill=green!50!]%, label={below:\usebox\mydictbox}]
+% 	\tikzstyle{text label}=[rectangle, text centered, text width=7.5em, node distance=5em]
+% 	\tikzstyle{nn}=[rectangle, module, fill=orange!50!]
+% 	\tikzstyle{rnn}=[nn, fill=red!50!]
+% 
+% 	\node[rnn, pin={[pin edge={<-}]north:}] (rnn1) {LSTM};
+% 	\node[right of=rnn1, text centered, text width=5.5em] (rnn1f) {{Toutes les $n$ entr\'{e}es de l'\'{e}chelle 1}};
+% 	\node[rnn, right of=rnn1f] (rnn2) {LSTM};
+% 	\node[right of=rnn2, text centered, text width=5.5em] (rnn2f) {{Toutes les $n$ entr\'{e}es de l'\'{e}chelle 2}};
+% 	\node[rnn, right of=rnn2f] (rnn3) {LSTM};
+% 	\foreach \n in {1,...,3}
+% 		\draw[->] (rnn\n.east) to [out=0,in=0, looseness=2] ($(rnn\n.south) + (0,-.5)$) to [out=180,in=180, looseness=2] (rnn\n.west);
+% 	\draw[->,dashed] (rnn1) to (rnn1f) to[out=90,in=90, looseness=1]  (rnn2.north);
+% 	\draw[->,dashed] (rnn2) to  (rnn2f) to[out=90,in=90, looseness=1]  (rnn3.north);
+% 	%\node[char] (char) {\$};
+% 
+% 	\foreach \n in {1,...,3}
+% 	    \node[text label, above of=rnn\n] (rnn\n l) {\'{E}chelle \n};
+% 
+% 	\node[nn, below of=rnn2, pin={[pin edge={->}]south:}] (merge) {Agr\'{e}gation};
+% 	\foreach \n/\m/\o in {1/west,2/north,3/east}
+% 		\draw[->] (rnn\n.south) to[out=-90,in=\o]  (merge.\m);
+% \end{tikzpicture}
+
 \begin{tikzpicture}[shorten >=2pt,->,draw=black!50, node distance=7em]
     \tikzstyle{every pin edge}=[<-,shorten <=2pt]
 	\tikzstyle{module}=[minimum size=3em, fill=gray!50!]
 	\tikzstyle{char}=[module, circle, fill=green!50!]%, label={below:\usebox\mydictbox}]
-	\tikzstyle{text label}=[rectangle, text centered, text width=7.5em, node distance=5em]
+	\tikzstyle{text label}=[rectangle, text centered, text width=7.5em, node distance=7em]
 	\tikzstyle{nn}=[rectangle, module, fill=orange!50!]
 	\tikzstyle{rnn}=[nn, fill=red!50!]
 
-	\node[rnn, pin={[pin edge={<-}]north:}] (rnn1) {LSTM};
-	\node[right of=rnn1, text centered, text width=5.5em] (rnn1f) {{Toutes les $n$ entr\'{e}es de l'\'{e}chelle 1}};
-	\node[rnn, right of=rnn1f] (rnn2) {LSTM};
-	\node[right of=rnn2, text centered, text width=5.5em] (rnn2f) {{Toutes les $n$ entr\'{e}es de l'\'{e}chelle 2}};
-	\node[rnn, right of=rnn2f] (rnn3) {LSTM};
+	\node[rnn, pin={[pin edge={<-}, pin distance=3em]south:Entr\'{e}e}] (rnn1) {RNN};
+	%\node[right of=rnn1, text centered, text width=5.5em] (rnn1f) {{Toutes les $n$ entr\'{e}es de l'\'{e}chelle 1}};
+	\node[rnn, above of=rnn1] (rnn2) {RNN};
+	%\node[right of=rnn2, text centered, text width=5.5em] (rnn2f) {{Toutes les $n$ entr\'{e}es de l'\'{e}chelle 2}};
+	\node[rnn, above of=rnn2, pin={[pin edge={->,dashed}, pin distance=3em]north:}] (rnn3) {RNN};
+
 	\foreach \n in {1,...,3}
 		\draw[->] (rnn\n.east) to [out=0,in=0, looseness=2] ($(rnn\n.south) + (0,-.5)$) to [out=180,in=180, looseness=2] (rnn\n.west);
-	\draw[->,dashed] (rnn1) to (rnn1f) to[out=90,in=90, looseness=1]  (rnn2.north);
-	\draw[->,dashed] (rnn2) to  (rnn2f) to[out=90,in=90, looseness=1]  (rnn3.north);
+
+	\path[->,dashed] (rnn1)  edge coordinate (@aux) (rnn2);
+	\path [late options={name=@aux, pin={[pin edge={-}, text width=10.5em, pin distance=5em]0:Transmission toutes les $n$ entr\'{e}es de l'\'{e}chelle 1}}];
+	\path[->,dashed] (rnn2)  edge coordinate (@aux) (rnn3);
+	\path [late options={name=@aux, pin={[pin edge={-}, text width=10.5em, pin distance=5em]0:Transmission toutes les $n$ entr\'{e}es de l'\'{e}chelle 2}}];
+	%\draw[->,dashed] (rnn2) to  (rnn2f) to[out=90,in=90, looseness=1]  (rnn3.north);
 	%\node[char] (char) {\$};
 
 	\foreach \n in {1,...,3}
-	    \node[text label, above of=rnn\n] (rnn\n l) {\'{E}chelle \n};
+	    \node[text label, left of=rnn\n] (rnn\n l) {\'{E}chelle \n};
+	\node[text label, right of=rnn3] (rnn l) {$n$ est la fr\'{e}quence de transmission};
 
-	\node[nn, below of=rnn2, pin={[pin edge={->}]south:}] (merge) {Agr\'{e}gation};
-	\foreach \n/\m/\o in {1/west,2/north,3/east}
-		\draw[->] (rnn\n.south) to[out=-90,in=\o]  (merge.\m);
+	%\node[nn, below of=rnn2, pin={[pin edge={->}]south:}] (merge) {Agr\'{e}gation};
+	%\foreach \n/\m/\o in {1/west,2/north,3/east}
+	%	\draw[->] (rnn\n.south) to[out=-90,in=\o]  (merge.\m);
 \end{tikzpicture}

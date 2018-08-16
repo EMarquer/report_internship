@@ -1,0 +1,96 @@
+\chapter{\Glsname{project_papud}\label{ch:project_papud}}
+\section{Contexte}
+Nous avons vu que parmi les secteurs d'activité de \gls{bull}, les serveurs et autres systèmes de traitent de gros volumes de données sont très présents.
+
+Ces outils tombent rarement en panne, mais quand ils le font cela occasionne des pertes très importantes pour l'entreprise.
+
+Il serait donc très intéressant de mettre au point un système de prédiction des panes, afin de pouvoir les éviter.
+
+Les données disponibles pour remplir cette tache sont des fichiers de journaux systèmes (décrits en détail dans le \autoref{ch:data_papud}) de très grande taille.
+Ils contiennent de nombreuses informations sur les évènements se déroulant dans les outils.
+
+\section{Solution}
+\textit{D'après les documents de travail officiels (en particulier le fichier README.md du dépôt de code officiel du projet).}
+
+Le cas d'utilisation \gls{bull} du \glsname{project_papud} est dédié à répondre à cette problématique, en fournissant un système détectant les anomalies (signes de pannes) dans les journaux systèmes.
+
+Pour cela, il à été décidé de modéliser le comportement normal (sans panne) de ces journaux.
+
+Ces journaux sont composés de lignes de textes en anglais. Il est donc possible de produire un \gls{lm} capable de prédire la prochaine ligne.
+%TODO compléter avec dépendances ....
+
+Le plan général des opérations est divisé en 2 parties~: %TODO reformuler
+\begin{enumerate}
+	\item on suppose que la structure en dépendances entre les lignes est simplissime~: une ligne dépend uniquement de la ligne précédente~; on cherche donc à établir un \gls{lm} capable de modéliser au mieux cette dépendance~;
+	\item une fois le modèle simple établi, on abandonne le postulat précédent, et on cherche à établir à partir du modèle créé un modèle capable de modéliser des dépendances à la fois plus complexes et sur plus d'une ligne au par avant.
+\end{enumerate}
+\hspace{1em}
+
+Pour ce qui est du modèle simple, il à été décidé de ne pas utiliser de \gls{rnn}, bien trop lent pour la quantité de données à traiter. À la place, un \gls{nn} basique, intégralement connecté (comme celui présenté dans la \autoref{fig:nn}), sera utilisé. % TODO transférer integralement ... au chapitre modèle
+
+On peut noter que les conclusions du \gls{project_gmsnn} ont été appliquées, autant pour le déroulement du projet que pour le type de modèle à utiliser.
+
+
+\section{\glsentrytext{project_papud}}
+La tache qui nous à été confiée est la réalisation du modèle simple.
+
+Plus exactement, étant donné qu'il était évident que la durée restante du stage serait insuffisante pour réaliser et pousser au maximum le modèle simple, nos objectifs étaient la réalisation d'un prototype du modèle, et de mettre en place les outils nécessaires à l'entraînement.
+Ceux-ci sont principalement les outils de gestion et de prétraitement des données, les outils d'évaluation des performances du modèle, et l'algorithme d'entraînement du modèle.
+
+La description des caractéristiques du modèle est disponible dans le \autoref{ch:papud_model}.
+
+Par la suite, nous désignerons ce projet par \og \gls{project_papud}\fg{}.
+
+\section{Organisation du travail}
+Contrairement au \gls{project_gmsnn}, d'autres collaborateurs participaient a ce projet (voir \autoref{sec:papud_colabo}).
+Étant, avec notre maître de stage, les seuls parmi les collaborateurs habitués à manipuler des réseaux de neurones, nous avons travaillé individuellement durant ce projet.
+
+Le \gls{project_gmsnn} s'étant bien déroulé, une organisation similaire à été mise en place afin de tenir ces autres membres du projet informés de l'avancement et des conclusions de notre travail.
+C'est-à-dire que des rapports fréquents et des réunions hebdomadaires durant lesquelles nous pressentions notre progression ont été mis en place.
+
+Les rapports de ce projet sont également disponibles en annexe.
+Le rapport d'une des réunion est disponible à l'annexe \ref{anx:meeting}. % TODO enlever ?
+
+Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git. Les collaborateurs du projet ont accès à l'ensemble de ces données, qui ont été mises à jours tout au long du projet.
+
+\subsection{Organisation initiale du travail}
+Ce \gls{project_papud} s'est déroulé sur la base de cycles de développement.
+C'est durant les réunions hebdomadaires que les prochains objectifs étaient décidés.
+
+En effet, contrairement au \gls{project_gmsnn} pour lequel il à été simple de définir des périodes réservées aux grandes étapes du projet, ce \gls{project_papud} s'est déroulé dans un temps très restreint.
+
+Cependant, il à été possible de définir les priorités suivantes~:
+\begin{enumerate}
+	\item la réalisation d'un prototype fonctionnel~;
+	\item la mise en place d'un algorithme d'entraînement basique~;
+	\item la mise en place de moyens d'évaluer le modèle et l'obtention de premières performances~;
+	\item le prétraitement des données et la préparation de la gestion des très gros volumes de données à venir~;
+	\item le temps restant est dédié à l'amélioration des performances.
+\end{enumerate}
+\hspace{1em}
+
+Une extension de la durée du stage de 1 semaine à été décidée, de façon à augmenter le temps dédié au travail sur le projet.
+Cela c'est fait en considérant les disponibilités de notre maître de stage, des autres collaborateurs ainsi que les nôtres.
+
+La durée totale du projet à donc été de 5 semaines.
+
+\subsection{Déroulement réel du projet}
+Tous les objectifs nécessaires ont été remplis, et deux améliorations notables des performances ont été mises en place.
+
+La répartition réelle du travail du projet est représentée dans la \autoref{fig:papud_time}.
+
+\begin{figure}[ht]
+	\centering
+	\input{plots/timeline_papud}\caption{Répartition du travail}\label{fig:papud_time}
+\end{figure}
+
+\section{Outils}
+Les outils choisis sont Python et PyTorch, pour trois principales raisons~:
+\begin{itemize}
+	\item la première partie du projet s'est déroulée avec ces outils, nous étions donc habitués à leur utilisation et à leurs subtilités~;
+	\item la base de code accumulée jusqu'à présent reposait sur ces outils, et pouvait être réutilisée sans trop d'efforts~;
+	\item il était possible de basculer plus tard vers une autre librairie, PyTorch possédant une fonctionnalité permettant la conversion d'un modèle vers les autres principales librairies disponibles pour Python et quelques autres langages.
+\end{itemize}
+
+
+% TODO Python, PyTorch (deja entrainé, portabilité des modules deja codés)

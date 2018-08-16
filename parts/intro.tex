@@ -1,0 +1,114 @@
+\chapter{Introduction}
+%il faut placer l’objet du stage dans son contexte et ses enjeux, puis annoncer
+%la mission et ses problématiques spécifiques. Le plan du rapport doit être 
+%présenté et justifié.
+
+\section[Contexte \& Enjeux]{Contexte et enjeux du stage}
+%-> nn \& tal -> ML
+%-> big amount of data
+
+D'une part, depuis quelques années, le \og\foreign{Deep Learning}\fg{} et les \og\glsentryplural{nn}\fg{} ont connu une explosion de popularité.
+Ce qui se cache derrière cet engouement est la combinaison de théories relativement anciennes et d'avancées technologiques permettant la mis en œuvre desdites théories.
+
+%Un des intérêt de ces méthodes d'\gls{ml} est la capacité à apprendre à partir de données restreintes.
+Un des domaines exploitant les performances de ces outils est le \gls{nlp}.
+L'application au \gls{nlp} des \glspl{nn} qui nous intéressera particulièrement dans ce mémoire est la création de \gls{lm}.
+
+D'autre part, nous somme à l'ère du \og\foreign{Big Data}\fg{}, et les quantités de données produites de nos jours est bien au delà de ce que nous pouvons gérer sans outils spécialisés.
+Afin de produire des outils adaptés aux échelles actuelles, , nous nous intéresseront dans ce rapport à des grands volumes de données bien au delà des volumes habituellement utilisés en \gls{dl}.
+
+Ainsi, nous explorerons la question le l'application des méthodes du \gls{dl} du point de vue du \gls{nlp} sur des ensembles de données de grande taille.
+
+L'axe principal de ce mémoire est l'application de telles méthodes sur des gros volumes de données.
+Cela implique à la fois des problématiques relativement classiques en développement de \gls{nn} d'architecture du réseau, et de choix d'algorithme d'entraînement; mais aussi des questions plus pragmatique d'optimisation lié au volume de données.% TODO applatir et dégonfler ce paragraphe 
+
+
+\section[Objectifs]{Objectifs du stage}
+%Les objectifs du stage sont doubles:
+%- découvrir et apprendre à manipuler les NN
+%- par la même occasion, explorer une idée d'architecture inovante: le Char-GMSNN-LM
+%- au vu des résultats et de l'évolution du contexte, mission évolue aussi: fournir une première approche et un premier retour pour le projet PAPUD cas d'utilisation BULL
+Deux objectifs successifs se distinguent dans le stage.
+
+% Version résumée
+L'objectif initial du stage est d'explorer une idée d'architecture de \gls{nn} innovante, imaginée par notre maître de stage Mr Cerisara.
+%Par la même occasion, ce stage est l'opportunité pour moi d'apprendre à manipuler les \gls{nn}.
+
+À l'issue du deuxième mois du stage, au vu des résultats de l'architecture et de l'évolution du contexte, la mission du stage à aussi évoluée.
+
+Le nouvel objectif est la réalisation d'un \gls{nn} et des outils nécessaires à son utilisation, en mettant à profit les connaissances acquises durant la première partie du stage.
+Cette réalisation servira de base technique pour une partie du \glsunset{project_papud}\gls{project_papud}.
+
+Les tenants et aboutissants des deux objectifs seront expliqués en détails dans le \autoref{ch:project_gmsnn} et le \autoref{ch:project_papud}.
+
+\section[Plan]{Plan du rapport}
+
+%1. intro
+Dans un premier temps, nous avons présenté à la fois le contexte, les enjeux, et les objectif généraux du stage.
+
+%2. scientific framework
+Dans un second temps, nous étudierons plus en détail le cadre théorique du rapport, afin de définir les termes et concepts principaux utilisés dans ce rapport.
+
+%3. workplace
+Dans un troisième temps, nous allons nous attarder plus en détail sur les différentes entités impliquées, en particulier sur l'équipe \gls{synalp} et ses entités parentes, ainsi que sur le \gls{project_papud}.
+
+%4. project
+%4.1. awd-lstm-lm
+%4.2. papud-bull-nn
+%4.3. gobal (or 3.0.)
+Dans un quatrième temps, nous allons décrire plus en détail les deux aspects du stage: l'idée d'architecture de \gls{nn} et l'intérêt d'une telle architecture d'un côté, et le \gls{project_papud}, ses implications et la portée du stage dans ce projet. Nous verrons aussi en quoi le \gls{project_papud} est dans la continuité de la première partie du stage.
+
+%5. realisation
+%5.1. recherche doc
+%5.2. patch "reimplement"
+%5.3. build "growing"
+%5.4. optimise "growing"
+%5.5. conclusions on "growing" and "awd"
+%5.6. preparing "papud" \& basic model
+%5.7. understanding strange comportment \& preparing corpus
+%5.8. conclusions on "papud"
+Dans un cinquième temps, nous exposerons le déroulement pas-à-pas du stage, avec les obstacles rencontrés, la façon de les surmonter, et en quoi chaque résultat entraîne l'étape suivante. 
+
+%6. conclusion, additional internship
+Dans un sixième et dernier temps, nous ferons une rétrospective sur l'avancement des objectifs, la qualité des résultats obtenus, et les apports du stage.
+
+%0. intro
+%1. scientific framework
+%2. workplace
+%3. project
+%3.1. awd-lstm-lm
+%3.2. papud-bull-nn
+%3.3. gobal (or 3.0.)
+%4. realisation
+%4.1. recherche doc
+%4.2. patch "reimplement"
+%4.3. build "growing"
+%4.4. optimise "growing"
+%4.5. conclusions on "growing" and "awd"
+%4.6. preparing "papud" \& basic model
+%4.7. understanding strange comportment \& preparing corpus
+%4.8. conclusions on "papud"
+%5. conclusion, additional internship
+
+%1. intro
+%2. scientific framework
+%3. Projet GMSNN
+%4. Projet PAPUD
+%5. Conclusion
+%6. Annexes
+
+%1. intro
+Dans un premier temps, nous avons présenté à la fois le contexte, les enjeux, et les objectif généraux du stage.
+
+%2. scientific framework
+Dans un second temps, nous étudierons plus en détail le cadre théorique du rapport, afin de définir les termes et concepts principaux utilisés dans ce rapport.
+
+Dans un troisième et un quatrième temps nous développerons les deux parties du stage, le \gls{project_gmsnn} et le \gls{project_papud}.
+
+Pour cela, nous présenterons le contexte, les enjeux, et les entités impliquées dans le projet. Nous décrirons ensuite les modèles implémentés, avant de dérouler le travail effectué. Enfin, une conclusion résumera les points majeurs du projet.
+
+Dans un cinquième et dernier temps, nous ferons une rétrospective sur l'ensemble du travail réalisé.
+
+
+
+

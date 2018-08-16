@@ -198,7 +198,7 @@
 	%{Encadrant : \reportSupervisor{}}
 	{Maître de stage : \reportSupervisor{}\\
 	\\
-	 Encadrant universitaire : \reportAcademicSupervisor{}}
+	 Parrain universitaire : \reportAcademicSupervisor{}}
 	{\ifbool{pi}
 		{Encadrant industriel : \reportSupervisor{}\\
 		 \\

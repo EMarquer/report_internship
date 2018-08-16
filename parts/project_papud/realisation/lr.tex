@@ -1,0 +1,14 @@
+\section{Optimisation du taux d'apprentissage}
+La troisième optimisation mise en place pour le modèle et le réglage d'un des paramètres de l'algorithme d'apprentissage, est une valeur nommée \og taux d'apprentissage\fg{}.
+
+Ce paramètre permet de déterminer la vitesse d'apprentissage du modèle.
+Cependant, un mauvais réglage entraîne des conséquences catastrophiques sur le modèle, comme un apprentissage extrêmement lent, voir une divergence de l'apprentissage.
+
+Il est donc nécessaire de correctement choisir ce paramètre.
+La procédure classique en \gls{dl} repose sur l'essai-erreur~: on entraîne le modèle avec différentes valeurs pour le taux d'apprentissage, et on choisi celles qui à donné le meilleur résultat pour les entraînements à venir.
+
+Un module permettant la détermination du taux d'apprentissage idéal à donc été implémenté, et utilisé.
+
+La nouvelle valeur définie pour le à permit d'augmenter largement la vitesse de convergence du modèle. % TODO donner valeur
+
+Le détail du processus de choix et des résultats est disponible dans les annexes \ref{anx:lr_1} et \ref{anx:lr_2}.

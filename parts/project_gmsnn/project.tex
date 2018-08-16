@@ -1,0 +1,91 @@
+%il est utile de rappeler à cet endroit les raisons de la mission, notament les enjeux économiques. Ne pas oublier les facteurs humains et techniques, sans compter l’organisation du travail en termes de planification des tâches et de gestion de projet. C’est après ce cadrage qu’il sera possible de passer aux détails du travail.
+
+\chapter{Architecture innovante de réseau de neurones pour l'élaboration de modèle du langage\label{ch:project_gmsnn}}
+\section{Contexte}
+Nous avons vus dans le \autoref{ch:sci_framework} du \gls{dl} et en particulier des \gls{rnn} % TODO bref résumé
+
+Nous nous plaçons ici dans le contexte de la réalisations de \gls{lm}.
+% TODO bref résumé SOA
+Les modèles actuels, généralement basés sur les \gls{rnn}, atteignent de très bonnes performances. % TODO ajouter sources
+Les modèles basés sur les caractères se montrent particulièrement flexibles, car ces modèles "apprennent" les mots, à la place de se reposer sur des dictionnaires très volumineux, qui ont des difficultés à gérer les fautes et les mots nouveaux.
+
+\subsection{Manque d'utilisation des gros volumes de données}
+Cependant, ces modèles sont souvent développés et entraînes avec peu de données.
+Les raisons envisageables sont principalement~: le manque de données brutes ou préparées~; et le peu d'amélioration de performance malgré des coûts largement augmentés.
+
+\subsection{Problèmes de mémoire}\label{subsec:mempb}
+Une des raison du manque d'augmentation de performance, typique des \gls{rnn}, est la limite de rappel d'informations en \og mémoire\fg{} (dans ses états cachés).
+
+Pour avoir un ordre d'idée, on peut considérer qu'un \gls{rnn} basique conserve en mémoire des informations datant d'au plus 20 entrées auparavant; un \gls{gru} peut se rappeler d'informations vielles d'une $100^\text{aine}$ d'entrées; et un \gls{lstm} dépasse difficilement les 200 entrées.
+
+Il est donc difficile d'apprendre des dépendances entre des éléments très écartés.
+
+De nombreuses tentatives ont été faite de résoudre ce problème, par exemple en changeant l'architecture du \gls{nn} (ex: \gls{gru}, \gls{lstm}), ou en augmentant le réseau avec des mécanismes comme ce que l'on appelle mécanismes attentionnels, ou avec de la mémoire explicite.
+
+\section{Solution proposée}
+L'architecture proposée par notre maître de stage vise à la fois à tirer partie des grands volumes de données, et à permettre au modèle d'établir dépendances de haut niveau, voir des connaissance contextuelles externes.
+
+L'architecture et ses caractéristiques sont décrits en détail \autoref{ch:gmsnn_model}.
+
+Nous avons nommé cette architecture \glsfirst{gmsnn}.
+Ainsi, nous désignerons ce projet par \og \gls{project_gmsnn}\fg{} dans le reste du rapport.
+
+\section{\glsentrytext{project_gmsnn}}
+La mission qui nous à été confiée est la création d'un \gls{ml} basé sur l'architecture \gls{gmsnn}.
+
+L'implémentation devait se réaliser à partir d'une base de code sur laquelle notre maître de stage avait commencé à travailler (plus de détails sont disponibles \autoref{subsec:codebase}).
+
+À cela s'ajoute l'exploration du potentiel de l'architecture, par le biais d'une amélioration du \gls{model} créé à l'aide d'optimisations classiques et de changements de l'architecture.
+
+Enfin, la réintégration des optimisation déjà contenues dans la base de code devait conclure le stage.
+
+\section{Organisation du travail}
+Durant ce projet, nous avons travaillé individuellement.
+
+Un fonctionnement en rapport réguliers (disponibles en annexes), complémentés d'une occasionnelle correspondance électronique, à permis de tenir notre maître de stage informé de l'avancement du stage.
+
+À cela s'ajoutent des réunions hebdomadaires avec M. Cerisara, afin de faire le point sur les résultats obtenus et de décider de la marche à suivre.
+
+Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git.
+
+\subsection{Organisation initiale du travail}
+Nous avons prévu l'organisation temporelle du travail dès la prise de connaissance du sujet définitif du stage (la réalisation de l'architecture proposée).
+
+La première semaine était dédiée l'acquisition des connaissances nécessaires, à la lecture d'articles et à la prise en main des outils.
+Ensuite, 3 semaines étaient consacrées à la prise en main de la base de code fournie et à l'implémentation d'un prototype.
+Les 4 semaines suivantes devaient permettre d'améliorer l'architecture et d'intégrer de nouvelles fonctionnalités.
+Enfin, les optimisations \gls{soa} contenue dans la base de code devaient être intégrée durant les 4 dernières semaines .
+
+La \autoref{fig:gmsnn_time_1} représente cette répartition prévue du travail.
+
+\begin{figure}[ht]
+	\centering
+	\input{plots/timeline_plan}\caption{Répartition prévue du travail}\label{fig:gmsnn_time_1}
+\end{figure}
+
+\subsection{Déroulement réel du projet}
+Le projet s'est déroulé comme prévu jusqu'à la fin de la période d'amélioration.
+
+Cependant, comme décrit \autoref{white_flag}, nous avons décidé d'interrompre ce projet pour nous consacrer au \gls{project_papud}.
+
+La \autoref{fig:gmsnn_time_2} représente la répartition réelle du travail.
+
+\begin{figure}[ht]
+	\centering
+	\input{plots/timeline_true_1}\caption{Répartition réelle du travail}\label{fig:gmsnn_time_2}
+\end{figure}
+
+\section{Outils}
+\subsection{Langage et librairie}
+Le langage choisi pour l'implémentation est Python, qui largement fourni en outils et librairies d'\gls{dl}.
+
+Parmi ces librairies, notre choix c'est porté sur \gls{pytorch}, qui contrairement à d'autres librairies telles que Caffe ou Keras, permet de moduler l'architecture du réseau au cours de l'apprentissage. Cette propriété est très importante, étant donné la nature \og croissante\fg{} de l'architecture proposée pour la première partie du projet.
+
+% TODO g5k, (conda)
+\subsection{Grid5000 et les machines distantes}
+Pendant le déroulement du projet, le \gls{model} à été testé et entraîné sur des machines distantes.
+
+Ces machines font partie du réseau \gls{g5k}.
+\og Grid'5000 est un banc d'essai à grande échelle et polyvalent pour la recherche expérimentale dans tous les domaines de l'informatique, avec un accent sur l'informatique parallèle et distribuée, y compris Cloud, HPC et Big Data. \fg{} D'après le site de \gls{g5k}\autoref{g5k}.
+
+Un des avantage de cet outil est la présence de machines spécialisé dans les calculs \gls{gpu}, qui sont celles que nous avons utilisées. %TODO (voir la description de l'optimisation graphique ??)

@@ -1,0 +1,73 @@
+\section{Production des exemples et découverte du problème d'encodage}
+Une fois le modèle fonctionnel, une partie importante de la compréhension et de l'évaluation du modèle est la production d'exemple.
+
+Nous avons retardé cette étape principalement à cause des problèmes de mémoire.
+
+Le principe de cette étape est d'utiliser notre \gls{lm} pour produire du langage, afin d'avoir une idée plus concrète qu'un score de la performance du modèle.
+
+\subsection{Exemples}
+Voici quelques exemples produits par le modèle. 
+La version du modèle choisie est celle avec le meilleur score, parmi celle enregistrées.
+
+Age du modèle~: 465 époques.
+
+Score BPC du modèle~: 1.839.
+
+Pour comparaison, le modèle \gls{soa} avait un score BPC de 1.255 en 50 époques.
+
+Pour rappel, les données sont issues d'une version filtrée de Wikipédia en anglais.
+
+%longstring
+\begin{lstlisting}[caption={Exemple 1~: une suite de caractères à priori incompréhensibles.},label=gmsnn_ex1]
+YeoMMDF|Ph#elementat[[Damous]]thatureoftenusevoirbeexpounderstatesandanumberofhisworkformembersothan novelwasmethecebylementorfromthelastPreenancenoldWarInstartedbythe Philosophy''theTayita(amsmethouspeopleamingshelebelobesinthesatietheuniversalistscientis educationof[[Lakingforts]].
+\end{lstlisting}
+
+%good
+\begin{lstlisting}[caption={Exemple 2~: des termes balisé comme dans le corpus d'origine, les crochets ouverts sont refermés.},label=gmsnn_ex2]
++EDrFuergCases,areinlesssuchasthesthealterplains.
+*In[[Stefapes]]
+*[[AcademyAwards===
+
+ANASA)asLASCIIRunder,andas.MatthebusipenclearsandpresidenthaveaquelfuelsifthesearchfromAwarerLievol ofany30020.
+
+It''[[Anim]]
+*[[UnitedStates|raphicsiteDirection]]
+
+Theplant-gainheditsreturnedtoaseethewarinsteast&quot;Oneofthe[ectlywouldnotbytheIntegrationscapianland](ora''[[schology]]
+|published:
+\end{lstlisting}
+
+%longstring + tags
+\begin{lstlisting}[caption={Exemple 3~: des termes balisé comme dans l'exemple 2, et une autre suite de carractères.},label=gmsnn_ex3]
+60447-toNewHarry}}
+Thenmainst.Rand'sintereststhe&quot;toinpassingtheEarth''s(''[[par]].
+
+:'''maimals,anackreloquedoutwidthofgrawwithluteframedapproyingtoundernverby[[hebesination]]of&lt;/smalkan,instablishedacondorttodevelopedframesbeforestatedwinkingaroundinrational hicarefartoredonaftercanbeagainsthatgroupswouldnear,notwhatwasthatisstillastructionCenter,toDagnythat
+
+On[[teleofAirëejÃ£]]
+[[cy:Alaska]]
+[[no:Arni-Anchorages]]
+\end{lstlisting}
+
+\subsection{Manque d'espaces}\label{whitespace_problem}
+Parmi ces exemples, on remarque immédiatement le manque d'espace.
+
+La source de ce phénomène n'est autre qu'un problème dans le corpus source.
+La version pré-traitée de ce corpus ne contenait aucun espace, donc le \gls{model} à appris une langue dans laquelle l'espace n'existe pas.
+
+C'est un problème majeur, qui à probablement eu un impact élevé sur les performances du modèle. En effet, en anglais comme dans beaucoup de langues occidentales, l'espace est un élément fondamental dans la structuration du langage écrit. Le \gls{model} à ainsi apprit une langue moins structurée, donc plus difficile à apprendre, que l'anglais.
+
+\subsection{Quelque éléments qui ressortent}
+Cependant, si on regarde plus en détail les exemples produits, des structures apparaissent. 
+
+Si on prend \lstinline!*[[UnitedStates|raphicsiteDirection]]! de l'exemple 2 (\autoref{gmsnn_ex2}, ligne 8) ou 
+\lstinline![[cy:Alaska]]! et \lstinline![[no:Arni-Anchorages]]! de l'exemple 2 (\autoref{gmsnn_ex2}, lignes 7 et 8), on a des doubles crochets, qui sont correctement ouverts puis fermés. On remarque aussi la présence de séparateurs (\lstinline!:! et \lstinline!|!).
+
+Ces structure sont similaire aux annotations présentes dans le code Wikipédia.
+
+Enfin, malgré l'absence d'espaces, on discerne de nombreux mots~:
+\begin{itemize}
+	\item la suite de mots \lstinline!statesandanumberofhisworkformembersothannovelwasmethe! qui ne contient en fait que des mots bien formés en anglais~: \lstinline!states and a number of his work for member so than novel was me the! (\autoref{gmsnn_ex1}, ligne 1);
+	\item de même pour la suite de mots \lstinline!oldWarInstartedbythePhilosophy!~: \lstinline!old War In started by the Philosophy! (\autoref{gmsnn_ex1}, ligne 1);
+	\item on trouve aussi des noms propres comme le nom de pays~: \lstinline!UnitedStates! (\autoref{gmsnn_ex2}, ligne 8) et \lstinline!Alaska! (\autoref{gmsnn_ex3}, ligne 7).
+\end{itemize}

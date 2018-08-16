@@ -2123,6 +2123,7 @@
     <bcf:datasource type="file" datatype="bibtex">bibs/msnn.bib</bcf:datasource>
     <bcf:datasource type="file" datatype="bibtex">bibs/torch.bib</bcf:datasource>
     <bcf:datasource type="file" datatype="bibtex">bibs/def.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">bibs/visualdl.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">cadre_theorique</bcf:citekey>
@@ -2136,21 +2137,27 @@
     <bcf:citekey order="9">org_loria</bcf:citekey>
     <bcf:citekey order="10">about_loria</bcf:citekey>
     <bcf:citekey order="11">about_synalp</bcf:citekey>
-    <bcf:citekey order="12">wiki_eureka</bcf:citekey>
-    <bcf:citekey order="13">about_papud</bcf:citekey>
-    <bcf:citekey order="14">bull_produits</bcf:citekey>
-    <bcf:citekey order="15">about_papud</bcf:citekey>
-    <bcf:citekey order="16">60MinBlitzTorch</bcf:citekey>
-    <bcf:citekey order="16">ByExampleTorch</bcf:citekey>
-    <bcf:citekey order="16">Classify</bcf:citekey>
-    <bcf:citekey order="16">doc_pytorch</bcf:citekey>
-    <bcf:citekey order="17">awd_source</bcf:citekey>
+    <bcf:citekey order="12">enwik8</bcf:citekey>
+    <bcf:citekey order="13">60MinBlitzTorch</bcf:citekey>
+    <bcf:citekey order="13">ByExampleTorch</bcf:citekey>
+    <bcf:citekey order="13">Classify</bcf:citekey>
+    <bcf:citekey order="13">doc_pytorch</bcf:citekey>
+    <bcf:citekey order="14">awd_source</bcf:citekey>
+    <bcf:citekey order="15">VisualDLGit</bcf:citekey>
+    <bcf:citekey order="15">VisualDLSite</bcf:citekey>
+    <bcf:citekey order="16">matplotlib</bcf:citekey>
+    <bcf:citekey order="17">csv</bcf:citekey>
     <bcf:citekey order="18">hm</bcf:citekey>
-    <bcf:citekey order="19">bug</bcf:citekey>
-    <bcf:citekey order="20">wiki_md</bcf:citekey>
-    <bcf:citekey order="21">wiki_lm</bcf:citekey>
-    <bcf:citekey order="22">wiki_eureka</bcf:citekey>
-    <bcf:citekey order="23">bptt-intro</bcf:citekey>
+    <bcf:citekey order="19">wiki_eureka</bcf:citekey>
+    <bcf:citekey order="20">about_papud</bcf:citekey>
+    <bcf:citekey order="21">about_papud</bcf:citekey>
+    <bcf:citekey order="22">bull_produits</bcf:citekey>
+    <bcf:citekey order="23">about_papud</bcf:citekey>
+    <bcf:citekey order="24">bug</bcf:citekey>
+    <bcf:citekey order="25">wiki_md</bcf:citekey>
+    <bcf:citekey order="26">wiki_lm</bcf:citekey>
+    <bcf:citekey order="27">wiki_eureka</bcf:citekey>
+    <bcf:citekey order="28">bptt-intro</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global/" type="entry" sortscheme="none" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

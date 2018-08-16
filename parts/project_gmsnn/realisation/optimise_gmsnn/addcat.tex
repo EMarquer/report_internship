@@ -1,0 +1,35 @@
+\subsection[Agrégation des sorties des couches]{Agrégation des sorties des couches~: d'une stratégie additive à une concaténation}\label{subsec:addcat_}
+La première optimisation à été de changer la façon de regrouper les informations de toues les \og échelles\fg{} avant de les transmettre au module produisant la distribution de probabilité.
+
+Initialement, les sorties de toutes les \og échelles\fg{} étaient sommées. Cela permettait de maintenir des \glspl{tensor} de dimensions uniformes quel que soit le nombre d'\og échelle\fg{} (\autoref{fig:add}).
+
+Après discussion avec notre maître de stage, la stratégie d'agrégation à été changé en une concaténation des sorties.
+
+Comme montré dans la \autoref{fig:cat}, la taille du \gls{tensor} concaténé change en fonction du nombre d'entrées.
+La manipulation de \glspl{tensor} de taille non fixée est très ardue dans ce cas précis, bien que nous ne développerons pas plus avant les raisons de cette difficulté.
+
+Cela à nécessité l'abandon de la propriété de croissance à l'infini de l'architecture (décrite \autoref{inf_growth}), au profit d'un nombre maximal d'échelles défini à l'avance ou déterminée à l'aide d'une formule en fonction des données disponibles (décrite \autoref{growth_formula}).
+
+\begin{figure}[ht]
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\scalebox{1}{\input{plots/add}}
+		\caption[Stratégie d'agrégation additive]{Stratégie d'agrégation additive.\vspace{2.5em}}\label{fig:add}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\scalebox{1}{\input{plots/cat}}
+		\caption[Stratégie d'agrégation par concaténation]{Stratégie d'agrégation par concaténation. Les sorties sont mises côte-à-côte affin de former un nouveau \gls{tensor}.}\label{fig:cat}
+	\end{subfigure} 
+	\caption{Stratégies d'agrégation}
+\end{figure}
+
+La stratégie par concaténation est plus lente en terme de temps de calcul que la stratégie additive, cependant pour le même temps de calcul elle permet d'obtenir de meilleurs résultats (\autoref{fig:addcat}).
+
+Voir l'annexe \ref{subsec:addcat} pour plus de détail sur le choix de la stratégie d'agrégation. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-bpc-msnn-det-msnn-cat.png}
+	\caption[Performances comparées des stratégies additive et par concaténation]{Performances comparées des stratégies par concaténation (msnn-cat) et additive (msnn-add). Le temps de calcul alloué est identique. Avec la concaténation on entraîne le modèle sur 1/4 des données, avec l'addition on l'entraîne 5 fois sur l'ensemble des données. Avec la concaténation, on obtient une BPC de 3.5, alors qu'on obtient une BPC de 4 avec l'addition.}\label{fig:addcat}
+\end{figure}
