@@ -22,14 +22,13 @@ Le fonctionnement détaillé de l'algorithme est disponible dans l'annexe \ref{s
 \subsubsection{Performances}
 Les performances de l'algorithme sont disponible dans le rapport dans l'annexe \ref{subsec:test_perf}.
 
-L'algorithme remplis sa fonction d'alléger la charge calculatoire. En effet, on à une réduction notable du temps nécessaire pour l'entraînement. % TODO parler de temps constant
+L'algorithme remplis sa fonction d'alléger la charge calculatoire. En effet, on obtient une réduction notable du temps nécessaire pour l'entraînement.
 
 De plus, il n'y à aucune variation notable de la qualité de l'entraînement.
 
 %\paragraph{Seule la première couche du modèle semble apprendre}
-Justement, comme seule une échelle apprend, on pourrait s'attendre à une baisse des performances.% TODO dire pourquoi.
+
+\subsubsection{Remise en cause de l'intérêt de l'architecture}
+Justement, comme seule une échelle apprend, on pourrait s'attendre à une baisse des performances. En effet, en entraînant une seule couche on réduit le nombre de paramètre du modèle, ce qui influence de façon néfaste la performance (Voir \autoref{subsec:optiparam} pour l'impact du nombre de paramètres).
 
 Comme le \gls{model} muni d'une seule échelle apprend aussi bien que le \gls{model} multi-échelles, cela remet en question l'utilité de l'architecture \gls{gmsnn} et de ses échelles multiples.
-
-\subsubsection{Conclusion}
-% TODO conclure

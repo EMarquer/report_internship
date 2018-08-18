@@ -1,4 +1,11 @@
 
+\nocite{*}
+\input{parts/appendix/bibliography.tex}\cleardoublepage
+\lists
+\cleardoublepage
+\terms
+\cleardoublepage
+
 \appendix
 %\pagenumbering{Alph}
 %\setcounter{page}{1}
@@ -11,27 +18,23 @@
 
 \cleardoublepage
 
+{
+\setcounter{tocdepth}{1}	
 \etocdepthtag.toc{mtappendix}
 \etocsettagdepth{mtchapter}{none}
 \etocsettagdepth{mtappendix}{subsection}
 \etoctocstyle{1}{Table des annexes}
 
-\tableofcontents
+\tableofcontents}
 \cleardoublepage
 
 
 % Bibliographie
-\input{parts/appendix/bibliography.tex}\cleardoublepage
 % Liste des figure
-%\listoffigures%\cleardoublepage
 % Liste des tables
 %\listoftables%\cleardoublepage
 % Liste des figure
 %\lstlistoflistings
-\lists
-\cleardoublepage
-\terms
-\cleardoublepage
 \captionsetup[figure]{list=no}
 \captionsetup[table]{list=no}
 \renewcommand\arraystretch{1.5}
@@ -43,9 +46,9 @@
 \input{parts/appendix/report_papud}
 \cleardoublepage
 
-\captionsetup[figure]{list=yes}
-\captionsetup[table]{list=yes}
-\renewcommand\arraystretch{1}
+%\captionsetup[figure]{list=yes}
+%\captionsetup[table]{list=yes}
+%\renewcommand\arraystretch{1}
 \chapter{Copie de la convention de stage}
 \includepdf[pages=-]{parts/appendix/convention.pdf}
 \cleardoublepage

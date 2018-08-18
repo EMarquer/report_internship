@@ -30,7 +30,7 @@ La réalisation de ce projet nous à permit d'approfondir largement nos connaiss
 \subsection{Pertinence des choix et possibilités d'exploration}
 Il est important de relever que dans beaucoup des situations rencontrées, nous avons dû faire des choix. De même dans l'ordre de priorité des optimisations à effectuer. La pertinence de nos choix est d'autant plus douteuse que notre niveau d'expertise du domaine est faible.
 
-Si à posteriori nous sommes capables d'envisages d'autres pistes pour poursuivre ce projet, en aucun cas nous ne regrettons les choix effectués, en particulier la décision d'abandonner le projet. % TODO add 'list'
+Si à posteriori nous sommes capables d'envisages d'autres pistes pour poursuivre ce projet, en aucun cas nous ne regrettons les choix effectués, en particulier la décision d'abandonner le projet.
 
 Par exemple, nous aurions pu optimiser le taux d'apprentissage, comme fait dans le \gls{project_papud} (voir \autoref{lr_opti_papud}).
 
@@ -38,26 +38,12 @@ Parmi les très nombreuse possibilités envisagées, on trouve aussi~:
 \begin{itemize}
 	\item l'utilisation d'un \gls{rnn} pour interpréter les informations des différentes échelles~;
 	\item la poursuite de l'utilisation de l'algorithme couche par couche, en poussant chaque échelle au maximum de ses capacités avant d'intégrer de nouvelles couches~;
-	\item le changement de l'architecture de pyramidale à parallèle, c'est à dire que chaque échelle serait indépendante, similairement à l'article \autocite{}~;
-	% TODO cite 
-	
-%	@article{Xiao2018Jan,
-%		author = {Xiao, Fen and Deng, Wenzheng and Peng, Liangchan and Cao, Chunhong and Hu, Kai and Gao, Xieping},
-%		title = {{MSDNN: Multi-Scale Deep Neural Network for Salient Object Detection}},
-%		journal = {arXiv},
-%		year = {2018},
-%		month = {Jan},
-%		eprint = {1801.04187},
-%		url = {https://arxiv.org/abs/1801.04187}
-%	}
-	\item ...
+	\item le changement de l'architecture de pyramidale à parallèle, c'est à dire que chaque échelle serait indépendante, similairement à l'article \autocite{Xiao2018Jan}.
 \end{itemize}
 
 \subsection{Travaux similaires}
-Dans un article datant du 27 Juillet 2018, soit quelques jours avant la fin du stage, une architecture extrêmement similaire à celle du \gls{gmsnn} est développée.
+Dans un article datant du 27 Juillet 2018 \autocite{hierachical_rnn}, soit quelques jours avant la fin du stage, une architecture extrêmement similaire à celle du \gls{gmsnn} est développée.
 
 Contrairement a notre stage, le modèle de l'article montre des performances supérieures à celles des autres architectures auxquelles il est comparé.
-En écho à la partie précédente, cela peut être dû à des choix de développement différent, comme à un travail plus poussé et plus expert sur le sujet.
-% TODO citer (https://arxiv.org/abs/1807.11582),
 
-%TODO rédiger un petit morceau
+En écho à la partie précédente, cela peut être dû à des choix de développement différent, comme à un travail plus poussé et plus expert sur le sujet.

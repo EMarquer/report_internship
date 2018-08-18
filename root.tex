@@ -1,21 +1,30 @@
 \documentclass[pidr]{univreport}
-\usepackage{reportcomands}
+\input{reportcomands}
+%\usepackage{reportcomands}
 
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees,snakes,calc}
 \usetikzlibrary{calc,positioning,shapes.multipart,decorations.pathreplacing,shapes.arrows}
 
 \DefineBibliographyStrings{french}{%
 	bibliography = {Bibliographie / Webographie},
+	and = {et},
+	in={dans},inseries={dans},
+	andothers={et associés},
 }
 
-\addbibresource{bibs/institute.bib}
-\addbibresource{bibs/report_howto.bib}
-\addbibresource{bibs/git.bib}
-\addbibresource{bibs/msnn.bib}
-\addbibresource{bibs/torch.bib}
-\addbibresource{bibs/def.bib}
-\addbibresource{bibs/visualdl.bib}
-\nocite{cadre_theorique, letudiant_presentation_memoire}
+\renewcommand{\multinamedelim}{et}
+
+\addbibresource{bibs/merge.bib}
+%\addbibresource{bibs/institute.bib}
+%\addbibresource{bibs/report_howto.bib}
+%\addbibresource{bibs/git.bib}
+%\addbibresource{bibs/msnn.bib}
+%\addbibresource{bibs/torch.bib}
+%\addbibresource{bibs/def.bib}
+%\addbibresource{bibs/visualdl.bib}
+%\addbibresource{bibs/g5k.bib}
+%\addbibresource{bibs/articles.bib}
+%\addbibresource{bibs/misc.bib}
 
 \input{data/metadata.tex}
 \input{data/glossary.tex}

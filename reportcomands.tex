@@ -1,0 +1,113 @@
+
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{subcaption}
+\usepackage[defaultlines=4,all]{nowidow}
+
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage[normalem]{ulem}
+\usepackage{float}
+
+\usepackage{makeidx}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage[nottoc]{tocbibind}
+\usepackage[backend=biber,backref=true,hyperref=true,sorting=none,citestyle=numeric,]{biblatex}%,sorting=nyt, autocite=footnote
+\usepackage{csquotes}
+\usepackage{etoc}
+\usepackage[xindy,acronym,section,style=altlist,nopostdot]{glossaries}%nonumberlist%altlist%long3colheader%nopostdot
+\setacronymstyle{long-short-desc}
+\usepackage{array}
+\usepackage{tabularx}
+
+\renewcommand{\seename}{voir aussi}
+\newcommand{\foreign}[1]{\emph{#1}}
+
+\renewcommand*{\glossaryentrynumbers}[1]{\space p. #1}
+
+\newcommand*{\defref}[1]{Défini \autoref{#1} (\autopageref{#1}).}
+
+\newcommand{\newglos}[3]
+{%
+	% The glossary entry the acronym links to   
+	\newglossaryentry{#1}{name={#2}, text={#2},
+		description={#3}}}
+
+\newcommand{\newglosacr}[4]
+{%
+	% The glossary entry the acronym links to   
+	\newglossaryentry{#1}{name={#2}, text={#2},
+		description={#3}}
+%
+	% Define the acronym and use the see= option
+	\newglossaryentry{#1-}{type=\acronymtype, name={#2}, text={#2},
+	description={}, first={#4\glsadd{#1}}, see=[Glossaire~:]{#1}}}
+
+\newcommand{\printixgls}
+{\printnoidxglossary[type=entity]
+	\printnoidxglossary[type=\acronymtype]
+	\printnoidxglossary[type=main]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+\usepackage{textcase}
+%\lstinputlisting{source_filename.py}
+%\lstinputlisting[language=Python]{source_filename.py}
+%\lstinputlisting[language=Python, firstline=37, lastline=45]{source_filename.py}
+
+\makeatletter
+\providecommand\phantomsection{}
+\newcommand{\listsname}{Listes des tables, des figures et des fragments de code}
+\newcommand{\lists}{
+	\clearpage
+	\chapter{\listsname}
+	\setcounter{tocdepth}{2}
+	\section*{\listtablename}
+	\@starttoc{lot}
+	\section*{\listfigurename}
+	\@starttoc{lof}
+	\section*{\lstlistlistingname}
+	\@starttoc{lol}
+}
+
+\newcommand{\termsname}{Glossaire, accronymes et noms d'entités}
+\newcommand{\terms}{
+	\clearpage
+	\chapter{\termsname}
+	\printnoidxglossary[type=main]
+	\newpage
+	\printnoidxglossary[type=\acronymtype]
+	\newpage
+	\printnoidxglossary[type=entity]
+}
+\makeatother
+
+\newcommand{\setlistingname}[3]{%
+	\renewcommand\lstlistingname{#1}
+	\renewcommand\lstlistlistingname{#2}
+	\def\lstlistingautorefname{#3}
+}
+
+\setlistingname{Fragment de code}{Liste des fragments de code}{Fragment de code}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tocloft}
+\renewcommand{\cftdot}{.}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\interfootnotelinepenalty=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{report}[1]{\section{#1}
+	\hrule}{\newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\medpoint{\textperiodcentered}

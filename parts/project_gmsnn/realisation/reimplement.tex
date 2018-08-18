@@ -30,8 +30,8 @@ Le module d'encodage des caractères, appelé \foreign{embeding layer} en anglai
 
 Le \gls{rnn} traite les caractères sous forme de séquence, et peut ainsi apprendre la structure en mots, la syntaxe et d'autres propriétés du langage.
 
-Le module produisant la distribution de probabilité est un module linéaire.
-Il transforme les informations produites par le réseau de neurones en probabilité pour chaque caractère d'être le prochain caractère de la séquence. % TODO def module linéaire
+Le module produisant la distribution de probabilité est un module linéaire\footnote{\og Module linéaire \fg{} est le nom donné aux modules composé d'un \gls{nn} intégralement connecté. Un réseau de neurones intégralement connécté signifie que chaque neurone d'une couche est connecté avec tous les neurones de la couche précédente. Il s'agit de l'architecture de \gls{nn} la plus simple.\label{def:fully_connected}\label{def:lin_module}}.
+Il transforme les informations produites par le réseau de neurones en probabilité pour chaque caractère d'être le prochain caractère de la séquence.
 
 Voir les annexes \ref{subsec:testreimp_1}, \ref{subsec:testreimp_2} et \ref{subsec:testreimp_3} pour les rapports sur le \gls{model} ré-implémenté. 
 

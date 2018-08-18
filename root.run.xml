@@ -79,13 +79,7 @@
       <file>root.bcf</file>
     </requires>
     <requires type="editable">
-      <file>bibs/institute.bib</file>
-      <file>bibs/report_howto.bib</file>
-      <file>bibs/git.bib</file>
-      <file>bibs/msnn.bib</file>
-      <file>bibs/torch.bib</file>
-      <file>bibs/def.bib</file>
-      <file>bibs/visualdl.bib</file>
+      <file>bibs/merge.bib</file>
     </requires>
   </external>
 </requests>

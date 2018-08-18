@@ -16,8 +16,8 @@
 		rectangle split parts=#1,
 		draw,
 		anchor=west,
-		inner sep=.4 em,
-		minimum height=1 em,
+		minimum height=2 em,
+		inner sep=.42 em,
 	},
 	mytext/.style={
 		arrow box,
@@ -86,7 +86,7 @@
 		{};
 		\node (upper\the\numexpr\ti-1\relax) at  ($(part\ti.west) + (0,-2em)$) {};
 		\node (lower\the\numexpr\ti-1\relax) at  ($(part\ti.west) + (0,2em)$) {};
-		\node[text width=\the\numexpr\Longitud*2\relax em,text centered]
+		\node[text width=\Longitud em,text centered]
 		at (part\ti.center) {\baselineskip=10pt\Texto\par};  
 		\gdef\lastpart{\ti}
 	}
@@ -105,25 +105,34 @@
 %	}
 }
 
+
+\colorlet{col1}{yellow2}
+\colorlet{col2}{yellow3}
+\colorlet{col3}{green!30!}
+\colorlet{col4}{blue!30!}
+\colorlet{col5}{purple!30!}
+
+
 \newenvironment{timeline}[1][]
 {\begin{tikzpicture}[node distance=0pt and -\pgflinewidth,#1]}
 {\end{tikzpicture}}
 
 \begin{timeline}
 \TimeLine{%
-    5/yellow2/{1 sem.},%
-    5/yellow3/{1 sem.},%
-    5/green!30!/{1 sem.},%
-    5/blue!30!/{1 sem.},%
-    5/purple!30!/{1 sem.}
+	1/col1/{1j.},%
+	4/col2/{4 jours},%
+	10/col3/{10 jours},%
+	6/col4/{6 jours},%
+	4/col5/{4 jours}
   }
 
-\AddText[text=white]{red!60!black}{D\'{e}but \\ du projet}{1}{l}
-\AddText{yellow2!50!}{Corpus, analyse \\ et mod\`{e}le basiques}{1}{M}
-\AddText{yellow3!50!}{Premiers r\'{e}sultats, \\ corpus gros volume}{2}{m}
-\AddText{green!15!}{Nouveau score, \\ analyse du pic \\ de performance}{3}{M}
-\AddText{blue!15!}{Recherche du taux \\ d'apprentissage, \\ corpus multi-queues}{4}{m}
-\AddText{purple!15!}{Documentation}{5}{M}
+%\AddText[text=white]{red!60!black}{D\'{e}but \\ du projet}{1}{l}
+\AddText{col1!50!}{Choix du \\ mod\`{e}le}{1}{M}
+\AddText{col2!50!}{Impl\'{e}mentation \\ du prototype}{2}{m}
+%\AddText{col2!50!}{Premiers r\'{e}sultats}{2}{R}
+\AddText{col3!50!}{Am\'{e}lioration du prototype : \\recherche du taux  d'apprentissage, \\ analyse du pic de performance,  \dots}{3}{M}
+\AddText{col4!50!}{Corpus multi-processus}{4}{m}
+\AddText{col5!50!}{Documentation}{5}{M}
 \AddText[text=white]{purple!60!black}{D\'{e}but de la \\r\'{e}daction\\ du rapport}{5}{r}
 
 % \AddText[text=white]{red1}{Initial \\ meeting}{2}{L}

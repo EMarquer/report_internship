@@ -6,9 +6,10 @@ Un \gls{batch} (anglais pour lot), est un groupe d'exemples successifs.
 
 Le découpage des données en \glspl{batch} permet de répartir l'apprentissage tout au long de l'étude des données.
 Cela permet d'atteindre de meilleurs performances.
+L'algorithme basé sur ce principe appelé \foreign{mini-batch}\autocite{batch}.
 
-Il s'agit d'une optimisation rependue pour l'entraînement de \glspl{nn}. % TODO ajouter sources
-Elle est souvent couplée à un entraînement simultané sur plusieurs \glspl{batch}.
+Il s'agit d'une optimisation rependue pour l'entraînement de \glspl{nn}\autocite{batch}.
+Elle est souvent couplée à un entraînement simultané sur plusieurs \glspl{batch}, décrit dans la partie suivante.
 
 \subsubsection{\Glspl{batch} parallèles}
 Un entraînement par \glspl{batch} parallèles permet de calculer le résultat de plusieurs exemples simultanément.
@@ -17,6 +18,8 @@ Enfin, on met à jours le \gls{model} en fonction de l'ensemble des exemples.
 Au final, les calculs des résultat sont parallélisé, et le coût de la mise à jour est mis en commun entre plusieurs exemples.
 
 Cela permet de réduire drastiquement le temps de calcul et d'améliorer la qualité de l'entraînement, au prix d'une plus grande utilisation de la mémoire.
+
+La version de l'algorithme de parallélisation utilisé est similaire à celle décrite dans l'article \autocite{batch_parallel}. Elle est géré de base par \gls{pytorch}.
 
 \subsubsection{Conflit entre les \glspl{batch} parallèles et l'architecture \gls{gmsnn}}
 Cependant, le découpage en \glspl{batch} pose un problème majeur avec l'architecture \gls{gmsnn}~: elle est basée sur la continuité des exemples fournis, et l'utilisation de \glspl{batch} brise la continuité en introduisant un parallélisme.
