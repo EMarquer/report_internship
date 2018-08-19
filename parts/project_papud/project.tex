@@ -1,12 +1,12 @@
 \chapter{\Glsname{project_papud}\label{ch:project_papud}}
 \section{Contexte}
-Nous avons vu que parmi les secteurs d'activité de \gls{bull}, les serveurs et autres systèmes de traitent de gros volumes de données sont très présents.
+Nous avons vu que parmi les secteurs d'activité de \gls{bull}, les serveurs et autres systèmes de traitent de gros volumes de \glspl{data} sont très présents.
 
 Ces outils tombent rarement en panne, mais quand ils le font cela occasionne des pertes très importantes pour l'entreprise.
 
 Il serait donc très intéressant de mettre au point un système de prédiction des panes, afin de pouvoir les éviter.
 
-Les données disponibles pour remplir cette tache sont des fichiers de journaux systèmes (décrits en détail dans le \autoref{ch:data_papud}) de très grande taille.
+Les \glspl{data} disponibles pour remplir cette tache sont des fichiers de journaux systèmes (décrits en détail dans le \autoref{ch:data_papud}) de très grande taille.
 Ils contiennent de nombreuses informations sur les évènements se déroulant dans les outils.
 
 \section{Solution}
@@ -27,7 +27,7 @@ Ainsi, le plan général des opérations est divisé en 2 parties~:
 \end{enumerate}
 \hspace{1em}
 
-Pour ce qui est du modèle simple, il à été décidé de ne pas utiliser de \gls{rnn}, bien trop lent pour la quantité de données à traiter. À la place, un \gls{nn} basique sera utilisé.
+Pour ce qui est du modèle simple, il à été décidé de ne pas utiliser de \gls{rnn}, bien trop lent pour la quantité de \glspl{data} à traiter. À la place, un \gls{nn} basique sera utilisé.
 
 On peut noter que les conclusions du \gls{project_gmsnn} ont été appliquées, autant pour le déroulement du projet que pour le type de modèle à utiliser.
 
@@ -36,7 +36,7 @@ On peut noter que les conclusions du \gls{project_gmsnn} ont été appliquées, 
 La tache qui nous à été confiée est la réalisation du modèle simple.
 
 Plus exactement, étant donné qu'il était évident que la durée restante du stage serait insuffisante pour réaliser et pousser au maximum le modèle simple, nos objectifs étaient la réalisation d'un prototype du modèle, et de mettre en place les outils nécessaires à l'entraînement.
-Ceux-ci sont principalement les outils de gestion et de prétraitement des données, les outils d'évaluation des performances du modèle, et l'algorithme d'entraînement du modèle.
+Ceux-ci sont principalement les outils de gestion et de \gls{preprocessing} des \glspl{data}, les outils d'évaluation des performances du modèle, et l'algorithme d'entraînement du modèle.
 
 La description des caractéristiques du modèle est disponible dans le \autoref{ch:papud_model}.
 
@@ -52,7 +52,7 @@ C'est-à-dire que des rapports fréquents et des réunions hebdomadaires durant 
 Les rapports de ce projet sont également disponibles en annexe.
 Le rapport d'une des réunion est disponible à l'annexe \ref{anx:meeting}. % TODO enlever ?
 
-Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git. Les collaborateurs du projet ont accès à l'ensemble de ces données, qui ont été mises à jours tout au long du projet.
+Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git. Les collaborateurs du projet ont accès à l'ensemble de ces \glspl{data}, qui ont été mises à jours tout au long du projet.
 
 \subsection{Organisation initiale du travail}
 Ce \gls{project_papud} s'est déroulé sur la base de cycles de développement.
@@ -65,7 +65,7 @@ Cependant, il à été possible de définir les priorités suivantes~:
 	\item la réalisation d'un prototype fonctionnel~;
 	\item la mise en place d'un algorithme d'entraînement basique~;
 	\item la mise en place de moyens d'évaluer le modèle et l'obtention de premières performances~;
-	\item le prétraitement des données et la préparation de la gestion des très gros volumes de données à venir~;
+	\item le \gls{preprocessing} des \glspl{data} et la préparation de la gestion des très gros volumes de \glspl{data} à venir~;
 	\item le temps restant est dédié à l'amélioration des performances.
 \end{enumerate}
 \hspace{1em}

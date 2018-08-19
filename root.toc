@@ -5,319 +5,309 @@
 \defcounter {refsection}{0}\relax 
 \etoc@depthtag {mtchapter}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Remerciements}{iii}{Doc-Start}
+\contentsline {chapter}{Remerciements}{3}{Doc-Start}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Contexte \& Enjeux}{3}{section.1.1}
+\contentsline {section}{\numberline {1.1}Contexte \& Enjeux}{7}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Objectifs}{3}{section.1.2}
+\contentsline {section}{\numberline {1.2}Objectifs}{7}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Plan}{4}{section.1.3}
+\contentsline {section}{\numberline {1.3}Terminologie et concepts fondamentaux}{8}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Cadre th\IeC {\'e}orique}{5}{chapter.2}
+\contentsline {subsection}{\numberline {1.3.1}\Glsentrytext {ml}, mod\IeC {\`e}le, entra\IeC {\^\i }nement et donn\IeC {\'e}es}{8}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}
+\contentsline {subsubsection}{\Glsentrytext {ml}}{8}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Domaines scientifiques et techniques concern\IeC {\'e}s}{5}{section.2.2}
+\contentsline {subsubsection}{\Glsentrytext {model}}{8}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}\Glsentrytext {ml}}{5}{subsection.2.2.1}
+\contentsline {subsubsection}{Entra\IeC {\^\i }nement du mod\IeC {\`e}le}{8}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}\Glsentrytext {dl}}{6}{subsection.2.2.2}
+\contentsline {subsubsection}{Donn\IeC {\'e}es d'entra\IeC {\^\i }nement}{8}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}\Glsentrytext {nlp}}{6}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {1.3.2}\Glsentrytext {dl} et r\IeC {\'e}seaux de neurones}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Concepts et termes fondamentaux}{6}{section.2.3}
+\contentsline {subsubsection}{\Glsentrytext {dl}}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}D\IeC {\'e}finitions g\IeC {\'e}n\IeC {\'e}rales}{6}{subsection.2.3.1}
+\contentsline {subsubsection}{\Glsentrytext {nn}}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Concepts r\IeC {\'e}currents en \Glsentrytext {ml}}{6}{subsection.2.3.2}
+\contentsline {subsubsection}{Architecture et modules}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\Glsentrytext {model}}{6}{subsection.2.3.2}
+\contentsline {paragraph}{\Glsentrytext {parameter}}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Entra\IeC {\^\i }nement du mod\IeC {\`e}le}{6}{subsection.2.3.2}
+\contentsline {subsubsection}{Principales architectures de r\IeC {\'e}seau de neurones artificiels}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Donn\IeC {\'e}es d'entra\IeC {\^\i }nement}{7}{subsection.2.3.2}
+\contentsline {paragraph}{\Glsentrytext {nn} int\IeC {\'e}gralement connect\IeC {\'e} ou module lin\IeC {\'e}aire}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}\Glsentrytext {lm}}{7}{subsection.2.3.3}
+\contentsline {paragraph}{\Glsentrytext {rnn}}{9}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.4}Principe des r\IeC {\'e}seaux de neurones artificiels}{7}{subsection.2.3.4}
+\contentsline {paragraph}{\Glsentrytext {lstm}}{10}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Le neurone formel}{7}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {1.3.3}\Glsentrytext {nlp} et mod\IeC {\`e}le de la langue}{10}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{G\IeC {\'e}n\IeC {\'e}ralement en \gls {dl}:}{7}{figure.caption.1}
+\contentsline {subsubsection}{\Glsentrytext {nlp}}{10}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Les r\IeC {\'e}seaux et les couches}{8}{figure.caption.2}
+\contentsline {subsubsection}{\Glsentrytext {lm}}{10}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{L'entra\IeC {\^\i }nement des r\IeC {\'e}seaux de neurones}{8}{figure.caption.3}
+\contentsline {subsubsection}{Contexte et d\IeC {\'e}pendances}{10}{subsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{La repr\IeC {\'e}sentation sous forme matricielle}{9}{figure.caption.3}
+\contentsline {subsection}{\numberline {1.3.4}Performance et mesure}{10}{subsection.1.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Les assemblages de modules et la programmation diff\IeC {\'e}rentielle}{9}{figure.caption.3}
+\contentsline {section}{\numberline {1.4}Plan}{11}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.5}Les types de r\IeC {\'e}seaux de neurones artificiels}{9}{subsection.2.3.5}
+\contentsline {part}{I\hspace {1em}\Glsentrytext {project_gmsnn}}{13}{part.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Les R\IeC {\'e}seaux \emph {feedforward}}{9}{subsection.2.3.5}
+\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du laboratoire et de l'\IeC {\'e}quipe}{14}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Les R\IeC {\'e}seaux de Neurones Artificiels R\IeC {\'e}currents}{9}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{14}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Quelques autres types non d\IeC {\'e}taill\IeC {\'e}s}{9}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.2}Le LORIA}{14}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}\IeC {\'E}tat de l'art}{10}{section.2.4}
+\contentsline {subsection}{\numberline {2.2.1}Structure administrative du LORIA}{14}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}\Glsentrytext {project_gmsnn}}{10}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.2.2}Recherche au sein du LORIA}{15}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}\Glsentrytext {project_papud}}{10}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.3}\IeC {\'E}quipe SYNALP}{16}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}\Glsentrytext {project_gmsnn}}{11}{part.1}
+\contentsline {subsection}{\numberline {2.3.1}Membres}{16}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Pr\IeC {\'e}sentation du laboratoire et de l'\IeC {\'e}quipe}{12}{chapter.3}
+\contentsline {subsection}{\numberline {2.3.2}Th\IeC {\'e}matiques de recherche}{16}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}s}{12}{section.3.1}
+\contentsline {section}{\numberline {2.4}Pour en savoir plus}{16}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Le LORIA}{12}{section.3.2}
+\contentsline {chapter}{\numberline {3}Architecture innovante de r\IeC {\'e}seau de neurones pour un mod\IeC {\`e}le du langage}{17}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}L'\IeC {\'e}quipe SYNALP}{13}{section.3.3}
+\contentsline {section}{\numberline {3.1}Contexte}{17}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Architecture innovante de r\IeC {\'e}seau de neurones pour l'\IeC {\'e}laboration d'un mod\IeC {\`e}le du langage}{15}{chapter.4}
+\contentsline {subsection}{\numberline {3.1.1}Manque d'utilisation des gros volumes de donn\IeC {\'e}es}{17}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Contexte}{15}{section.4.1}
+\contentsline {subsection}{\numberline {3.1.2}Probl\IeC {\`e}mes de m\IeC {\'e}moire}{17}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Manque d'utilisation des gros volumes de donn\IeC {\'e}es}{15}{subsection.4.1.1}
+\contentsline {section}{\numberline {3.2}Solution propos\IeC {\'e}e}{18}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Probl\IeC {\`e}mes de m\IeC {\'e}moire}{15}{subsection.4.1.2}
+\contentsline {section}{\numberline {3.3}\Glsentrytext {project_gmsnn}}{18}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Solution propos\IeC {\'e}e}{16}{section.4.2}
+\contentsline {section}{\numberline {3.4}Organisation du travail}{18}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}\Glsentrytext {project_gmsnn}}{16}{section.4.3}
+\contentsline {subsection}{\numberline {3.4.1}Organisation initiale du travail}{18}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Organisation du travail}{16}{section.4.4}
+\contentsline {subsection}{\numberline {3.4.2}D\IeC {\'e}roulement r\IeC {\'e}el du projet}{19}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Organisation initiale du travail}{16}{subsection.4.4.1}
+\contentsline {section}{\numberline {3.5}Outils}{20}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}D\IeC {\'e}roulement r\IeC {\'e}el du projet}{17}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {3.5.1}Gestion du code}{20}{subsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Outils}{18}{section.4.5}
+\contentsline {subsection}{\numberline {3.5.2}Langage et librairie}{20}{subsection.3.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}Langage et librairie}{18}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {3.5.3}Grid5000 et les machines distantes}{20}{subsection.3.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.2}Grid5000 et les machines distantes}{18}{subsection.4.5.2}
+\contentsline {chapter}{\numberline {4}Donn\IeC {\'e}es disponibles}{21}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Donn\IeC {\'e}es disponibles}{19}{chapter.5}
+\contentsline {section}{\numberline {4.1}Extrait des donn\IeC {\'e}es d'entra\IeC {\^\i }nent}{21}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Extrait des donn\IeC {\'e}es d'entra\IeC {\^\i }nent}{19}{section.5.1}
+\contentsline {section}{\numberline {4.2}Pr\IeC {\'e}traitement des donn\IeC {\'e}es}{22}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Pr\IeC {\'e}traitement des donn\IeC {\'e}es}{20}{section.5.2}
+\contentsline {chapter}{\numberline {5}Description de l'architecture propos\IeC {\'e}e}{23}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Description de l'architecture propos\IeC {\'e}e}{21}{chapter.6}
+\contentsline {section}{\numberline {5.1}Propri\IeC {\'e}t\IeC {\'e}s du mod\IeC {\`e}le}{23}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Propri\IeC {\'e}t\IeC {\'e}s du mod\IeC {\`e}le}{21}{section.6.1}
+\contentsline {subsection}{\numberline {5.1.1}R\IeC {\'e}currence du mod\IeC {\`e}le}{23}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}R\IeC {\'e}currence du mod\IeC {\`e}le}{21}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Passer \IeC {\`a} l'\IeC {\'e}chelle}{23}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.2}Passer \IeC {\`a} l'\IeC {\'e}chelle}{21}{subsection.6.1.2}
+\contentsline {subsubsection}{Plusieurs niveaux d'abstraction de l'information}{24}{figure.caption.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Plusieurs niveaux d'abstraction de l'information}{22}{figure.caption.7}
+\contentsline {subsection}{\numberline {5.1.3}Adapter le mod\IeC {\`e}le au volume de donn\IeC {\'e}es et croissance du mod\IeC {\`e}le}{24}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.3}Adapter le mod\IeC {\`e}le au volume de donn\IeC {\'e}es et croissance du mod\IeC {\`e}le}{22}{subsection.6.1.3}
+\contentsline {subsubsection}{Croissance potentiellement infinie du mod\IeC {\`e}le}{25}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Croissance potentiellement infinie du mod\IeC {\`e}le}{23}{subsection.6.1.3}
+\contentsline {chapter}{\numberline {6}R\IeC {\'e}alisation}{27}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}R\IeC {\'e}alisation}{25}{chapter.7}
+\contentsline {section}{\numberline {6.1}Recherche documentaire}{27}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Recherche documentaire}{25}{section.7.1}
+\contentsline {section}{\numberline {6.2}\IeC {\'E}tude et r\IeC {\'e}-impl\IeC {\'e}mentation simplifi\IeC {\'e}e du mod\IeC {\`e}le \gls {soa}}{27}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}\IeC {\'E}tude et r\IeC {\'e}-impl\IeC {\'e}mentation simplifi\IeC {\'e}e du mod\IeC {\`e}le \gls {soa}}{25}{section.7.2}
+\contentsline {subsection}{\numberline {6.2.1}Travail effectu\IeC {\'e}}{27}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}Travail effectu\IeC {\'e}}{25}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {6.2.2}\Glsentrytext {model} r\IeC {\'e}-impl\IeC {\'e}ment\IeC {\'e} simplifi\IeC {\'e}e}{28}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.2}\Glsentrytext {model} r\IeC {\'e}-impl\IeC {\'e}ment\IeC {\'e} simplifi\IeC {\'e}e}{25}{subsection.7.2.2}
+\contentsline {section}{\numberline {6.3}Impl\IeC {\'e}mentation du nouveau mod\IeC {\`e}le}{29}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.3}Conclusion}{26}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {6.3.1}Travail effectu\IeC {\'e}}{29}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Impl\IeC {\'e}mentation du nouveau mod\IeC {\`e}le}{27}{section.7.3}
+\contentsline {subsection}{\numberline {6.3.2}Transmission d'information}{29}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Travail effectu\IeC {\'e}}{27}{subsection.7.3.1}
+\contentsline {section}{\numberline {6.4}Int\IeC {\'e}gration de syst\IeC {\`e}mes de visualisation}{30}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Transmission d'information}{27}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {6.4.1}Utilisation de librairies}{30}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.3}Conclusion}{28}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {6.4.2}Cr\IeC {\'e}ation d'un outil personnalis\IeC {\'e}}{30}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Int\IeC {\'e}gration de syst\IeC {\`e}mes de visualisation}{29}{section.7.4}
+\contentsline {section}{\numberline {6.5}Optimisation et am\IeC {\'e}lioration du nouveau mod\IeC {\`e}le}{31}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Utilisation de librairies}{29}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {6.5.1}Agr\IeC {\'e}gation des sorties des couches}{31}{subsection.6.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Cr\IeC {\'e}ation d'un outil personnalis\IeC {\'e}}{29}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {6.5.2}Sauvegarde, interruption et reprise de l'entra\IeC {\^\i }nement}{33}{subsection.6.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Optimisation et am\IeC {\'e}lioration du nouveau mod\IeC {\`e}le}{30}{section.7.5}
+\contentsline {subsection}{\numberline {6.5.3}Tentatives d'optimisations, fuites m\IeC {\'e}moires et lenteur de l'entra\IeC {\^\i }nement}{33}{subsection.6.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Agr\IeC {\'e}gation des sorties des couches}{30}{subsection.7.5.1}
+\contentsline {subsubsection}{Consommation de m\IeC {\'e}moire et de temps de calcul accrue}{33}{subsection.6.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}Sauvegarde, interruption et reprise de l'entra\IeC {\^\i }nement}{32}{subsection.7.5.2}
+\contentsline {subsubsection}{Estimation de la consommation normale du mod\IeC {\`e}le}{34}{subsection.6.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.3}Tentatives d'optimisations, fuites m\IeC {\'e}moires et lenteur de l'entra\IeC {\^\i }nement}{32}{subsection.7.5.3}
+\contentsline {subsubsection}{R\IeC {\'e}solution des fuites}{34}{subsection.6.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Consommation de m\IeC {\'e}moire et de temps de calcul accrue}{32}{subsection.7.5.3}
+\contentsline {subsubsection}{Conclusion}{34}{subsection.6.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Estimation de la consommation normale du mod\IeC {\`e}le}{33}{subsection.7.5.3}
+\contentsline {subsection}{\numberline {6.5.4}Entra\IeC {\^\i }nement par exemples simultan\IeC {\'e}s}{34}{subsection.6.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{R\IeC {\'e}solution des fuites}{33}{subsection.7.5.3}
+\contentsline {subsubsection}{\Gls {batch}}{34}{subsection.6.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Conclusion}{33}{subsection.7.5.3}
+\contentsline {subsubsection}{\Glspl {batch} parall\IeC {\`e}les}{35}{subsection.6.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.4}Entra\IeC {\^\i }nement par exemples simultan\IeC {\'e}s ; \Glsentrytext {batch}}{33}{subsection.7.5.4}
+\contentsline {subsubsection}{Conflit entre les \glspl {batch} parall\IeC {\`e}les et l'architecture \gls {gmsnn}}{35}{subsection.6.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\gls {batch}}{33}{subsection.7.5.4}
+\contentsline {subsection}{\numberline {6.5.5}Augmentation du nombre de param\IeC {\`e}tres}{35}{subsection.6.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\Glspl {batch} parall\IeC {\`e}les}{34}{subsection.7.5.4}
+\contentsline {subsection}{\numberline {6.5.6}Entra\IeC {\^\i }nement couche par couche}{36}{subsection.6.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Conflit entre les \glspl {batch} parall\IeC {\`e}les et l'architecture \gls {gmsnn}}{34}{subsection.7.5.4}
+\contentsline {subsubsection}{Performances}{36}{subsection.6.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Conclusion}{34}{subsection.7.5.4}
+\contentsline {subsubsection}{Remise en cause de l'int\IeC {\'e}r\IeC {\^e}t de l'architecture}{36}{subsection.6.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.5}Augmentation du nombre de param\IeC {\`e}tres}{34}{subsection.7.5.5}
+\contentsline {subsection}{\numberline {6.5.7}Conclusion}{37}{subsection.6.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Conclusion}{35}{subsection.7.5.5}
+\contentsline {section}{\numberline {6.6}Production des exemples et d\IeC {\'e}couverte du probl\IeC {\`e}me d'encodage}{38}{section.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.6}Entra\IeC {\^\i }nement couche par couche}{35}{subsection.7.5.6}
+\contentsline {subsection}{\numberline {6.6.1}Exemples}{38}{subsection.6.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Performances}{35}{subsection.7.5.6}
+\contentsline {subsection}{\numberline {6.6.2}Manque d'espaces}{39}{subsection.6.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Remise en cause de l'int\IeC {\'e}r\IeC {\^e}t de l'architecture}{36}{subsection.7.5.6}
+\contentsline {subsection}{\numberline {6.6.3}Quelques \IeC {\'e}l\IeC {\'e}ments qui ressortent}{39}{subsection.6.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.7}Conclusion}{36}{subsection.7.5.7}
+\contentsline {section}{\numberline {6.7}Analyse des r\IeC {\'e}sultats et arr\IeC {\^e}t du projet}{40}{section.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Production des exemples et d\IeC {\'e}couverte du probl\IeC {\`e}me d'encodage}{37}{section.7.6}
+\contentsline {subsection}{\numberline {6.7.1}Analyse des r\IeC {\'e}sultats}{40}{subsection.6.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.1}Exemples}{37}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {6.7.2}Conclusions de l'analyse}{40}{subsection.6.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.2}Manque d'espaces}{38}{subsection.7.6.2}
+\contentsline {subsection}{\numberline {6.7.3}Arr\IeC {\^e}t du projet et d\IeC {\'e}but du projet suivant}{40}{subsection.6.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.3}Quelque \IeC {\'e}l\IeC {\'e}ments qui ressortent}{38}{subsection.7.6.3}
+\contentsline {chapter}{\numberline {7}Conclusions sur le projet GMSNN}{41}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.7}Analyse des r\IeC {\'e}sultats et arr\IeC {\^e}t du projet}{39}{section.7.7}
+\contentsline {section}{\numberline {7.1}Retour sur le travail effectu\IeC {\'e}}{41}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7.1}Analyse des r\IeC {\'e}sultats}{39}{subsection.7.7.1}
+\contentsline {section}{\numberline {7.2}Apport personnel du projet}{41}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7.2}Conclusions de l'analyse}{39}{subsection.7.7.2}
+\contentsline {section}{\numberline {7.3}Discussion et perspectives}{42}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7.3}Arr\IeC {\^e}t du projet et d\IeC {\'e}but du projet suivant}{39}{subsection.7.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Pertinence des choix et possibilit\IeC {\'e}s d'exploration}{42}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Conclusions sur le projet GMSNN}{41}{chapter.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Retour sur le travail effectu\IeC {\'e}}{41}{section.8.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Apport personnel du projet}{41}{section.8.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Discussion et perspectives}{42}{section.8.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.1}Pertinence des choix et possibilit\IeC {\'e}s d'exploration}{42}{subsection.8.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.2}Travaux similaires}{42}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {7.3.2}Travaux similaires}{42}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{II\hspace {1em}\Glsentrytext {project_papud}}{43}{part.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Pr\IeC {\'e}sentation du projet ITEA3-PAPUD, cas d'utilisation BULL\glsadd {itea3}\glsadd {papud}}{44}{chapter.9}
+\contentsline {chapter}{\numberline {8}Pr\IeC {\'e}sentation du projet ITEA3-PAPUD, cas d'utilisation BULL\glsadd {itea3}\glsadd {papud}}{44}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Collaborateurs}{44}{section.9.1}
+\contentsline {section}{\numberline {8.1}Collaborateurs}{44}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}\Glsentrytext {eureka} et ITEA3}{44}{section.9.2}
+\contentsline {section}{\numberline {8.2}\Glsentrytext {eureka} et ITEA3}{44}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.3}\Glsentrytext {project_papud} et cas d'utilisation BULL}{44}{section.9.3}
+\contentsline {section}{\numberline {8.3}\Glsentrytext {project_papud} et cas d'utilisation BULL}{44}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.4}\Glsentrytext {bull}}{45}{section.9.4}
+\contentsline {section}{\numberline {8.4}\Glsentrytext {bull}}{45}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}\Glsname {project_papud}}{47}{chapter.10}
+\contentsline {chapter}{\numberline {9}\Glsname {project_papud}}{47}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}Contexte}{47}{section.10.1}
+\contentsline {section}{\numberline {9.1}Contexte}{47}{section.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Solution}{47}{section.10.2}
+\contentsline {section}{\numberline {9.2}Solution}{47}{section.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3}projet PAPUD}{48}{section.10.3}
+\contentsline {section}{\numberline {9.3}projet PAPUD}{48}{section.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.4}Organisation du travail}{48}{section.10.4}
+\contentsline {section}{\numberline {9.4}Organisation du travail}{48}{section.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.1}Organisation initiale du travail}{48}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {9.4.1}Organisation initiale du travail}{48}{subsection.9.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.2}D\IeC {\'e}roulement r\IeC {\'e}el du projet}{49}{subsection.10.4.2}
+\contentsline {subsection}{\numberline {9.4.2}D\IeC {\'e}roulement r\IeC {\'e}el du projet}{49}{subsection.9.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.5}Outils}{49}{section.10.5}
+\contentsline {section}{\numberline {9.5}Outils}{49}{section.9.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Donn\IeC {\'e}es disponibles}{51}{chapter.11}
+\contentsline {chapter}{\numberline {10}Donn\IeC {\'e}es disponibles}{51}{chapter.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Extrait des donn\IeC {\'e}es d'entra\IeC {\^\i }nent}{51}{section.11.1}
+\contentsline {section}{\numberline {10.1}Extrait des donn\IeC {\'e}es d'entra\IeC {\^\i }nent}{51}{section.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.2}Pr\IeC {\'e}traitement des donn\IeC {\'e}es}{51}{section.11.2}
+\contentsline {section}{\numberline {10.2}Pr\IeC {\'e}traitement des donn\IeC {\'e}es}{51}{section.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2.1}Traitement des codes hexad\IeC {\'e}cimaux}{52}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {10.2.1}Traitement des codes hexad\IeC {\'e}cimaux}{52}{subsection.10.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Mod\IeC {\`e}le \IeC {\`a} r\IeC {\'e}aliser}{53}{chapter.12}
+\contentsline {chapter}{\numberline {11}Mod\IeC {\`e}le \IeC {\`a} r\IeC {\'e}aliser}{53}{chapter.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.1}Utilisation d'un r\IeC {\'e}seau de neurones artificiels basique}{53}{section.12.1}
+\contentsline {section}{\numberline {11.1}Utilisation d'un r\IeC {\'e}seau de neurones artificiels basique}{53}{section.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.2}R\IeC {\'e}duction de la taille de l'entr\IeC {\'e}e}{53}{section.12.2}
+\contentsline {section}{\numberline {11.2}R\IeC {\'e}duction de la taille de l'entr\IeC {\'e}e}{53}{section.11.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.3}Repr\IeC {\'e}sentation de l'architecture}{53}{section.12.3}
+\contentsline {section}{\numberline {11.3}Repr\IeC {\'e}sentation de l'architecture}{53}{section.11.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.4}Lien avec l'\IeC {\'e}tat de l'art}{54}{section.12.4}
+\contentsline {section}{\numberline {11.4}Lien avec l'\IeC {\'e}tat de l'art}{54}{section.11.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}R\IeC {\'e}alisation}{55}{chapter.13}
+\contentsline {chapter}{\numberline {12}R\IeC {\'e}alisation}{55}{chapter.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.1}D\IeC {\'e}finition du mod\IeC {\`e}le}{55}{section.13.1}
+\contentsline {section}{\numberline {12.1}D\IeC {\'e}finition du mod\IeC {\`e}le}{55}{section.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.2}Impl\IeC {\'e}mentation du mod\IeC {\`e}le et transfert des outils de base}{55}{section.13.2}
+\contentsline {section}{\numberline {12.2}Impl\IeC {\'e}mentation du mod\IeC {\`e}le et transfert des outils de base}{55}{section.12.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.2.1}Premiers r\IeC {\'e}sultats}{55}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {12.2.1}Premiers r\IeC {\'e}sultats}{55}{subsection.12.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.3}Adaptation du syst\IeC {\`e}me de gestion de corpus au volume de donn\IeC {\'e}es}{55}{section.13.3}
+\contentsline {section}{\numberline {12.3}Adaptation du syst\IeC {\`e}me de gestion de corpus au volume de donn\IeC {\'e}es}{55}{section.12.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.4}Entrainement par batch}{56}{section.13.4}
+\contentsline {section}{\numberline {12.4}Entrainement par batch}{56}{section.12.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.5}Changement de m\IeC {\'e}trique pour \IeC {\'e}valuer la qualit\IeC {\'e} du mod\IeC {\`e}le}{56}{section.13.5}
+\contentsline {section}{\numberline {12.5}Changement de m\IeC {\'e}trique pour \IeC {\'e}valuer la qualit\IeC {\'e} du mod\IeC {\`e}le}{56}{section.12.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.5.1}Pr\IeC {\'e}cision de base}{56}{subsection.13.5.1}
+\contentsline {subsection}{\numberline {12.5.1}Pr\IeC {\'e}cision de base}{56}{subsection.12.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.6}Analyse d'une \IeC {\'e}trange variation de performance dans l'apprentissage}{57}{section.13.6}
+\contentsline {section}{\numberline {12.6}Analyse d'une \IeC {\'e}trange variation de performance dans l'apprentissage}{57}{section.12.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.7}Optimisation du taux d'apprentissage}{57}{section.13.7}
+\contentsline {section}{\numberline {12.7}Optimisation du taux d'apprentissage}{57}{section.12.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.8}Mise en place d'un syst\IeC {\`e}me de gestion de corpus plus puissant}{58}{section.13.8}
+\contentsline {section}{\numberline {12.8}Mise en place d'un syst\IeC {\`e}me de gestion de corpus plus puissant}{58}{section.12.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.8.1}Fichiers multiples}{58}{subsection.13.8.1}
+\contentsline {subsection}{\numberline {12.8.1}Fichiers multiples}{58}{subsection.12.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.8.2}Pr\IeC {\'e}traitement modulaire}{58}{subsection.13.8.2}
+\contentsline {subsection}{\numberline {12.8.2}Pr\IeC {\'e}traitement modulaire}{58}{subsection.12.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.8.3}Processus multiples}{58}{subsection.13.8.3}
+\contentsline {subsection}{\numberline {12.8.3}Processus multiples}{58}{subsection.12.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.8.4}Performances}{58}{subsection.13.8.4}
+\contentsline {subsection}{\numberline {12.8.4}Performances}{58}{subsection.12.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {14}Conclusions sur le projet PAPUD}{59}{chapter.14}
+\contentsline {chapter}{\numberline {13}Conclusions sur le projet PAPUD}{59}{chapter.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.1}Retour sur le travail effectu\IeC {\'e}}{59}{section.14.1}
+\contentsline {section}{\numberline {13.1}Retour sur le travail effectu\IeC {\'e}}{59}{section.13.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.2}Apport personnel du projet}{59}{section.14.2}
+\contentsline {section}{\numberline {13.2}Apport personnel du projet}{59}{section.13.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.3}Discussion et perspectives}{60}{section.14.3}
+\contentsline {section}{\numberline {13.3}Discussion et perspectives}{60}{section.13.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.3.1}Continuation du travail}{60}{subsection.14.3.1}
+\contentsline {subsection}{\numberline {13.3.1}Continuation du travail}{60}{subsection.13.3.1}
 \defcounter {refsection}{0}\relax 
 \vspace {1em}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {15}R\IeC {\'e}trospective sur le stage}{61}{chapter.15}
+\contentsline {chapter}{\numberline {14}R\IeC {\'e}trospective sur le stage}{61}{chapter.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15.1}Bilan sur le travail effectu\IeC {\'e}}{61}{section.15.1}
+\contentsline {section}{\numberline {14.1}Bilan sur le travail effectu\IeC {\'e}}{61}{section.14.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15.2}Bilan professionnel}{61}{section.15.2}
+\contentsline {section}{\numberline {14.2}Bilan professionnel}{61}{section.14.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15.3}Bilan personnel}{62}{section.15.3}
+\contentsline {section}{\numberline {14.3}Bilan personnel}{62}{section.14.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16}Bibliographie / Webographie}{63}{chapter.16}
+\contentsline {chapter}{\numberline {15}Bibliographie / Webographie}{63}{chapter.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {17}Listes des tables, des figures et des fragments de code}{67}{chapter.17}
+\contentsline {chapter}{\numberline {16}Listes des tables, des figures et des fragments de code}{67}{chapter.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {18}Glossaire, accronymes et noms d'entit\IeC {\'e}s}{69}{chapter.18}
+\contentsline {chapter}{\numberline {17}Glossaire, accronymes et noms d'entit\IeC {\'e}s}{69}{chapter.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Annexes}{75}{part*.19}
+\contentsline {chapter}{Annexes}{75}{part*.16}
 \defcounter {refsection}{0}\relax 
 \etoc@depthtag {mtappendix}
 \defcounter {refsection}{0}\relax 
@@ -473,7 +463,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Plot}{100}{subsection.A.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Details}{100}{figure.caption.21}
+\contentsline {subsubsection}{Details}{100}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.9.4}Potential ameliorations \& next steps}{100}{subsection.A.9.4}
 \defcounter {refsection}{0}\relax 
@@ -491,11 +481,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{BPC/fraction of corpus}{102}{subsection.A.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ValBPC/epoch}{103}{figure.caption.22}
+\contentsline {paragraph}{ValBPC/epoch}{103}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Loss}{104}{figure.caption.23}
+\contentsline {paragraph}{Loss}{104}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Logs}{104}{figure.caption.24}
+\contentsline {subsubsection}{Logs}{104}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.10.4}Potential ameliorations \& next steps}{104}{subsection.A.10.4}
 \defcounter {refsection}{0}\relax 
@@ -513,15 +503,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Comparative analysis}{107}{subsection.A.11.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Plot}{107}{figure.caption.25}
+\contentsline {subsubsection}{Plot}{107}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{BPC/fraction of corpus}{107}{figure.caption.25}
+\contentsline {paragraph}{BPC/fraction of corpus}{107}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ValBPC/epoch}{107}{figure.caption.26}
+\contentsline {paragraph}{ValBPC/epoch}{107}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Loss}{107}{figure.caption.27}
+\contentsline {paragraph}{Loss}{107}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Logs}{108}{figure.caption.28}
+\contentsline {subsubsection}{Logs}{108}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.11.4}Potential ameliorations \& next steps}{108}{subsection.A.11.4}
 \defcounter {refsection}{0}\relax 
@@ -539,9 +529,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Comparative analysis}{112}{subsection.A.12.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Plot}{112}{figure.caption.29}
+\contentsline {subsubsection}{Plot}{112}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{BPC/fraction of corpus}{112}{figure.caption.29}
+\contentsline {paragraph}{BPC/fraction of corpus}{112}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.12.4}Potential ameliorations \& next steps}{113}{subsection.A.12.4}
 \defcounter {refsection}{0}\relax 
@@ -573,9 +563,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Memory}{116}{subsection.A.14.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{BPC / Validation BPC}{119}{figure.caption.33}
+\contentsline {subsubsection}{BPC / Validation BPC}{119}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Job restart}{120}{figure.caption.34}
+\contentsline {subsubsection}{Job restart}{120}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.14.3}Next steps}{122}{subsection.A.14.3}
 \defcounter {refsection}{0}\relax 
@@ -587,9 +577,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Results (1 epoch)}{123}{subsection.A.15.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Results (full)}{126}{figure.caption.40}
+\contentsline {subsubsection}{Results (full)}{126}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ram consumption for ``last b2 10epoch''}{128}{figure.caption.42}
+\contentsline {paragraph}{Ram consumption for ``last b2 10epoch''}{128}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.15.3}Conclusion}{128}{subsection.A.15.3}
 \defcounter {refsection}{0}\relax 
@@ -641,9 +631,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Memory}{140}{table.A.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Run time (in seconds)}{141}{figure.caption.48}
+\contentsline {paragraph}{Run time (in seconds)}{141}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Epoch run time}{141}{figure.caption.49}
+\contentsline {subparagraph}{Epoch run time}{141}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.18.3}Next steps}{142}{subsection.A.18.3}
 \defcounter {refsection}{0}\relax 
@@ -707,9 +697,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{GPU memory usage}{154}{subsection.B.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Computation time}{154}{figure.caption.51}
+\contentsline {subsubsection}{Computation time}{154}{figure.caption.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Loss and accuracy}{154}{figure.caption.51}
+\contentsline {subsubsection}{Loss and accuracy}{154}{figure.caption.48}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {B.3.3}Improvements and next steps}{155}{subsection.B.3.3}
 \defcounter {refsection}{0}\relax 
@@ -725,7 +715,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{GPU memory usage}{157}{subsection.B.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Loss and accuracy}{157}{figure.caption.53}
+\contentsline {subsubsection}{Loss and accuracy}{157}{figure.caption.50}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Computation time}{158}{table.B.3}
 \defcounter {refsection}{0}\relax 
@@ -743,7 +733,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {B.5.2}Analysis}{160}{subsection.B.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Examples of Kernel messages}{160}{subsection.B.5.2}
+\contentsline {paragraph}{Examples of Kernel messages}{161}{subsection.B.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Repartition of match in the corpus}{161}{lstnumber.-19.5}
 \defcounter {refsection}{0}\relax 

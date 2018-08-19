@@ -37,96 +37,51 @@
       \verb https://fr.wikipedia.org/wiki/Apprentissage_automatique
       \endverb
     \endentry
-    \entry{futura_nn}{online}{}
+    \entry{wiki_lm}{online}{}
+      \list{language}{1}{%
+        {english}%
+      }
       \list{organization}{1}{%
-        {Futura}%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
       }
       \field{sortinit}{2}
       \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labeltitlesource}{title}
-      \field{month}{08}
-      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau neuronal}}
+      \field{month}{07}
+      \field{title}{{Language model}}
       \field{urlday}{10}
       \field{urlmonth}{8}
       \field{urlyear}{2018}
       \field{year}{2018}
       \field{urldateera}{ce}
       \verb{url}
-      \verb https://www.futura-sciences.com/tech/definitions/informatique-reseau-neuronal-601
+      \verb https://en.wikipedia.org/wiki/Language_model
       \endverb
     \endentry
-    \entry{statsoft-nn}{online}{}
-      \name{author}{1}{}{%
-        {{hash=915af163e2107106fced5dd3164d9a8e}{%
-           family={Brownlee},
-           familyi={B\bibinitperiod},
-           given={Jason},
-           giveni={J\bibinitperiod}}}%
-      }
+    \entry{about_loria}{online}{}
       \list{organization}{1}{%
-        {Statistica}%
+        {LORIA}%
       }
-      \strng{namehash}{915af163e2107106fced5dd3164d9a8e}
-      \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
-      \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
-      \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
       \field{sortinit}{3}
       \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{06}
-      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seaux de Neurones}}
-      \field{urlday}{11}
-      \field{urlmonth}{8}
-      \field{urlyear}{2018}
-      \field{year}{2017}
-      \field{urldateera}{ce}
-      \verb{url}
-      \verb http://www.statsoft.fr/concepts-statistiques/reseaux-de-neurones-automatises/reseaux-de-neurones-automatises.htm
-      \endverb
-    \endentry
-    \entry{datamining-nn}{online}{}
-      \list{organization}{1}{%
-        {OD-Datamining}%
-      }
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
-      \field{labeltitlesource}{title}
-      \field{month}{08}
-      \field{title}{{Les r{\ifmmode\acute{e}\elseé\fi}seaux de neurones expliqu{\ifmmode\acute{e}\elseé\fi}s {\ifmmode\grave{a}\elseà\fi} ma fille}}
-      \field{urlday}{11}
-      \field{urlmonth}{8}
+      \field{month}{07}
+      \field{title}{{Le Loria}}
+      \field{urlday}{31}
+      \field{urlmonth}{7}
       \field{urlyear}{2018}
       \field{year}{2018}
       \field{urldateera}{ce}
       \verb{url}
-      \verb https://od-datamining.com/knwbase/les-reseaux-de-neurones-expliques-a-ma-fille
-      \endverb
-    \endentry
-    \entry{wiki_rnn}{online}{}
-      \list{organization}{1}{%
-        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
-      }
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
-      \field{labeltitlesource}{title}
-      \field{month}{08}
-      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau de neurones r{\ifmmode\acute{e}\elseé\fi}currents}}
-      \field{urlday}{10}
-      \field{urlmonth}{8}
-      \field{urlyear}{2018}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{url}
-      \verb https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_r%C3%A9currents
+      \verb http://www.loria.fr
       \endverb
     \endentry
     \entry{organisation_loria}{online}{}
       \list{organization}{1}{%
         {LORIA}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
       \field{labeltitlesource}{title}
       \field{month}{08}
       \field{title}{{Organisation}}
@@ -143,8 +98,8 @@
       \list{organization}{1}{%
         {LORIA}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labeltitlesource}{title}
       \field{month}{08}
       \field{title}{{Organigramme 2017 du Loria}}
@@ -157,24 +112,6 @@
       \verb http://www.loria.fr/wp-content/uploads/2016/05/organigramme-2017.pdf
       \endverb
     \endentry
-    \entry{about_loria}{online}{}
-      \list{organization}{1}{%
-        {LORIA}%
-      }
-      \field{sortinit}{8}
-      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
-      \field{labeltitlesource}{title}
-      \field{month}{07}
-      \field{title}{{Le Loria}}
-      \field{urlday}{31}
-      \field{urlmonth}{7}
-      \field{urlyear}{2018}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{url}
-      \verb http://www.loria.fr
-      \endverb
-    \endentry
     \entry{about_synalp}{online}{}
       \list{language}{1}{%
         {english}%
@@ -182,8 +119,8 @@
       \list{organization}{1}{%
         {SYNALP}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
       \field{labeltitlesource}{title}
       \field{month}{07}
       \field{title}{{About SYNALP}}
@@ -246,8 +183,8 @@
       \strng{fullhash}{39ba690b5e618c6ba46bd949ac1da2b3}
       \strng{authornamehash}{f424b8146f43b06dacb5134617a25b94}
       \strng{authorfullhash}{39ba690b5e618c6ba46bd949ac1da2b3}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CL}
@@ -302,8 +239,8 @@
       \strng{fullhash}{b37852739bbbca002f0a13b20b7bae78}
       \strng{authornamehash}{6db187114464ad938f919888e4e2e260}
       \strng{authorfullhash}{b37852739bbbca002f0a13b20b7bae78}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CL}
@@ -338,8 +275,8 @@
       \strng{fullhash}{e91a4c2044bccdbef249eabc886ff988}
       \strng{authornamehash}{e91a4c2044bccdbef249eabc886ff988}
       \strng{authorfullhash}{e91a4c2044bccdbef249eabc886ff988}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{05}
@@ -360,8 +297,8 @@
       \list{organization}{1}{%
         {Grid5000}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{title}{{Grid5000}}
@@ -727,8 +664,8 @@
       \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
       \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
       \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Machine Learning Mastery}
@@ -1005,8 +942,8 @@
       \strng{fullhash}{4eea441ca3776c5dca2cd281214cba9d}
       \strng{authornamehash}{230c52dadba3dcf6f49d11d95df78c3c}
       \strng{authorfullhash}{4eea441ca3776c5dca2cd281214cba9d}
-      \field{sortinit}{3}
-      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CL}
@@ -1120,8 +1057,8 @@
       \strng{fullhash}{bf91eb622991fb654bc77acc01fe9f8e}
       \strng{authornamehash}{bf91eb622991fb654bc77acc01fe9f8e}
       \strng{authorfullhash}{bf91eb622991fb654bc77acc01fe9f8e}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1708.02182}
@@ -1153,8 +1090,8 @@
       \strng{fullhash}{bf91eb622991fb654bc77acc01fe9f8e}
       \strng{authornamehash}{bf91eb622991fb654bc77acc01fe9f8e}
       \strng{authorfullhash}{bf91eb622991fb654bc77acc01fe9f8e}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1803.08240}
@@ -1252,27 +1189,6 @@
       \verb https://fr.wikipedia.org/wiki/Apprentissage_profond
       \endverb
     \endentry
-    \entry{wiki_lm}{online}{}
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{organization}{1}{%
-        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
-      }
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
-      \field{labeltitlesource}{title}
-      \field{month}{07}
-      \field{title}{{Language model}}
-      \field{urlday}{10}
-      \field{urlmonth}{8}
-      \field{urlyear}{2018}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Language_model
-      \endverb
-    \endentry
     \entry{wiki_md}{online}{}
       \list{organization}{1}{%
         {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
@@ -1291,6 +1207,42 @@
       \verb https://fr.wikipedia.org/wiki/Markdown
       \endverb
     \endentry
+    \entry{wiki_rnn}{online}{}
+      \list{organization}{1}{%
+        {Wikip{\ifmmode\acute{e}\elseé\fi}dia}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau de neurones r{\ifmmode\acute{e}\elseé\fi}currents}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_r%C3%A9currents
+      \endverb
+    \endentry
+    \entry{futura_nn}{online}{}
+      \list{organization}{1}{%
+        {Futura}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seau neuronal}}
+      \field{urlday}{10}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.futura-sciences.com/tech/definitions/informatique-reseau-neuronal-601
+      \endverb
+    \endentry
     \entry{mlmastery_dataset}{article}{}
       \name{author}{1}{}{%
         {{hash=915af163e2107106fced5dd3164d9a8e}{%
@@ -1306,8 +1258,8 @@
       \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
       \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
       \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Machine Learning Mastery}
@@ -1337,8 +1289,8 @@
       \strng{fullhash}{7915e7c2f5406f21e3071c706ba303fe}
       \strng{authornamehash}{7915e7c2f5406f21e3071c706ba303fe}
       \strng{authorfullhash}{7915e7c2f5406f21e3071c706ba303fe}
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{techburst}
@@ -1368,8 +1320,8 @@
       \strng{fullhash}{678d1d5046c03cc0b1a36881f3f1ed4b}
       \strng{authornamehash}{678d1d5046c03cc0b1a36881f3f1ed4b}
       \strng{authorfullhash}{678d1d5046c03cc0b1a36881f3f1ed4b}
-      \field{sortinit}{6}
-      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
@@ -1634,6 +1586,54 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb https://machinelearningmastery.com/gentle-introduction-backpropagation-time
+      \endverb
+    \endentry
+    \entry{statsoft-nn}{online}{}
+      \name{author}{1}{}{%
+        {{hash=915af163e2107106fced5dd3164d9a8e}{%
+           family={Brownlee},
+           familyi={B\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Statistica}%
+      }
+      \strng{namehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{fullhash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authornamehash}{915af163e2107106fced5dd3164d9a8e}
+      \strng{authorfullhash}{915af163e2107106fced5dd3164d9a8e}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{{R{\ifmmode\acute{e}\elseé\fi}seaux de Neurones}}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.statsoft.fr/concepts-statistiques/reseaux-de-neurones-automatises/reseaux-de-neurones-automatises.htm
+      \endverb
+    \endentry
+    \entry{datamining-nn}{online}{}
+      \list{organization}{1}{%
+        {OD-Datamining}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{{Les r{\ifmmode\acute{e}\elseé\fi}seaux de neurones expliqu{\ifmmode\acute{e}\elseé\fi}s {\ifmmode\grave{a}\elseà\fi} ma fille}}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://od-datamining.com/knwbase/les-reseaux-de-neurones-expliques-a-ma-fille
       \endverb
     \endentry
     \entry{letudiant_presentation_memoire}{online}{}

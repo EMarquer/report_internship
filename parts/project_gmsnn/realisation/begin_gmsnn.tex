@@ -1,8 +1,8 @@
 \section{Implémentation du nouveau modèle}
-\subsection{Travail effectué}
+\subsection{Travail effectué}\label{def:lstm_2}
 La troisième partie du projet à été la réalisation d'un prototype de l'architecture \gls{gmsnn}, basé sur la ré-implémentation simplifiée du \gls{model} \gls{soa}.
 
-L'architecture du \gls{gmsnn} est identique à celle du \gls{model} ré-implémenté, mis à part le \gls{rnn} qui est remplacé par le \gls{module_gmsnn} (voir \autoref{fig:reimplement_gmsnn}). C'est sur ce nouveau module que le reste du travail au cours du \gls{project_gmsnn} à été effectué.
+L'architecture du \gls{gmsnn} est identique à celle du \gls{model} ré-implémenté, mis à part le \gls{rnn} qui est remplacé par le \gls{module_gmsnn} (voir figure \ref{fig:reimplement_gmsnn}). C'est sur ce nouveau \gls{module_gmsnn} que le reste du travail au cours du \gls{project_gmsnn} à été effectué.
 
 \begin{figure}[ht]
 	\centering
@@ -10,28 +10,26 @@ L'architecture du \gls{gmsnn} est identique à celle du \gls{model} ré-impléme
 	\caption[Architecture du \glsentrytext{model} réimplémenté]{Architecture du \gls{model} réimplémenté. Le modèle prend en entrée des caractères, et produit des probabilités sur quel caractère apparaîtra ensuite.}\label{fig:reimplement_gmsnn}
 \end{figure}
 
-Ce prototype est une implémentation naïve de l'architecture, permettant de mettre en place les mécanismes de base du modèle.
+Ce prototype à permis de mettre en place les mécanismes de base du modèle.
 
-Durant cette étape, nous avons mis en place l'architecture multi-échelle avec deux mécanisme fondamentaux: la transmission de l'information d'une échelle à l'autre, et l'agrégation de l'information de toutes les échelles.
+Durant cette étape, nous avons mis en place l'architecture multi-échelle avec deux mécanismse fondamentaux: la transmission de l'information d'une échelle à l'autre, et l'agrégation de l'information de toutes les échelles.
 
-Chaque couche de l'architecture (chaque \og échelle\fg{}) est un \gls{lstm}, comme dans le \gls{model} d'origine. \label{def:lstm_2}
+Chaque échelle qui compose le \gls{module_gmsnn} est un \gls{lstm}, qui est le \gls{rnn} utilisé dans le \gls{model} d'origine. 
 
 \subsection{Transmission d'information}
-La transmission d'information se fait d'une couche à la couche supérieure.
-Pour rappel, cette transmission se fait périodiquement, en fonction d'un nombre appelé fréquence de transmission.
-
-Par exemple, pour fréquence de transmission de $3$~: 
-\begin{itemize}
-	\item toutes les $3$ entrées de la couche $n-1$, la couche $n$ reçoit de l'information de la couche $n-1$~;
-	\item toutes les $3$ entrées de la couche $n$ (soit toutes les $3^2$ entrées de la couche $n-1$), la couche $n+1$ reçoit de l'information de la couche $n$.
-\end{itemize}
+Pour rappel, la transmission d'information se fait d'une couche à la couche supérieure.
+Cette transmission se fait périodiquement, en fonction d'un nombre appelé fréquence de transmission.
+%
+%Par exemple, pour fréquence de transmission de $3$~: 
+%\begin{itemize}
+%	\item toutes les $3$ entrées de la couche $n-1$, la couche $n$ reçoit de l'information de la couche $n-1$~;
+%	\item toutes les $3$ entrées de la couche $n$ (soit toutes les $3^2$ entrées de la couche $n-1$), la couche $n+1$ reçoit de l'information de la couche $n$.
+%\end{itemize}
 
 \vspace{1em}
-Dans un premier temps, il à fallu choisir quelle information transmettre d'une échelle à l'échelle supérieure. En effet, les \glspl{rnn} produisent à la fois une sortie, et un \gls{hidden state}. L'utilisation de l'\gls{embedding} à été écarté initialement, car elle n'est pas en accord avec l'architecture proposée.
+Dans un premier temps, il à fallu choisir quelle information transmettre d'une échelle à l'échelle supérieure. En effet, les \glspl{rnn} produisent à la fois une sortie, et un \gls{tensor} contenant leur mémoire. L'utilisation de l'\gls{embedding} à été écarté initialement, car elle n'est pas en accord avec le principe d'abstraction de l'architecture proposée.
 
-Le choix s'est porté sur l'\gls{hidden state}, qui contient les informations abstraite de la séquence de caractères, contrairement à la sortie qui contient les informations sur le caractère suivant uniquement.
-
-Ensuite, il à fallu déterminer comment regrouper les informations avant de les transmettre au module produisant la distribution de probabilité.
+Le choix s'est porté sur le \gls{tensor} contenant la mémoire, qui contient don les informations abstraites par l'échelle, contrairement à la sortie qui  contient uniquement les informations pour prédire le caractère suivant.
 
 %\begin{figure}[h]
 %	\begin{subfigure}{0.45\textwidth}
@@ -48,6 +46,3 @@ Ensuite, il à fallu déterminer comment regrouper les informations avant de les
 %\end{figure}
 
 Voir l'annexe \ref{subsec:testms} pour le rapport sur le prototype. 
-
-\subsection{Conclusion}
-Cette partie du projet à permit la mise en œuvre de l'architecture proposée. La dernière étape est d'améliorer les performances du modèle, et de l'optimiser.

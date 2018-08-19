@@ -9,25 +9,22 @@
 	%lbl
 % ccl plus pb mémoire & tps, opti z'oignons (XD) même, 5 min c'est balèze
 
-Une fois le prototype fonctionnel, il à fallu améliorer les performances.
+Une fois le prototype fonctionnel, nous avons amélioré ses performances.
 Par performances, nous entendons principalement le temps nécessaire pour que la qualité prédictive du modèle dépasse un certain seuil.
 
-Pour améliorer ce temps de calcul, il est possible de travailler sur deux dimensions~:
+Pour améliorer ce temps d'entraînement, il est possible de travailler sur deux dimensions~:
 \begin{itemize}
-	\item la \textbf{quantité de données} traitées en un laps de temps~; c'est une \textbf{stratégie quantitative}~;
-	\item la \textbf{qualité} de l'apprentissage pour une quantité fixée de données~; c'est une \textbf{stratégie qualitative}.
+	\item la \emph{quantité de \glspl{data}} traitées en un laps de temps~;
+	pour cela on peut optimiser les algorithmes et le modèle pour réduire le temps nécessaire pour traiter les \glspl{example}~;
+	c'est une \emph{stratégie quantitative}~;
+	\item la \emph{qualité} de l'apprentissage pour une quantité fixée de \glspl{data}~;
+	pour cela on peut améliorer le modèle en réglant les paramètres (comme la fréquence de transmission) ou en implémentant de nouvelles mécaniques~;
+	c'est une \emph{stratégie qualitative}.
 \end{itemize}
-
-Ainsi, plusieurs options sont possible~:
-\begin{itemize}
-	\item optimiser les algorithmes et le modèle pour réduire le temps nécessaire pour traiter les données~;
-	\item améliorer le modèle en réglant les paramètres (comme la fréquence de transmission) ou en implémentant de nouvelles mécaniques~;
-\end{itemize}
-\hspace{1em}
 
 Les deux stratégies ont été utilisées. Il faut noter que certaines améliorations qualitatives ont un impact quantitatif négatif.
 
-Principalement, le travail effectué pendant cette partie du projet est un travail de débogage et d'analyse et d'optimisation, avec peu d'implémentation de nouvelles mécaniques dans le \gls{model}.
+Principalement, le travail effectué pendant cette partie du projet est un travail de débogage, d'analyse et d'optimisation, avec peu d'implémentation de nouvelles mécaniques dans le \gls{model}.
 
 \input{parts/project_gmsnn/realisation/optimise_gmsnn/addcat} % new
 \input{parts/project_gmsnn/realisation/optimise_gmsnn/reprise} % new
@@ -37,7 +34,7 @@ Principalement, le travail effectué pendant cette partie du projet est un trava
 \input{parts/project_gmsnn/realisation/optimise_gmsnn/lbl} % new/opti
 
 \subsection{Conclusion}
-Cette partie du \gls{project_gmsnn} à permit d'améliorer notablement les performances du \gls{model}, tout en réduisant drastiquement le coût d'entraînement.% ccl plus pb mémoire & tps, opti z'oignons (XD) même, 5 min c'est balèze
+Cette partie du \gls{project_gmsnn}, dédiée à l'optimisation, à permis d'améliorer notablement les performances du \gls{model}, tout en réduisant drastiquement le coût d'entraînement.% ccl plus pb mémoire & tps, opti z'oignons (XD) même, 5 min c'est balèze
 
 De plus, l'algorithme présenté \autoref{subsec:optilbl} à démontré une faiblesse majeure de l'architecture \gls{gmsnn}.
 

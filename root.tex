@@ -12,7 +12,17 @@
 	andothers={et associés},
 }
 
+\renewcommand*{\multicitedelim}{\addcomma\nobreakspace}
 \renewcommand{\multinamedelim}{et}
+
+\renewcommand*{\figureautorefname}{figure}%
+\renewcommand*{\tableautorefname}{table}%
+\renewcommand*{\partautorefname}{partie}%
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 \addbibresource{bibs/merge.bib}
 %\addbibresource{bibs/institute.bib}
@@ -38,15 +48,15 @@
 \etocsettagdepth{mtappendix}{none}
 {%----- Frontix -----
 	\input{parts/cover.tex}\cleardoublepage
-	%\input{parts/preface.tex}\cleardoublepage
-	\pagenumbering{arabic}
-	\setcounter{page}{1}
+	% TODO \input{parts/preface.tex}\cleardoublepage
+	%\pagenumbering{arabic}
+	%\setcounter{page}{1}
 	\input{parts/toc.tex}\cleardoublepage
 }
 
 {%----- Content -----
 	\input{parts/intro.tex}\cleardoublepage
-	\input{parts/scientific_framework.tex}\cleardoublepage % cadre scientifique
+	%\input{parts/scientific_framework.tex}\cleardoublepage % cadre scientifique
 	\input{parts/project_gmsnn}\cleardoublepage
 	\input{parts/project_papud}\cleardoublepage
 	\input{parts/conclusion.tex}\cleardoublepage

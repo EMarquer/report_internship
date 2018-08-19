@@ -13,21 +13,21 @@ Deux versions alternatives de ce corpus ont été utilisées.
 \end{enumerate}
 
 \section{Extrait des données d'entraînent}
-Voici un extrait des données brutes avant le découpage en caractères.
+Le \autoref{enwik8_ex} un extrait des données brutes avant le découpage en caractères.
 
-\begin{lstlisting}[caption={Extrait des premières lignes du fichier enwik8, correspondant à l'article sur l'ansarchisme.},label=enwik8_ex]
+\begin{lstlisting}[caption={Extrait des premières lignes du fichier enwik8, correspondant à l'article Wikipédia sur l'ansarchisme.},label=enwik8_ex]
 While anarchism is most easily defined by what it is against, anarchists also offer positive visions of what they believe to be a truly free society. However, ideas about how an anarchist society might work vary considerably, especially with respect to economics; there is also disagreement about how a free society might be brought about. 
 
 == Origins and predecessors ==
 
-[[Peter Kropotkin|Kropotkin]], and others, argue that before recorded [[history]], human society was organized on anarchist principles.&lt;ref&gt;[[Peter Kropotkin|Kropotkin]], Peter. ''&quot;[[Mutual Aid: A Factor of Evolution]]&quot;'', 1902.&lt;/ref&gt; Most anthropologists follow Kropotkin and Engels in believing that hunter-gatherer bands were egalitarian and lacked division of labour, accumulated wealth, or decreed law, and had equal access to resources.&lt;ref&gt;[[Friedrich Engels|Engels]], Freidrich. ''&quot;[http://www.marxists.org/archive/marx/works/1884/origin-family/index.htm Origins of the Family, Private Property, and the State]&quot;'', 1884.&lt;/ref&gt;
+[[Peter Kropotkin|Kropotkin]], and others, argue that before recorded [[history]], human society was organized on anarchist principles.&lt;ref&gt;[[Peter Kropotkin|Kropotkin]], Peter. ''&quot;[[Mutual Aid: A Factor of Evolution]]&quot;'', 1902.&lt;/ref&gt; Most anthropologists follow Kropotkin and Engels in believing that hunter-gatherer bands were egalitarian and lacked division of labour, accumulated wealth, or decreed law, and had equal access to resources.&lt;ref&gt;[[Friedrich Engels|Engels]], Freidrich.
 [[Image:WilliamGodwin.jpg|thumb|right|150px|William Godwin]]
 \end{lstlisting}
 
 \section{Prétraitement des données}
-Le prétraitement des données est composé du découpage du document, et du remplacement des caractères
+Le \gls{preprocessing} des données est composé du découpage du document en caractères et du remplacement des caractères par des nombres, à l'aide d'un dictionnaire.
 
-Comme mentionné dans la \autoref{whitespace_problem}, un défaut dans le prétraitement à mené à la disparition des espaces.
+Comme mentionné dans la \autoref{whitespace_problem}, un défaut dans le prétraitement à mené à la disparition des espaces du texte.
 
 En effet, le prétraitement d'origine du corpus utilisait les espaces en tant que séparateurs pour le stockage des données. Par la suite, au moment d'utiliser les données pré-traitées, l'intégralité des espaces étaient supprimés, y compris ceux du texte d'origine.
 

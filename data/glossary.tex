@@ -34,10 +34,10 @@
 	first={{apprentissage profond (\foreign{Deep Learning} en anglais)}}}
 
 \newglossaryentry{preprocessing}{
-	name={{Traitement préalable des données}},
-	text={{traitement préalable des données}},
+	name={{Prétraitement des données}},
+	text={{prétraitement}},
 	description={{\defref{def:preprocessing}}},
-	first={{traitement préalable des données (\foreign{preprocessing} en anglais)}}}
+	first={{prétraitement des données (\foreign{preprocessing} en anglais)}}}
 
 
 \newglossaryentry{model}{
@@ -46,7 +46,16 @@
 	plural={{modèles}},
 	description={{\defref{def:model}}}}
 
+\newglossaryentry{module}{
+	name={{Module}},
+	text={{module}},
+	plural={{modules}},
+	description={{\defref{def:module}}}}
 
+\newglossaryentry{architecture}{
+	name={{Architecture}},
+	text={{architecture}},
+	description={{\defref{def:architecture}}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Neural Networks                                                            %
@@ -96,28 +105,30 @@
 {{\defref{def:rnn}}}
 {réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais, RNN)}
 
-\newglosacr{gmsnn}{GMSNN}
-{{\defref{def:gmsnn}}}
-{Réseau de Neurones Récurrents Multi-Échelles Croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}
+\newglossaryentry{gmsnn}{
+	name={{GMSNN}},
+	text={{GMSNN}},
+	first={{réseau de neurones récurrents multi-échelles croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}},
+	description={}}
 
-\newglosacr{gru}{GRU}
-{{\defref{def:gru}}}
-{Réseau récurent à porte (\foreign{Gated Recurent Unit} en anglais, GRU)}
+%\newglosacr{gmsnn}{GMSNN}
+%{{\defref{def:gmsnn}}}
+%{Réseau de Neurones Récurrents Multi-Échelles Croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}
+
+%\newglosacr{gru}{GRU}
+%{{\defref{def:gru}}}
+%{réseau récurent à porte (\foreign{Gated Recurent Unit} en anglais, GRU)}
 
 \newglosacr{lstm}{LSTM}
 {{\defref{def:lstm}}}
-{Réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais, LSTM)}
+{réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais, LSTM)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Language Models                                                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newglosacr{lm}{Modèle de la Langue}
+\newglosacr{lm}{modèle de la langue}
 {%
-	Un Modèle de la Langue (\foreign{Language Model} en anglais) est une \og distribution de probabilité sur une séquence de mots [ou de caractères]\fg{}, 
-	utilisé pour estimer la probabilité d'apparition du prochain mot ou caractère.
-	Autrement dit, c'est une représentation servant à prédire le prochain mot à partir des mots précédents. D'après Wikipédia \footfullcite{wiki_lm}.
-	%TODO describe LM
-}{Modèle de la Langue (\foreign{Language Model} en anglais, LM)}
+}{modèle de la langue (\foreign{Language Model} en anglais, LM)}
 
 %\newglosacr{char-lm}{Char-LM}
 %{%
@@ -156,15 +167,46 @@
 }{processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU)}
 
 \newglossaryentry{nlp}{
-	name={Traitement Automatique des Langues},
+	name={Traitement automatique des langues},
 	text={TAL},
-	first={Traitement Automatique des Langues (TAL, \foreign{Natural Language Processing} en anglais)},
+	first={traitement automatique des langues (TAL, \foreign{Natural Language Processing} en anglais)},
 	description={\defref{def:nlp}}}
 
 \newglossaryentry{formal grammars}{
 	name={Grammaires formelles},
 	text={grammaires formelles},
 	description={}}
+
+\newglossaryentry{training}{
+	name={Entraînement},
+	text={entraînement},
+	description={\defref{def:weight1,def:weight2}}
+}
+
+\newglossaryentry{learning}{
+	name={Apprentissage},
+	text={apprentissage},
+	description={Voir \glsentrytext{training}}
+}
+
+\newglossaryentry{data}{
+	name={Données},
+	text={données},
+	description={\defref{def:data}}}
+\newglossaryentry{example}{
+name={Exemple},
+text={exemple},
+description={\defref{def:example}}}
+\newglossaryentry{epoch}{
+	sort={epoque},
+name={Époque},
+text={époque},
+description={\defref{def:epoch}}}
+\newglossaryentry{corpus}{
+name={Corpus},
+text={corpus},
+plural={corpus},
+description={\defref{def:corpus}}}
 
 \newglossaryentry{weight}{
 	name={Poids},
@@ -204,7 +246,7 @@
 	sort={batch},
 	name={\foreign{batch}},
 	text={\foreign{batch}},
-	plural={\foreign{batches}},
+	plural={\foreign{batchs}},
 	description={}}
 
 \newglossaryentry{soa}{

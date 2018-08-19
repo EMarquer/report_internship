@@ -3,15 +3,15 @@
 Les optimisations tentées par la suite ont révélé des fuites mémoires et mis en avant une lenteur excessive de l'apprentissage.
 
 Les optimisations en questions ont été mises en suspens le temps de la résolution de ces deux problèmes.
-Ces optimisations sont:
+Il s'agit de~:
 \begin{itemize}
-	\item l'utilisation de \glspl{batch} simultanés (voir \autoref{subsec:optibatch})~; 
-	\item l'augmentation du nombre de \glspl{parameter} du \gls{model} (voir \autoref{subsec:optiparam})~;
+	\item l'utilisation de \glspl{batch} simultanés (voir \autoref{subsec:optibatch}, \autopageref{subsec:optibatch})~; 
+	\item l'augmentation du nombre de \glspl{parameter} du \gls{model} (voir \autoref{subsec:optiparam}, \autopageref{subsec:optiparam})~;
 \end{itemize}
 
 %\hspace{1em}
 \subsubsection{Consommation de mémoire et de temps de calcul accrue}
-Un effet direct de ces optimisations est l'augmentation de la consommation mémoire.
+Un effet direct des optimisations tentées est l'augmentation de la consommation mémoire.
 
 Cette consommation accrue à causé le plantage\footnote{Un plantage en informatique est l'arrêt d'un programme lié à un dysfonctionnement.} de plusieurs tests, révélant la présence de fuites mémoires critiques.
 Un ralentissement progressif de l'entraînement à aussi été découvert pendant l'analyse du problème.
@@ -21,7 +21,7 @@ Un premier correctif à fourni une amélioration notable mais insuffisante.
 Il remplaçait le \gls{lstm} de chaque couche (voir \autoref{def:lstm_2}) par un \gls{rnn} basique, moins gourmand. Cela permettait aussi d'éliminer une redondance entre l'architecture \gls{lstm} et l'architecture \gls{gmsnn}.
 
 \subsubsection{Estimation de la consommation normale du modèle}
-La première étape, qui est détaillée dans l'annexe \ref{subsec:memuse}, à été d'estimer l'usage normal de la mémoire sans fuite, et d'isoler les \glspl{parameter} qui ont le plus d'impact sur la consommation mémoire.
+La première étape, qui est détaillée dans l'annexe \ref{subsec:memuse}, à été d'estimer l'usage normal de la mémoire (sans fuite), et d'isoler les \glspl{parameter} qui ont le plus d'impact sur la consommation mémoire.
 Cela à confirmé que l'explosion de la consommation n'était pas du à l'architecture en elle même, et qu'il s'agissait bien d'une anomalie.
 
 \subsubsection{Résolution des fuites}
@@ -31,7 +31,7 @@ En effet, \gls{pytorch} utilise la \gls{automatic differentiation} pour mettre �
 Pour cela, \gls{pytorch} à besoin de connaître la suite d'opérations et l'implication des différents \glspl{parameter} du \gls{model} et se base sur un \og graphe de computation\fg{}.
 C'est la façon dont est gérée ce graphe, couplée aux spécificités de l'architecture \gls{gmsnn} qui est la cause de la principale fuite mémoire.
 
-L'annexe \ref{subsec:memleak} contient une des tentatives de résolution du problème.
+L'annexe \ref{subsec:memleak} contient le début de la résolution du problème.
 
 \subsubsection{Conclusion}
 Le problème de la fuite mémoire à été résolu, et avec lui celui de la lenteur de l'entraînement.

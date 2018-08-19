@@ -4,13 +4,13 @@ Afin d'évaluer les performances du modèle dans la suite du projet, il à été
 \subsection{Utilisation de librairies}
 Dans un premier temps, diverses librairies permettant de visualiser l'état du \gls{nn} ont étés testées, en particulier VisualDL \autocite{VisualDLGit,VisualDLSite}.
 
-Malheureusement, aucune de ces librairies ne sont pas en mesure de supporter les architectures les plus complexes (en particulier celles qui impliquent des \gls{rnn}).
+Malheureusement, ces librairies ont des difficultés à supporter les architectures complexes (en particulier celles qui impliquent des \gls{rnn}).
 
 Ainsi, aucune des librairies testées n'a fonctionné avec notre modèle.
 
 \subsection{Création d'un outil personnalisé}
-Nous avons donc réalisé un module capable d'enregistrer des données et de réaliser des graphiques. Nous nous sommes basés sur le module \og matplotlib\fg{}\autocite{matplotlib} de Python, et sur une variante française du format CSV\autocite{csv}.
+Nous avons donc réalisé un outil capable d'enregistrer des données et de réaliser des graphiques. Nous nous sommes basés sur le module \og matplotlib\fg{} de Python, et sur une variante française du format CSV. Il s'agit d'un format simple à manipuler qui permet de stoker facilement des lignes de données, et de définir le nom de chaque colonne du tableau ainsi obtenu.
 
-Ce module à évolué tout au long du projet pour s'adapter à nos besoins.
+L'outil à évolué tout au long du projet pour s'adapter à nos besoins.
 
-L'intégralité des graphiques produits dans les divers rapports du projet (disponibles en annexes) à été produit avec ce module.
+Il nous a permis de réaliser les graphiques produits dans les divers rapports du projet (disponibles en annexes).

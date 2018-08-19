@@ -1,0 +1,125 @@
+\section{Terminologie et concepts fondamentaux}
+Cette section est dédié à la présentation et l'explication des théories, termes et concepts nécessaires à la compréhension du présent rapport.
+
+Ces termes sont répertoriés dans le glossaire, et mais aucun rappel de leur présence dans celui-ci ne sera donné au long du texte.
+
+L'objectif n'est pas de fournir des explications approfondies, mais de fournir les connaissances minimales à la compréhension du contenu et des enjeux du rapport.
+
+\subsection{\Glsentrytext{ml}, modèle, entraînement et données}
+\subsubsection{\Glsentrytext{ml}} \label{subsec:ml} \label{def:ml}
+L'\glsfirst{ml} est un ensemble de \og méthodes [statistiques] permettant à une machine (au sens large) d'évoluer par un processus systématique, et ainsi de remplir des tâches difficiles ou problématiques par des moyens algorithmiques plus classiques\fg{}. D'après Wikipédia \autocite{wiki_ml}.
+
+\subsubsection{\Glsentrytext{model}} \label{def:model}
+Un \gls{model} en \gls{ml} est la représentation du monde construite afin de répondre au problème à résoudre.
+
+Pour un \gls{model}, on parle d'entrées pour désigner les \glspl{data} fournies, et de sorties pour désigner les \glspl{data} produites.
+
+\subsubsection{Entraînement du \glsentrytext{model}} \label{def:training}
+L'\gls{training} du \gls{model}, aussi appelé apprentissage, est le processus par lequel on adapte le \gls{model} de façon à mieux résoudre le problème.
+
+\subsubsection{Données d'entraînement} \label{def:preprocessing} \label{def:corpus} \label{def:data} \label{def:example} \label{def:epoch}
+Pour entraîner un \gls{model}, il faut lui fournir des \glspl{data}.
+%
+Voici quelques termes courants se référant aux \glspl{data} d'\gls{training}~:
+\begin{itemize}
+	\item le \gls{corpus}~: l'ensemble des \glspl{data} d'\gls{training}~;
+	\item un \gls{example}~: un fragment du \gls{corpus} utilisé pour entraîner un \gls{model}~;
+	\item une \gls{epoch}~: un cycle complet d'\gls{training} sur le \gls{corpus}.
+\end{itemize}
+\vspace{1em}
+
+Généralement, on effectue un \gls{preprocessing} pour les préparer. Cela peut être retirer les données erronées, en adapter le format, les anonymiser, ou associer le résultat attendu aux données correspondantes.
+
+\subsection{\Glsentrytext{dl} et \glsentryplural{nn}}
+\subsubsection{\Glsentrytext{dl}} \label{subsec:dl} \label{def:dl}
+L'\gls{dl} représente un ensemble de techniques de \gls{ml}, basés sur les techniques appelées \glspl{nn}.
+
+Faisant partie des méthodes du \gls{ml}, l'\gls{dl} regroupe à la fois les méthodes de création, d'entraînement, d'optimisation et d'utilisation des modèles basés sur des \glspl{nn}.
+
+\subsubsection{\Glsentrytext{nn}} \label{def:nn}
+Dans le cadre de l'\gls{dl}, un \gls{model} correspond généralement au \gls{nn}.
+
+Un \glsfirst{nn} est un \gls{model} mathématique composé d'éléments interconnectés nommés neurones formels, dont le comportement est vaguement semblable aux neurones biologiques.
+
+Un \gls{nn} prend en entrée un \gls{tensor} (un type de \gls{matrice} spécifique utilisé en \gls{dl}), et produit un \gls{tensor} en sortie.
+Toutes les valeurs contenues dans ces \glspl{tensor} sont des nombres.
+
+%Un \glsfirst{nn} est un \og ensemble de neurones formels interconnectés permettant la résolution de problèmes complexes tels que la reconnaissance des formes ou le traitement du langage naturel, grâce à l'ajustement des coefficients de pondération dans une phase d'apprentissage.\fg{} D'après Futura\autocite{futura_nn}.
+
+\subsubsection{Architecture et modules} \label{def:module} \label{def:architecture}
+Pour des raisons de concision, nous considéreront les \glspl{nn} comme des \glspl{module}. C'est-à-dire que nous les considérerons comme des boites noires,
+sans nous intéresser à leur conception interne.
+
+Nous parlerons d'\gls{architecture} pour désigner à la fois la façon dont sont conçus les \glspl{nn} et la façon dont sont assemblés les \glspl{module} pour former un \gls{model}.
+
+Pour décrire les \glspl{architecture}, nous utiliserons des diagrammes considérant les \glspl{module} comme des blocs.
+
+\paragraph{\Glsentrytext{parameter}} \label{def:parameter}
+Les \glspl{parameter} pour un \gls{module} ou un \glspl{model} sont des valeurs qui varient au cours de l'\gls{training}. Généralement, plus un \glspl{model} possède de \glspl{parameter}, plus son \gls{training} consomme de ressources mais plus la qualité de l'apprentissage est élevé.
+
+%\subsubsection{Principaux modules complémentaires}
+%\paragraph{Dictionnaire}
+%Afin de rendre les mots ou les caractères utilisables par un \gls{nn}, on les associe à des nombres. L'outil qui stocke la correspondance entre les nombres et les mots ou caractères s'appelle un dictionnaire
+%
+%\paragraph{Encodage des caractères}
+%%TODO describe embedding
+%Le module d'encodage des caractères, appelé \foreign{embeding layer} en anglais (littéralement \og couche d'inclusion\fg{}), produit une représentation apprise de chaque caractère sous forme de \gls{tensor}. Ce \gls{tensor} est appelé \gls{embedding}. Ce module, entraîné, peut apprendre des propriétés spécifiques à chaque caractère. Par exemple ce module peut apprendre que tel caractère est une consonne et que tel autre est un caractère de ponctuation. \label{def:embeding}
+
+%Le module produisant la distribution de probabilité est un module linéaire\footnote{\og Module linéaire \fg{} est le nom donné aux modules composé d'un \gls{nn} intégralement connecté. Un réseau de neurones intégralement connécté signifie que chaque neurone d'une couche est connecté avec tous les neurones de la couche précédente. Il s'agit de l'architecture de \gls{nn} la plus simple.\label{def:fully_connected}\label{def:lin_module}}.
+%Il transforme les informations produites par le réseau de neurones en probabilité pour chaque caractère d'être le prochain caractère de la séquence.
+
+\subsubsection{Principales \glsentryplural{architecture} de \glsentrytext{nn}}
+\paragraph{\Glsentrytext{nn} intégralement connecté ou module linéaire}
+Il s'agit d'un des types de \glspl{nn} les plus simples. Il est emblématique des \glspl{nn}.
+
+\paragraph{\Glsentrytext{rnn}} \label{def:rnn}
+Le \glsfirst{rnn} est une \gls{architecture} de \glspl{nn} particulièrement adaptée au traitement de séquences.
+Il traite des éléments les uns après les autres, et stocke dans une \og mémoire \fg{} des informations au fur-et-à-mesure.
+Il utilise les informations stockées pour améliorer la façon dont il traite les prochains éléments.
+
+\paragraph{\Glsentrytext{lstm}} \label{def:lstm}
+Le \glsfirst{lstm} est un \gls{rnn} particulier équipé d'une mémoire supplémentaire.
+%\subsubsection{Mémoire et contexte}
+
+On peut noter qu'un \glspl{nn} intégralement connecté consomme moins de ressources qu'un \gls{rnn} qui en consomme moins qu'un \gls{lstm}.
+
+\subsection{\Glsentrytext{nlp} et \glsentrytext{lm}}
+\subsubsection{\Glsentrytext{nlp}} \label{subsec:nlp}\label{def:nlp}
+Le \glsfirst{nlp} est une discipline qui s'intéresse au traitement des informations langagières par des moyens formels ou informatiques.
+
+\subsubsection{\Glsentrytext{lm}}
+Un \glsfirst{lm} est une \og distribution de probabilité sur une séquence de mots [ou de caractères]\fg{}, 
+utilisé pour estimer la probabilité d'apparition du prochain mot ou caractère. D'après Wikipédia \autocite{wiki_lm}.
+
+Autrement dit, c'est une représentation servant à prédire le prochain mot à partir des mots précédents.
+
+\subsubsection{Contexte et dépendances}
+Dans le cadre d'un \gls{lm}, le contexte est l'ensemble des informations disponible hors du mot ou caractère à prédire.
+
+On parle aussi de dépendances entre les mots ou caractères et l'élément du contexte correspondant.
+
+Les informations contenues dans le contexte peuvent autant être les mots alentours que la structure de la phrase ou des informations comme le genre du héro d'un livre.
+
+On considère que plus on à d'informations contextuelles plus le \gls{lm} est précis. Par exemple~: si on nous dit \og un chat \fg{}, on aura plus de difficultés à prédire la couleur du chat que si on nous dit \og un chat noir \fg{}.
+
+\subsection{Performance et mesure}
+Le dernier concept important du rapport est celui de performance des modèles produits.
+
+La performance d'un modèle est évalué par trois choses~:
+\begin{itemize}
+	\item la qualité maximale des résultats produits~; dans le cas d'un \gls{lm}, il s'agit de la qualité de la prédiction~;
+	\item le temps d'entraînement nécessaire pour atteindre cette qualité (nombre d'\gls{epoch}, nombre d'heures, \dots)~;
+	\item la consommation de ressources nécessaire pour atteindre cette qualité (mémoire, puissance de calcul, \dots).
+\end{itemize}
+\vspace{1em}
+
+Afin d'évaluer les performances, des mesures ont été définies pour~:
+\begin{itemize}
+	\item la qualité du résultat~:  l'écart entre le résultat produit et le résultat attendu~; une mesure définie dans la littérature est le BPC, plus elle est proche de 0 mieux c'est~;
+	\item le temps d'entraînement~:  le nombre d'\gls{epoch} et le temps nécessaire par \gls{epoch}, le nombre total d'heures, \dots~;
+	\item la consommation de ressources~:  l'espace mémoire occupée (en MiB ou GiB), la puissance de calcul utilisée, \dots~;
+\end{itemize}
+\vspace{1em}
+
+Un \gls{model} optimal serait un modèle qui atteint des résultats parfaits (aucun écart entre ce qui est attendu et ce qui est produit), le plus rapidement possible, en consommant le moins de ressources possibles.
+

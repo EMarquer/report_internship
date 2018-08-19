@@ -6,11 +6,11 @@
 \subsection{Entraînement couche par couche}\label{subsec:optilbl}
 La dernière optimisation mise en place est un nouvel algorithme d'entraînement.
 
-Cet algorithme est une implémentation naïve d'un entraînement couche par couche appliqué à l'architecture \gls{gmsnn}. Cette algorithme s'apparente aux algorithmes HM \autocite{hm}.
+Cet algorithme est une implémentation naïve d'un entraînement couche par couche appliqué à l'architecture \gls{gmsnn}. Cette algorithme s'apparente aux algorithmes HM. %TODO \autocite{hm}.
 
 L'intuition à l'origine de l'algorithme est~:
-il semble que pour apprendre des représentations de haut niveau, le modèle doit en premier lieu apprendre les représentations de bas niveau~;
-en effet, sans mots, il est difficile de faire des phrases cohérentes.
+\og il semble que pour apprendre des représentations de haut niveau, le modèle doit en premier lieu apprendre les représentations de bas niveau~;
+en effet, sans mots, il est difficile de faire des phrases cohérentes \fg{}.
 
 Cela sous-entend que les échelles les plus proches des données doivent apprendre avant que les échelles supérieures puisse le faire à leur tour.
 Aussi, il semble inutile d'augmenter la charge de l'algorithme d'entraînement en entraînant des couches qui n'apprennent pas.
@@ -20,11 +20,12 @@ Le fonctionnent général de cette algorithme est d'entraîner successivement, u
 Le fonctionnement détaillé de l'algorithme est disponible dans l'annexe \ref{subsec:lbl}.
 
 \subsubsection{Performances}
-Les performances de l'algorithme sont disponible dans le rapport dans l'annexe \ref{subsec:test_perf}.
 
 L'algorithme remplis sa fonction d'alléger la charge calculatoire. En effet, on obtient une réduction notable du temps nécessaire pour l'entraînement.
 
 De plus, il n'y à aucune variation notable de la qualité de l'entraînement.
+
+Les performances de l'algorithme sont disponible dans le rapport dans l'annexe \ref{subsec:test_perf}.
 
 %\paragraph{Seule la première couche du modèle semble apprendre}
 

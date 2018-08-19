@@ -1,11 +1,11 @@
 %nouvelle tentative augmenter params
 %aucun impact probant malgré tentative variées
 \subsection{Augmentation du nombre de paramètres}\label{subsec:optiparam}
-Les \glspl{parameter}, ou \glspl{weight}, du modèle sont des valeurs qui varient au long de l'entraînement du \gls{model}. On peut dire que ce sont ces valeurs qui \og apprennent\fg{}.
+Pour rappel, les \glspl{parameter} du modèle sont des valeurs qui varient au long de l'entraînement du \gls{model}.
 
-Le fait d'augmenter ces \glspl{parameter} augmente la qualité de l'apprentissage, et la précision du modèle appris. Mais cela se fait au coût d'un volume plus important du \gls{model}, et d'une augmentation des calculs nécessaires pour utiliser et entraîner le \gls{model}. Cela se manifeste par un entraînement plus lent et une consommation mémoire plus élevée.
+Le fait d'augmenter ces \glspl{parameter} augmente la qualité de l'apprentissage, et la précision du modèle appris. Mais cela se fait au prix d'un volume plus important du \gls{model}, et d'une augmentation des calculs nécessaires pour utiliser et entraîner le \gls{model}. Cela se manifeste par un entraînement plus lent et une consommation mémoire plus élevée.
 
-Cependant, grâce aux optimisations mises en place durant la résolution des fuites mémoires (voir \autoref{subsec:optimem}), ces coûts ne sont plus dramatiques.
+Cependant, grâce aux optimisations mises en place durant la résolution des fuites mémoires (voir \autoref{subsec:optimem}), ces coûts restent raisonnables.
 
 Il existe plusieurs façon de mettre en place cette optimisation~:
 \begin{itemize}
@@ -13,6 +13,6 @@ Il existe plusieurs façon de mettre en place cette optimisation~:
 	\item augmenter le nombre de couches dans le \glspl{rnn} qui compose chaque \og échelle\fg{}.
 \end{itemize}
 
-\subsubsection{Conclusion}
-Ces deux pratiques ont été testées, et aucune n'apporte d'amélioration de qualité de l'apprentissage, tout en multipliant le temps d'entraînement.
-En résumé, ces améliorations apportent des coûts supplémentaires sans aucun bénéfices. Par conséquent, aucune de ces améliorations n'à été conservée.
+%\subsubsection{Conclusion}
+Ces deux pratiques ont été testées, et aucune n'a apporté d'amélioration de qualité de l'apprentissage, tout en multipliant le temps d'entraînement.
+En résumé, ces améliorations apportaient des coûts supplémentaires sans aucun bénéfices. Par conséquent, aucune de ces améliorations n'a été conservée.
