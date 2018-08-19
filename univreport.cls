@@ -209,7 +209,9 @@
 	
 	\cleardoublepage
 	\setcounter{page}{1}
-	\pagestyle{plain}
+    
+	\pagestyle{empty}
+	%\pagestyle{plain}
 }
 \makeatother
 

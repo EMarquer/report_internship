@@ -1,17 +1,17 @@
 \section{Adaptation du système de gestion de corpus au volume de données}
-L'étape suivant l'implémentation du modèle fonctionnel à été l'adaptation du système de gestion de corpus aux grands volumes de \glspl{data} à traiter dans le futur.
+L'étape suivant l'implémentation du modèle à été l'adaptation du système de gestion de corpus aux grands volumes de \glspl{data} à traiter dans le futur.
 
 Pour cela, un premier prototype à été réalisé.
-Il utilise des mécanismes optimisés du langage Python pour la lecture de fichier.
-L'objectif de ce prototype est de maintenir uniquement une fiable quantité de \glspl{data} en mémoire.
+Il utilisait des mécanismes optimisés du langage Python pour la lecture de fichier.
+L'objectif de ce prototype est de maintenir uniquement une faible quantité de \glspl{data} en mémoire.
 
 Le principe de fonctionnement est simple~:
 \begin{enumerate}
 	\item on charge en mémoire une portion des \glspl{data}~; \label{itm:1}
 	\item on applique le \gls{preprocessing} sur ces \glspl{data}~;
-	\item on transfert les \glspl{data} traitées à l'algorythme d'entrainement~;
+	\item on transfert les \glspl{data} traitées à l'algorithme d'\gls{training}~;
 	\item on recommence de l'étape \ref{itm:1} avec la portion suivante des \glspl{data}.
 \end{enumerate}
 \vspace{1em}
 
-L'intégration de cet outil s'est faite en parallèle de la suite du projet.
+L'intégration de cet outil à l'algorithme d'\gls{training} s'est faite en parallèle de la suite du projet.

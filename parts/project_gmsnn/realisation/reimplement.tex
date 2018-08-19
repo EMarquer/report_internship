@@ -18,17 +18,10 @@ Pour cela, nous avons déchiffré et re-documenté le code, qui contenait des fr
 Après le déchiffrage, il à fallu comprendre et réparer les fragments défectueux.
 
 \pagebreak
-\subsection[\Glsentrytext{model} ré-implémenté simplifiée]{\Gls{model} ré-implémenté simplifiée}
+\subsection[\Glsentrytext{model} ré-implémenté simplifiée]{\Gls{model} ré-implémenté simplifiée} 
 Le \gls{model} simplifiée produit est composé d'un module encodant les caractères, d'un \gls{rnn} particulier (un \gls{lstm}), et d'un module produisant une distribution de probabilité sur les caractères connus. La figure \ref{fig:reimplement}, \autopageref{fig:reimplement}, représente cette architecture.
 
-\begin{figure}[h]
-	\centering
-	\scalebox{1}{\input{plots/base_msnn_data}}
-	\caption[Architecture du \glsentrytext{model} réimplémenté]{Architecture du \gls{model} réimplémenté. Le modèle prend en entrée des caractères, et produit des probabilités sur quel caractère apparaîtra ensuite.}
-	\label{fig:reimplement}
-\end{figure}
-
-Le module d'encodage des caractères, appelé \foreign{embeding layer} en anglais (littéralement \og couche d'inclusion\fg{}), produit une représentation apprise de chaque caractère sous forme de \gls{tensor}. Ce \gls{tensor} est appelé \gls{embedding}. Ce module, entraîné, peut apprendre des propriétés spécifiques à chaque caractère. Par exemple ce module peut apprendre que tel caractère est une consonne et que tel autre est un caractère de ponctuation. \label{def:embeding}
+Le module d'encodage des caractères, appelé \foreign{embeding layer} en anglais (littéralement \og couche d'inclusion\fg{}), produit une représentation apprise de chaque caractère sous forme de \gls{tensor}. Ce \gls{tensor} est appelé \gls{embedding}. Ce module, entraîné, peut apprendre des propriétés spécifiques à chaque caractère. Par exemple ce module peut apprendre que tel caractère est une consonne et que tel autre est un caractère de ponctuation. \label{def:embedding}
 
 Le \gls{rnn} traite les caractères sous forme de séquence, et peut ainsi apprendre la structure des mots, la syntaxe et d'autres propriétés du langage.
 
@@ -36,6 +29,13 @@ Le module produisant la distribution de probabilité est un module linéaire\foo
 Il transforme les informations produites par le réseau de neurones en probabilité pour chaque caractère d'être le prochain caractère de la séquence.
 
 Voir les annexes \ref{subsec:testreimp_1}, \ref{subsec:testreimp_2} et \ref{subsec:testreimp_3} pour les rapports sur le \gls{model} ré-implémenté. 
+
+\begin{figure}[h]
+	\centering
+	\scalebox{1}{\input{plots/base_msnn_data}}
+	\caption[Architecture du \glsentrytext{model} réimplémenté]{Architecture du \gls{model} réimplémenté. Le modèle prend en entrée des caractères, et produit des probabilités sur quel caractère apparaîtra ensuite.}
+	\label{fig:reimplement}
+\end{figure}
 %
 %\subsection{Conclusion}
 %Cette étape, outre la préparation du code, à permis la mise en œuvre et une meilleur compréhension des concepts appris durant l’étape précédente. C'est la première pierre de l'édifice qu'est le \gls{gmsnn}.

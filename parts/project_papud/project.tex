@@ -1,22 +1,22 @@
-\chapter{\Glsname{project_papud}\label{ch:project_papud}}
+\chapter{\Glsentrytext{nn} pour la prédiction de pannes\label{ch:project_papud}}
 \section{Contexte}
 Nous avons vu que parmi les secteurs d'activité de \gls{bull}, les serveurs et autres systèmes de traitent de gros volumes de \glspl{data} sont très présents.
 
 Ces outils tombent rarement en panne, mais quand ils le font cela occasionne des pertes très importantes pour l'entreprise.
 
-Il serait donc très intéressant de mettre au point un système de prédiction des panes, afin de pouvoir les éviter.
+Il serait donc très intéressant de mettre au point un système de prédiction des pannes, afin de pouvoir les éviter.
 
 Les \glspl{data} disponibles pour remplir cette tache sont des fichiers de journaux systèmes (décrits en détail dans le \autoref{ch:data_papud}) de très grande taille.
 Ils contiennent de nombreuses informations sur les évènements se déroulant dans les outils.
 
-\section{Solution}
+\section{Solution}\label{sec:solution}
 \textit{D'après les documents de travail officiels (en particulier le fichier README.md du dépôt de code officiel du projet).} % TODO remove dat shit
 
-Le cas d'utilisation \gls{bull} du \glsname{project_papud} est dédié à répondre à cette problématique, en fournissant un système détectant les anomalies (signes de pannes) dans les journaux systèmes.
+Le cas d'utilisation \gls{bull} du \glsname{project_papud} est dédié à répondre à cette problématique, en fournissant un système détectant les signes de pannes dans les journaux systèmes.
 
 Pour cela, il à été décidé de modéliser le comportement normal (sans panne) de ces journaux.
 
-Ces journaux sont composés de lignes de textes en anglais. Il est donc possible de produire un \gls{lm} capable de prédire la prochaine ligne.
+Ils sont composés de lignes de textes en anglais. Il est donc possible de produire un \gls{lm} capable de prédire la prochaine ligne.
 Par la suite, le modèle sera augmenté d'un système prenant en compte le contexte de la ligne à prédire pour améliorer sa précision.
 Par contexte on entend ici des dépendances avec des lignes plus anciennes que la ligne précédente.
 
@@ -32,7 +32,7 @@ Pour ce qui est du modèle simple, il à été décidé de ne pas utiliser de \g
 On peut noter que les conclusions du \gls{project_gmsnn} ont été appliquées, autant pour le déroulement du projet que pour le type de modèle à utiliser.
 
 
-\section{\glsentrytext{project_papud}}
+\section{\Glsentrytext{project_papud}}
 La tache qui nous à été confiée est la réalisation du modèle simple.
 
 Plus exactement, étant donné qu'il était évident que la durée restante du stage serait insuffisante pour réaliser et pousser au maximum le modèle simple, nos objectifs étaient la réalisation d'un prototype du modèle, et de mettre en place les outils nécessaires à l'entraînement.
@@ -49,17 +49,16 @@ Contrairement au \gls{project_gmsnn}, d'autres collaborateurs participaient a ce
 Le \gls{project_gmsnn} s'étant bien déroulé, une organisation similaire à été mise en place afin de tenir ces autres membres du projet informés de l'avancement et des conclusions de notre travail.
 C'est-à-dire que des rapports fréquents et des réunions hebdomadaires durant lesquelles nous pressentions notre progression ont été mis en place.
 
-Les rapports de ce projet sont également disponibles en annexe.
+Les rapports de ce projet sont également disponibles en annexe (voir l'annexe \ref{anx:papud}, \autopageref{anx:papud}).
 Le rapport d'une des réunion est disponible à l'annexe \ref{anx:meeting}. % TODO enlever ?
 
-Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git. Les collaborateurs du projet ont accès à l'ensemble de ces \glspl{data}, qui ont été mises à jours tout au long du projet.
-
 \subsection{Organisation initiale du travail}
-Ce \gls{project_papud} s'est déroulé sur la base de cycles de développement.
+Le \gls{project_papud} s'est déroulé sur la base de cycles de développement.
 C'est durant les réunions hebdomadaires que les prochains objectifs étaient décidés.
 
 En effet, contrairement au \gls{project_gmsnn} pour lequel il à été simple de définir des périodes réservées aux grandes étapes du projet, ce \gls{project_papud} s'est déroulé dans un temps très restreint.
 
+\pagebreak
 Cependant, il à été possible de définir les priorités suivantes~:
 \begin{enumerate}
 	\item la réalisation d'un prototype fonctionnel~;
@@ -78,17 +77,21 @@ La durée totale du projet à donc été de 5 semaines.
 \subsection{Déroulement réel du projet}
 Tous les objectifs nécessaires ont été remplis, et deux améliorations notables des performances ont été mises en place.
 
-La répartition réelle du travail du projet est représentée dans la \autoref{fig:papud_time}.
+La répartition réelle du travail du projet est représentée dans la figure \ref{fig:papud_time}.
 
 \begin{figure}[ht]
 	\centering
-	\input{plots/timeline_papud}\caption[Répartition du travail]{Répartition du travail. Une case correspond à 1 jour de travail.}\label{fig:papud_time}
+	\input{plots/timeline_papud}\caption[Répartition du travail]{Répartition du travail. Une case correspond à un jour de travail.}\label{fig:papud_time}
 \end{figure}
 
 \section{Outils}
-Les outils choisis sont Python et PyTorch, pour trois principales raisons~:
+\subsection{Gestion du code}
+Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git. Les collaborateurs du projet ont accès à l'ensemble de ces \glspl{data}, qui ont été mises à jours tout au long du projet.
+
+\subsection{Python, PyTorch et Grid5000}
+Nous avons décidé de continuer à travailler avec Python, PyTorch et Grid5000, pour trois principales raisons~:
 \begin{itemize}
 	\item la première partie du projet s'est déroulée avec ces outils, nous étions donc habitués à leur utilisation et à leurs subtilités~;
 	\item la base de code accumulée jusqu'à présent reposait sur ces outils, et pouvait être réutilisée sans trop d'efforts~;
-	\item il était possible de basculer plus tard vers une autre librairie, PyTorch possédant une fonctionnalité permettant la conversion d'un modèle vers les autres principales librairies disponibles pour Python et quelques autres langages.
+	\item il était possible de basculer plus tard vers une autre librairie que  PyTorch, cette dernière possédant une fonctionnalité permettant la conversion d'un modèle vers les autres principales librairies disponibles pour Python et quelques autres langages.
 \end{itemize}

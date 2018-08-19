@@ -4,13 +4,13 @@ La dernière optimisation mise en place est la transformation du système de cor
 \subsection{Fichiers multiples}
 L'étude des \glspl{data} disponibles a révélé une structure en nombreux fichiers successifs.
 Ainsi, à la demande de notre maître de stage, nous avons donné au nouvel outil la capacité à utiliser plusieurs fichiers comme source de \glspl{data} continue.
-Cette fonctionnalité à été implémentée de façon optimisée en temps de calcul et en espace optimisé.
+Cette fonctionnalité à été implémentée de façon optimisée en temps de calcul et en utilisation mémoire.
 
 \subsection{Prétraitement modulaire}
-D'autre part, durant le déroulement du projet nous avons remarqué que l'ajout d'une étape de \gls{preprocessing} était ardue avec l'ancien outil.
+D'autre part, durant le déroulement du projet nous avons remarqué que l'ajout ou la modification d'une étape de \gls{preprocessing} était ardue avec l'ancien outil.
 En gardant cela à l'esprit, nous avons développé un système de \gls{preprocessing} modulaire, dans lequel chaque étape du traitement est séparée et interchangeable.
 Cette architecture permet d'ajouter ou de retirer à volonté des étapes au traitement.
-C'est d'ailleurs lors de l'implémentation de ces modules que le \gls{preprocessing} mentionnée \autoref{} et \autoref{} à été intégré.
+C'est d'ailleurs lors de l'implémentation de ces modules que le \gls{preprocessing} mentionnée \autoref{sec:spike} (\autopageref{sec:spike}) et \autoref{hex} (\autopageref{hex}) à été intégré.
 
 \subsection{Processus multiples}
 Une autre amélioration, tirant profit de l'aspect modulaire du traitement, est l'utilisation de multiples processus en parallèle.
@@ -20,7 +20,8 @@ Ainsi, l'outil est beaucoup plus rapide que la version précédente.
 
 \subsection{Performances}
 Le nouvel outil est largement plus rapide et efficace que son prédécesseur.
-De plus, il augmente la facilité d'utilisation et d'entretient.
+De plus, il augmente la facilité d'utilisation et d'entretien.
 Il reste cependant plus lent que la version adaptée aux petits fichiers.
 
-La description des performances et du fonctionnement en détail de l'outil sont disponibles dans le rapport de l'annexe \ref{anx:multi_process}.
+La description des performances et le détail du fonctionnement de l'outil sont disponibles dans le rapport de l'annexe \ref{anx:multi_process} (\autopageref{anx:multi_process}).
+\pagebreak
