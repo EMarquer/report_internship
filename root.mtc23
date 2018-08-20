@@ -1,0 +1,71 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.1}Informations sur les documents contenus dans la pr\IeC {\'e}sente annexe}{\reset@font\mtcSfont 159}{section.B.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.1.1}Format d'origine, transcription et contenu des rapports}{\reset@font\mtcSSfont 159}{subsection.B.1.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.2}Informations g\IeC {\'e}n\IeC {\'e}rales}{\reset@font\mtcSfont 160}{section.B.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.2.1}Corpus}{\reset@font\mtcSSfont 160}{subsection.B.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode firsttest}{\reset@font\mtcSSSfont 160}{subsection.B.2.1}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Baseline accuracy}{\reset@font\mtcPfont 160}{subsection.B.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.2.2}Grid-5000}{\reset@font\mtcSSfont 160}{subsection.B.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode GPU-equipped nodes}{\reset@font\mtcSSSfont 160}{subsection.B.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.3}R\IeC {\'e}sultats de l'impl\IeC {\'e}mentation basique}{\reset@font\mtcSfont 162}{section.B.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.3.1}Paradigm}{\reset@font\mtcSSfont 162}{subsection.B.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Model architecture}{\reset@font\mtcSSSfont 162}{subsection.B.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.3.2}Results}{\reset@font\mtcSSfont 162}{subsection.B.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode GPU memory usage}{\reset@font\mtcSSSfont 162}{subsection.B.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Computation time}{\reset@font\mtcSSSfont 162}{figure.caption.48}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Loss and accuracy}{\reset@font\mtcSSSfont 162}{figure.caption.48}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.3.3}Improvements and next steps}{\reset@font\mtcSSfont 163}{subsection.B.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Mini-batch}{\reset@font\mtcSSSfont 163}{subsection.B.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Dynamic corpus}{\reset@font\mtcSSSfont 163}{subsection.B.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.4}Paquets (\emph {batchs}) simultan\IeC {\'e}s}{\reset@font\mtcSfont 164}{section.B.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.4.1}Paradigm}{\reset@font\mtcSSfont 164}{subsection.B.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.4.2}Results}{\reset@font\mtcSSfont 165}{subsection.B.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode GPU memory usage}{\reset@font\mtcSSSfont 165}{subsection.B.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Loss and accuracy}{\reset@font\mtcSSSfont 165}{figure.caption.50}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Computation time}{\reset@font\mtcSSSfont 166}{table.B.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.4.3}Conclusion}{\reset@font\mtcSSfont 167}{subsection.B.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.4.4}Improvements and next steps}{\reset@font\mtcSSfont 167}{subsection.B.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Dynamic corpus}{\reset@font\mtcSSSfont 167}{subsection.B.4.4}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Buffer size}{\reset@font\mtcPfont 167}{subsection.B.4.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.5}Analyse du pic de performance}{\reset@font\mtcSfont 168}{section.B.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.5.1}Problem}{\reset@font\mtcSSfont 168}{subsection.B.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.5.2}Analysis}{\reset@font\mtcSSfont 168}{subsection.B.5.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Examples of Kernel messages}{\reset@font\mtcPfont 168}{subsection.B.5.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Repartition of match in the corpus}{\reset@font\mtcSSSfont 169}{lstnumber.-19.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Percentages of match in each part of the corpus}{\reset@font\mtcSSSfont 169}{table.B.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.5.3}Conclusion(s)}{\reset@font\mtcSSfont 171}{subsection.B.5.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Kernel messages}{\reset@font\mtcSSSfont 171}{subsection.B.5.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Memory addresses and hexadecimal codes}{\reset@font\mtcSSSfont 171}{subsection.B.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.5.4}Improvements and next steps}{\reset@font\mtcSSfont 171}{subsection.B.5.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.6}Rapport de la r\IeC {\'e}union avec les autres membres du projet}{\reset@font\mtcSfont 172}{section.B.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.6.1}Main points}{\reset@font\mtcSSfont 172}{subsection.B.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.6.2}Improvements and next steps}{\reset@font\mtcSSfont 173}{subsection.B.6.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.7}Optimisation du taux d'apprentissage}{\reset@font\mtcSfont 174}{section.B.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.7.1}General information}{\reset@font\mtcSSfont 174}{subsection.B.7.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.7.2}Optimisation process}{\reset@font\mtcSSfont 174}{subsection.B.7.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.7.3}Results}{\reset@font\mtcSSfont 175}{subsection.B.7.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.7.4}Additional information}{\reset@font\mtcSSfont 176}{subsection.B.7.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.7.5}Improvements and next steps}{\reset@font\mtcSSfont 176}{subsection.B.7.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.8}Effets de l'optimisation du taux d'apprentissage}{\reset@font\mtcSfont 178}{section.B.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.8.1}Context}{\reset@font\mtcSSfont 178}{subsection.B.8.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.8.2}Results}{\reset@font\mtcSSfont 178}{subsection.B.8.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.8.3}Conclusion}{\reset@font\mtcSSfont 179}{subsection.B.8.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.8.4}Improvements and next steps}{\reset@font\mtcSSfont 179}{subsection.B.8.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.9}Taille de \emph {batch} binaire}{\reset@font\mtcSfont 180}{section.B.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.9.1}Context}{\reset@font\mtcSSfont 180}{subsection.B.9.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.9.2}Paradigm}{\reset@font\mtcSSfont 180}{subsection.B.9.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.9.3}Results}{\reset@font\mtcSSfont 180}{subsection.B.9.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.9.4}Conclusion}{\reset@font\mtcSSfont 181}{subsection.B.9.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.9.5}Next steps and improvements}{\reset@font\mtcSSfont 181}{subsection.B.9.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.10}Performances du lecteur de corpus multi-fichiers multi-processus}{\reset@font\mtcSfont 182}{section.B.10}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.10.1}Context}{\reset@font\mtcSSfont 182}{subsection.B.10.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.10.2}Multi-file-multi-process corpus concept}{\reset@font\mtcSSfont 182}{subsection.B.10.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Multi-process system}{\reset@font\mtcSSSfont 182}{subsection.B.10.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Multi-file system}{\reset@font\mtcSSSfont 183}{lstnumber.-23.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.10.3}Tests}{\reset@font\mtcSSfont 183}{subsection.B.10.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Paradigm}{\reset@font\mtcSSSfont 183}{subsection.B.10.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Results}{\reset@font\mtcSSSfont 183}{subsection.B.10.3}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Printing only the status of the process at each batch}{\reset@font\mtcPfont 183}{subsection.B.10.3}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Printing the status of the process at each batch and printing the data}{\reset@font\mtcPfont 184}{lstnumber.-24.9}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Printing the status of the process at each batch and training the model}{\reset@font\mtcPfont 184}{lstnumber.-25.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.10.4}Conclusions}{\reset@font\mtcSSfont 184}{subsection.B.10.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.10.5}Next steps and improvements}{\reset@font\mtcSSfont 185}{subsection.B.10.5}}

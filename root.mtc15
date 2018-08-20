@@ -1,0 +1,14 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.1}D\IeC {\'e}finition du mod\IeC {\`e}le}{\reset@font\mtcSfont 61}{section.13.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.2}Impl\IeC {\'e}mentation du mod\IeC {\`e}le et transfert des outils de base}{\reset@font\mtcSfont 61}{section.13.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.2.1}Premiers r\IeC {\'e}sultats}{\reset@font\mtcSSfont 61}{subsection.13.2.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.3}Adaptation du syst\IeC {\`e}me de gestion de corpus au volume de donn\IeC {\'e}es}{\reset@font\mtcSfont 61}{section.13.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.4}Entra\IeC {\^\i }nement par \emph {batchs} simultan\IeC {\'e}s}{\reset@font\mtcSfont 62}{section.13.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.5}Changement d'unit\IeC {\'e} de mesure pour \IeC {\'e}valuer la qualit\IeC {\'e} du mod\IeC {\`e}le}{\reset@font\mtcSfont 62}{section.13.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.5.1}Pr\IeC {\'e}cision de base}{\reset@font\mtcSSfont 62}{subsection.13.5.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.6}Analyse d'une \IeC {\'e}trange variation de performance dans l'apprentissage}{\reset@font\mtcSfont 63}{section.13.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.7}Optimisation du taux d'apprentissage}{\reset@font\mtcSfont 63}{section.13.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {13.8}Mise en place d'un syst\IeC {\`e}me de gestion de corpus plus puissant}{\reset@font\mtcSfont 64}{section.13.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.8.1}Fichiers multiples}{\reset@font\mtcSSfont 64}{subsection.13.8.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.8.2}Pr\IeC {\'e}traitement modulaire}{\reset@font\mtcSSfont 64}{subsection.13.8.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.8.3}Processus multiples}{\reset@font\mtcSSfont 64}{subsection.13.8.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {13.8.4}Performances}{\reset@font\mtcSSfont 64}{subsection.13.8.4}}

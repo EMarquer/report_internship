@@ -12,12 +12,13 @@ Ce qui se cache derrière cet engouement est la combinaison de théories relativ
 
 %Un des intérêt de ces méthodes d'\gls{ml} est la capacité à apprendre à partir de données restreintes.
 Un des domaines exploitant les performances de ces nouveaux outils est le \gls{nlp}.
-L'application au \gls{nlp} des \glspl{nn} qui nous intéresse particulièrement dans ce rapport est la création de \glspl{lm}.
+En particulier, nous nous intéresserons dans ce rapport à la création de \glspl{lm}.
+%L'application au \gls{nlp} des \glspl{nn} qui nous intéresse particulièrement dans ce rapport est la création de \glspl{lm}.
 
-D'autre part, nous somme à l'ère du \og\foreign{Big Data}\fg{}, et les quantités de \glspl{data} produites de nos jours sont bien au-delà de ce que nous pouvons gérer sans outils spécialisés.
+D'autre part, nous sommes à l'ère du \foreign{\og Big Data\fg{}}, et les quantités de \glspl{data} produites de nos jours sont bien au-delà de ce que nous pouvons gérer sans l'aide d'outils spécialisés.
 Afin de produire des outils adaptés aux échelles actuelles, nous nous intéressons dans ce rapport à des grands volumes de \glspl{data} bien au-delà des volumes habituellement utilisés en \gls{dl}.
 
-Ainsi, l'axe principal de ce rapport est l'application des méthodes de l'\gls{dl} du point de vue du \gls{nlp} sur de grands volumes de \glspl{data}.
+Ainsi, l'axe principal de ce rapport est l'application des méthodes de l'\gls{dl} sur de grands volumes de \glspl{data}, de la perspective du \gls{nlp}.
 Cela implique des problématiques relativement classiques en développement de \gls{nn}~: le choix de l'architecture du réseau, de l'algorithme d'entraînement, mais aussi des questions plus pragmatiques d'optimisation liées au volume de \glspl{data}.
 
 \section[Objectifs]{Objectifs du stage}
@@ -31,14 +32,14 @@ Deux objectifs se sont succédé durant le stage.
 L'objectif initial du stage était d'explorer une idée d'architecture innovante de \gls{nn}, imaginée par Mr.~Cerisara, le maître de stage. Il s'agit du \glsunset{project_gmsnn}\gls{project_gmsnn} (réseau de neurones récurrents multi-échelles croissant, \foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, voir \autoref{ch:project_gmsnn}, \autopageref{ch:project_gmsnn}).
 %Par la même occasion, ce stage est l'opportunité pour moi d'apprendre à manipuler les \gls{nn}.
 
-Cependant, à l'issue du deuxième mois du stage, notre objectifs a changé.
+Cependant, à l'issue du deuxième mois du stage, nous avons changé d'objectif.
 
 Le nouvel objectif a été la réalisation d'un \gls{nn} et des outils nécessaires à son utilisation, en mettant à profit les connaissances acquises durant la première partie du stage.
 Cette réalisation doit servir de base technique pour une partie du \glsunset{project_papud}\gls{project_papud} (\foreign{Profiling and Analysis Platform Using Deep Learning}, voir \autoref{ch:project_papud}, \autopageref{ch:project_papud}).
 
 %Les tenants et aboutissants des deux phases, ainsi que l'explication des noms des projets, seront expliqués en détails dans le \autoref{ch:project_gmsnn} (\autopageref{ch:project_gmsnn}) et le \autoref{ch:project_papud} (\autopageref{ch:project_papud}).
 
-\input{parts/terms_concepts.tex}
+%\input{parts/terms_concepts.tex}
 
 \section[Plan]{Plan du rapport}
 
@@ -96,18 +97,29 @@ Cette réalisation doit servir de base technique pour une partie du \glsunset{pr
 %5. Conclusion
 %6. Annexes
 
-%1. intro
-Dans un premier temps, nous avons présenté à la fois le contexte, les enjeux, et les objectif généraux du stage. Nous avons aussi présenté les principaux termes et concepts utilisés au long du rapport.
+%%1. intro
+%Dans un premier temps, nous avons présenté à la fois le contexte, les enjeux, et les objectif généraux du stage. Nous avons aussi présenté les principaux termes et concepts utilisés au long du rapport.
+%
+%%2. scientific framework
+%Dans un second temps, nous définirons les termes et concepts principaux utilisés dans ce rapport.
+%
+%Dans un second temps nous allons développer les deux parties du stage, c'est-à-dire le \gls{project_gmsnn} et le \gls{project_papud}.
+%
+%Notamment, pour chacun d'eux, nous présenterons le contexte, les enjeux, et les entités impliquées dans le projet. Nous décrirons ensuite le \gls{model} réalisé avant de rapporter le travail effectué. Enfin, une conclusion résumera les points majeurs du projet.
+%
+%Dans un dernier temps, nous ferons un bilan de l'ensemble du travail réalisé pur en tirer les apports principaux.
 
-%2. scientific framework
-%Dans un second temps, nous étudierons plus en détail le cadre théorique du rapport, afin de définir les termes et concepts principaux utilisés dans ce rapport.
+%%%%%%%%%%
 
-Dans un second temps nous allons développer les deux parties du stage, c'est-à-dire le \gls{project_gmsnn} et le \gls{project_papud}.
+Dans un premier temps, nous avons présenté à la fois le contexte, les enjeux, et les objectif généraux du stage.
+
+Dans un second temps, nous définirons les termes et concepts principaux utilisés dans ce rapport.
+
+La complexité du stage est qu'il est composé de deux projets, le \gls{project_gmsnn} et le \gls{project_papud}, l'un étant la continuation de l'autre. En effet, les conclusions tirées du premier projet ont servi de base pour le second. C'est pourquoi, pour simplifier la lecture du présent rapport, chaque projet sera traité suivant le même plan.
 
 Notamment, pour chacun d'eux, nous présenterons le contexte, les enjeux, et les entités impliquées dans le projet. Nous décrirons ensuite le \gls{model} réalisé avant de rapporter le travail effectué. Enfin, une conclusion résumera les points majeurs du projet.
 
-Dans un dernier temps, nous ferons un bilan de l'ensemble du travail réalisé pur en tirer les apports principaux.
-
+Dans un dernier temps, nous ferons un bilan de l'ensemble du travail réalisé pour en tirer les apports principaux.
 
 
 

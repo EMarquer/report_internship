@@ -15,6 +15,10 @@
 \usepackage{makeidx}
 \usepackage{titletoc}
 \usepackage{tocloft}
+%\usepackage{minitoc}
+%\setcounter{minitocdepth}{1}
+%\dominitoc[n]
+
 \usepackage[nottoc]{tocbibind}
 \usepackage[backend=biber,backref=true,hyperref=true,sorting=none,citestyle=numeric,block=ragged]{biblatex}%,sorting=nyt, autocite=footnote
 \usepackage{csquotes}
@@ -74,7 +78,7 @@
 	\@starttoc{lol}
 }
 
-\newcommand{\termsname}{Glossaire, accronymes et noms d'entités}
+\newcommand{\termsname}{Glossaire, acronymes et noms d'entités}
 \newcommand{\terms}{
 	\clearpage
 	\chapter{\termsname}
