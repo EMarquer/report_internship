@@ -6,7 +6,7 @@
 \subsection{Entraînement couche par couche}\label{subsec:optilbl}
 La dernière optimisation mise en place est un nouvel algorithme d'entraînement.
 
-Cet algorithme est une implémentation naïve d'un entraînement couche par couche appliqué à l'architecture \gls{gmsnn}. Cette algorithme s'apparente aux algorithmes HM. %TODO \autocite{hm}.
+Cet algorithme est une implémentation naïve d'un entraînement couche par couche appliqué à l'architecture \gls{gmsnn}. Cette algorithme s'apparente aux algorithmes IM \foreign{(Information-Maximizing)}. %TODO \autocite{hm}.
 
 L'intuition à l'origine de l'algorithme est~:
 \og il semble que pour apprendre des représentations de haut niveau, le modèle doit en premier lieu apprendre les représentations de bas niveau~;
@@ -17,19 +17,19 @@ Aussi, il semble inutile d'augmenter la charge de l'algorithme d'entraînement e
 
 Le fonctionnent général de cette algorithme est d'entraîner successivement, une à une, les échelles du \gls{model} en commençant par celle la plus proche des données.
 
-Le fonctionnement détaillé de l'algorithme est disponible dans l'annexe \ref{subsec:lbl}.
+Le fonctionnement détaillé de l'algorithme est disponible dans l'annexe \ref{subsec:lbl} (\autopageref{subsec:lbl}).
 
 \subsubsection{Performances}
 
 L'algorithme remplis sa fonction d'alléger la charge calculatoire. En effet, on obtient une réduction notable du temps nécessaire pour l'entraînement.
 
-De plus, il n'y à aucune variation notable de la qualité de l'entraînement.
+De plus, il n'y a aucune variation notable de la qualité de l'entraînement.
 
-Les performances de l'algorithme sont disponible dans le rapport dans l'annexe \ref{subsec:test_perf}.
+Les performances de l'algorithme sont disponible dans le rapport dans l'annexe \ref{subsec:test_perf} (\autopageref{subsec:lbl}).
 
 %\paragraph{Seule la première couche du modèle semble apprendre}
 
 \subsubsection{Remise en cause de l'intérêt de l'architecture}
-Justement, comme seule une échelle apprend, on pourrait s'attendre à une baisse des performances. En effet, en entraînant une seule couche on réduit le nombre de paramètre du modèle, ce qui influence de façon néfaste la performance (Voir \autoref{subsec:optiparam} pour l'impact du nombre de paramètres).
+Justement, comme seule une échelle apprend, on pourrait s'attendre à une baisse des performances. En effet, en entraînant une seule couche on réduit le nombre de paramètre du modèle, ce qui influence de façon néfaste la performance (Voir \autoref{subsec:optiparam} pour l'impact du nombre de paramètres, \autopageref{subsec:optiparam}).
 
 Comme le \gls{model} muni d'une seule échelle apprend aussi bien que le \gls{model} multi-échelles, cela remet en question l'utilité de l'architecture \gls{gmsnn} et de ses échelles multiples.

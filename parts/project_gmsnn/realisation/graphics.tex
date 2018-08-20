@@ -1,16 +1,16 @@
 \section{Intégration de systèmes de visualisation}\label{sec:gmsnn_track}
-Afin d'évaluer les performances du modèle dans la suite du projet, il à été nécessaire d'établir un système de visualisation des performances.
+Afin d'évaluer les performances du modèle dans la suite du projet, il a été nécessaire d'établir un système de visualisation des performances.
 
 \subsection{Utilisation de librairies}
 Dans un premier temps, diverses librairies permettant de visualiser l'état du \gls{nn} ont étés testées, en particulier VisualDL \autocite{VisualDLGit,VisualDLSite}.
 
 Malheureusement, ces librairies ont des difficultés à supporter les architectures complexes (en particulier celles qui impliquent des \gls{rnn}).
 
-Ainsi, aucune des librairies testées n'a fonctionné avec notre modèle.
+Ainsi, aucune des librairies testées n'a pu fonctionner avec notre modèle.
 
 \subsection{Création d'un outil personnalisé}
 Nous avons donc réalisé un outil capable d'enregistrer des données et de réaliser des graphiques. Nous nous sommes basés sur le module \og matplotlib\fg{} de Python, et sur une variante française du format CSV. Il s'agit d'un format simple à manipuler qui permet de stoker facilement des lignes de données, et de définir le nom de chaque colonne du tableau ainsi obtenu.
 
-L'outil à évolué tout au long du projet pour s'adapter à nos besoins.
+L'outil a évolué tout au long du projet pour s'adapter à nos besoins.
 
 Il nous a permis de réaliser les graphiques produits dans les divers rapports du projet (disponibles en annexes).

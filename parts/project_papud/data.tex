@@ -3,21 +3,23 @@ Les données disponibles sont des des fichiers de journaux système.
 
 Ce sont des lignes de texte en anglais extrêmement structuré (comme on peut le voir sur le \autoref{cde:traindata}, \autopageref{cde:traindata}),
 qui donnent des informations sur les programmes en cours d'exécution sur l'outil, et les évènements qui de déroulent.
-Par exemple, des messages d'information, comme \og le programme A à tenté de faire B\fg{}, ou \og l'utilisateur C changé son mot de passe\fg{}.
+Par exemple, des messages d'information, comme \og le programme A a tenté de faire B\fg{}, ou \og l'utilisateur C changé son mot de passe\fg{}.
 
 Ces messages sont précédées d'informations comme le moment d'écriture du message et le programme d'ou il provient.
 
 De plus, ces journaux système contiennent un nombre très grand de messages, et la quantité de données disponible pour le projet dépasse les 400~GiB de texte brut. En comparaison, les données utilisées pour le projet précédent pesaient au maximum 100~MiB, soit 4~000 fois moins.
 
-Un échantillon de 9~MiB des données disponibles à été utilisé pendant le projet.
+Un échantillon de 9~MiB des données disponibles a été utilisé pendant le projet.
 Cela correspond à 70~131 lignes de journaux système.
 
 \section{Extrait des données d'entraînent}%dummy example
 Les données utilisées sont confidentielles.
-Ainsi, l'extrait présenté ici à été largement modifié.
-Entre autre, la date et le \foreign{timestamp} (nombre correspondant à la date) ont été remplacées par le date de début du stage et le \foreign{timestamp} correspondant, et l'utilisateur à été renommé \og OOOOOO \fg{}.
+Ainsi, l'extrait présenté ici a été largement modifié.
+Entre autre, la date et le \foreign{timestamp} (nombre correspondant à la date) ont été remplacées par le date de début du stage et le \foreign{timestamp} correspondant, et l'utilisateur a été renommé \og OOOOOO \fg{}.
 
-\begin{lstlisting}[caption={[Exemple d'une ligne extraite des journaux systèmes.]Exemple d'une ligne extraite des journaux systèmes. On a ici dans de gauche à droite~: le \foreign{timestamp}, la date, l'heure, l'utilisateur (OOOOOO), le processus (authpriv), le type de message (info), et le message.},label=cde:traindata]
+Dans le \autoref{cde:traindata} (\autopageref{cde:traindata}), on a de gauche à droite~: le \foreign{timestamp}, la date, l'heure, l'utilisateur (OOOOOO), le processus (authpriv), le type de message (info), et le message.
+
+\begin{lstlisting}[caption={[Exemple d'une ligne extraite des journaux systèmes.]Exemple d'une ligne extraite des journaux systèmes},label=cde:traindata]
 	1524463200 2018 Apr 23 08:00:00 OOOOOO authpriv info access granted for user root (uid=0)
 \end{lstlisting}
 
@@ -32,7 +34,7 @@ Le prétraitement des données est composé de~:
 \end{itemize}
 
 \subsection{Traitement des codes hexadécimaux}\label{hex}
-Par la suite, le remplacement de tout code hexadécimal comme \lstinline|0x005f| par un caractère spécifique du dictionnaire à été ajouté (voir \autoref{sec:spike}).
+Par la suite, le remplacement de tout code hexadécimal comme \lstinline|0x005f| par un caractère spécifique du dictionnaire a été ajouté (voir \autoref{sec:spike}, \autopageref{sec:spike}).
 De cette façon, \lstinline|0x005f| et \lstinline|0x0007| sont remplacés par le caractère  \lstinline|<hexX4>|, tandis que  \lstinline|0000005f| et  \lstinline|89abcdef| sont remplacés par  \lstinline|<hex8>|.
 Cela permet de s'abstraire de la valeur du code sans perdre l'information liée à sa présence.
 

@@ -5,10 +5,10 @@ Le modèle est un \gls{lm} au niveau du caractère, qui prend en entrée une lig
 
 Ainsi, l'entrée du modèle est une ligne de taille fixe de nombres correspondant à des caractères.
 
-La sortie est un tableau à 2 dimensions, qui contient pour chaque caractère prédit une distribution de probailité sur les caractères connus (répertoriés dans le dictionnaire décrit \autoref{def_dict_papud}).
+La sortie est un tableau à 2 dimensions, qui contient pour chaque caractère prédit une distribution de probailité sur les caractères connus (répertoriés dans le dictionnaire décrit \autoref{def_dict_papud}, \autopageref{def_dict_papud}).
 
 \section{Utilisation d'un \glsentrytext{nn} basique}
-Comme présenté dans le \autoref{ch:project_papud}, un \gls{nn} basique, intégralement connecté, à été choisi pour le modèle.
+Comme présenté dans le \autoref{ch:project_papud} (\autopageref{ch:project_papud}), un \gls{nn} basique, intégralement connecté, a été choisi pour le modèle.
 
 Étant le \gls{nn} le plus simple, il est extrêmement rapide à entraîner.
 
@@ -25,17 +25,17 @@ Car $0<2$, $30<42$, $6>3$, $-5<5$, $6>-60$ et $12>-2$.
 
 \section{Représentation de l'architecture}
 
-La façon dont s'agencent les différents modules de l'architecture est représentée dans la \autoref{fig:base_papud}.
+La façon dont s'agencent les différents modules de l'architecture est représentée dans la \autoref{fig:base_papud} (\autopageref{fig:base_papud}).
 
 \begin{figure}[ht]
 	\centering
 	\input{plots/base_papud}
-	\caption[Architecture du modèle du projet PAPUD]{Architecture du modèle du \gls{project_papud}.}
+	\caption[Architecture du modèle du projet PAPUD]{Architecture du modèle du \gls{project_papud}}
 	\label{fig:base_papud}
 \end{figure}
 
 \section{Lien avec l'état de l'art}
-Il à été récemment montré que les \gls{lm} simples basés sur des  \glspl{embedding} et des opération de \foreign{pooling}
+Il a été récemment montré que les \gls{lm} simples basés sur des  \glspl{embedding} et des opération de \foreign{pooling}
 montre des performances équivalentes voir supérieures à des modèles plus complexes et plus coûteux comme les \gls{rnn} \autocite{pooling_simple}.
 
 %%%%%%%%%%%

@@ -5,9 +5,9 @@ Ce paramètre permet de déterminer la vitesse d'apprentissage du modèle.
 Cependant, un mauvais réglage entraîne des conséquences catastrophiques sur le modèle, comme un apprentissage extrêmement lent, voir une divergence de l'apprentissage.
 
 Il est donc nécessaire de correctement choisir ce paramètre.
-Les algorithmes que nous avons étudiés reposent sur des séries de brefs \glspl{training}~: on entraîne le modèle avec différentes valeurs pour le taux d'apprentissage, et on conserve celle qui à donné le meilleur résultat pour les entraînements à venir.
+Les algorithmes que nous avons étudiés reposent sur des séries de brefs \glspl{training}~: on entraîne le modèle avec différentes valeurs pour le taux d'apprentissage, et on conserve celle qui a donné le meilleur résultat pour les entraînements à venir.
 
-Un module permettant la détermination du taux d'apprentissage idéal à donc été implémenté, et utilisé.
+Un module permettant la détermination du taux d'apprentissage idéal a donc été implémenté, et utilisé.
 
 La nouvelle valeur définie a permis d'augmenter largement la vitesse d'amélioration de la qualité du modèle. En effet, il fallait plus de 400 époques pour atteindre la qualité maximale du modèle, et la nouvelle valeur a permis de l'atteindre en moins de 100 époques. % TODO donner valeur
 

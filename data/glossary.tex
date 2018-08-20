@@ -71,7 +71,7 @@
 	text={{réseau de neurones artificiels}},
 	plural={{réseaux de neurones}},
 	description={{\defref{def:nn}}},
-	firstplural={{réseaux de neurones artificiels ou réseaux de neurones (\foreign{Neural Networks} en anglais)}},
+	firstplural={{réseaux de neurones artificiels, ou plus simplement réseaux de neurones (\foreign{Neural Networks} en anglais)}},
 	first={{réseau de neurones artificiels ou réseau de neurones (\foreign{Neural Network} en anglais)}}}
 
 \newglossaryentry{module_gmsnn}{
@@ -84,7 +84,7 @@
 \newglossaryentry{tensor}{
 	name={{Tenseur}},
 	text={{tenseur}},
-	first={{tenseur (\foreign{tensor} en anglais)}},
+	first={{tenseur (\foreign{tensor} en anglais, un type de \gls{matrice} spécifique utilisé en \gls{dl})}},
 	description={{Un tenseur en \glsentrytext{dl} est un type de \glsentrytext{matrice} particulier adapté à la technique de la \glsentrytext{automatic differentiation}}}}
 
 \newglossaryentry{embedding}{
@@ -101,9 +101,27 @@
 	plural={{états cachés}},
 	description={}}
 
-\newglosacr{rnn}{RNN}
-{{\defref{def:rnn}}}
-{réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais, RNN)}
+\newglossaryentry{rnn}{
+	sort={{RNN}},
+	name={{RNN}},
+	text={{RNN}},
+	plural={{RNN}},
+	first={réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais, RNN\glsadd{rnn-})},
+	description={\defref{def:rnn}}}
+
+\newglossaryentry{rnn-}{type=\acronymtype, name={RNN}, text={RNN},
+	description={réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais)}, see=[Glossaire~:]{rnn}}
+
+\newglossaryentry{lstm}{
+	sort={{LSTM}},
+	name={{LSTM}},
+	text={{LSTM}},
+	plural={{LSTM}},
+	first={réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais, LSTM\glsadd{lstm-})},
+	description={\defref{def:lstm}}}
+
+\newglossaryentry{lstm-}{type=\acronymtype, name={LSTM}, text={LSTM},
+	description={réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais)}, see=[Glossaire~:]{lstm}}
 
 \newglossaryentry{gmsnn}{
 	name={{GMSNN}},
@@ -119,16 +137,18 @@
 %{{\defref{def:gru}}}
 %{réseau récurent à porte (\foreign{Gated Recurent Unit} en anglais, GRU)}
 
-\newglosacr{lstm}{LSTM}
-{{\defref{def:lstm}}}
-{réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais, LSTM)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Language Models                                                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newglosacr{lm}{modèle de la langue}
-{%
-}{modèle de la langue (\foreign{Language Model} en anglais, LM)}
+\newglossaryentry{lm}{
+	sort={{modele de la langue}},
+	name={{Modèle de la langue}},
+	text={{modèle de la langue}},
+	plural={{modèles de la langue}},
+	first={modèle de la langue (\foreign{Language Model} en anglais, LM)},
+	firstplural={modèles de la langue (\foreign{Language Models} en anglais, LM)},
+	description={}}
 
 %\newglosacr{char-lm}{Char-LM}
 %{%

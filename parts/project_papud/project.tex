@@ -6,7 +6,7 @@ Ces outils tombent rarement en panne, mais quand ils le font cela occasionne des
 
 Il serait donc très intéressant de mettre au point un système de prédiction des pannes, afin de pouvoir les éviter.
 
-Les \glspl{data} disponibles pour remplir cette tache sont des fichiers de journaux systèmes (décrits en détail dans le \autoref{ch:data_papud}) de très grande taille.
+Les \glspl{data} disponibles pour remplir cette tache sont des fichiers de journaux systèmes (décrits en détail dans le \autoref{ch:data_papud}, \autopageref{ch:data_papud}) de très grande taille.
 Ils contiennent de nombreuses informations sur les évènements se déroulant dans les outils.
 
 \section{Solution}\label{sec:solution}
@@ -14,7 +14,7 @@ Ils contiennent de nombreuses informations sur les évènements se déroulant da
 
 Le cas d'utilisation \gls{bull} du \glsname{project_papud} est dédié à répondre à cette problématique, en fournissant un système détectant les signes de pannes dans les journaux systèmes.
 
-Pour cela, il à été décidé de modéliser le comportement normal (sans panne) de ces journaux.
+Pour cela, il a été décidé de modéliser le comportement normal (sans panne) de ces journaux.
 
 Ils sont composés de lignes de textes en anglais. Il est donc possible de produire un \gls{lm} capable de prédire la prochaine ligne.
 Par la suite, le modèle sera augmenté d'un système prenant en compte le contexte de la ligne à prédire pour améliorer sa précision.
@@ -27,39 +27,39 @@ Ainsi, le plan général des opérations est divisé en 2 parties~:
 \end{enumerate}
 \hspace{1em}
 
-Pour ce qui est du modèle simple, il à été décidé de ne pas utiliser de \gls{rnn}, bien trop lent pour la quantité de \glspl{data} à traiter. À la place, un \gls{nn} basique sera utilisé.
+Pour ce qui est du modèle simple, il a été décidé de ne pas utiliser de \gls{rnn}, bien trop lent pour la quantité de \glspl{data} à traiter. À la place, un \gls{nn} basique sera utilisé.
 
 On peut noter que les conclusions du \gls{project_gmsnn} ont été appliquées, autant pour le déroulement du projet que pour le type de modèle à utiliser.
 
 
 \section{\Glsentrytext{project_papud}}
-La tache qui nous à été confiée est la réalisation du modèle simple.
+La tache qui nous a été confiée est la réalisation du modèle simple.
 
 Plus exactement, étant donné qu'il était évident que la durée restante du stage serait insuffisante pour réaliser et pousser au maximum le modèle simple, nos objectifs étaient la réalisation d'un prototype du modèle, et de mettre en place les outils nécessaires à l'entraînement.
 Ceux-ci sont principalement les outils de gestion et de \gls{preprocessing} des \glspl{data}, les outils d'évaluation des performances du modèle, et l'algorithme d'entraînement du modèle.
 
-La description des caractéristiques du modèle est disponible dans le \autoref{ch:papud_model}.
+La description des caractéristiques du modèle est disponible dans le \autoref{ch:papud_model} (\autopageref{ch:papud_model}).
 
 Par la suite, nous désignerons ce projet par \og \gls{project_papud}\fg{}.
 
 \section{Organisation du travail}
-Contrairement au \gls{project_gmsnn}, d'autres collaborateurs participaient a ce projet (voir \autoref{sec:papud_colabo}).
-Étant, avec notre maître de stage, les seuls parmi les collaborateurs habitués à manipuler des réseaux de neurones, nous avons travaillé individuellement durant ce projet.
+Contrairement au \gls{project_gmsnn}, d'autres collaborateurs participaient a ce projet (voir \autoref{sec:papud_colabo}, \autopageref{sec:papud_colabo}).
+Étant, avec le maître de stage, les seuls parmi les collaborateurs habitués à manipuler des réseaux de neurones, nous avons travaillé individuellement durant ce projet.
 
-Le \gls{project_gmsnn} s'étant bien déroulé, une organisation similaire à été mise en place afin de tenir ces autres membres du projet informés de l'avancement et des conclusions de notre travail.
+Le \gls{project_gmsnn} s'étant bien déroulé, une organisation similaire a été mise en place afin de tenir ces autres membres du projet informés de l'avancement et des conclusions de notre travail.
 C'est-à-dire que des rapports fréquents et des réunions hebdomadaires durant lesquelles nous pressentions notre progression ont été mis en place.
 
 Les rapports de ce projet sont également disponibles en annexe (voir l'annexe \ref{anx:papud}, \autopageref{anx:papud}).
-Le rapport d'une des réunion est disponible à l'annexe \ref{anx:meeting}. % TODO enlever ?
+Le rapport d'une des réunion est disponible à l'annexe \ref{anx:meeting} (\autopageref{anx:meeting}). % TODO enlever ?
 
 \subsection{Organisation initiale du travail}
 Le \gls{project_papud} s'est déroulé sur la base de cycles de développement.
 C'est durant les réunions hebdomadaires que les prochains objectifs étaient décidés.
 
-En effet, contrairement au \gls{project_gmsnn} pour lequel il à été simple de définir des périodes réservées aux grandes étapes du projet, ce \gls{project_papud} s'est déroulé dans un temps très restreint.
+En effet, contrairement au \gls{project_gmsnn} pour lequel il a été simple de définir des périodes réservées aux grandes étapes du projet, ce \gls{project_papud} s'est déroulé dans un temps très restreint.
 
 \pagebreak
-Cependant, il à été possible de définir les priorités suivantes~:
+Cependant, il a été possible de définir les priorités suivantes~:
 \begin{enumerate}
 	\item la réalisation d'un prototype fonctionnel~;
 	\item la mise en place d'un algorithme d'entraînement basique~;
@@ -69,24 +69,24 @@ Cependant, il à été possible de définir les priorités suivantes~:
 \end{enumerate}
 \hspace{1em}
 
-Une extension de la durée du stage de 1 semaine à été décidée, de façon à augmenter le temps dédié au travail sur le projet.
-Cela c'est fait en considérant les disponibilités de notre maître de stage, des autres collaborateurs ainsi que les nôtres.
+Une extension de la durée du stage de 1 semaine a été décidée, de façon à augmenter le temps dédié au travail sur le projet.
+Cela c'est fait en considérant les disponibilités du maître de stage, des autres collaborateurs ainsi que les nôtres.
 
-La durée totale du projet à donc été de 5 semaines.
+La durée totale du projet a donc été de 5 semaines.
 
 \subsection{Déroulement réel du projet}
 Tous les objectifs nécessaires ont été remplis, et deux améliorations notables des performances ont été mises en place.
 
-La répartition réelle du travail du projet est représentée dans la figure \ref{fig:papud_time}.
+La répartition réelle du travail du projet est représentée dans la figure \ref{fig:papud_time} (\autopageref{fig:papud_time}). Une case de la figure correspond à un jour de travail.
 
 \begin{figure}[ht]
 	\centering
-	\input{plots/timeline_papud}\caption[Répartition du travail]{Répartition du travail. Une case correspond à un jour de travail.}\label{fig:papud_time}
+	\input{plots/timeline_papud}\caption[Répartition du travail]{Répartition du travail}\label{fig:papud_time}
 \end{figure}
 
 \section{Outils}
 \subsection{Gestion du code}
-Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git. Les collaborateurs du projet ont accès à l'ensemble de ces \glspl{data}, qui ont été mises à jours tout au long du projet.
+Le code et les rapports ont été gérés avec le système de gestion de version Git, et ont été stockés sur les serveurs Gitlab de l'\gls{inria}. Les collaborateurs du projet ont accès à l'ensemble de ces \glspl{data}, qui ont été mises à jours tout au long du projet.
 
 \subsection{Python, PyTorch et Grid5000}
 Nous avons décidé de continuer à travailler avec Python, PyTorch et Grid5000, pour trois principales raisons~:

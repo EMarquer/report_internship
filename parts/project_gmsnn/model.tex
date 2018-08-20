@@ -1,6 +1,6 @@
 {\chapter{Description de l'architecture proposée}\label{ch:gmsnn_model}
 \section{Propriétés du modèle}
-Pour rappel, l'architecture proposée à pour but d'établir un \gls{lm}.
+Pour rappel, l'architecture proposée a pour but d'établir un \gls{lm}.
 
 Elle est caractérisée par trois propriétés majeures~:
 \begin{itemize}
@@ -8,79 +8,80 @@ Elle est caractérisée par trois propriétés majeures~:
 	\item l'utilisation de plusieurs échelles~;
 	\item la croissance du modèle.
 \end{itemize}
+\vspace{1em}
 
-Nous avons nommé cette architecture \glsfirst{gmsnn} en considérant ses principales caractéristiques.
+Comme annoncé dans la \autoref{sec:soluce} (\autopageref{sec:soluce}), nous avons nommé cette architecture \glsfirst{gmsnn} en considérant ses principales caractéristiques.
 
 \subsection{Récurrence du modèle}
 %la récurance: le modèle est un modèle récurent, c'est donc un \gls{rnn}
-Comme souvent dans la réalisation de \gls{lm}, on peut considérer les données sous forme de séquence.
+Comme souvent dans la réalisation de \glspl{lm}, on peut considérer les données sous forme de séquence.
 
-Dans notre cas, le caractère à prédire est dépendant de la suite de tous les caractères précédents.
+Dans le cas présent, le caractère à prédire est dépendant de la suite de tous les caractères précédents.
 
 Pour rappel, en \gls{dl}, le type de \gls{nn} considéré le plus adapté à la manipulation de séquences est le \gls{rnn}.
 
-C'est pour ces raisons que l'architecture à été conçue à partir de \gls{rnn}.
+C'est pour ces raisons que l'architecture a été conçue à partir de \gls{rnn}.
 
 \subsection{Passer à l'échelle}\label{subsec:scaling}
 %le multi-échelle: le modèle repose sur des "échelles" supperposées et connectées
-Comme décrit \autoref{subsec:mempb}, les \glspl{rnn} ont un problème inhérent de capacité mémoire, qui limite la distance des dépendances apprises par le \gls{model}.
+Comme décrit dans la \autoref{subsec:mempb} (\autopageref{subsec:mempb}), les \glspl{rnn} ont un problème inhérent de capacité mémoire, qui limite la distance des dépendances apprises par le \gls{model}.
 
-Afin de compenser ce défaut, l'architecture \glsfirst{gmsnn} s'appuie sur des couches de plus en plus vastes, appelées \og échelles\fg{} dans ce rapport.
+Afin de compenser ce défaut, l'architecture \glsfirst{gmsnn} s'appuie sur des couches de plus en plus vastes, identifiés par leur échelle dans ce rapport.
 Chacune de ces couches est un \gls{rnn}.
 
-Chaque échelle supplémentaire permet de modéliser des dépendances sur de plus grandes distances.
+Chaque échelle supplémentaire permet de modéliser des dépendances au sein de champs plus larges.
 
 De plus, chaque échelle tire ses informations de l'échelle précédente.
-L'exemple suivant explique ce mécanisme de transfert de l'information, également illustré sur la \autoref{fig:gmsnn_transmit}, \autopageref{fig:gmsnn_transmit}.
+L'exemple suivant explique ce mécanisme de transfert de l'information, également illustré sur la figure \ref{fig:gmsnn_transmit} (\autopageref{fig:gmsnn_transmit}). Sur cette figure, la fréquence de transmission est notée $n$.
 
 \begin{figure}[ht]
 	\centering
 	\input{plots/base_gmsnn_folded}
-	\caption[Principe de transmission de l'information d'une échelle à la suivante.]{Principe de transmission de l'information d'une échelle à la suivante. Ici, la fréquence de transmission est notée $n$.}
+	\caption{Principe de transmission de l'information d'une échelle à la suivante}
 	\label{fig:gmsnn_transmit}
 \end{figure}
 
-Admettons que la capacité de mémoire d'un \gls{rnn} est de $9$ entrées (nombre arbitrairement défini pour l'exemple).
-Si l'échelle supérieure récupère des informations toutes les $3$ entrées de la couche inférieure, ca capacité de mémoire devient $9*3=27$ entrées.
-L'échelle encore au dessus aura une capacité mémoire de  $9*3*3=81$ entrées, et ainsi de suite.
-Ici le nombre $3$ représente la fréquence à laquelle une échelle transmet des informations. On parlera par la suite de \og fréquence de transmission \fg{}.
+Admettons que la capacité de mémoire d'un \gls{rnn} soit de $9$ entrées (nombre arbitrairement défini pour l'exemple).
+Si l'échelle supérieure récupère des informations toutes les $3$ entrées de la couche inférieure, sa capacité de mémoire devient $9*3=27$ entrées.
+L'échelle encore au-dessus aura une capacité mémoire de  $9*3*3=81$ entrées, et ainsi de suite.
+Ici le nombre $3$ représente la fréquence à laquelle une échelle transmet des informations. Nous parlerons par la suite de \og fréquence de transmission \fg{}.
 
 \subsubsection{Plusieurs niveaux d'abstraction de l'information}
-Une autre caractéristique importante du \gls{gmsnn} est qu'une échelle prend en entrée les informations abstraites par la couche précédente.
-Ainsi, on peut s'attendre à ce que chaque échelle ajoute un niveau d'abstraction supplémentaire au modèle, comme sur la figure \ref{fig:gmsnn_ms}, \autopageref{fig:gmsnn_ms}.
+Une autre caractéristique importante du \gls{gmsnn} est qu'une échelle prend en entrée les informations abstraites par la couche précédente. En effet, l'information stockée dans la mémoire d'un \gls{rnn} peut d'apparenter à une représentation, donc à une abstraction, des \glspl{data}.
+
+Ainsi, on peut s'attendre à ce que chaque échelle ajoute un niveau d'abstraction supplémentaire au modèle, comme sur la figure \ref{fig:gmsnn_ms} (\autopageref{fig:gmsnn_ms}).
+Sur cette figure, chaque bloc vert correspond à une entrée pour l'échelle correspondante~; les blocs bleus en bas du diagramme correspond aux caractères qui sont fourni en entrée au modèle.
+Ici la fréquence de transmission vaut 3.
 
 \begin{figure}[ht]
 	\centering
 	\input{plots/multi_scale}
-	\caption[Différentes échelles, et les niveaux d'abstraction correspondants.]{%
-		Différentes échelles, et les niveaux d'abstraction que l'on pourait attendre de celles-ci.
-		Chaque bloc vert correspond à une entrée pour l'échelle correspondante.
-		Les blocs bleus en bas du graphique correspond aux caractères qui sont fourni en entrée au modèle.
-		Ici la fréquence de transmission vaut 3.}
+	\caption{%
+		Différentes échelles, et les niveaux d'abstraction attendus}
 	\label{fig:gmsnn_ms}
 \end{figure}
+
 
 \subsection{Adapter le modèle au volume de données et croissance du modèle}
 Une propriété de l'architecture dérivée du principe d'échelles est de s'adapter au nombre d'entrées.
 
-En effet, comme décrit dans la \autoref{subsec:scaling}, \autopageref{subsec:scaling}, le nombre d'échelles est dépendant du nombre d'entrées totales. 
+En effet, comme expliqué dans la \autoref{subsec:scaling} (\autopageref{subsec:scaling}), le nombre d'échelles est dépendant du nombre d'entrées totales. 
 
-On peut considérer que tant que aucune entrés ne lui est fournie, une échelle reste dans son état initial, elle n'\og existe\fg{} pas~; par conséquent, les échelles qui en sont dépendantes n'\og existent\fg{} pas non plus.
+On peut considérer que, tant qu'aucune entrées ne lui est fournie, une échelle reste dans son état initial, elle n'\og existe\fg{} pas~; par conséquent, les échelles qui en sont dépendantes n'existent pas non plus.
 
-Ainsi, au fur et à mesure de l'entraînement, le modèle croit.
+Ainsi, au fur-et-à-mesure de l'entraînement, le modèle croît.
 
-Il existe une formule pour déterminer le nombre de couches \og existantes\fg{} en fonction du nombre d'entrées présentées et de la fréquence de transmission~:
+Une formule permet de déterminer le nombre de couches \og existantes\fg{} $n$ en fonction du nombre d'entrées présentées $i$ et de la fréquence de transmission $f$~:
 
-\[n = \lfloor\log_f i\rfloor + 1\]%
-\[n: \text{nombre de couches}, i: \text{nombre d'entrées}, f: \text{fréquence de transmission}\]\label{growth_formula}
+\[n = \lfloor\log_f i\rfloor + 1\]\label{growth_formula}
 
 \subsubsection{Croissance potentiellement infinie du modèle}\label{inf_growth}
 %[secondaire] la croissance: le modèle s'adapte au fur et à mesure que l'on lui fournit des données; plus exacte
-Il est envisageable d'adapter le modèle au nombre d'entrées \textit{durant l'entraînement}, en créant réellement les échelles au fur et à mesure que l’on fournit les données.
+Il est envisageable d'adapter le modèle au nombre d'entrées \textit{durant l'entraînement}, en créant réellement les échelles au fur-et-à-mesure que l’on fournit les données.
 
 Dans ce cas, tant que l'on lui fournit des données, la croissance du modèle est potentiellement infinie.
 
-Comme décrit dans la \autoref{subsec:addcat_}, \autopageref{subsec:addcat_}, cette propriété à été abandonnée.
+Comme décrit dans la \autoref{subsec:addcat_} (\autopageref{subsec:addcat_}), l'utilisation de cette propriété a été abandonnée.
 
 % TODO faire le schema
 %\section{Architecture complète, des données aux prédictions}

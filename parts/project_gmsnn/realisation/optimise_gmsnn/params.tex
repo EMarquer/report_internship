@@ -5,13 +5,15 @@ Pour rappel, les \glspl{parameter} du modèle sont des valeurs qui varient au lo
 
 Le fait d'augmenter ces \glspl{parameter} augmente la qualité de l'apprentissage, et la précision du modèle appris. Mais cela se fait au prix d'un volume plus important du \gls{model}, et d'une augmentation des calculs nécessaires pour utiliser et entraîner le \gls{model}. Cela se manifeste par un entraînement plus lent et une consommation mémoire plus élevée.
 
-Cependant, grâce aux optimisations mises en place durant la résolution des fuites mémoires (voir \autoref{subsec:optimem}), ces coûts restent raisonnables.
+Cependant, grâce aux optimisations mises en place durant la résolution des fuites mémoires (voir \autoref{subsec:optimem}, \autopageref{subsec:optimem}), ces coûts restent raisonnables.
 
+\pagebreak
 Il existe plusieurs façon de mettre en place cette optimisation~:
 \begin{itemize}
 	\item augmenter le nombre de neurones par couches~;
 	\item augmenter le nombre de couches dans le \glspl{rnn} qui compose chaque \og échelle\fg{}.
 \end{itemize}
+\vspace{1em}
 
 %\subsubsection{Conclusion}
 Ces deux pratiques ont été testées, et aucune n'a apporté d'amélioration de qualité de l'apprentissage, tout en multipliant le temps d'entraînement.

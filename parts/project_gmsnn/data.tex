@@ -1,21 +1,21 @@
 \chapter{Données disponibles}
 Les données d'entraînement utilisées proviennent du Wikipédia anglais.
-Elles sont tirée du fichier \og enwik8\fg{} utilisé pour le prix Hutter \autocite{enwik8,Hutter2018Feb}. Ce fichier est composé d'environ 100 000 000 caractères.
+Elles sont tirée du fichier \og enwik8\fg{} utilisé pour le prix Hutter \autocite{enwik8,Hutter2018Feb}. Ce fichier est composé d'environ 100~000~000 caractères.
 
 Ces données sont composées de texte balisé structuré en paragraphes.
-Quelques fragment de XML\footnote{XML (\foreign{eXtensible Markup Language} en anglais), \og est un langage informatique qui sert à enregistrer des données textuelles. [...] Ce langage , grosso-modo similaire à l'HTML de par son système de balisage, permet de faciliter l'échange d'information sur l'internet.\fg{} D'après le glossaire sur \emph{infowebmaster} \autocite{xml}. Il s'agit du format sous lequel sont stockés les articles Wikipédia.}
+Quelques fragment de XML\footnote{XML (\foreign{eXtensible Markup Language} en anglais), \og est un langage informatique qui sert à enregistrer des données textuelles. [...] Ce langage , [...] similaire à l'HTML de par son système de balisage, permet de faciliter l'échange d'information sur l'internet \fg{}, d'après le glossaire sur \emph{infowebmaster} \autocite{xml}. Il s'agit du format sous lequel sont stockés les articles Wikipédia.}
 sont aussi présents, mais ils sont minoritaires dans les données. Il est donc peu probable de les retrouver dans les données apprises.
 
-Deux versions alternatives de ce corpus ont été utilisées.
+Deux versions alternatives du corpus ont été utilisées~:
 \begin{enumerate}
-	\item la première est composée des 10 000 000 premiers caractères de \og enwik8\fg{}~; cette version à servi aux entraînements et à la plupart des tests du modèle~; % TODO glossaire
-	\item la seconde est composée des 1 000 000 premiers caractères de \og enwik8\fg{}~; elle à servi pour le débogage du modèle. % TODO glossaire
+	\item la première est composée des 10~000~000 premiers caractères de \og enwik8\fg{}~; cette version a servi aux entraînements et à la plupart des tests du modèle~; % TODO glossaire
+	\item la seconde est composée des 1~000~000 premiers caractères de \og enwik8\fg{}~; elle a servi pour le débogage du modèle. % TODO glossaire
 \end{enumerate}
 
 \section{Extrait des données d'entraînent}
-Le \autoref{enwik8_ex} un extrait des données brutes avant le découpage en caractères.
+Le \autoref{enwik8_ex} (\autopageref{enwik8_ex}) est un extrait des données brutes avant le découpage en caractères. Il correspond à l'article Wikipédia sur l'ansarchisme.
 
-\begin{lstlisting}[caption={Extrait des premières lignes du fichier enwik8, correspondant à l'article Wikipédia sur l'ansarchisme.},label=enwik8_ex]
+\begin{lstlisting}[caption={Extrait des premières lignes du fichier enwik8},label=enwik8_ex]
 While anarchism is most easily defined by what it is against, anarchists also offer positive visions of what they believe to be a truly free society. However, ideas about how an anarchist society might work vary considerably, especially with respect to economics; there is also disagreement about how a free society might be brought about. 
 
 == Origins and predecessors ==
@@ -27,8 +27,8 @@ While anarchism is most easily defined by what it is against, anarchists also of
 \section{Prétraitement des données}
 Le \gls{preprocessing} des données est composé du découpage du document en caractères et du remplacement des caractères par des nombres, à l'aide d'un dictionnaire.
 
-Comme mentionné dans la \autoref{whitespace_problem}, un défaut dans le prétraitement à mené à la disparition des espaces du texte.
+Comme mentionné dans la \autoref{whitespace_problem} (\autopageref{whitespace_problem}), un défaut dans le prétraitement a mené à la disparition des espaces du texte.
 
-En effet, le prétraitement d'origine du corpus utilisait les espaces en tant que séparateurs pour le stockage des données. Par la suite, au moment d'utiliser les données pré-traitées, l'intégralité des espaces étaient supprimés, y compris ceux du texte d'origine.
+En effet, le prétraitement d'origine du corpus utilisait les espaces en tant que séparateurs pour le stockage des données. Par la suite, au moment d'utiliser les données prétraitées, l'intégralité des espaces était supprimé, y compris ceux du texte d'origine.
 
-Malheureusement, ce défaut à été découvert à la fin du projet, et n'à pas pu être corrigé à temps.
+Malheureusement, ce défaut a été détecté à la fin du projet, et n'a pas pu être corrigé à temps pour entraîner le \gls{model} sur une version propre du \gls{corpus}.

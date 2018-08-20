@@ -6,7 +6,7 @@
 \BOOKMARK [1][-]{section.1.3}{Terminologie et concepts fondamentaux}{chapter.1}% 6
 \BOOKMARK [2][-]{subsection.1.3.1}{ml, mod\350le, entra\356nement et donn\351es}{section.1.3}% 7
 \BOOKMARK [2][-]{subsection.1.3.2}{dl et r\351seaux de neurones}{section.1.3}% 8
-\BOOKMARK [2][-]{subsection.1.3.3}{nlp et mod\350le de la langue}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.3}{Traitement automatique des langues \(TAL\) et mod\350le de la langue}{section.1.3}% 9
 \BOOKMARK [2][-]{subsection.1.3.4}{Performance et mesure}{section.1.3}% 10
 \BOOKMARK [1][-]{section.1.4}{Plan}{chapter.1}% 11
 \BOOKMARK [-1][-]{part.1}{I projectgmsnn}{}% 12
@@ -19,7 +19,7 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Membres}{section.2.3}% 19
 \BOOKMARK [2][-]{subsection.2.3.2}{Th\351matiques de recherche}{section.2.3}% 20
 \BOOKMARK [1][-]{section.2.4}{Pour en savoir plus}{chapter.2}% 21
-\BOOKMARK [0][-]{chapter.3}{Architecture innovante de r\351seau de neurones pour un mod\350le du langage}{part.1}% 22
+\BOOKMARK [0][-]{chapter.3}{Architecture innovante de r\351seaux de neurones pour un mod\350le du langage}{part.1}% 22
 \BOOKMARK [1][-]{section.3.1}{Contexte}{chapter.3}% 23
 \BOOKMARK [2][-]{subsection.3.1.1}{Manque d'utilisation des gros volumes de donn\351es}{section.3.1}% 24
 \BOOKMARK [2][-]{subsection.3.1.2}{Probl\350mes de m\351moire}{section.3.1}% 25
@@ -118,7 +118,7 @@
 \BOOKMARK [1][-]{section.13.2}{Apport personnel du projet}{chapter.13}% 118
 \BOOKMARK [1][-]{section.13.3}{Discussion et perspectives}{chapter.13}% 119
 \BOOKMARK [2][-]{subsection.13.3.1}{Continuation du travail}{section.13.3}% 120
-\BOOKMARK [0][-]{chapter.14}{R\351trospective sur le stage}{part.2}% 121
+\BOOKMARK [0][-]{chapter.14}{Bilan du stage}{part.2}% 121
 \BOOKMARK [1][-]{section.14.1}{Bilan du travail effectu\351}{chapter.14}% 122
 \BOOKMARK [1][-]{section.14.2}{Bilan professionnel}{chapter.14}% 123
 \BOOKMARK [1][-]{section.14.3}{Bilan personnel}{chapter.14}% 124

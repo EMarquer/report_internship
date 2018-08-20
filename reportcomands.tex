@@ -16,7 +16,7 @@
 \usepackage{titletoc}
 \usepackage{tocloft}
 \usepackage[nottoc]{tocbibind}
-\usepackage[backend=biber,backref=true,hyperref=true,sorting=none,citestyle=numeric,]{biblatex}%,sorting=nyt, autocite=footnote
+\usepackage[backend=biber,backref=true,hyperref=true,sorting=none,citestyle=numeric,block=ragged]{biblatex}%,sorting=nyt, autocite=footnote
 \usepackage{csquotes}
 \usepackage{etoc}
 \usepackage[xindy,acronym,section,style=altlist,nopostdot]{glossaries}%nonumberlist%altlist%long3colheader%nopostdot
@@ -69,7 +69,7 @@
 	\section*{\listtablename}
 	\@starttoc{lot}
 	\section*{\listfigurename}
-	\@starttoc{lof}
+	\@starttoc{lof}\newpage
 	\section*{\lstlistlistingname}
 	\@starttoc{lol}
 }

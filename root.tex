@@ -1,6 +1,8 @@
 \documentclass[pidr]{univreport}
 \input{reportcomands}
 %\usepackage{reportcomands}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
 
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees,snakes,calc}
 \usetikzlibrary{calc,positioning,shapes.multipart,decorations.pathreplacing,shapes.arrows}
@@ -19,10 +21,12 @@
 \renewcommand*{\tableautorefname}{table}%
 \renewcommand*{\partautorefname}{partie}%
 
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
+\newenvironment{nohyphen}
+{\tolerance=1% Also consider setting \pretolerance
+	\emergencystretch=\maxdimen%
+	\hyphenpenalty=10000%
+	\hbadness=10000}% \begin{nohyphen}
+{\par}% \end{nohyphen}
 
 \addbibresource{bibs/merge.bib}
 %\addbibresource{bibs/institute.bib}
@@ -46,6 +50,7 @@
 \etocdepthtag.toc{mtchapter}
 \etocsettagdepth{mtchapter}{subsection}
 \etocsettagdepth{mtappendix}{none}
+\begin{nohyphen}
 {%----- Frontix -----
 	\input{parts/cover.tex}\cleardoublepage
 	\input{parts/preface.tex}\cleardoublepage
@@ -61,6 +66,7 @@
 	\input{parts/project_papud}\cleardoublepage
 	\input{parts/conclusion.tex}\cleardoublepage
 }
+\end{nohyphen}
 
 {%----- Appendix -----
 	\input{parts/appendix.tex}

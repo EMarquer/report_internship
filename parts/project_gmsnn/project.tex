@@ -1,52 +1,55 @@
 %il est utile de rappeler à cet endroit les raisons de la mission, notament les enjeux économiques. Ne pas oublier les facteurs humains et techniques, sans compter l’organisation du travail en termes de planification des tâches et de gestion de projet. C’est après ce cadrage qu’il sera possible de passer aux détails du travail.
 
-\chapter[Architecture innovante de réseau de neurones pour un modèle du langage]{Architecture innovante de réseau de neurones pour l'élaboration d'un modèle du langage\label{ch:project_gmsnn}}
+\chapter[Architecture innovante de réseaux de neurones pour un modèle du langage]{Architecture innovante de réseaux de neurones pour l'élaboration d'un modèle du langage\label{ch:project_gmsnn}}
 \section{Contexte}
-Les \glslink{nn}{modèles neuronaux} actuellement utilisés en \gls{nlp}, généralement basés sur les \gls{rnn}, atteignent de très bonnes performances similaires dans certains cas à celles des humains~\autocite{rnn_perf,JozefowiczVSSW16,UnreasonableRNN}.
+Les \glslink{nn}{modèles neuronaux} actuellement utilisés en \gls{nlp}, généralement basés sur les \gls{rnn}, atteignent de très bonnes performances, similaires dans certains cas à celles des humains~\autocite{rnn_perf,JozefowiczVSSW16,UnreasonableRNN}.
 
-Les modèles basés sur les caractères se montrent particulièrement flexibles, car ces modèles \og apprennent\fg{} les mots. Au contraire, les modèles basés sur les mots se reposent sur des dictionnaires, qui sont très volumineux et ont des difficultés à gérer les fautes et les mots nouveaux.
+Les modèles basés sur les caractères se montrent particulièrement flexibles, car ces modèles \og apprennent\fg{} les mots. Au contraire, les modèles basés sur les mots se reposent sur des dictionnaires, qui sont très volumineux et gèrent difficilement les fautes et les mots nouveaux.
 
-Ces performances sont obtenues entre autres grâce à une gestion du contexte des \glspl{example}, typique des \gls{lm}.
+Ces performances sont obtenues, entre autres, grâce à une gestion du contexte des \glspl{example}.
 
 \subsection{Manque d'utilisation des gros volumes de données}
-Cependant, ces modèles sont souvent développés et entraînes avec peu de \glspl{data}.
-Les raisons envisageables sont principalement le manque de \glspl{data} brutes ou préparées, et le peu d'amélioration de performance malgré des coûts largement augmentés.
+Cependant, ces modèles sont souvent développés et entraînés avec peu de \glspl{data}.
+Les raisons envisageables sont principalement le manque de \glspl{data} brutes ou préparées, et le peu d'amélioration de performance malgré des coûts supplémentaires importants.
 
 \subsection{Problèmes de mémoire}\label{subsec:mempb}
 Une des raison du manque d'augmentation de performance, typique des \gls{rnn}, est la limite de rappel d'informations en mémoire. %Ce sont ces informations qui permettent la gestion du contexte.
 
-Pour avoir un ordre d'idée, on peut considérer qu'un \gls{rnn} basique conserve en mémoire des informations datant d'au plus 20 entrées auparavant; d'autres architectures peut se rappeler d'informations vielles d'une $100^\text{aine}$ d'entrées; et un \gls{lstm} dépasse difficilement les 200 entrées.
+Pour avoir un ordre d'idée, on peut considérer qu'un \gls{rnn} basique conserve en mémoire des informations datant d'au plus 20 entrées auparavant; d'autres architectures de \gls{rnn} peunent se rappeler d'informations vielles d'une centaine d'entrées; et un \gls{lstm} dépasse difficilement les 200 entrées.
 
-Il est donc difficile d'apprendre des dépendances entre des éléments très écartés.
+Il est donc difficile d'apprendre des dépendances entre des éléments très distants.
 
-De nombreuses tentatives ont été faite de résoudre ce problème, par exemple en changeant l'architecture du \gls{nn} (ex: \gls{lstm}), ou en augmentant le réseau avec des mécanismes comme de la mémoire explicite (mémoire plus performante).
+De nombreuses tentatives ont été faite pour résoudre ce problème, par exemple en changeant l'architecture du \gls{nn} (ex.~: \gls{lstm}), ou en augmentant le réseau avec des mécanismes comme de la mémoire explicite (mémoire plus performante).
 
-\section{Solution proposée}
-L'architecture proposée par notre maître de stage vise à la fois à tirer partie des grands volumes de \glspl{data}, et à permettre au modèle d'établir des dépendances de haut niveau, voir des connaissance contextuelles externes (c'est-à-dire étendre le contexte au-delà des informations directement accessibles, inférer des vérités générales).
+\pagebreak
+\section{Solution proposée}\label{sec:soluce}
+L'architecture proposée par le sujet de stage vise à la fois à tirer partie des grands volumes de \glspl{data}, et à permettre au modèle d'établir des dépendances de haut niveau, voire des connaissance contextuelles externes (c'est-à-dire à étendre le contexte au-delà des informations directement accessibles, à inférer des vérités générales).
 
-L'architecture et ses caractéristiques sont décrits en détail dans le \autoref{ch:gmsnn_model}.
+Cette architecture, nommée \glsunset{gmsnn}\gls{gmsnn} (voir \autoref{ch:gmsnn_model}, \autopageref{ch:gmsnn_model}), a donné son nom au projet qui l'utilises.
 
-Nous avons nommé cette architecture \glsunset{gmsnn}\gls{gmsnn}.
-Ainsi, nous désignerons ce projet par \og \gls{project_gmsnn}\fg{} dans le reste du rapport.
+%L'architecture et ses caractéristiques sont décrits en détail dans le \autoref{ch:gmsnn_model}.
+
+%Nous avons nommé cette architecture \glsunset{gmsnn}\gls{gmsnn}.
+%Ainsi, nous désignerons ce projet par \og \gls{project_gmsnn}\fg{} dans le reste du rapport.
 
 \section{\Glsentrytext{project_gmsnn}}
-La mission qui nous à été confiée est la création d'un \gls{lm} basé sur l'architecture \gls{gmsnn}.
+La tâche qui nous a été confiée est la création d'un \gls{lm} basé sur l'architecture \gls{gmsnn}.
 
-L'implémentation devait se réaliser à partir d'une base de code sur laquelle notre maître de stage avait commencé à travailler (plus de détails sont disponibles dans la \autoref{subsec:codebase}).
+La mise en œuvre devait se réaliser à partir d'une base de code sur laquelle le maître de stage avait commencé à travailler (plus de détails sont disponibles dans la \autoref{subsec:codebase}, \autopageref{subsec:codebase}).
 
 À cela s'ajoutait l'exploration du potentiel de l'architecture en améliorant le \gls{model} créé, par le biais d'optimisations classiques et de changements de l'architecture.
 
 Enfin, la réintégration des optimisations déjà contenues dans la base de code devait conclure le stage.
 
 \section{Organisation du travail}
-Durant ce projet, nous avons travaillé individuellement.
+Cette tâche a été nourrie par un travail individuel.
 
-Un fonctionnement en rapport réguliers (disponibles dans l'annexe \ref{anx:gmsnn}, \autopageref{anx:gmsnn}), complémentés d'une occasionnelle correspondance électronique, à permis de tenir notre maître de stage informé de l'avancement du stage.
+Un fonctionnement en rapports de suivis (disponibles dans l'annexe \ref{anx:gmsnn}, \autopageref{anx:gmsnn}), complémentés d'une occasionnelle correspondance électronique, a permis de tenir le maître de stage informé de l'avancement du travail.
 
-À cela s'ajoutent des réunions hebdomadaires avec M. Cerisara, afin de faire le point sur les résultats obtenus et de décider de la marche à suivre.
+À cela s'ajoutent des réunions hebdomadaires pour faire le point sur les résultats obtenus et déterminer les priorités de travail.
 
 \subsection{Organisation initiale du travail}
-Dès la prise de connaissance du sujet définitif du stage, 
+Dès la connaissance du sujet définitif du stage, 
 nous avons pu prévoir l'organisation temporelle du travail.
 
 La première semaine était dédiée l'acquisition des connaissances nécessaires, à la lecture d'articles et à la prise en main des outils.
@@ -54,39 +57,40 @@ Ensuite, 3 semaines étaient consacrées à la prise en main de la base de code 
 Les 4 semaines suivantes devaient permettre d'améliorer l'architecture et d'intégrer de nouvelles fonctionnalités.
 Enfin, les optimisations \gls{soa} contenue dans la base de code devaient être intégrée durant les 4 dernières semaines .
 
-La \autoref{fig:gmsnn_time_1} représente cette répartition prévue du travail.
-
+La figure \ref{fig:gmsnn_time_1} (\autopageref{fig:gmsnn_time_1}) représente cette répartition prévue du travail.
+Une case correspond à une semaine de travail.
 \begin{figure}[ht]
 	\centering
-	\input{plots/timeline_plan}\caption[Répartition prévue du travail]{Répartition prévue du travail. Une case correspond à une semaine de travail.}\label{fig:gmsnn_time_1}
+	\input{plots/timeline_plan}\caption[Répartition prévue du travail]{Répartition prévue du travail}\label{fig:gmsnn_time_1}
 \end{figure}
 
 \subsection{Déroulement réel du projet}
-Le projet s'est déroulé comme prévu jusqu'à la fin de la période d'amélioration.
+Le projet s'est déroulé comme prévu jusqu'à la fin de la période d'amélioration du prototype.
 
-Cependant, comme décrit \autoref{white_flag}, nous avons décidé d'interrompre ce projet pour nous consacrer au \gls{project_papud}.
+Cependant, comme décrit \autoref{white_flag} (\autopageref{white_flag}), nous avons décidé d'interrompre ce projet pour nous consacrer au \gls{project_papud}. Une case de la figure correspond à une semaine de travail.
 
-La \autoref{fig:gmsnn_time_2} représente la répartition réelle du travail.
+La figure \ref{fig:gmsnn_time_2} (\autoref{fig:gmsnn_time_2}) représente la répartition réalisée du travail.
 
 \begin{figure}[ht]
 	\centering
-	\input{plots/timeline_true_1}\caption[Répartition réelle du travail]{Répartition réelle du travail. Une case correspond à une semaine de travail.}\label{fig:gmsnn_time_2}
+	\input{plots/timeline_true_1}\caption{Répartition réalisée du travail}\label{fig:gmsnn_time_2}
 \end{figure}
 
+\pagebreak
 \section{Outils}
 \subsection{Gestion du code}
-Le code et les rapports sont stockés sur les serveurs Gitlab de l'Inria, avec le système de gestion de version Git.
+Le code et les rapports ont été gérés avec le système de gestion de version Git, et ont été stockés sur les serveurs Gitlab de l'\gls{inria}.
 
 \subsection{Langage et librairie}
-Le langage choisi pour l'implémentation est Python, qui largement fourni en outils et librairies d'\gls{dl}.
+Le langage choisi pour la mise en œuvre du projet est Python, qui est abondement fourni en outils et librairies d'\gls{dl}.
 
-Parmi ces librairies, notre choix c'est porté sur \gls{pytorch}, qui contrairement à d'autres librairies telles que Caffe ou Keras, permet de moduler l'architecture du réseau au cours de l'apprentissage. Cette propriété est très importante, étant donné la nature \og croissante\fg{} de l'architecture proposée. De plus, cette librairie est particulièrement bien documentée.
+Parmi ces librairies, notre choix s'est porté sur \gls{pytorch} qui, contrairement à d'autres librairies telles que Caffe ou Keras, permet de moduler l'architecture du réseau au cours de l'apprentissage. Cette propriété est très importante, étant donnée la nature \og croissante\fg{} de l'architecture proposée. De plus, cette librairie est particulièrement bien documentée.
 
 % TODO g5k, (conda)
 \subsection{Grid5000 et les machines distantes}
-Pendant le déroulement du projet, le \gls{model} à été testé et entraîné sur des machines distantes.
+Pendant le déroulement du projet, le \gls{model} a été testé et entraîné sur des machines distantes.
 
 Ces machines font partie du réseau \gls{g5k}.
-\og Grid'5000 est un banc d'essai à grande échelle et polyvalent pour la recherche expérimentale dans tous les domaines de l'informatique, avec un accent sur l'informatique parallèle et distribuée, y compris Cloud, HPC et Big Data. \fg{} D'après le site de \gls{g5k} \autocite{g5k}.
+\og Grid'5000 est un banc d'essai à grande échelle et polyvalent pour la recherche expérimentale dans tous les domaines de l'informatique, avec un accent sur l'informatique parallèle et distribuée, y compris Cloud, HPC et Big Data.\fg{}~\autocite{g5k}
 
-Un des avantage de cet outil est la présence de machines spécialisé dans les calculs \gls{gpu}, qui sont celles que nous avons utilisées. En effet, l'utilisation de \glsfirst{gpu} pour l'entraînement des \gls{nn} est une pratique fréquente en \gls{dl}, car elle permet d'accélérer les calculs effectués.
+Un des avantage de cet outil est la présence de machines spécialisées équipées de \gls{gpu}\footnote{Un processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU) est un composant d'ordinateur spécialisé, qui montre d'excellentes performances dans les calculs impliquant des \glspl{matrice} (ex.~: images). Cette propriété s'applique aussi sur les \glspl{tensor}. L'utilisation de \gls{gpu} pour l'entraînement des \glspl{nn} est une pratique fréquente en \gls{dl}, car elle permet d'accélérer les calculs effectués.}, qui sont celles que nous avons utilisées.

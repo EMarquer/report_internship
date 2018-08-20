@@ -14,7 +14,7 @@ Elle est souvent couplée à un entraînement simultané sur plusieurs \glspl{ba
 \subsubsection{\Glspl{batch} parallèles}
 Un entraînement par \glspl{batch} parallèles permet de calculer le résultat de plusieurs exemples simultanément.
 On calcule ensuite la différence de chaque résultat avec le résultat attendu correspondant.
-Enfin, on met à jours le \gls{model} en fonction de l'ensemble des exemples.
+Enfin, on met à jour le \gls{model} en fonction de l'ensemble des exemples.
 Au final, les calculs des résultat sont parallélisé, et le coût de la mise à jour est mis en commun entre plusieurs exemples.
 
 Cela permet de réduire drastiquement le temps de calcul et d'améliorer la qualité de l'entraînement, au prix d'une plus grande utilisation de la mémoire et de la puissance de calcul.
@@ -24,10 +24,10 @@ La version de l'algorithme de parallélisation utilisé est similaire à celle d
 \subsubsection{Conflit entre les \glspl{batch} parallèles et l'architecture \gls{gmsnn}}
 Cependant, le découpage en \glspl{batch} pose un problème majeur avec l'architecture \gls{gmsnn}~: elle est basée sur la continuité des exemples fournis, et l'utilisation de \glspl{batch} brise la continuité en introduisant un parallélisme.
 
-Une analyse approfondie à permit d'établir une méthode pour résoudre ou écarter la majorités des aspect du problème. Après consultation avec notre maître de stage, nous avons décidé d'utiliser l'entraînement par \glspl{batch} malgré les problèmes restants.
+Une analyse approfondie a permit d'établir une méthode pour résoudre ou écarter la majorités des aspect du problème. Après consultation avec le maître de stage, nous avons décidé d'utiliser l'entraînement par \glspl{batch} malgré les problèmes restants.
 
-Voir le rapport de l'annexe \ref{subsec:batch} pour les détails de l'analyse des problèmes théoriques de l'utilisation de \glspl{batch} avec l'architecture \gls{gmsnn}.
+Le rapport de l'annexe \ref{subsec:batch} (\autopageref{subsec:batch}) contient les détails de l'analyse des problèmes théoriques de l'utilisation de \glspl{batch} avec l'architecture \gls{gmsnn}.
 
-Voir l'annexe \ref{subsec:memuse} pour les détails sur l'impact de la taille des \glspl{batch} et du nombre de \glspl{batch} sur la consommation mémoire.
+L'annexe \ref{subsec:memuse} (\autopageref{subsec:memuse}) contient les détails sur l'impact de la taille des \glspl{batch} et du nombre de \glspl{batch} sur la consommation mémoire.
 
-Voir les annexes\ref{subsec:batch_1}, \ref{subsec:batch_2}, \ref{subsec:batch_3} et \ref{subsec:batch_4} pour les rapports des tests sur la rotation des \glspl{batch}.
+Les annexes \ref{subsec:batch_1} (\autopageref{subsec:batch_1}), \ref{subsec:batch_2} (\autopageref{subsec:batch_2}), \ref{subsec:batch_3} (\autopageref{subsec:batch_3}) et \ref{subsec:batch_4} (\autopageref{subsec:batch_4}) contiennent les rapports des tests sur la rotation des \glspl{batch}.
