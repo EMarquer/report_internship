@@ -31,7 +31,7 @@
 \renewcommand{\seename}{voir aussi}
 \newcommand{\foreign}[1]{\emph{#1}}
 
-\newcommand*{\defref}[1]{Défini \autoref{#1} (\autopageref{#1}). \hspace{0.5em}}
+\newcommand*{\defref}[1]{Défini \autoref{#1}, \autopageref{#1}. \hspace{0.5em}}
 
 \newcommand{\newglos}[3]
 {%
@@ -63,7 +63,7 @@
 
 \makeatletter
 \providecommand\phantomsection{}
-\newcommand{\listsname}{Listes des tables, des figures et des fragments de code}
+\newcommand{\listsname}{Listes des tableaux, des figures et des fragments de code}
 \newcommand{\lists}{
 	\clearpage
 	\chapter*{\listsname}
@@ -108,7 +108,7 @@
 	\setglossarystyle{long3col}%
 	%
 	\renewenvironment{theglossary}%
-	{\begin{longtable}[l]{@{}p{0.2\hsize}p{0.7\hsize}p{0.01\hsize}@{}}}%
+	{\begin{longtable}[l]{@{}p{0.09\hsize}p{0.9\hsize}p{0.01\hsize}@{}}}%
 		{\end{longtable}}%
 	\renewcommand{\glossentry}[2]{%
 		\glstarget{##1}{\glossentryname{##1}}%

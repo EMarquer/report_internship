@@ -2162,8 +2162,7 @@
     <bcf:citekey order="32">pep483</bcf:citekey>
     <bcf:citekey order="32">pep484</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
-    <bcf:citekey order="33">bug</bcf:citekey>
-    <bcf:citekey order="34">bptt-intro</bcf:citekey>
+    <bcf:citekey order="33">bptt-intro</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global/" type="entry" sortscheme="none" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

@@ -92,7 +92,7 @@ Un \gls{parameter} pour un \gls{module} ou un \gls{model} est une valeur qui var
 
 %\subsubsection{Principales \glsentryplural{architecture} de \glsentryplural{nn}}
 \subsection{Principales \glsentryplural{architecture} de \glsentryplural{nn}}
-\label{def:lstm} \label{def:rnn} \label{def:fully_connected} \label{def:lin_module}
+\label{def:lstm} \label{def:rnn} \label{def:fully_connected} \label{def:lin_module} \label{def:nn_2} 
 
 La liste suivante présente les principales \glspl{architecture} de \glspl{nn} utilisées dans ce rapport, classées en ordre croissant de complexité et de consommation de ressources.
 
@@ -125,11 +125,11 @@ La liste suivante présente les principales \glspl{architecture} de \glspl{nn} u
 \section{Traitement automatique des langues (\glsentrytext{nlp}) et \glsentrytext{lm}}
 %\subsubsection{Traitement automatique des langues (\glsentrytext{nlp})}
 \subsection{Traitement automatique des langues (\glsentrytext{nlp})}
-\label{subsec:nlp}\label{def:nlp}
+\label{subsec:nlp} \label{def:nlp}
 Le \glsfirst{nlp} est une discipline qui s'intéresse au traitement des informations langagières par des moyens formels ou informatiques.
 
 %\subsubsection{\Glsentrytext{lm}}
-\subsection{\Glsentrytext{lm}}
+\subsection{\Glsentrytext{lm}} \label{def:lm}
 Un \glsfirst{lm} est une \og distribution de probabilité sur une séquence de mots [ou de caractères]\fg{} (d'après Wikipédia \autocite{wiki_lm})
 utilisée pour estimer la probabilité d'apparition du prochain mot ou caractère.
 
@@ -137,7 +137,7 @@ Autrement dit, c'est une représentation servant à prédire le mot suivant à p
 
 \pagebreak
 %\subsubsection{Contexte et dépendances}
-\subsection{Contexte et dépendances}
+\subsection{Contexte et dépendances} \label{def:context} \label{def:dependency}
 Dans le cadre d'un \gls{lm}, le contexte est l'ensemble des informations disponibles hors du mot ou caractère à prédire.
 
 On parle aussi de dépendances entre d'une part les mots ou caractères et d'autre part l'élément du contexte correspondant.
@@ -149,7 +149,7 @@ Parmi les informations contenues dans le contexte d'un mot, on peut trouver auss
 On considère que, plus on a d'informations contextuelles, plus le \gls{lm} est précis. Par exemple, si on nous dit \og un chat \fg{}, il sera plus difficile de prédire la couleur du chat que si on nous dit \og un chat de couleur sombre \fg{}.
 
 %\subsection{Performance et mesure}
-\section{Performance et mesure}
+\section{Performance et mesure} \label{def:bpc}
 Le dernier concept important présenté dans ce chapitre est celui de performance des modèles produits.
 
 La performance d'un modèle est évaluée par trois composantes~:

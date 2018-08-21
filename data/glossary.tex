@@ -77,6 +77,7 @@
 	first={{réseau de neurones artificiels ou plus simplement réseau de neurones (\foreign{Neural Network} en anglais)}}}
 
 \newglossaryentry{module_gmsnn}{
+	type=entity,
 	sort={{module gmsnn}},
 	name={{Module \glsentrytext{gmsnn}}},
 	text={{module \glsentrytext{gmsnn}}},
@@ -87,14 +88,14 @@
 	name={{Tenseur}},
 	text={{tenseur}},
 	first={{tenseur (\foreign{tensor} en anglais, un type de \gls{matrice} spécifique utilisé en \gls{dl})}},
-	description={{Un tenseur en \glsentrytext{dl} est un type de \glsentrytext{matrice} particulier adapté à la technique de la \glsentrytext{automatic differentiation}}}}
+	description={{\defref{def:tensor}}}}
 
 \newglossaryentry{embedding}{
 	sort={{embedding}},
-	name={{\foreign{embedding}}},
+	name={{\foreign{Embedding}}},
 	text={\foreign{embedding}},
 	plural={\foreign{embeddings}},
-	description={{Un \foreign{embedding} est un \glsentrytext{tensor} particulier produit par un module éponyme. Il est la représentation d'un caractère ou d'un mot.}}}
+	description={{\defref{def:embedding}}}}
 
 \newglossaryentry{hidden state}{
 	sort={{etat cache}},
@@ -112,7 +113,7 @@
 	description={\defref{def:rnn}}}
 
 \newglossaryentry{rnn-}{type=\acronymtype, name={RNN}, text={RNN},
-	description={réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais)}, see=[Glossaire~:]{rnn}}
+	description={réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais)}}
 
 \newglossaryentry{lstm}{
 	sort={{LSTM}},
@@ -123,13 +124,19 @@
 	description={\defref{def:lstm}}}
 
 \newglossaryentry{lstm-}{type=\acronymtype, name={LSTM}, text={LSTM},
-	description={réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais)}, see=[Glossaire~:]{lstm}}
+	description={réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais)}}
 
-\newglossaryentry{gmsnn}{
+\newglossaryentry{gmsnn-}{
+	type=\acronymtype,
 	name={{GMSNN}},
 	text={{GMSNN}},
-	first={{réseau de neurones récurrents multi-échelles croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)}},
-	description={}}
+	description={réseau de neurones récurrents multi-échelles croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais)}}
+
+\newglossaryentry{gmsnn}{
+	name={{Réseau de neurones récurrents multi-échelles croissant}},
+	text={{GMSNN}},
+	first={{réseau de neurones récurrents multi-échelles croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)\glsadd{gmsnn-}}},
+	description={\defref{ch:gmsnn_model}}}
 
 %\newglosacr{gmsnn}{GMSNN}
 %{{\defref{def:gmsnn}}}
@@ -150,7 +157,7 @@
 	plural={{modèles de la langue}},
 	first={modèle de la langue (\foreign{Language Model} en anglais)},
 	firstplural={modèles de la langue (\foreign{Language Models} en anglais)},
-	description={}}
+	description={\defref{def:lm}}}
 
 %\newglosacr{char-lm}{Char-LM}
 %{%
@@ -183,14 +190,31 @@
 	description={}
 }
 
-\newglosacr{gpu}{GPU}
-{%
-	Un processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU) est un composant d'ordinateur spécialisé, qui montre d'excellentes performances dans les calculs impliquant des matrices (ex. : images)\glsadd{matrice}
-}{processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU)}
+%\newglosacr{gpu}{GPU}
+%{%
+	%Un processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU) est un composant d'ordinateur spécialisé, qui montre d'excellentes performances dans les calculs impliquant des matrices (ex. : images)\glsadd{matrice}
+%}{processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU)}
+
+\newglossaryentry{gpu-}{
+	type=\acronymtype,
+	name={GPU},
+	text={GPU},
+	description={processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU)}}
+
+\newglossaryentry{nlp-}{
+	type=\acronymtype,
+	name={TAL},
+	text={TAL},
+	description={traitement automatique des langues}}
+
+\newglossaryentry{gpu}{
+	name={Processeur graphique},
+	text={GPU\glsadd{gpu-}},
+	description={\defref{def:gpu}}}
 
 \newglossaryentry{nlp}{
 	name={Traitement automatique des langues},
-	text={TAL},
+	text={TAL\glsadd{nlp-}},
 	first={traitement automatique des langues (TAL, \foreign{Natural Language Processing} en anglais)},
 	description={\defref{def:nlp}}}
 
@@ -202,7 +226,7 @@
 \newglossaryentry{training}{
 	name={Entraînement},
 	text={entraînement},
-	description={\defref{def:weight1,def:weight2}}
+	description={\defref{def:training}}
 }
 
 \newglossaryentry{learning}{
@@ -233,7 +257,7 @@ description={\defref{def:corpus}}}
 \newglossaryentry{weight}{
 	name={Poids},
 	text={poids},
-	description={\defref{def:weight1,def:weight2}}}
+	description={\defref{def:weight1}}}
 
 \newglossaryentry{computational semantics}{
 	name={Sémantique computationnelle},
@@ -257,7 +281,7 @@ description={\defref{def:corpus}}}
 	name={Fichier de journalisation},
 	text={fichier de journalisation},
 	plural={fichiers de journalisation},
-	description={},
+	description={\defref{def:log}},
 	first={fichier de journalisation (\foreign{log file} en anglais)},
 	firstplural={fichiers de journalisation (\foreign{log files} en anglais)},}
 
@@ -271,21 +295,21 @@ description={\defref{def:corpus}}}
 	sort={parametre},
 	name={Paramètre},
 	text={paramètre},
-	description={}}
+	description={\defref{def:parameter}}}
 
 \newglossaryentry{batch}{
 	sort={batch},
-	name={\foreign{batch}},
+	name={\foreign{Batch}},
 	text={\foreign{batch}},
 	plural={\foreign{batches}},
-	description={}}
+	description={\defref{def:batch}}}
 
 \newglossaryentry{soa}{
 	sort={etat de l'art},
-	name={état de l'art},
+	name={État de l'art},
 	text={état de l'art},
 	plural={états de l'art},
-	description={}}
+	description={\defref{def:soa}}}
 
 \newglossaryentry{md}{
 	type=entity,
@@ -306,4 +330,6 @@ description={\defref{def:corpus}}}
 	name={{Bogue}},
 	text={{bogue}},
 	plural={{bogues}},
-	description={{Un Bogue (\foreign{bug} en anglais) est \og un défaut de conception d'un programme informatique à l'origine d'un dysfonctionnement.\fg D'après Wikipédia \autocite{bug}}}}
+	description={%
+		%{Un Bogue (\foreign{bug} en anglais) est \og un défaut de conception d'un programme informatique à l'origine d'un dysfonctionnement.\fg D'après Wikipédia \autocite{bug}}
+	}}

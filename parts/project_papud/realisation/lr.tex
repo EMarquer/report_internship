@@ -1,14 +1,14 @@
 \section{Optimisation du taux d'apprentissage}\label{lr_opti_papud}
-La troisième optimisation mise en place pour le modèle et le réglage d'un des paramètres de l'algorithme d'apprentissage, est une valeur nommée \og taux d'apprentissage\fg{}. Il s'agit d'une optimisation courante en \gls{dl} \autocite{LearningRateOptimisation}.
+La troisième optimisation mise en place porte sur le réglage d'un des paramètres de l'algorithme d'apprentissage, est une valeur nommée \og taux d'apprentissage\fg{}. Il s'agit d'une optimisation courante en \gls{dl} \autocite{LearningRateOptimisation}.
 
 Ce paramètre permet de déterminer la vitesse d'apprentissage du modèle.
-Cependant, un mauvais réglage entraîne des conséquences catastrophiques sur le modèle, comme un apprentissage extrêmement lent, voir une divergence de l'apprentissage.
+Un mauvais réglage peut entraîner des conséquences catastrophiques sur le modèle, comme un apprentissage extrêmement lent, voire la divergence de l'apprentissage\footnote{On parle de divergence quand la performance du \gls{model} empire au long de l'apprentissage. Ce terme est utilisé par opposition à la convergence souhaitée des performances vers le meilleur score possible.}.
 
-Il est donc nécessaire de correctement choisir ce paramètre.
-Les algorithmes que nous avons étudiés reposent sur des séries de brefs \glspl{training}~: on entraîne le modèle avec différentes valeurs pour le taux d'apprentissage, et on conserve celle qui a donné le meilleur résultat pour les entraînements à venir.
+Il est donc nécessaire de fixer correctement ce paramètre.
+Les algorithmes que nous avons étudiés reposent sur des séries d'\glspl{training} brefs~: on entraîne le modèle avec différentes valeurs du taux d'apprentissage, et on conserve celle qui a donné le meilleur résultat pour les entraînements à venir.
 
-Un module permettant la détermination du taux d'apprentissage idéal a donc été implémenté, et utilisé.
+Un outil permettant la détermination du taux d'apprentissage idéal a donc été implémenté, et utilisé.
 
-La nouvelle valeur définie a permis d'augmenter largement la vitesse d'amélioration de la qualité du modèle. En effet, il fallait plus de 400 époques pour atteindre la qualité maximale du modèle, et la nouvelle valeur a permis de l'atteindre en moins de 100 époques. % TODO donner valeur
+La nouvelle valeur définie a permis d'augmenter considérablement la vitesse d'amélioration de la qualité du modèle. En effet, il fallait précédemment plus de 400 époques pour atteindre la qualité maximale du modèle, contre moins de 100 époques avec le nouveau taux d'apprentissage. % TODO donner valeur
 
-Le détail du processus de choix et des résultats est disponible dans les annexes \ref{anx:lr_1} (\autopageref{anx:lr_1}) et \ref{anx:lr_2} (\autopageref{anx:lr_2}).
+Le détail du processus de choix et des résultats est présenté dans les annexes \ref{anx:lr_1} (\autopageref{anx:lr_1}) et \ref{anx:lr_2} (\autopageref{anx:lr_2}).

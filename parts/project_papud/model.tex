@@ -5,7 +5,7 @@ Le modèle est un \gls{lm} au niveau du caractère, qui prend en entrée une lig
 
 Ainsi, l'entrée du modèle est une ligne de taille fixe de nombres correspondant à des caractères.
 
-La sortie est un tableau à 2 dimensions, qui contient pour chaque caractère prédit une distribution de probailité sur les caractères connus (répertoriés dans le dictionnaire décrit \autoref{def_dict_papud}, \autopageref{def_dict_papud}).
+La sortie est un tableau à 2 dimensions, qui contient, pour chaque caractère prédit, une distribution de probabilité sur les caractères connus (répertoriés dans le dictionnaire, qui est décrit dans la \autoref{def_dict_papud}, \autopageref{def_dict_papud}).
 
 \section{Utilisation d'un \glsentrytext{nn} basique}
 Comme présenté dans le \autoref{ch:project_papud} (\autopageref{ch:project_papud}), un \gls{nn} basique, intégralement connecté, a été choisi pour le modèle.
@@ -14,18 +14,21 @@ Comme présenté dans le \autoref{ch:project_papud} (\autopageref{ch:project_pap
 
 \section{Réduction de la taille de l'entrée}
 Comme écrit plus haut, l'entrée du modèle est une ligne de caractères.
-Pour chacun d'entre eux, comme dans le modèle \gls{gmsnn}, est transformé en un \gls{tensor} par un module d'\gls{embedding} (voir la \autoref{def:embedding}, \autopageref{def:embedding}).
+Chacun caractère, comme dans le modèle \gls{gmsnn}, est transformé en un \gls{tensor} par un module d'\gls{embedding} (voir la \autoref{def:embedding}, \autopageref{def:embedding}). Les \glspl{tensor} des caractères sont assemblés pour représenter la ligne.
 
-Grâce à une opération appelée \og \foreign{max-pooling} \fg{}, qui correspond à prendre pour chaque case du \gls{tensor} final la valeur maximale des cases correspondantes des \glspl{tensor} initiaux.
+Pour réduire la taille de cette représentation, on utilise une opération appelée \og \foreign{max-pooling} \fg{}, qui permet de produire un unique \gls{tensor} d'\gls{embedding} par ligne.
+
+Le \foreign{max-pooling} consiste à prendre, pour chaque coefficient du \gls{tensor} final, la valeur maximale des coefficients correspondants des \glspl{tensor} initiaux.
 
 Par exemple~:
-\[ \text{max-pool}\left(\left[\begin{array}{ccc}0&30&6\\-5&6&12\end{array}\right] , \left[ \begin{array}{ccc}2&42&3\\5&-60&-2\end{array}\right] \right) = \left[\begin{array}{ccc}2&42&6\\5&6&12\end{array}\right]  \]
+\[ \text{max-pool}\left(\left[\begin{array}{ccc}0&30&\textbf{6}\\-5&\textbf{6}&\textbf{12}\end{array}\right] , \left[ \begin{array}{ccc}\textbf{2}&\textbf{42}&3\\\textbf{5}&-60&-2\end{array}\right] \right) = \left[\begin{array}{ccc}2&42&6\\5&6&12\end{array}\right]  \]
+\vspace{0em}
 
-Car $0<2$, $30<42$, $6>3$, $-5<5$, $6>-60$ et $12>-2$.
+%Car $0<2$, $30<42$, $6>3$, $-5<5$, $6>-60$ et $12>-2$.
 
 \section{Représentation de l'architecture}
 
-La façon dont s'agencent les différents modules de l'architecture est représentée dans la \autoref{fig:base_papud} (\autopageref{fig:base_papud}).
+L'agencement des différents modules de l'architecture est représentée dans la \autoref{fig:base_papud} (\autopageref{fig:base_papud}).
 
 \begin{figure}[ht]
 	\centering
@@ -35,8 +38,8 @@ La façon dont s'agencent les différents modules de l'architecture est représe
 \end{figure}
 
 \section{Lien avec l'état de l'art}
-Il a été récemment montré que les \gls{lm} simples basés sur des  \glspl{embedding} et des opération de \foreign{pooling}
-montre des performances équivalentes voir supérieures à des modèles plus complexes et plus coûteux comme les \gls{rnn} \autocite{pooling_simple}.
+Il a été récemment démontré que les \gls{lm} simples, basés sur des  \glspl{embedding} et des opération de \foreign{pooling},
+montrent des performances équivalentes voire supérieures à des modèles plus complexes et plus coûteux comme les \gls{rnn} \autocite{pooling_simple}.
 
 %%%%%%%%%%%
 %

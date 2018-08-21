@@ -9,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Avant-propos}{5}{Doc-Start}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Listes des tables, des figures et des fragments de code}{9}{chapter*.1}
+\contentsline {chapter}{Listes des tableaux, des figures et des fragments de code}{9}{chapter*.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{13}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -43,9 +43,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.5}Principales architectures de r\IeC {\'e}seaux de neurones}{17}{subsection.2.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Traitement automatique des langues (TAL) et mod\IeC {\`e}le de la langue}{17}{section.2.3}
+\contentsline {section}{\numberline {2.3}Traitement automatique des langues (TAL\glsadd {nlp-}) et mod\IeC {\`e}le de la langue}{17}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Traitement automatique des langues (TAL)}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}Traitement automatique des langues (TAL\glsadd {nlp-})}{17}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}\Glsentrytext {lm}}{17}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
@@ -263,8 +263,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {13.2}Impl\IeC {\'e}mentation du mod\IeC {\`e}le et transfert des outils de base}{67}{section.13.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.2.1}Premiers r\IeC {\'e}sultats}{67}{subsection.13.2.1}
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {13.3}Adaptation du syst\IeC {\`e}me de gestion de corpus au volume de donn\IeC {\'e}es}{67}{section.13.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {13.4}Entra\IeC {\^\i }nement par \emph {batchs} simultan\IeC {\'e}s}{68}{section.13.4}
@@ -273,7 +271,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {13.5.1}Pr\IeC {\'e}cision de base}{68}{subsection.13.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.6}Analyse d'une \IeC {\'e}trange variation de performance dans l'apprentissage}{69}{section.13.6}
+\contentsline {section}{\numberline {13.6}Analyse d'une variation anormale de performance dans l'apprentissage}{69}{section.13.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {13.7}Optimisation du taux d'apprentissage}{69}{section.13.7}
 \defcounter {refsection}{0}\relax 
@@ -295,7 +293,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {14.3}Discussion et perspectives}{72}{section.14.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.3.1}Continuation du travail}{72}{subsection.14.3.1}
+\contentsline {subsection}{\numberline {14.3.1}Poursuite du travail}{72}{subsection.14.3.1}
 \defcounter {refsection}{0}\relax 
 \vspace {1em}
 \defcounter {refsection}{0}\relax 
@@ -369,7 +367,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Method using \texttt {with} keyword for backup system, during evaluation}{96}{subsection.A.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Solution tentative pour les fuites m\IeC {\'e}moires}{97}{section.A.4}
+\contentsline {section}{\numberline {A.4}Tentative de solution pour les fuites m\IeC {\'e}moires}{97}{section.A.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.4.1}Abstract}{97}{subsection.A.4.1}
 \defcounter {refsection}{0}\relax 
@@ -377,7 +375,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.4.3}Solution}{98}{subsection.A.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Probl\IeC {\`e}mes th\IeC {\'e}oriques li\IeC {\'e}s \IeC {\`a} l'entra\IeC {\^\i }nement batch par batch}{99}{section.A.5}
+\contentsline {section}{\numberline {A.5}Probl\IeC {\`e}mes th\IeC {\'e}oriques li\IeC {\'e}s \IeC {\`a} l'utilisation de \textit {batches} pour l'entra\IeC {\^\i }nement}{99}{section.A.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.5.1}Abstract}{99}{subsection.A.5.1}
 \defcounter {refsection}{0}\relax 
@@ -676,8 +674,6 @@
 \contentsline {chapter}{\numberline {B}Rapports d'avancement du projet PAPUD}{159}{appendix.B}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {B.1}Informations sur les rapports contenus dans la pr\IeC {\'e}sente annexe}{159}{section.B.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.1}Format d'origine, transcription et contenu des rapports}{159}{subsection.B.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {B.2}Informations g\IeC {\'e}n\IeC {\'e}rales}{160}{section.B.2}
 \defcounter {refsection}{0}\relax 
