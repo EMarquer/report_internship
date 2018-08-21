@@ -6,18 +6,19 @@ L'architecture du \gls{gmsnn} est celle du \gls{model} ré-implémenté, mais le
 
 De la même façon qu'avec la version ré-implémentée, le modèle prend en entrée des caractères, et produit des probabilités sur quel caractère apparaîtra ensuite.
 
-\begin{figure}[ht]
-	\centering
-	\scalebox{1}{\input{plots/base_gmsnn_data}}
-	\caption[Architecture du \glsentrytext{model} ré-implémenté]{Architecture du \gls{model} ré-implémenté}\label{fig:reimplement_gmsnn}
-\end{figure}
-
 Ce prototype a permis de mettre en place les mécanismes de base du modèle.
 
 Durant cette étape, nous avons mis en place l'architecture multi-échelle avec deux mécanismes fondamentaux, la transmission de l'information d'une échelle à l'autre et l'agrégation de l'information de toutes les échelles.
 
-Chaque échelle qui compose le \gls{module_gmsnn} est un \gls{lstm}, qui est le \gls{rnn} utilisé dans le \gls{model} d'origine. 
+Chaque échelle qui compose le \gls{module_gmsnn} est un \gls{lstm}, qui est le \gls{rnn} utilisé dans le \gls{model} d'origine.
 
+\begin{figure}[ht]
+	\centering
+	\scalebox{1}{\input{plots/base_gmsnn_data}}
+	\caption[Architecture du \glsentrytext{model} ré-implémenté]{Architecture du \gls{model} ré-implémenté}\label{fig:reimplement_gmsnn}
+\end{figure} 
+
+\pagebreak
 \subsection{Transmission d'information}
 Pour rappel, la transmission d'information se fait d'une couche donnée à la couche immédiatement supérieure.
 Cette transmission se fait périodiquement, en fonction d'un nombre appelé fréquence de transmission.
@@ -31,6 +32,7 @@ Cette transmission se fait périodiquement, en fonction d'un nombre appelé fré
 
 Dans un premier temps, il a fallu choisir quelle information transmettre d'une échelle à l'échelle supérieure. En effet, les \glspl{rnn} produisent à la fois une sortie et un \gls{tensor} contenant leur mémoire. L'utilisation de l'\gls{embedding} a été écartée initialement, car elle n'est pas en accord avec le principe d'abstraction de l'architecture proposée.
 
+%\pagebreak
 Le choix s'est porté sur le \gls{tensor} contenant la mémoire, qui contient donc les informations abstraites par l'échelle, contrairement à la sortie qui  contient uniquement les informations pour prédire le caractère suivant.
 
 %\begin{figure}[h]

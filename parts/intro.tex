@@ -10,17 +10,18 @@
 D'une part, depuis quelques années, l'\gls{dl} et les \glspl{nn} ont connu une explosion de popularité.
 Ce qui se cache derrière cet engouement est la combinaison de théories relativement anciennes et d'avancées technologiques permettant la mise en œuvre desdites théories.
 
+D'autre part, nous sommes à l'ère du \foreign{\og Big Data\fg{}}, et les quantités de \glspl{data} produites de nos jours sont bien au-delà de ce que nous pouvons gérer sans l'aide d'outils spécialisés.
+Afin de produire des outils adaptés aux échelles actuelles, nous nous intéressons dans ce rapport à des grands volumes de \glspl{data} bien au-delà des volumes habituellement utilisés en \gls{dl}.
+
 %Un des intérêt de ces méthodes d'\gls{ml} est la capacité à apprendre à partir de données restreintes.
 Un des domaines exploitant les performances de ces nouveaux outils est le \gls{nlp}.
 En particulier, nous nous intéresserons dans ce rapport à la création de \glspl{lm}.
 %L'application au \gls{nlp} des \glspl{nn} qui nous intéresse particulièrement dans ce rapport est la création de \glspl{lm}.
 
-D'autre part, nous sommes à l'ère du \foreign{\og Big Data\fg{}}, et les quantités de \glspl{data} produites de nos jours sont bien au-delà de ce que nous pouvons gérer sans l'aide d'outils spécialisés.
-Afin de produire des outils adaptés aux échelles actuelles, nous nous intéressons dans ce rapport à des grands volumes de \glspl{data} bien au-delà des volumes habituellement utilisés en \gls{dl}.
-
-Ainsi, l'axe principal de ce rapport est l'application des méthodes de l'\gls{dl} sur de grands volumes de \glspl{data}, de la perspective du \gls{nlp}.
+Ainsi, l'axe principal de ce rapport est l'application des méthodes de l'\gls{dl} sur de grands volumes de \glspl{data}, par la réalisation de \glspl{lm}.
 Cela implique des problématiques relativement classiques en développement de \gls{nn}~: le choix de l'architecture du réseau, de l'algorithme d'entraînement, mais aussi des questions plus pragmatiques d'optimisation liées au volume de \glspl{data}.
 
+\newpage
 \section[Objectifs]{Objectifs du stage}
 %Les objectifs du stage sont doubles:
 %- découvrir et apprendre à manipuler les NN
@@ -111,15 +112,15 @@ Cette réalisation doit servir de base technique pour une partie du \glsunset{pr
 
 %%%%%%%%%%
 
-Dans un premier temps, nous avons présenté à la fois le contexte, les enjeux, et les objectif généraux du stage.
+Nous avons présenté à la fois le contexte, les enjeux, et les objectif généraux du stage.
 
-Dans un second temps, nous définirons les termes et concepts principaux utilisés dans ce rapport.
+Tout d’abord, nous définirons les termes et concepts principaux utilisés dans ce rapport.
 
 La complexité du stage est qu'il est composé de deux projets, le \gls{project_gmsnn} et le \gls{project_papud}, l'un étant la continuation de l'autre. En effet, les conclusions tirées du premier projet ont servi de base pour le second. C'est pourquoi, pour simplifier la lecture du présent rapport, chaque projet sera traité suivant le même plan.
 
-Notamment, pour chacun d'eux, nous présenterons le contexte, les enjeux, et les entités impliquées dans le projet. Nous décrirons ensuite le \gls{model} réalisé avant de rapporter le travail effectué. Enfin, une conclusion résumera les points majeurs du projet.
+Pour chacun d'eux, nous présenterons le contexte, les enjeux, et les entités impliquées dans le projet. Nous décrirons ensuite le \gls{model} réalisé avant de rapporter le travail effectué. Enfin, une conclusion résumera les points majeurs du projet.
 
-Dans un dernier temps, nous ferons un bilan de l'ensemble du travail réalisé pour en tirer les apports principaux.
+Enfin, nous ferons un bilan de l'ensemble du travail réalisé pour en tirer les apports principaux.
 
 
 

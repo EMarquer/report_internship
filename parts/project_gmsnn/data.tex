@@ -1,9 +1,9 @@
 \chapter{Données disponibles}
 Les données d'entraînement utilisées proviennent du Wikipédia anglais.
-Elles sont tirée du fichier \og enwik8\fg{} utilisé pour le prix Hutter \autocite{enwik8,Hutter2018Feb}. Ce fichier est composé d'environ 100~000~000 caractères.
+Elles sont tirées du fichier \og enwik8\fg{} utilisé pour le prix Hutter \autocite{enwik8,Hutter2018Feb}. Ce fichier est composé d'environ 100~000~000 caractères.
 
-Ces données sont composées de texte balisé structuré en paragraphes.
-Quelques fragment de XML\footnote{XML (\foreign{eXtensible Markup Language} en anglais), \og est un langage informatique qui sert à enregistrer des données textuelles. [...] Ce langage , [...] similaire à l'HTML de par son système de balisage, permet de faciliter l'échange d'information sur l'internet \fg{}, d'après le glossaire sur \emph{infowebmaster} \autocite{xml}. Il s'agit du format sous lequel sont stockés les articles Wikipédia.}
+Ces données sont composées de texte balisé, structuré en paragraphes.
+Quelques fragments de XML\footnote{XML (\foreign{eXtensible Markup Language} en anglais), \og est un langage informatique qui sert à enregistrer des données textuelles. [...] Ce langage , [...] similaire à l'HTML de par son système de balisage, permet de faciliter l'échange d'informations sur l'internet \fg{}, d'après le glossaire sur \emph{infowebmaster} \autocite{xml}. Il s'agit du format sous lequel sont stockés les articles Wikipédia.}
 sont aussi présents, mais ils sont minoritaires dans les données. Il est donc peu probable de les retrouver dans les données apprises.
 
 Deux versions alternatives du corpus ont été utilisées~:
@@ -13,7 +13,7 @@ Deux versions alternatives du corpus ont été utilisées~:
 \end{enumerate}
 
 \section{Extrait des données d'entraînent}
-Le \autoref{enwik8_ex} (\autopageref{enwik8_ex}) est un extrait des données brutes avant le découpage en caractères. Il correspond à l'article Wikipédia sur l'ansarchisme.
+Le \autoref{enwik8_ex} (\autopageref{enwik8_ex}) est un extrait des données brutes avant le découpage en caractères. Il correspond à l'article Wikipédia sur l'anarchisme.
 
 \begin{lstlisting}[caption={Extrait des premières lignes du fichier enwik8},label=enwik8_ex]
 While anarchism is most easily defined by what it is against, anarchists also offer positive visions of what they believe to be a truly free society. However, ideas about how an anarchist society might work vary considerably, especially with respect to economics; there is also disagreement about how a free society might be brought about. 
@@ -29,6 +29,6 @@ Le \gls{preprocessing} des données est composé du découpage du document en ca
 
 Comme mentionné dans la \autoref{whitespace_problem} (\autopageref{whitespace_problem}), un défaut dans le prétraitement a mené à la disparition des espaces du texte.
 
-En effet, le prétraitement d'origine du corpus utilisait les espaces en tant que séparateurs pour le stockage des données. Par la suite, au moment d'utiliser les données prétraitées, l'intégralité des espaces était supprimé, y compris ceux du texte d'origine.
+En effet, le prétraitement d'origine du corpus utilisait les espaces en tant que séparateurs pour le stockage des données. Par la suite, au moment d'utiliser les données prétraitées, l'intégralité des espaces était supprimée, y compris ceux du texte d'origine.
 
 Malheureusement, ce défaut a été détecté à la fin du projet, et n'a pas pu être corrigé à temps pour entraîner le \gls{model} sur une version propre du \gls{corpus}.

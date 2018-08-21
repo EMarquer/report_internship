@@ -4,7 +4,7 @@ Cette section est dédiée à la présentation et l'explication des théories, t
 
 L'objectif n'est pas de fournir des explications approfondies, mais de fournir les connaissances minimales nécessaires à la compréhension du contenu et des enjeux du stage.
 
-Les termes présentés sont répertoriés dans le glossaire, mais aucun rappel de leur présence dans celui-ci n'est donné au long du texte.
+Les termes présentés ici sont répertoriés dans le glossaire, mais aucun rappel de leur présence dans celui-ci n'est donné au long du texte.
 
 %\subsection{\Glsentrytext{ml}, modèle, entraînement et données}
 \section{\Glsentrytext{ml}, modèle, entraînement et données}
@@ -150,9 +150,9 @@ On considère que, plus on a d'informations contextuelles, plus le \gls{lm} est 
 
 %\subsection{Performance et mesure}
 \section{Performance et mesure}
-Le dernier concept important du rapport est celui de performance des modèles produits.
+Le dernier concept important présenté dans ce chapitre est celui de performance des modèles produits.
 
-La performance d'un modèle est évalué par trois composantes~:
+La performance d'un modèle est évaluée par trois composantes~:
 \begin{itemize}
 	\item la qualité maximale des résultats produits~; dans le cas d'un \gls{lm}, il s'agit de la qualité de la prédiction~;
 	\item le temps d'entraînement nécessaire pour atteindre cette qualité (nombre d'\glspl{epoch}, durée, etc.)~;
@@ -163,10 +163,10 @@ La performance d'un modèle est évalué par trois composantes~:
 Afin d'évaluer la performance, des mesures ont été définies~:
 \begin{itemize}
 	\item pour mesurer la qualité du résultat, on utilise l'écart entre le résultat produit et le résultat attendu~; une mesure définie dans la littérature et utilisée dans les annexes est le BPC\footnote{Le BPC (\foreign{Bits Per Character} en anglais) \autocite{BPC} est originalement une mesure de la qualité de compression de texte, mais plusieurs papiers ont détourné cette mesure en s'en servant d'estimation de la qualité d'un \gls{lm} au niveau du caractère. Dans cet usage, le BPC est assimilable à une mesure de la précision des résultats du \gls{lm}. Plus le BPC est proche de 0 plus la qualité du \gls{lm} est élevé.}~;
-	\item pour mesurer le temps d'entraînement, on le nombre d'\gls{epoch} et le temps nécessaire par \gls{epoch}, la durée totale en heures, etc.~;
-	\item pour mesurer la consommation de ressources, on évalue l'espace mémoire occupée (en MiB ou GiB), la puissance de calcul utilisée (pourcentage de la puissance disponible), etc.
+	\item pour mesurer le temps d'entraînement, on mesure le nombre d'\gls{epoch} et le temps nécessaire par \gls{epoch}, la durée totale en heures, etc.~;
+	\item pour mesurer la consommation de ressources, on évalue l'espace mémoire occupé (en MiB ou GiB), la puissance de calcul utilisée (pourcentage de la puissance disponible), etc.
 \end{itemize}
 \vspace{1em}
 
-Un \gls{model} optimal serait un modèle qui atteint d'excellents résultats  (l'écart entre ce qui est attendu et ce qui est produit le plus faible possible), le plus rapidement possible, en consommant le moins de ressources possibles.
+Un \gls{model} optimal serait un modèle qui atteint d'excellents résultats  (l'écart entre ce qui est attendu et ce qui est produit le plus faible possible), le plus rapidement possible, en consommant le moins de ressources possible.
 

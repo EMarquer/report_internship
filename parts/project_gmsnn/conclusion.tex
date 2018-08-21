@@ -1,15 +1,15 @@
 \chapter{Conclusions sur le \glsentrytext{project_gmsnn}}
 % ccl plus pb mémoire & tps, opti z'oignons (XD) même, 5 min c'est balèze
 \section{Retour sur le travail effectué}
-Ce projet nous a permit d'implémenter une architecture innovante de \gls{nn}, à partir du squelette d'un modèle \gls{soa}.
-Nous avons pus élaborer un prototype suivant les concepts clés de l'architecture proposée, avant de l'améliorer et de l'optimiser.
+Ce projet nous a permis de mettre en œuvre une architecture innovante de \glspl{nn}, à partir du squelette d'un modèle \gls{soa}.
+Nous avons pu élaborer un prototype selon les concepts clés de l'architecture proposée, avant de l'améliorer et de l'optimiser.
 
 Pour cela nous avons étudié un domaine technique dans lequel nous avions peu de connaissances~; nous avons manipulé une librairie qui nous était inconnue~;
-nous avons géré des tests durant de plusieurs heures à plusieurs jours sur des machines distantes~; nous avons, enfin, affronté un des obstacles les plus importants dans le développement de \gls{nn}, le problème de l'optimisation.
+nous avons géré des tests d'une durée allant de plusieurs heures à plusieurs jours sur des machines distantes~; nous avons, enfin, affronté un des obstacles les plus importants dans le développement de \gls{nn}, le problème de l'optimisation.
 
-Bien que le l'architecture \gls{gmsnn} n'ai pas atteint les performances espérées, le modèle produit est robuste, rapide, et peu volumineux.
+Bien que le l'architecture \gls{gmsnn} n'ait pas atteint les performances espérées, le modèle produit est robuste, rapide, et peu volumineux.
 De plus, l'algorithme présenté \autoref{subsec:optilbl} (\autopageref{subsec:optilbl}) a démontré une faiblesse majeure de l'architecture \gls{gmsnn}.
-Enfin, les problèmes rencontrés dans ce projet ont permit de tirer des conclusions très utiles pour de prochains projets~:
+Enfin, les problèmes rencontrés dans ce projet ont permis de tirer des conclusions très utiles pour de prochains projets~:
 \begin{itemize}
 	\item les \gls{rnn} sont très lents à entraîner~;
 	\item la maîtrise du \gls{preprocessing} est fondamentale pour obtenir des bons résultats~;
@@ -17,23 +17,24 @@ Enfin, les problèmes rencontrés dans ce projet ont permit de tirer des conclus
 \end{itemize}\hspace{1em}
 
 En conclusion, le projet a abouti sur le rejet de l'architecture proposée.
-Néanmoins, ce résultat a permit de cerner les principaux écueils de la réalisation d'un \gls{lm} multi-échelle, et a ainsi permit un meilleur déroulement du projet suivant.
+Néanmoins, ce résultat a permis de cerner les principaux écueils de la réalisation d'un \gls{lm} multi-échelle, et a ainsi rendu possible un meilleur déroulement du projet suivant.
 
 
 %%%%
 \section{Apport personnel du projet}
-La réalisation de ce projet nous a permit d'approfondir largement nos connaissances en \gls{dl}, et de nous habituer aux problématique de la création et de l'utilisation de \glspl{nn}.
+La réalisation de ce projet nous a permis d'approfondir substantiellement nos connaissances en \gls{dl}, et de nous habituer aux problématiques de la création et de l'utilisation de \glspl{nn}.
 
 \section{Discussion et perspectives}
-\subsection{Pertinence des choix et possibilités d'exploration}
-Il est important de relever que dans beaucoup des situations rencontrées, nous avons dû faire des choix. De même dans l'ordre de priorité des optimisations à effectuer. 
-Il est normal de douter de la pertinence de ces choix, d'autant plus que notre niveau d'expertise du domaine est faible.
+\subsection{Possibilités d'exploration de l'architecture}
+%Il est important de relever que, dans beaucoup des situations rencontrées, nous avons dû faire des choix. De même dans l'ordre de priorité des optimisations à effectuer. 
+%Il est normal de douter de la pertinence de ces choix, d'autant plus que notre niveau d'expertise du domaine est faible.
 
-Si à posteriori nous sommes capables d'envisages d'autres pistes pour poursuivre ce projet, en aucun cas nous ne regrettons les choix effectués, en particulier la décision d'abandonner le projet.
+%Si à posteriori nous sommes capables d'envisages d'autres pistes pour poursuivre ce projet, en aucun cas nous ne regrettons les choix effectués, en particulier la décision d'abandonner le projet.
+Si le \gls{project_gmsnn} devait être relancé, l'expérience acquise durant le stage permettrait de présenter un éventail de pistes de recherche, à évaluer bien-sûr à la lumière de la littérature récente.
 
-Par exemple, nous aurions pu optimiser le taux d'apprentissage, comme fait dans le \gls{project_papud} (voir \autoref{lr_opti_papud}, \autopageref{lr_opti_papud}).
+Par exemple, nous aurions pu optimiser le taux d'apprentissage, comme dans le \gls{project_papud} (voir \autoref{lr_opti_papud}, \autopageref{lr_opti_papud}).
 
-Parmi les très nombreuse possibilités envisagées, on trouve aussi~:
+De très nombreuses autres possibilités s'offrent, notamment~:
 \begin{itemize}
 	\item l'utilisation d'un \gls{rnn} pour interpréter les informations des différentes échelles~;
 	\item la poursuite de l'utilisation de l'algorithme couche par couche, en poussant chaque échelle au maximum de ses capacités avant d'intégrer de nouvelles échelle~;
@@ -41,8 +42,8 @@ Parmi les très nombreuse possibilités envisagées, on trouve aussi~:
 \end{itemize}
 
 \subsection{Travaux similaires}
-Dans un article datant du 27 juillet 2018 \autocite{hierachical_rnn}, soit quelques jours avant la fin du stage, une architecture extrêmement similaire à celle du \gls{gmsnn} est développée.
+Dans un article datant du 27 juillet 2018 \autocite{hierachical_rnn}, soit quelques jours avant la fin du stage, une architecture extrêmement similaire à celle du \gls{gmsnn} est présentée.
 
 Contrairement a notre stage, le modèle de l'article montre des performances supérieures à celles des autres architectures auxquelles il est comparé.
 
-En écho à la partie précédente, cela peut être dû à des choix de développement différent, comme à un travail plus poussé et plus expert sur le sujet.
+En écho à la partie précédente, cela peut être dû à des choix de développement différents, comme à un travail plus poussé et plus expert sur le sujet.

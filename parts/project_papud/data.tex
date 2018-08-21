@@ -1,36 +1,35 @@
 \chapter{Données disponibles}\label{ch:data_papud}
-Les données disponibles sont des des fichiers de journaux système.
+Les données disponibles sont des \glspl{log}.
 
-Ce sont des lignes de texte en anglais extrêmement structuré (comme on peut le voir sur le \autoref{cde:traindata}, \autopageref{cde:traindata}),
-qui donnent des informations sur les programmes en cours d'exécution sur l'outil, et les évènements qui de déroulent.
-Par exemple, des messages d'information, comme \og le programme A a tenté de faire B\fg{}, ou \og l'utilisateur C changé son mot de passe\fg{}.
+Ces fichiers sont composés de lignes de texte en anglais extrêmement structurées (comme on peut le voir sur le \autoref{cde:traindata}, \autopageref{cde:traindata}), générées par les programmes en cours d'exécution et qui donnent des informations sur les évènements qui surviennent sur la machine.
+Ce sont par exemple des messages d'information, tels que \og le programme A a tenté de faire B\fg{}, ou \og l'utilisateur C a changé son mot de passe\fg{}.
 
-Ces messages sont précédées d'informations comme le moment d'écriture du message et le programme d'ou il provient.
+Ces messages sont précédés d'informations contextuelles comme l'instant d'écriture du message et le programme d'où il provient.
 
-De plus, ces journaux système contiennent un nombre très grand de messages, et la quantité de données disponible pour le projet dépasse les 400~GiB de texte brut. En comparaison, les données utilisées pour le projet précédent pesaient au maximum 100~MiB, soit 4~000 fois moins.
+De plus, ces \glspl{log} contiennent un nombre très grand de messages, et la quantité de données disponible pour le projet dépasse les 400~GiB de texte brut. En comparaison, les données utilisées pour le projet précédent pesaient au maximum 100~MiB, soit 4~000 fois moins.
 
 Un échantillon de 9~MiB des données disponibles a été utilisé pendant le projet.
-Cela correspond à 70~131 lignes de journaux système.
+Cela correspond à 70~131 lignes de \glspl{log}.
 
-\section{Extrait des données d'entraînent}%dummy example
+\section{Extrait des données d'entraînement}%dummy example
 Les données utilisées sont confidentielles.
-Ainsi, l'extrait présenté ici a été largement modifié.
-Entre autre, la date et le \foreign{timestamp} (nombre correspondant à la date) ont été remplacées par le date de début du stage et le \foreign{timestamp} correspondant, et l'utilisateur a été renommé \og OOOOOO \fg{}.
+Ainsi, pour les protéger, l'extrait présenté ici a été modifié.
+Entre autres, la date et le \foreign{timestamp} (nombre correspondant à la date) ont été remplacées par le date de début du stage et le \foreign{timestamp} correspondant, et l'utilisateur a été renommé \og OOOOOO \fg{}.
 
-Dans le \autoref{cde:traindata} (\autopageref{cde:traindata}), on a de gauche à droite~: le \foreign{timestamp}, la date, l'heure, l'utilisateur (OOOOOO), le processus (authpriv), le type de message (info), et le message.
+Dans le \autoref{cde:traindata} (\autopageref{cde:traindata}), on a, de gauche à droite~: le \foreign{timestamp}, la date, l'heure, l'utilisateur (OOOOOO), le processus (authpriv), le type de message (info), et le message.
 
-\begin{lstlisting}[caption={[Exemple d'une ligne extraite des journaux systèmes.]Exemple d'une ligne extraite des journaux systèmes},label=cde:traindata]
+\begin{lstlisting}[caption={Exemple de ligne extraite d'un des fichiers de journalisation},label=cde:traindata]
 	1524463200 2018 Apr 23 08:00:00 OOOOOO authpriv info access granted for user root (uid=0)
 \end{lstlisting}
 
 \pagebreak
 \section{Prétraitement des données}\label{def_dict_papud}
-Le prétraitement des données est composé de~:
+Le prétraitement des données est consiste en~:
 \begin{itemize}
 	\item la suppression du \foreign{timestamp}, de la date, de l'heure, et de l'utilisateur~;
 	\item le découpage du texte restant à une certaine longueur~;
 	\item le remplissage des ligne n'atteignant pas cette longueur par un caractère spécifique nommé caractère de remplissage~;
-	\item la transformation de tous les caractères en nombres, à l'aide d'un dictionnaire~; les caractères apparaissant peu fréquemment ou n'apparaissant pas dans le dictionnaire sont tous remplacé par un caractère spécial nommé \og caractère inconnu\fg{}.
+	\item la transformation de tous les caractères en nombres, à l'aide d'un dictionnaire~; les caractères apparaissant peu fréquemment ou n'apparaissant pas dans le dictionnaire sont tous remplacés par un caractère spécial nommé \og caractère inconnu\fg{}.
 \end{itemize}
 
 \subsection{Traitement des codes hexadécimaux}\label{hex}

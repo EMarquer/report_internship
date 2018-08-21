@@ -1,26 +1,26 @@
 \section{Production des exemples et découverte du problème d'encodage}
-Une fois le modèle fonctionnel, une partie importante de la compréhension et de l'évaluation du modèle est la production d'exemple.
+Une fois le modèle fonctionnel, une partie importante de la compréhension et de l'évaluation du modèle est la production d'exemples.
 
 Nous avons retardé cette étape principalement à cause des problèmes de mémoire.
 
-Le principe de cette étape est d'utiliser notre \gls{lm} pour produire du langage, afin d'avoir une idée plus concrète qu'un score de la performance du modèle.
+Le principe de cette étape est d'utiliser notre \gls{lm} pour produire du langage, afin d'avoir un aperçu plus concret qu'une mesure de la performance du modèle.
 
 \subsection{Exemples}
 Voici quelques exemples produits par le modèle. 
-La version du modèle choisie est celle avec le meilleur score, parmi celle enregistrées.
+Parmi les versions du \gls{model} enregistrées, nous avons choisi celle dont la performance mesurée est la meilleure (autrement dit, dont le score BPC est le plus bas).
 
-Cette version atteignait un score BPC de 1.839 après un entraînement de 465 époques.
-Pour comparaison, le modèle \gls{soa} avait un score BPC de 1.255 en 50 époques.
+Cette version a été entraînée pendant 465 époques, et son score BPC est de 1,839.
+Pour comparaison, le modèle \gls{soa} atteint un score BPC de 1,255 en 50 époques.
 
 Pour rappel, les données sont issues d'une version filtrée de Wikipédia en anglais.
 
 %longstring
-\begin{lstlisting}[caption={Exemple 1~: une suite de caractères à priori incompréhensibles},label=gmsnn_ex1]
+\begin{lstlisting}[caption={Exemple 1~: une suite de caractères difficilement compréhensibles},label=gmsnn_ex1]
 YeoMMDF|Ph#elementat[[Damous]]thatureoftenusevoirbeexpounderstatesandanumberofhisworkformembersothan novelwasmethecebylementorfromthelastPreenancenoldWarInstartedbythe Philosophy''theTayita(amsmethouspeopleamingshelebelobesinthesatietheuniversalistscientis educationof[[Lakingforts]].
 \end{lstlisting}
 
 %good
-\begin{lstlisting}[caption={[Exemple 2~: des termes balisé comme dans le corpus d'origine, les crochets ouverts sont refermés]Exemple 2~: des termes balisé comme dans le corpus d'origine, les crochets ouverts sont refermés},label=gmsnn_ex2]
+\begin{lstlisting}[caption={[Exemple 2~: des termes balisés comme dans le corpus d'origine, les crochets ouverts sont refermés]Exemple 2~: des termes balisé comme dans le corpus d'origine, les crochets ouverts sont refermés},label=gmsnn_ex2]
 +EDrFuergCases,areinlesssuchasthesthealterplains.
 *In[[Stefapes]]
 *[[AcademyAwards===
@@ -35,7 +35,7 @@ Theplant-gainheditsreturnedtoaseethewarinsteast&quot;Oneofthe[ectlywouldnotbythe
 \end{lstlisting}
 \pagebreak
 %longstring + tags
-\begin{lstlisting}[caption={Exemple 3~: des termes balisé comme dans l'exemple 2, et une autre suite de carractères},label=gmsnn_ex3]
+\begin{lstlisting}[caption={Exemple 3~: des termes balisés comme dans l'exemple 2, et une autre suite de caractères},label=gmsnn_ex3]
 60447-toNewHarry}}
 Thenmainst.Rand'sintereststhe&quot;toinpassingtheEarth''s(''[[par]].
 
@@ -47,19 +47,19 @@ On[[teleofAirëejÃ£]]
 \end{lstlisting}
 
 \subsection{Manque d'espaces}\label{whitespace_problem}
-Parmi ces exemples, on remarque immédiatement le manque d'espace.
+Parmi ces exemples, on remarque immédiatement le manque de caractères d'espacement.
 
 La source de ce phénomène n'est autre qu'un problème dans le corpus source.
 La version prétraitée de ce corpus ne contenait aucun espace, donc le \gls{model} a appris une langue dans laquelle l'espace n'existe pas.
 
-C'est un problème majeur, qui a probablement eu un impact élevé sur les performances du modèle. En effet, en anglais comme dans beaucoup de langues occidentales, l'espace est un élément fondamental dans la structuration du langage écrit. Le \gls{model} a ainsi apprit une langue moins structurée, donc plus difficile à apprendre, que l'anglais.
+C'est un problème qui a probablement eu un impact élevé sur les performances du modèle. En effet, en anglais comme dans beaucoup de langues occidentales, l'espace est un élément fondamental dans la structuration du langage écrit. Le \gls{model} a ainsi appris une langue moins structurée, donc plus difficile à apprendre, que l'anglais.
 
 \subsection{Quelques éléments qui ressortent}
 Cependant, si on regarde plus en détail les exemples produits, des structures apparaissent. 
 
 Si on prend \lstinline!*[[UnitedStates|raphicsiteDirection]]! de l'exemple 2 (\autoref{gmsnn_ex2}, \autopageref{gmsnn_ex2}, ligne 8) ou 
-\lstinline![[cy:Alaska]]! et \lstinline![[no:Arni-Anchorages]]! de l'exemple 2 (\autoref{gmsnn_ex2}, \autopageref{gmsnn_ex2}, lignes 7 et 8), on a des doubles crochets, qui sont correctement ouverts puis fermés. On remarque aussi la présence de séparateurs (\lstinline!:! et \lstinline!|!). De plus, ces structure sont similaire aux annotations présentes dans le code Wikipédia.
-On peut les voir dans l'\autoref{enwik8_ex}, \autopageref{enwik8_ex}.
+\lstinline![[cy:Alaska]]! et \lstinline![[no:Arni-Anchorages]]! de l'exemple 2 (\autoref{gmsnn_ex2}, \autopageref{gmsnn_ex2}, lignes 7 et 8), on a des doubles crochets, qui sont correctement ouverts puis fermés. On remarque aussi la présence de séparateurs (\lstinline!:! et \lstinline!|!). De plus, ces structures sont similaire aux annotations présentes dans le code Wikipédia.
+On peut les voir dans le \autoref{enwik8_ex}, \autopageref{enwik8_ex}.
 
 Enfin, malgré l'absence d'espaces, on discerne de nombreux mots~:
 \begin{itemize}

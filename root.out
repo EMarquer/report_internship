@@ -66,7 +66,7 @@
 \BOOKMARK [1][-]{section.7.5}{Optimisation et am\351lioration du nouveau mod\350le}{chapter.7}% 66
 \BOOKMARK [2][-]{subsection.7.5.1}{Agr\351gation des sorties des couches}{section.7.5}% 67
 \BOOKMARK [2][-]{subsection.7.5.2}{Sauvegarde, interruption et reprise de l'entra\356nement}{section.7.5}% 68
-\BOOKMARK [2][-]{subsection.7.5.3}{Tentatives d'optimisations, fuites m\351moires et lenteur de l'entra\356nement}{section.7.5}% 69
+\BOOKMARK [2][-]{subsection.7.5.3}{Tentatives d'optimisation, fuites de m\351moire et lenteur de l'entra\356nement}{section.7.5}% 69
 \BOOKMARK [2][-]{subsection.7.5.4}{Entra\356nement par exemples simultan\351s}{section.7.5}% 70
 \BOOKMARK [2][-]{subsection.7.5.5}{Augmentation du nombre de param\350tres}{section.7.5}% 71
 \BOOKMARK [2][-]{subsection.7.5.6}{Entra\356nement couche par couche}{section.7.5}% 72
@@ -75,99 +75,101 @@
 \BOOKMARK [2][-]{subsection.7.6.1}{Exemples}{section.7.6}% 75
 \BOOKMARK [2][-]{subsection.7.6.2}{Manque d'espaces}{section.7.6}% 76
 \BOOKMARK [2][-]{subsection.7.6.3}{Quelques \351l\351ments qui ressortent}{section.7.6}% 77
-\BOOKMARK [1][-]{section.7.7}{Analyse des r\351sultats et arr\352t du projet}{chapter.7}% 78
+\BOOKMARK [1][-]{section.7.7}{Analyse des r\351sultats et suspension du projet GMSNN}{chapter.7}% 78
 \BOOKMARK [2][-]{subsection.7.7.1}{Analyse des r\351sultats}{section.7.7}% 79
 \BOOKMARK [2][-]{subsection.7.7.2}{Conclusions de l'analyse}{section.7.7}% 80
-\BOOKMARK [2][-]{subsection.7.7.3}{Arr\352t du projet et d\351but du projet suivant}{section.7.7}% 81
+\BOOKMARK [2][-]{subsection.7.7.3}{Suspension du projet et lancement du projet suivant}{section.7.7}% 81
 \BOOKMARK [0][-]{chapter.8}{Conclusions sur le projet GMSNN}{part.1}% 82
 \BOOKMARK [1][-]{section.8.1}{Retour sur le travail effectu\351}{chapter.8}% 83
 \BOOKMARK [1][-]{section.8.2}{Apport personnel du projet}{chapter.8}% 84
 \BOOKMARK [1][-]{section.8.3}{Discussion et perspectives}{chapter.8}% 85
-\BOOKMARK [2][-]{subsection.8.3.1}{Pertinence des choix et possibilit\351s d'exploration}{section.8.3}% 86
+\BOOKMARK [2][-]{subsection.8.3.1}{Possibilit\351s d'exploration de l'architecture}{section.8.3}% 86
 \BOOKMARK [2][-]{subsection.8.3.2}{Travaux similaires}{section.8.3}% 87
 \BOOKMARK [-1][-]{part.2}{II projectpapud}{}% 88
 \BOOKMARK [0][-]{chapter.9}{Pr\351sentation d'ITEA, du projet PAPUD, et de BULL}{part.2}% 89
-\BOOKMARK [1][-]{section.9.1}{Collaborateurs}{chapter.9}% 90
+\BOOKMARK [1][-]{section.9.1}{\311quipe de projet}{chapter.9}% 90
 \BOOKMARK [1][-]{section.9.2}{eureka et ITEA3}{chapter.9}% 91
-\BOOKMARK [1][-]{section.9.3}{projectpapud et cas d'utilisation BULL}{chapter.9}% 92
+\BOOKMARK [1][-]{section.9.3}{projectpapud et cas d'utilisation de Bull}{chapter.9}% 92
 \BOOKMARK [1][-]{section.9.4}{bull}{chapter.9}% 93
-\BOOKMARK [0][-]{chapter.10}{nn pour la pr\351diction de pannes}{part.2}% 94
-\BOOKMARK [1][-]{section.10.1}{Contexte}{chapter.10}% 95
-\BOOKMARK [1][-]{section.10.2}{Solution}{chapter.10}% 96
-\BOOKMARK [1][-]{section.10.3}{projectpapud}{chapter.10}% 97
-\BOOKMARK [1][-]{section.10.4}{Organisation du travail}{chapter.10}% 98
-\BOOKMARK [2][-]{subsection.10.4.1}{Organisation initiale du travail}{section.10.4}% 99
-\BOOKMARK [2][-]{subsection.10.4.2}{D\351roulement r\351el du projet}{section.10.4}% 100
-\BOOKMARK [1][-]{section.10.5}{Outils}{chapter.10}% 101
-\BOOKMARK [2][-]{subsection.10.5.1}{Gestion du code}{section.10.5}% 102
-\BOOKMARK [2][-]{subsection.10.5.2}{Python, PyTorch et Grid5000}{section.10.5}% 103
-\BOOKMARK [0][-]{chapter.11}{Donn\351es disponibles}{part.2}% 104
-\BOOKMARK [1][-]{section.11.1}{Extrait des donn\351es d'entra\356nent}{chapter.11}% 105
-\BOOKMARK [1][-]{section.11.2}{Pr\351traitement des donn\351es}{chapter.11}% 106
-\BOOKMARK [2][-]{subsection.11.2.1}{Traitement des codes hexad\351cimaux}{section.11.2}% 107
-\BOOKMARK [0][-]{chapter.12}{Description du mod\350le \340 r\351aliser}{part.2}% 108
-\BOOKMARK [1][-]{section.12.1}{Utilisation d'un r\351seau de neurones artificiels basique}{chapter.12}% 109
-\BOOKMARK [1][-]{section.12.2}{R\351duction de la taille de l'entr\351e}{chapter.12}% 110
-\BOOKMARK [1][-]{section.12.3}{Repr\351sentation de l'architecture}{chapter.12}% 111
-\BOOKMARK [1][-]{section.12.4}{Lien avec l'\351tat de l'art}{chapter.12}% 112
-\BOOKMARK [0][-]{chapter.13}{R\351alisation}{part.2}% 113
-\BOOKMARK [1][-]{section.13.1}{D\351finition du mod\350le}{chapter.13}% 114
-\BOOKMARK [1][-]{section.13.2}{Impl\351mentation du mod\350le et transfert des outils de base}{chapter.13}% 115
-\BOOKMARK [2][-]{subsection.13.2.1}{Premiers r\351sultats}{section.13.2}% 116
-\BOOKMARK [1][-]{section.13.3}{Adaptation du syst\350me de gestion de corpus au volume de donn\351es}{chapter.13}% 117
-\BOOKMARK [1][-]{section.13.4}{Entra\356nement par batchs simultan\351s}{chapter.13}% 118
-\BOOKMARK [1][-]{section.13.5}{Changement d'unit\351 de mesure pour \351valuer la qualit\351 du mod\350le}{chapter.13}% 119
-\BOOKMARK [2][-]{subsection.13.5.1}{Pr\351cision de base}{section.13.5}% 120
-\BOOKMARK [1][-]{section.13.6}{Analyse d'une \351trange variation de performance dans l'apprentissage}{chapter.13}% 121
-\BOOKMARK [1][-]{section.13.7}{Optimisation du taux d'apprentissage}{chapter.13}% 122
-\BOOKMARK [1][-]{section.13.8}{Mise en place d'un syst\350me de gestion de corpus plus puissant}{chapter.13}% 123
-\BOOKMARK [2][-]{subsection.13.8.1}{Fichiers multiples}{section.13.8}% 124
-\BOOKMARK [2][-]{subsection.13.8.2}{Pr\351traitement modulaire}{section.13.8}% 125
-\BOOKMARK [2][-]{subsection.13.8.3}{Processus multiples}{section.13.8}% 126
-\BOOKMARK [2][-]{subsection.13.8.4}{Performances}{section.13.8}% 127
-\BOOKMARK [0][-]{chapter.14}{Conclusions sur le projet PAPUD}{part.2}% 128
-\BOOKMARK [1][-]{section.14.1}{Retour sur le travail effectu\351}{chapter.14}% 129
-\BOOKMARK [1][-]{section.14.2}{Apport personnel du projet}{chapter.14}% 130
-\BOOKMARK [1][-]{section.14.3}{Discussion et perspectives}{chapter.14}% 131
-\BOOKMARK [2][-]{subsection.14.3.1}{Continuation du travail}{section.14.3}% 132
-\BOOKMARK [0][-]{chapter.15}{Bilan du stage}{part.2}% 133
-\BOOKMARK [1][-]{section.15.1}{Bilan du travail effectu\351}{chapter.15}% 134
-\BOOKMARK [1][-]{section.15.2}{Bilan professionnel}{chapter.15}% 135
-\BOOKMARK [1][-]{section.15.3}{Bilan personnel}{chapter.15}% 136
-\BOOKMARK [0][-]{chapter.16}{Bibliographie / Webographie}{part.2}% 137
-\BOOKMARK [0][-]{chapter.17}{Listes des tables, des figures et des fragments de code}{part.2}% 138
-\BOOKMARK [0][-]{chapter.18}{Glossaire, acronymes et noms d'entit\351s}{part.2}% 139
-\BOOKMARK [0][-]{part*.16}{Annexes}{part.2}% 140
-\BOOKMARK [0][-]{appendix.A}{Rapports d'avancement du projet GMSNN}{part.2}% 141
-\BOOKMARK [1][-]{section.A.1}{Informations sur les rapports contenus dans la pr\351sente annexe}{appendix.A}% 142
-\BOOKMARK [1][-]{section.A.2}{\311tude des probl\350mes de m\351moire}{appendix.A}% 143
-\BOOKMARK [1][-]{section.A.3}{Sauvegarde du mod\350le}{appendix.A}% 144
-\BOOKMARK [1][-]{section.A.4}{Solution tentative pour les fuites m\351moires}{appendix.A}% 145
-\BOOKMARK [1][-]{section.A.5}{Probl\350mes th\351oriques li\351s \340 l'entra\356nement batch par batch}{appendix.A}% 146
-\BOOKMARK [1][-]{section.A.6}{Tentative de r\351duction du temps de calcul par utilisation de l'algorithme d'entra\356nement \253 Truncated BPTT \273}{appendix.A}% 147
-\BOOKMARK [1][-]{section.A.7}{Entra\356nement couche par couche}{appendix.A}% 148
-\BOOKMARK [1][-]{section.A.8}{Premier test du mod\350le r\351impl\351ment\351}{appendix.A}% 149
-\BOOKMARK [1][-]{section.A.9}{Premier entra\356nement complet du mod\350le r\351impl\351ment\351}{appendix.A}% 150
-\BOOKMARK [1][-]{section.A.10}{Premier entra\356nement \340 50 \351poques du mod\350le r\351impl\351ment\351}{appendix.A}% 151
-\BOOKMARK [1][-]{section.A.11}{Premier test du mod\350le multi-\351chelles}{appendix.A}% 152
-\BOOKMARK [1][-]{section.A.12}{Comparaison des strat\351gies de fusion des r\351sultats des diff\351rentes couches}{appendix.A}% 153
-\BOOKMARK [1][-]{section.A.13}{Test des effets du changement de taille des paquets \(batch\)}{appendix.A}% 154
-\BOOKMARK [1][-]{section.A.14}{Entra\356nement sur le corpus complet avec beaucoup de temps allou\351}{appendix.A}% 155
-\BOOKMARK [1][-]{section.A.15}{Changement de strat\351gie de gestion d'historique}{appendix.A}% 156
-\BOOKMARK [1][-]{section.A.16}{Test de l'impl\351mentation des batchs}{appendix.A}% 157
-\BOOKMARK [1][-]{section.A.17}{Test des performances des batchs}{appendix.A}% 158
-\BOOKMARK [1][-]{section.A.18}{Test des performances des batchs sur 50 \351poques}{appendix.A}% 159
-\BOOKMARK [1][-]{section.A.19}{Test des performances des diff\351rentes am\351liorations}{appendix.A}% 160
-\BOOKMARK [0][-]{appendix.B}{Rapports d'avancement du projet PAPUD}{part.2}% 161
-\BOOKMARK [1][-]{section.B.1}{Informations sur les documents contenus dans la pr\351sente annexe}{appendix.B}% 162
-\BOOKMARK [1][-]{section.B.2}{Informations g\351n\351rales}{appendix.B}% 163
-\BOOKMARK [1][-]{section.B.3}{R\351sultats de l'impl\351mentation basique}{appendix.B}% 164
-\BOOKMARK [1][-]{section.B.4}{Paquets \(batchs\) simultan\351s}{appendix.B}% 165
-\BOOKMARK [1][-]{section.B.5}{Analyse du pic de performance}{appendix.B}% 166
-\BOOKMARK [1][-]{section.B.6}{Rapport de la r\351union avec les autres membres du projet}{appendix.B}% 167
-\BOOKMARK [1][-]{section.B.7}{Optimisation du taux d'apprentissage}{appendix.B}% 168
-\BOOKMARK [1][-]{section.B.8}{Effets de l'optimisation du taux d'apprentissage}{appendix.B}% 169
-\BOOKMARK [1][-]{section.B.9}{Taille de batch binaire}{appendix.B}% 170
-\BOOKMARK [1][-]{section.B.10}{Performances du lecteur de corpus multi-fichiers multi-processus}{appendix.B}% 171
-\BOOKMARK [0][-]{appendix.C}{Copie de la convention de stage}{part.2}% 172
-\BOOKMARK [0][-]{appendix.D}{Copie de l'avenant \340 la convention de stage}{part.2}% 173
+\BOOKMARK [2][-]{subsection.9.4.1}{Pr\351sentation de l'entreprise}{section.9.4}% 94
+\BOOKMARK [2][-]{subsection.9.4.2}{Secteurs d'activit\351}{section.9.4}% 95
+\BOOKMARK [0][-]{chapter.10}{nn pour la pr\351diction de pannes}{part.2}% 96
+\BOOKMARK [1][-]{section.10.1}{Contexte}{chapter.10}% 97
+\BOOKMARK [1][-]{section.10.2}{Solution}{chapter.10}% 98
+\BOOKMARK [1][-]{section.10.3}{projectpapud}{chapter.10}% 99
+\BOOKMARK [1][-]{section.10.4}{Organisation du travail}{chapter.10}% 100
+\BOOKMARK [2][-]{subsection.10.4.1}{Organisation initiale du travail}{section.10.4}% 101
+\BOOKMARK [2][-]{subsection.10.4.2}{D\351roulement du projet}{section.10.4}% 102
+\BOOKMARK [1][-]{section.10.5}{Outils}{chapter.10}% 103
+\BOOKMARK [2][-]{subsection.10.5.1}{Gestion du code}{section.10.5}% 104
+\BOOKMARK [2][-]{subsection.10.5.2}{Python, PyTorch et Grid5000}{section.10.5}% 105
+\BOOKMARK [0][-]{chapter.11}{Donn\351es disponibles}{part.2}% 106
+\BOOKMARK [1][-]{section.11.1}{Extrait des donn\351es d'entra\356nement}{chapter.11}% 107
+\BOOKMARK [1][-]{section.11.2}{Pr\351traitement des donn\351es}{chapter.11}% 108
+\BOOKMARK [2][-]{subsection.11.2.1}{Traitement des codes hexad\351cimaux}{section.11.2}% 109
+\BOOKMARK [0][-]{chapter.12}{Description du mod\350le \340 r\351aliser}{part.2}% 110
+\BOOKMARK [1][-]{section.12.1}{Utilisation d'un r\351seau de neurones artificiels basique}{chapter.12}% 111
+\BOOKMARK [1][-]{section.12.2}{R\351duction de la taille de l'entr\351e}{chapter.12}% 112
+\BOOKMARK [1][-]{section.12.3}{Repr\351sentation de l'architecture}{chapter.12}% 113
+\BOOKMARK [1][-]{section.12.4}{Lien avec l'\351tat de l'art}{chapter.12}% 114
+\BOOKMARK [0][-]{chapter.13}{R\351alisation}{part.2}% 115
+\BOOKMARK [1][-]{section.13.1}{D\351finition du mod\350le}{chapter.13}% 116
+\BOOKMARK [1][-]{section.13.2}{Impl\351mentation du mod\350le et transfert des outils de base}{chapter.13}% 117
+\BOOKMARK [2][-]{subsection.13.2.1}{Premiers r\351sultats}{section.13.2}% 118
+\BOOKMARK [1][-]{section.13.3}{Adaptation du syst\350me de gestion de corpus au volume de donn\351es}{chapter.13}% 119
+\BOOKMARK [1][-]{section.13.4}{Entra\356nement par batchs simultan\351s}{chapter.13}% 120
+\BOOKMARK [1][-]{section.13.5}{Changement d'unit\351 de mesure pour \351valuer la qualit\351 du mod\350le}{chapter.13}% 121
+\BOOKMARK [2][-]{subsection.13.5.1}{Pr\351cision de base}{section.13.5}% 122
+\BOOKMARK [1][-]{section.13.6}{Analyse d'une \351trange variation de performance dans l'apprentissage}{chapter.13}% 123
+\BOOKMARK [1][-]{section.13.7}{Optimisation du taux d'apprentissage}{chapter.13}% 124
+\BOOKMARK [1][-]{section.13.8}{Mise en place d'un syst\350me de gestion de corpus plus puissant}{chapter.13}% 125
+\BOOKMARK [2][-]{subsection.13.8.1}{Fichiers multiples}{section.13.8}% 126
+\BOOKMARK [2][-]{subsection.13.8.2}{Pr\351traitement modulaire}{section.13.8}% 127
+\BOOKMARK [2][-]{subsection.13.8.3}{Processus multiples}{section.13.8}% 128
+\BOOKMARK [2][-]{subsection.13.8.4}{Performances}{section.13.8}% 129
+\BOOKMARK [0][-]{chapter.14}{Conclusions sur le projet PAPUD}{part.2}% 130
+\BOOKMARK [1][-]{section.14.1}{Retour sur le travail effectu\351}{chapter.14}% 131
+\BOOKMARK [1][-]{section.14.2}{Apport personnel du projet}{chapter.14}% 132
+\BOOKMARK [1][-]{section.14.3}{Discussion et perspectives}{chapter.14}% 133
+\BOOKMARK [2][-]{subsection.14.3.1}{Continuation du travail}{section.14.3}% 134
+\BOOKMARK [0][-]{chapter.15}{Bilan du stage}{part.2}% 135
+\BOOKMARK [1][-]{section.15.1}{Bilan du travail effectu\351}{chapter.15}% 136
+\BOOKMARK [1][-]{section.15.2}{Bilan professionnel}{chapter.15}% 137
+\BOOKMARK [1][-]{section.15.3}{Bilan personnel}{chapter.15}% 138
+\BOOKMARK [0][-]{chapter.16}{Bibliographie / Webographie}{part.2}% 139
+\BOOKMARK [0][-]{chapter.17}{Listes des tables, des figures et des fragments de code}{part.2}% 140
+\BOOKMARK [0][-]{chapter.18}{Glossaire, acronymes et noms d'entit\351s}{part.2}% 141
+\BOOKMARK [0][-]{part*.16}{Annexes}{part.2}% 142
+\BOOKMARK [0][-]{appendix.A}{Rapports d'avancement du projet GMSNN}{part.2}% 143
+\BOOKMARK [1][-]{section.A.1}{Informations sur les rapports contenus dans la pr\351sente annexe}{appendix.A}% 144
+\BOOKMARK [1][-]{section.A.2}{\311tude des probl\350mes de m\351moire}{appendix.A}% 145
+\BOOKMARK [1][-]{section.A.3}{Sauvegarde du mod\350le}{appendix.A}% 146
+\BOOKMARK [1][-]{section.A.4}{Solution tentative pour les fuites m\351moires}{appendix.A}% 147
+\BOOKMARK [1][-]{section.A.5}{Probl\350mes th\351oriques li\351s \340 l'entra\356nement batch par batch}{appendix.A}% 148
+\BOOKMARK [1][-]{section.A.6}{Tentative de r\351duction du temps de calcul par utilisation de l'algorithme d'entra\356nement \253 Truncated BPTT \273}{appendix.A}% 149
+\BOOKMARK [1][-]{section.A.7}{Entra\356nement couche par couche}{appendix.A}% 150
+\BOOKMARK [1][-]{section.A.8}{Premier test du mod\350le r\351impl\351ment\351}{appendix.A}% 151
+\BOOKMARK [1][-]{section.A.9}{Premier entra\356nement complet du mod\350le r\351impl\351ment\351}{appendix.A}% 152
+\BOOKMARK [1][-]{section.A.10}{Premier entra\356nement \340 50 \351poques du mod\350le r\351impl\351ment\351}{appendix.A}% 153
+\BOOKMARK [1][-]{section.A.11}{Premier test du mod\350le multi-\351chelles}{appendix.A}% 154
+\BOOKMARK [1][-]{section.A.12}{Comparaison des strat\351gies de fusion des r\351sultats des diff\351rentes couches}{appendix.A}% 155
+\BOOKMARK [1][-]{section.A.13}{Test des effets du changement de taille des paquets \(batch\)}{appendix.A}% 156
+\BOOKMARK [1][-]{section.A.14}{Entra\356nement sur le corpus complet avec beaucoup de temps allou\351}{appendix.A}% 157
+\BOOKMARK [1][-]{section.A.15}{Changement de strat\351gie de gestion d'historique}{appendix.A}% 158
+\BOOKMARK [1][-]{section.A.16}{Test de l'impl\351mentation des batchs}{appendix.A}% 159
+\BOOKMARK [1][-]{section.A.17}{Test des performances des batchs}{appendix.A}% 160
+\BOOKMARK [1][-]{section.A.18}{Test des performances des batchs sur 50 \351poques}{appendix.A}% 161
+\BOOKMARK [1][-]{section.A.19}{Test des performances des diff\351rentes am\351liorations}{appendix.A}% 162
+\BOOKMARK [0][-]{appendix.B}{Rapports d'avancement du projet PAPUD}{part.2}% 163
+\BOOKMARK [1][-]{section.B.1}{Informations sur les documents contenus dans la pr\351sente annexe}{appendix.B}% 164
+\BOOKMARK [1][-]{section.B.2}{Informations g\351n\351rales}{appendix.B}% 165
+\BOOKMARK [1][-]{section.B.3}{R\351sultats de l'impl\351mentation basique}{appendix.B}% 166
+\BOOKMARK [1][-]{section.B.4}{Paquets \(batchs\) simultan\351s}{appendix.B}% 167
+\BOOKMARK [1][-]{section.B.5}{Analyse du pic de performance}{appendix.B}% 168
+\BOOKMARK [1][-]{section.B.6}{Rapport de la r\351union avec les autres membres du projet}{appendix.B}% 169
+\BOOKMARK [1][-]{section.B.7}{Optimisation du taux d'apprentissage}{appendix.B}% 170
+\BOOKMARK [1][-]{section.B.8}{Effets de l'optimisation du taux d'apprentissage}{appendix.B}% 171
+\BOOKMARK [1][-]{section.B.9}{Taille de batch binaire}{appendix.B}% 172
+\BOOKMARK [1][-]{section.B.10}{Performances du lecteur de corpus multi-fichiers multi-processus}{appendix.B}% 173
+\BOOKMARK [0][-]{appendix.C}{Copie de la convention de stage}{part.2}% 174
+\BOOKMARK [0][-]{appendix.D}{Copie de l'avenant \340 la convention de stage}{part.2}% 175
