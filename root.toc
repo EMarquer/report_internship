@@ -307,6 +307,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {16}Bibliographie / Webographie}{75}{chapter.16}
 \defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Glossaire}{81}{chapter.16}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Annexes}{83}{part*.18}
 \defcounter {refsection}{0}\relax 
 \etoc@depthtag {mtappendix}
