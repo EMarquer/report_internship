@@ -4,7 +4,7 @@ La troisième partie du projet a été la réalisation d'un prototype de l'archi
 
 L'architecture du \gls{gmsnn} est celle du \gls{model} ré-implémenté, mais le \gls{rnn} y est remplacé par le \gls{module_gmsnn} (voir figure \ref{fig:reimplement_gmsnn}, \autopageref{fig:reimplement_gmsnn}). C'est sur ce nouveau \gls{module_gmsnn} que le reste du travail au cours du \gls{project_gmsnn} a été effectué.
 
-De la même façon qu'avec la version ré-implémentée, le modèle prend en entrée des caractères, et produit des probabilités sur quel caractère apparaîtra ensuite.
+De la même façon qu'avec la version ré-implémentée, le modèle prend en entrée des caractères, et produit des probabilités sur le caractère qui apparaîtra ensuite.
 
 Ce prototype a permis de mettre en place les mécanismes de base du modèle.
 
@@ -15,12 +15,12 @@ Chaque échelle qui compose le \gls{module_gmsnn} est un \gls{lstm}, qui est le 
 \begin{figure}[ht]
 	\centering
 	\scalebox{1}{\input{plots/base_gmsnn_data}}
-	\caption[Architecture du \glsentrytext{model} ré-implémenté]{Architecture du \gls{model} ré-implémenté}\label{fig:reimplement_gmsnn}
+	\caption[Architecture du \glsentrytext{model} GMSNN]{Architecture du \glsentrytext{model} GMSNN}\label{fig:reimplement_gmsnn}
 \end{figure} 
 
 \pagebreak
-\subsection{Transmission d'information}
-Pour rappel, la transmission d'information se fait d'une couche donnée à la couche immédiatement supérieure.
+\subsection{Transmission de l'information}
+Pour rappel, la transmission de l'information se fait d'une couche donnée à la couche immédiatement supérieure.
 Cette transmission se fait périodiquement, en fonction d'un nombre appelé fréquence de transmission.
 
 %Par exemple, pour fréquence de transmission de $3$~: 

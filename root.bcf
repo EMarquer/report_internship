@@ -2150,18 +2150,20 @@
     <bcf:citekey order="20">Xiao2018Jan</bcf:citekey>
     <bcf:citekey order="21">hierachical_rnn</bcf:citekey>
     <bcf:citekey order="22">wiki_eureka</bcf:citekey>
-    <bcf:citekey order="23">about_papud</bcf:citekey>
-    <bcf:citekey order="24">bull_produits</bcf:citekey>
-    <bcf:citekey order="25">about_papud</bcf:citekey>
-    <bcf:citekey order="26">pooling_simple</bcf:citekey>
-    <bcf:citekey order="27">LearningRateOptimisation</bcf:citekey>
-    <bcf:citekey order="28">pep483</bcf:citekey>
-    <bcf:citekey order="28">pep484</bcf:citekey>
+    <bcf:citekey order="23">ce_eureka</bcf:citekey>
+    <bcf:citekey order="24">fr_eureka</bcf:citekey>
+    <bcf:citekey order="25">eureka</bcf:citekey>
+    <bcf:citekey order="26">about_papud</bcf:citekey>
+    <bcf:citekey order="27">bull_produits</bcf:citekey>
+    <bcf:citekey order="28">about_papud</bcf:citekey>
+    <bcf:citekey order="29">delivrable</bcf:citekey>
+    <bcf:citekey order="30">pooling_simple</bcf:citekey>
+    <bcf:citekey order="31">LearningRateOptimisation</bcf:citekey>
+    <bcf:citekey order="32">pep483</bcf:citekey>
+    <bcf:citekey order="32">pep484</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
-    <bcf:citekey order="29">bug</bcf:citekey>
-    <bcf:citekey order="30">wiki_md</bcf:citekey>
-    <bcf:citekey order="31">wiki_eureka</bcf:citekey>
-    <bcf:citekey order="32">bptt-intro</bcf:citekey>
+    <bcf:citekey order="33">bug</bcf:citekey>
+    <bcf:citekey order="34">bptt-intro</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global/" type="entry" sortscheme="none" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

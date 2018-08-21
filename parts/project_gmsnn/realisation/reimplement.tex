@@ -2,7 +2,7 @@
 \subsection{Travail effectué}\label{subsec:codebase}
 La deuxième partie du projet a été la prise en main de la base de code fournie.
 Elle contient une implémentation \gls{soa} d'un \gls{lm} au niveau du caractère, sur laquelle le maître de stage avait commencé à travailler.
-Le code d'origine provient du dépôt \og awd-lstm-lm\fg{}\autocite{awd_source}, qui contenait un d'un \gls{lm} au niveau du caractère \gls{soa}.
+Le code d'origine provient du dépôt \og awd-lstm-lm\fg{}\autocite{awd_source}, qui contenait plusieurs \glspl{lm} \glspl{soa}.
 
 Au début du stage, la base de code contenait~:
 \begin{itemize}
@@ -18,15 +18,15 @@ Pour cela, nous avons déchiffré et re-documenté le code, qui comportait des f
 Après le déchiffrage, il a fallu comprendre et corriger les fragments défectueux.
 
 \pagebreak
-\subsection[\Glsentrytext{model} ré-implémenté simplifiée]{\Gls{model} ré-implémenté simplifiée} 
-Le \gls{model} simplifiée prend en entrée des caractères, et produit des probabilités sur quel caractère apparaîtra ensuite.
+\subsection[\Glsentrytext{model} ré-implémenté simplifié]{\Glsentrytext{model} ré-implémenté simplifié} 
+Le \gls{model} simplifié prend en entrée des caractères, et produit des probabilités sur le prochain caractère.
 Le \gls{model} est composé d'un module encodant les caractères, d'un \gls{rnn} particulier (un \gls{lstm}) et d'un module produisant une distribution de probabilités sur les caractères connus. La figure \ref{fig:reimplement}, (\autopageref{fig:reimplement}) représente cette architecture.
 
-Le module d'encodage des caractères, appelé \foreign{embedding layer} en anglais (littéralement \og couche d'inclusion\fg{}), produit une représentation apprise de chaque caractère sous forme de \gls{tensor}. Ce \gls{tensor} est appelé \gls{embedding}. Ce module, entraîné, peut apprendre des propriétés spécifiques à chaque caractère. Par exemple ce module peut apprendre que tel caractère est une consonne et qu'un autre est un caractère de ponctuation. \label{def:embedding}
+Le module d'encodage des caractères, appelé \foreign{embedding layer} en anglais (littéralement \og couche d'inclusion\fg{}), produit une représentation apprise de chaque caractère sous forme de \gls{tensor}. Ce \gls{tensor} est appelé \gls{embedding}. Ce module, entraîné, peut apprendre certaines propriétés spécifiques à chaque caractère. Par exemple ce module peut apprendre que tel caractère est une consonne et qu'un autre est un caractère de ponctuation. \label{def:embedding}
 
 Le \gls{rnn} traite les caractères sous forme de séquence, et peut ainsi apprendre la structure des mots, la syntaxe et d'autres propriétés du langage.
 
-Le module produisant la distribution de probabilité est un module linéaire\footnote{\og Module linéaire \fg{} est le nom donné aux modules composé d'un \gls{nn} intégralement connecté. Un réseau de neurones intégralement connécté signifie que chaque neurone d'une couche est connecté avec tous les neurones de la couche précédente. Il s'agit de l'architecture de \gls{nn} la plus simple.\label{def:fully_connected}\label{def:lin_module}}.
+Le module produisant la distribution de probabilité est un module linéaire\footnote{\og Module linéaire \fg{} est le nom donné aux modules composé d'un \gls{nn} intégralement connecté. Un réseau de neurones intégralement connécté signifie que chaque neurone d'une couche est connecté avec tous les neurones de la couche précédente. Il s'agit de l'architecture de \gls{nn} la plus simple (voir la \autoref{def:fully_connected}, \autopageref{def:fully_connected}).\label{def:fully_connected_2}\label{def:lin_module_2}}.
 Il transforme les informations produites par le réseau de neurones en probabilité qu'un des caractères soit le prochain caractère de la séquence.
 
 Les rapports sur le \gls{model} ré-implémenté sont disponibles aux annexes \ref{subsec:testreimp_1} (\autopageref{subsec:testreimp_1}), \ref{subsec:testreimp_2} (\autopageref{subsec:testreimp_2}) et \ref{subsec:testreimp_3} (\autopageref{subsec:testreimp_3}). 

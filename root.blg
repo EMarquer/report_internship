@@ -1,20 +1,15 @@
 [0] Config.pm:354> INFO - This is Biber 2.7 (beta)
 [0] Config.pm:357> INFO - Logfile is 'root.blg'
-[24] biber:303> INFO - === dim. août 19, 2018, 03:45:44
+[24] biber:303> INFO - === mar. août 21, 2018, 18:56:29
 [35] Biber.pm:360> INFO - Reading 'root.bcf'
-[87] Biber.pm:833> INFO - Using all citekeys in bib section 0
-[97] Biber.pm:3671> INFO - Processing section 0
-[110] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/merge.bib' for section 0
-[113] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[88] Biber.pm:833> INFO - Using all citekeys in bib section 0
+[100] Biber.pm:3671> INFO - Processing section 0
+[112] Biber.pm:3841> INFO - Looking for bibtex format file 'bibs/merge.bib' for section 0
+[114] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
 [122] bibtex.pm:1281> INFO - Found BibTeX data source 'bibs/merge.bib'
-[159] Utils.pm:164> WARN - month field 'Mar' in entry 'DeepLoriaG5k' is not an integer - this will probably not sort properly.
-[163] Utils.pm:164> WARN - month field 'Apr' in entry 'TutoIbadaG5k' is not an integer - this will probably not sort properly.
-[165] Utils.pm:164> WARN - month field 'Mar' in entry 'BibEntry2018Mar' is not an integer - this will probably not sort properly.
-[176] Utils.pm:164> WARN - month field 'Apr' in entry 'g5k' is not an integer - this will probably not sort properly.
 [211] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
 [211] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
 [211] Biber.pm:3500> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'fr-FR'
 [211] Biber.pm:3506> INFO - No sort tailoring available for locale 'fr-FR'
-[235] bbl.pm:608> INFO - Writing 'root.bbl' with encoding 'UTF-8'
-[242] bbl.pm:712> INFO - Output to root.bbl
-[242] Biber.pm:110> INFO - WARNINGS: 4
+[237] bbl.pm:608> INFO - Writing 'root.bbl' with encoding 'UTF-8'
+[243] bbl.pm:712> INFO - Output to root.bbl

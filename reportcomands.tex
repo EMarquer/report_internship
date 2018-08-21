@@ -23,7 +23,7 @@
 \usepackage[backend=biber,backref=true,hyperref=true,sorting=none,citestyle=numeric,block=ragged]{biblatex}%,sorting=nyt, autocite=footnote
 \usepackage{csquotes}
 \usepackage{etoc}
-\usepackage[xindy,acronym,section,style=altlist,nopostdot]{glossaries}%nonumberlist%altlist%long3colheader%nopostdot
+\usepackage[xindy,acronym,section=chapter,style=altlist,nopostdot]{glossaries}%nonumberlist%altlist%long3colheader%nopostdot
 \setacronymstyle{long-short-desc}
 \usepackage{array}
 \usepackage{tabularx}
@@ -31,9 +31,7 @@
 \renewcommand{\seename}{voir aussi}
 \newcommand{\foreign}[1]{\emph{#1}}
 
-\renewcommand*{\glossaryentrynumbers}[1]{\space p. #1}
-
-\newcommand*{\defref}[1]{Défini \autoref{#1} (\autopageref{#1}).}
+\newcommand*{\defref}[1]{Défini \autoref{#1} (\autopageref{#1}). \hspace{0.5em}}
 
 \newcommand{\newglos}[3]
 {%
@@ -68,7 +66,8 @@
 \newcommand{\listsname}{Listes des tables, des figures et des fragments de code}
 \newcommand{\lists}{
 	\clearpage
-	\chapter{\listsname}
+	\chapter*{\listsname}
+	\addcontentsline{toc}{chapter}{\listsname}
 	\setcounter{tocdepth}{2}
 	\section*{\listtablename}
 	\@starttoc{lot}
@@ -78,16 +77,48 @@
 	\@starttoc{lol}
 }
 
+\newglossarystyle{gls_local}{%
+	%\setglossarystyle{altlist}%
+	%\setglossarystyle{long3col}%
+	%\setglossarystyle{longraggedheader}%
+	%\setglossarystyle{mcolindexgroup}%
+	\setglossarystyle{indexgroup}%
+	%\setglossarystyle{treegroup}%
+	%\setglossarystyle{longragged}%
+	%\renewcommand*\glossaryentryfield[5]{%
+	%	\textbf{\glstarget{##1}{##2}} X & \makefirstuc{##4}##3\glspostdescription\space & ##5\tabularnewline
+	%}
+	%
+	\renewcommand*{\glossaryentrynumbers}[1]{\space p. ##1}%
+}
+
 \newcommand{\termsname}{Glossaire, acronymes et noms d'entités}
 \newcommand{\terms}{
 	\clearpage
-	\chapter{\termsname}
-	\printnoidxglossary[type=main]
-	\newpage
-	\printnoidxglossary[type=\acronymtype]
-	\newpage
-	\printnoidxglossary[type=entity]
+	%\chapter{\termsname}
+	\printnoidxglossary[type=main, style=gls_local]
+	%\printglossaries[type=main]
+	%\newpage
+	%\printnoidxglossary[type=\acronymtype]
+	%\newpage
+	%\printnoidxglossary[type=entity]
 }
+
+\newglossarystyle{acronym_long3col}{%
+	\setglossarystyle{long3col}%
+	%
+	\renewenvironment{theglossary}%
+	{\begin{longtable}[l]{@{}p{0.2\hsize}p{0.7\hsize}p{0.01\hsize}@{}}}%
+		{\end{longtable}}%
+	\renewcommand{\glossentry}[2]{%
+		\glstarget{##1}{\glossentryname{##1}}%
+		& \glossentrydesc{##1}%
+		\tabularnewline % end of row
+	}%
+}
+\newcommand{\abrevs}
+{\clearpage\printnoidxglossary[type=\acronymtype, style=acronym_long3col, nonumberlist]}
+%{\clearpage\printglossaries[type=\acronymtype]}
 \makeatother
 
 \newcommand{\setlistingname}[3]{%

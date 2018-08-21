@@ -10,7 +10,7 @@ Il s'agit de~:
 \end{itemize}
 
 %\hspace{1em}
-\subsubsection{Consommation de mémoire et de temps de calcul accrue}
+\subsubsection{Consommation accrue de mémoire et de temps de calcul}
 Un effet direct des optimisations testées est l'augmentation de la consommation de mémoire.
 
 Cette consommation accrue a causé le plantage\footnote{Un plantage en informatique est l'arrêt d'un programme causé par un dysfonctionnement.} de plusieurs tests, révélant la présence de fuites critiques de mémoire.
@@ -21,7 +21,7 @@ Un premier correctif a fourni une amélioration notable mais insuffisante.
 Il remplaçait le \gls{lstm} de chaque couche (voir \autoref{def:lstm_2}, \autopageref{def:lstm_2}) par un \gls{rnn} basique, moins gourmand. Cela permettait aussi d'éliminer une redondance entre l'architecture \gls{lstm} et l'architecture \gls{gmsnn}.
 
 \subsubsection{Estimation de la consommation normale du modèle}
-La première étape, qui est détaillée dans l'annexe \ref{subsec:memuse} (\autopageref{subsec:memuse}), a été d'estimer l'usage normal de la mémoire (sans fuite), et d'isoler les \glspl{parameter} qui ont le plus d'impact sur la consommation mémoire.
+La première étape, qui est détaillée dans l'annexe \ref{subsec:memuse} (\autopageref{subsec:memuse}), a été d'estimer l'usage normal de la mémoire (sans fuite), et d'isoler les \glspl{parameter} qui ont le plus d'impact sur la consommation de mémoire.
 Ceci a confirmé que l'explosion de la consommation n'était pas due à l'architecture en elle-même et qu'il s'agissait bien d'une anomalie dans le fonctionnement du programme.
 
 \subsubsection{Résolution des fuites}
@@ -36,10 +36,10 @@ Le rapport dans l'annexe \ref{subsec:memleak} (\autopageref{subsec:memleak}) pr�
 \subsubsection{Conclusion}
 Le problème de la fuite de mémoire a été résolu et, avec lui, celui de la lenteur de l'entraînement.
 On peut déplorer de ne pas avoir analysé plus en profondeur cet étrange lien entre la mémoire et le temps d'entraînement.
-Cependant, la résolution des fuites de mémoire et de la lenteur de l'entraînement était l'objectif principal de cette étape, et l'optimisation du \gls{module_gmsnn} a pu reprendre.
+Cependant, résoudre les problèmes de fuites de mémoire et de lenteur de l'entraînement était l'objectif principal de cette étape, et l'optimisation du \gls{module_gmsnn} a pu reprendre.
 
 On notera l'ampleur de l'optimisation par rapport à la version initiale~:
 \begin{itemize}
-	\item le temps de d'entraînement a été réduit par un facteur 5~000 (de plus de 400~h à environ 5~min pour une époque)~;
+	\item le temps d'entraînement a été réduit par un facteur 5~000 (de plus de 400~h à environ 5~min pour une époque)~;
 	\item la consommation de mémoire est passée d'une utilisation en constante augmentation, dépassant les 6~GiB par époque, à une consommation constante inférieure à 200~MiB.
 \end{itemize}\vspace{1em}

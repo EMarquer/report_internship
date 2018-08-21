@@ -17,16 +17,16 @@ Elle est souvent couplée à un entraînement simultané sur plusieurs \glspl{ba
 Un entraînement par \glspl{batch} parallèles permet de calculer le résultat de plusieurs exemples simultanément.
 On calcule ensuite la différence de chaque résultat avec le résultat attendu correspondant.
 Enfin, on met à jour le \gls{model} en fonction des différences observées sur l'ensemble des \glspl{batch}.
-Au final, les calculs des résultat sont parallélisés, et le coût de la mise à jour est mis en commun entre les \glspl{batch}.
+Au final, les calculs des résultats sont parallélisés, et le coût de la mise à jour est mis en commun entre les \glspl{batch}.
 
 Le temps de calcul est ainsi réduit drastiquement et la qualité de l'entraînement est augmentée, au prix d'une plus grande utilisation de la mémoire et de la puissance de calcul.
 
-La version de l'algorithme de parallélisation utilisé est similaire à celle décrite dans l'article \autocite{batch_parallel}. Elle est gérée nativement par \gls{pytorch}.
+La version de l'algorithme de parallélisation utilisée est similaire à celle décrite dans l'article~\autocite{batch_parallel}. Elle est gérée nativement par \gls{pytorch}.
 
 \subsubsection{Conflit entre les \glspl{batch} parallèles et l'architecture \gls{gmsnn}}
-Cependant, le découpage en \glspl{batch} pose un problème majeur avec l'architecture \gls{gmsnn}~: elle est basée sur la continuité des exemples fournis, et l'utilisation de \glspl{batch} brise la continuité en introduisant un parallélisme.
+Cependant, le découpage en \glspl{batch} pose un problème majeur avec l'architecture \gls{gmsnn}~: cette dernière est basée sur la continuité des exemples fournis, et l'utilisation de \glspl{batch} brise la continuité en introduisant un parallélisme.
 
-Une analyse approfondie a permis d'établir une méthode pour résoudre ou écarter la majorité des aspect du problème. Après consultation, nous avons décidé d'utiliser l'entraînement par \glspl{batch} malgré les problèmes non encore résolus.
+Une analyse approfondie a permis d'établir une méthode pour résoudre ou écarter la majorité des aspects du problème. Après consultation, nous avons décidé d'utiliser l'entraînement par \glspl{batch} malgré les problèmes non encore résolus.
 
 Le rapport de l'annexe \ref{subsec:batch} (\autopageref{subsec:batch}) contient les détails de l'analyse des problèmes théoriques de l'utilisation de \glspl{batch} avec l'architecture \gls{gmsnn}. Les rapports des tests de la solution retenue suite à l'analyse sont contenus dans les annexes \ref{subsec:batch_1} (\autopageref{subsec:batch_1}), \ref{subsec:batch_2} (\autopageref{subsec:batch_2}), \ref{subsec:batch_3} (\autopageref{subsec:batch_3}) et \ref{subsec:batch_4} (\autopageref{subsec:batch_4}).
 

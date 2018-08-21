@@ -8,7 +8,7 @@ Pour cela nous avons étudié un domaine technique dans lequel nous avions peu d
 nous avons géré des tests d'une durée allant de plusieurs heures à plusieurs jours sur des machines distantes~; nous avons, enfin, affronté un des obstacles les plus importants dans le développement de \gls{nn}, le problème de l'optimisation.
 
 Bien que le l'architecture \gls{gmsnn} n'ait pas atteint les performances espérées, le modèle produit est robuste, rapide, et peu volumineux.
-De plus, l'algorithme présenté \autoref{subsec:optilbl} (\autopageref{subsec:optilbl}) a démontré une faiblesse majeure de l'architecture \gls{gmsnn}.
+De plus, l'algorithme présenté dans la \autoref{subsec:optilbl} (\autopageref{subsec:optilbl}) a démontré une faiblesse majeure de l'architecture \gls{gmsnn}.
 Enfin, les problèmes rencontrés dans ce projet ont permis de tirer des conclusions très utiles pour de prochains projets~:
 \begin{itemize}
 	\item les \gls{rnn} sont très lents à entraîner~;
@@ -17,12 +17,12 @@ Enfin, les problèmes rencontrés dans ce projet ont permis de tirer des conclus
 \end{itemize}\hspace{1em}
 
 En conclusion, le projet a abouti sur le rejet de l'architecture proposée.
-Néanmoins, ce résultat a permis de cerner les principaux écueils de la réalisation d'un \gls{lm} multi-échelle, et a ainsi rendu possible un meilleur déroulement du projet suivant.
+Néanmoins, ce résultat a permis de cerner les principaux écueils de la réalisation d'un \gls{lm} multi-échelles, et a ainsi rendu possible un meilleur déroulement du projet suivant.
 
 
 %%%%
 \section{Apport personnel du projet}
-La réalisation de ce projet nous a permis d'approfondir substantiellement nos connaissances en \gls{dl}, et de nous habituer aux problématiques de la création et de l'utilisation de \glspl{nn}.
+La réalisation de ce projet m'a permis d'approfondir substantiellement nos connaissances en \gls{dl}, et de m'habituer aux problématiques de la création et de l'utilisation de \glspl{nn}.
 
 \section{Discussion et perspectives}
 \subsection{Possibilités d'exploration de l'architecture}
@@ -37,13 +37,16 @@ Par exemple, nous aurions pu optimiser le taux d'apprentissage, comme dans le \g
 De très nombreuses autres possibilités s'offrent, notamment~:
 \begin{itemize}
 	\item l'utilisation d'un \gls{rnn} pour interpréter les informations des différentes échelles~;
-	\item la poursuite de l'utilisation de l'algorithme couche par couche, en poussant chaque échelle au maximum de ses capacités avant d'intégrer de nouvelles échelle~;
-	\item le changement de l'architecture de pyramidale à parallèle, c'est à dire que chaque échelle serait indépendante, similairement à l'article \autocite{Xiao2018Jan}.
+	\item la poursuite de l'utilisation de l'algorithme couche par couche, en poussant chaque échelle au maximum de ses capacités avant d'intégrer de nouvelles échelles~;
+	\item le changement de l'architecture de pyramidale à parallèle, c'est à dire que chaque échelle serait indépendante, tel que proposé dans l'article \autocite{Xiao2018Jan}.
 \end{itemize}
 
 \subsection{Travaux similaires}
 Dans un article datant du 27 juillet 2018 \autocite{hierachical_rnn}, soit quelques jours avant la fin du stage, une architecture extrêmement similaire à celle du \gls{gmsnn} est présentée.
 
-Contrairement a notre stage, le modèle de l'article montre des performances supérieures à celles des autres architectures auxquelles il est comparé.
+Contrairement au \gls{model} développé durant notre stage, le modèle de l'article montre des performances supérieures à celles des autres architectures auxquelles il est comparé.
 
-En écho à la partie précédente, cela peut être dû à des choix de développement différents, comme à un travail plus poussé et plus expert sur le sujet.
+Ceci nous permet de prendre du recul sur les décisions et choix pris pendant le projet, qui n'ont pu bénéficier d'un travail aussi poussé et expert que celui fourni par les chercheurs pour leur article.
+
+
+%En écho à la partie précédente, cela peut être dû à des choix de développement différents, comme à un travail plus poussé et plus expert sur le sujet.
