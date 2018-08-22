@@ -6,7 +6,7 @@ Ce sont par exemple des messages d'information, tels que \og le programme A a te
 
 Ces messages sont précédés d'informations contextuelles comme l'instant d'écriture du message et le programme d'où il provient.
 
-De plus, ces \glspl{log} contiennent un nombre très grand de messages, et la quantité de données disponible pour le projet dépasse les 400~GiB de texte brut. En comparaison, les données utilisées pour le projet précédent pesaient au maximum 100~MiB, soit 4~000 fois moins.
+De plus, ces \glspl{log} contiennent un nombre très grand de messages, et la quantité de données disponibles pour le projet dépasse les 400~GiB de texte brut. En comparaison, les données utilisées pour le projet précédent pesaient au maximum 100~MiB, soit 4~000 fois moins.
 
 Un échantillon de 9~MiB des données disponibles a été utilisé pendant le projet.
 Cela correspond à 70~131 lignes de \glspl{log}.
@@ -14,7 +14,7 @@ Cela correspond à 70~131 lignes de \glspl{log}.
 \section{Extrait des données d'entraînement}%dummy example
 Les données utilisées sont confidentielles.
 Ainsi, pour les protéger, l'extrait présenté ici a été modifié.
-Entre autres, la date et le \foreign{timestamp} (nombre correspondant à la date) ont été remplacées par le date de début du stage et le \foreign{timestamp} correspondant, et l'utilisateur a été renommé \og OOOOOO \fg{}.
+Entre autres, la date et le \foreign{timestamp} (nombre correspondant à la date) ont été remplacés par la date de début du stage et le \foreign{timestamp} correspondant, et l'utilisateur a été renommé \og OOOOOO \fg{}.
 
 Dans le \autoref{cde:traindata} (\autopageref{cde:traindata}), on a, de gauche à droite~: le \foreign{timestamp}, la date, l'heure, l'utilisateur (OOOOOO), le processus (authpriv), le type de message (info), et le message.
 
@@ -24,16 +24,16 @@ Dans le \autoref{cde:traindata} (\autopageref{cde:traindata}), on a, de gauche �
 
 \pagebreak
 \section{Prétraitement des données}\label{def_dict_papud}
-Le prétraitement des données est consiste en~:
+Le prétraitement des données consiste en~:
 \begin{itemize}
 	\item la suppression du \foreign{timestamp}, de la date, de l'heure, et de l'utilisateur~;
 	\item le découpage du texte restant à une certaine longueur~;
-	\item le remplissage des ligne n'atteignant pas cette longueur par un caractère spécifique nommé caractère de remplissage~;
+	\item le remplissage des lignes n'atteignant pas cette longueur par un caractère spécifique nommé caractère de remplissage~;
 	\item la transformation de tous les caractères en nombres, à l'aide d'un dictionnaire~; les caractères apparaissant peu fréquemment ou n'apparaissant pas dans le dictionnaire sont tous remplacés par un caractère spécial nommé \og caractère inconnu\fg{}.
 \end{itemize}
 
 \subsection{Traitement des codes hexadécimaux}\label{hex}
-Par la suite, le remplacement de tout code hexadécimal comme \lstinline|0x005f| par un caractère spécifique du dictionnaire a été ajouté (voir \autoref{sec:spike}, \autopageref{sec:spike}).
+Par la suite, le remplacement de tout code hexadécimal\footnote{Le système hexadécimal est un système de numérotation en base 16, très utilisé en informatique. Les codes hexadécimaux sont écrits avec les chiffres de 0 à 9 et les lettres de A à F. On utilise généralement le suffixe \lstinline|0x| pour indiquer qu'un nombre est codé en hexadécimal.} comme \lstinline|0x005f| par un caractère spécifique du dictionnaire a été ajouté (voir \autoref{sec:spike}, \autopageref{sec:spike}).
 De cette façon, \lstinline|0x005f| et \lstinline|0x0007| sont remplacés par le caractère  \lstinline|<hexX4>|, tandis que  \lstinline|0000005f| et  \lstinline|89abcdef| sont remplacés par  \lstinline|<hex8>|.
 Cela permet de s'abstraire de la valeur du code sans perdre l'information liée à sa présence.
 

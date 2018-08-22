@@ -1,5 +1,5 @@
 \section{Optimisation du taux d'apprentissage}\label{lr_opti_papud}
-La troisième optimisation mise en place porte sur le réglage d'un des paramètres de l'algorithme d'apprentissage, est une valeur nommée \og taux d'apprentissage\fg{}. Il s'agit d'une optimisation courante en \gls{dl} \autocite{LearningRateOptimisation}.
+La troisième optimisation mise en place porte sur le réglage d'une valeur nommée \og taux d'apprentissage\fg{}, qui est un des \glspl{parameter} de l'algorithme d'apprentissage. Il s'agit d'une optimisation courante en \gls{dl} \autocite{LearningRateOptimisation}.
 
 Ce paramètre permet de déterminer la vitesse d'apprentissage du modèle.
 Un mauvais réglage peut entraîner des conséquences catastrophiques sur le modèle, comme un apprentissage extrêmement lent, voire la divergence de l'apprentissage\footnote{On parle de divergence quand la performance du \gls{model} empire au long de l'apprentissage. Ce terme est utilisé par opposition à la convergence souhaitée des performances vers le meilleur score possible.}.
@@ -7,7 +7,7 @@ Un mauvais réglage peut entraîner des conséquences catastrophiques sur le mod
 Il est donc nécessaire de fixer correctement ce paramètre.
 Les algorithmes que nous avons étudiés reposent sur des séries d'\glspl{training} brefs~: on entraîne le modèle avec différentes valeurs du taux d'apprentissage, et on conserve celle qui a donné le meilleur résultat pour les entraînements à venir.
 
-Un outil permettant la détermination du taux d'apprentissage idéal a donc été implémenté, et utilisé.
+Un outil permettant la détermination du taux d'apprentissage idéal a donc été réalisé, et utilisé.
 
 La nouvelle valeur définie a permis d'augmenter considérablement la vitesse d'amélioration de la qualité du modèle. En effet, il fallait précédemment plus de 400 époques pour atteindre la qualité maximale du modèle, contre moins de 100 époques avec le nouveau taux d'apprentissage. % TODO donner valeur
 

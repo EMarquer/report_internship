@@ -5,7 +5,7 @@ Le modèle est un \gls{lm} au niveau du caractère, qui prend en entrée une lig
 
 Ainsi, l'entrée du modèle est une ligne de taille fixe de nombres correspondant à des caractères.
 
-La sortie est un tableau à 2 dimensions, qui contient, pour chaque caractère prédit, une distribution de probabilité sur les caractères connus (répertoriés dans le dictionnaire, qui est décrit dans la \autoref{def_dict_papud}, \autopageref{def_dict_papud}).
+La sortie est un tableau à 2 dimensions, qui contient, pour chaque caractère prédit, une distribution de probabilité sur les caractères connus, répertoriés dans un dictionnaire (décrit dans la \autoref{def_dict_papud}, \autopageref{def_dict_papud}).
 
 \section{Utilisation d'un \glsentrytext{nn} basique}
 Comme présenté dans le \autoref{ch:project_papud} (\autopageref{ch:project_papud}), un \gls{nn} basique, intégralement connecté, a été choisi pour le modèle.
@@ -38,8 +38,8 @@ L'agencement des différents modules de l'architecture est représentée dans la
 \end{figure}
 
 \section{Lien avec l'état de l'art}
-Il a été récemment démontré que les \gls{lm} simples, basés sur des  \glspl{embedding} et des opération de \foreign{pooling},
-montrent des performances équivalentes voire supérieures à des modèles plus complexes et plus coûteux comme les \gls{rnn} \autocite{pooling_simple}.
+Il a été récemment démontré que les \glspl{lm} simples, basés sur des  \glspl{embedding} et des opérations de \foreign{pooling},
+montrent des performances équivalentes, voire supérieures, à des modèles plus complexes et plus coûteux comme les \gls{rnn} \autocite{pooling_simple}.
 
 %%%%%%%%%%%
 %
