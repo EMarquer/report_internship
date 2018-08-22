@@ -27,7 +27,11 @@ Ceci a confirmé que l'explosion de la consommation n'était pas due à l'archit
 \subsubsection{Résolution des fuites}
 L'analyse et la résolution des fuites de mémoire s'est révélée ardue. Si quelques fuites mineures ont été simples à détecter et réparer, la principale fuite était due à une spécificité non documentée de \gls{pytorch}.
 
-En effet, \gls{pytorch} utilise la \gls{automatic differentiation} pour mettre à jour les \gls{parameter} du \gls{nn}.
+En effet, \gls{pytorch} utilise la \gls{automatic differentiation}\footnote{
+	La \gls{automatic differentiation} est un algorithme clé qui, en mettant en œuvre le principe de rétro-propagation du gradient, permet d'entraîner les \glspl{nn}.
+	En effet, la \gls{backpropagation} permet de déterminer l'implication de chaque  \glspl{parameter} dans les résultats obtenus.
+	Ainsi, on peut déterminer de quelle façon mettre à jour les \glspl{parameter} pour améliorer les résultats. \label{def:automatic differentiation} \label{def:backpropagation}}
+pour mettre à jour les \glspl{parameter} du \gls{nn}.
 Pour cela, \gls{pytorch} a besoin de connaître la suite d'opérations et l'implication des différents \glspl{parameter} du \gls{model} et se base sur un \og graphe de computation\fg{}.
 C'est le mode de gestion de ce graphe, couplé aux spécificités de l'architecture \gls{gmsnn}, qui est la cause de la principale fuite mémoire.
 

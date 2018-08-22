@@ -15,6 +15,7 @@
 \usepackage{makeidx}
 \usepackage{titletoc}
 \usepackage{tocloft}
+\usepackage{chngcntr}\counterwithout{footnote}{chapter}
 %\usepackage{minitoc}
 %\setcounter{minitocdepth}{1}
 %\dominitoc[n]
@@ -60,7 +61,7 @@
 %\lstinputlisting{source_filename.py}
 %\lstinputlisting[language=Python]{source_filename.py}
 %\lstinputlisting[language=Python, firstline=37, lastline=45]{source_filename.py}
-
+\usepackage{arydshln}
 \makeatletter
 \providecommand\phantomsection{}
 \newcommand{\listsname}{Listes des tableaux, des figures et des fragments de code}
@@ -78,26 +79,47 @@
 }
 
 \newglossarystyle{gls_local}{%
+	%\setglossarystyle{listgroup}%
 	%\setglossarystyle{altlist}%
-	%\setglossarystyle{long3col}%
+	\setglossarystyle{long3col}%
 	%\setglossarystyle{longraggedheader}%
+	\renewcommand*{\glossaryheader}{%  Change the table header
+		\bfseries \large Terme & \bfseries \large Description & \bfseries \large Pages \\%
+		\hline\tabularnewline[-0.5em]%
+		\endhead}
 	%\setglossarystyle{mcolindexgroup}%
-	\setglossarystyle{indexgroup}%
+	%%\setglossarystyle{indexgroup}%
 	%\setglossarystyle{treegroup}%
-	%\setglossarystyle{longragged}%
+	%nope\setglossarystyle{longragged}%
 	%\renewcommand*\glossaryentryfield[5]{%
 	%	\textbf{\glstarget{##1}{##2}} X & \makefirstuc{##4}##3\glspostdescription\space & ##5\tabularnewline
 	%}
+	\renewcommand*{\glsgroupskip}{\tabularnewline[-0.2em]}%\hdashline}%
+	\renewcommand*{\glsgroupskip}{\tabularnewline[0.2em]}%\hdashline}%
+	\renewenvironment{theglossary}{%
+		\vspace{-1em}%
+		\setlength{\dashlinedash}{0.2pt}%
+		\setlength{\dashlinegap}{5pt}%
+		\setlength{\arrayrulewidth}{0.2pt}%
+		\begin{nohyphen}%
+		\begin{longtable}[l]{@{}>{\raggedright\arraybackslash}p{0.34\hsize}@{\hspace{.5em}}>{\raggedright\arraybackslash}p{0.36\hsize}p{0.3\hsize}@{}}}%
+		{\end{longtable}\end{nohyphen}}%
+	\renewcommand{\glossentry}[2]{%
+		\glstarget{##1}{\glossentryname{##1}}%
+		& \glossentrydesc{##1} & ##2 %
+		\tabularnewline%\hdashline % end of row
+	}
+	%\glstarget{##1}{\glossentryname{##1}}]  
+	%\glossentrydesc{##1}\glspostdescription\space} 
 	%
-	\renewcommand*{\glossaryentrynumbers}[1]{\space p. ##1}%
+	%\renewcommand*{\glossaryentrynumbers}[1]{\space p. ##1}%
 }
 
 \newcommand{\termsname}{Glossaire, acronymes et noms d'entités}
 \newcommand{\terms}{
 	\clearpage
-	\addcontentsline{toc}{chapter}{\glossaryname}
 	%\chapter{\termsname}
-	\printnoidxglossary[type=main, style=gls_local]
+	\printnoidxglossary[type=main, style=gls_local, title={\addcontentsline{toc}{chapter}{\glossaryname}\glossaryname\label{gls}}]
 	%\printglossaries[type=main]
 	%\newpage
 	%\printnoidxglossary[type=\acronymtype]
@@ -108,8 +130,9 @@
 \newglossarystyle{acronym_long3col}{%
 	\setglossarystyle{long3col}%
 	%
+	\renewcommand*{\glsgroupskip}{\tabularnewline[-0.5em]}%
 	\renewenvironment{theglossary}%
-	{\begin{longtable}[l]{@{}p{0.09\hsize}p{0.9\hsize}p{0.01\hsize}@{}}}%
+	{\begin{longtable}[l]{@{}p{0.15\hsize}p{0.85\hsize}p{0.01\hsize}@{}}}%
 		{\end{longtable}}%
 	\renewcommand{\glossentry}[2]{%
 		\glstarget{##1}{\glossentryname{##1}}%
@@ -118,7 +141,7 @@
 	}%
 }
 \newcommand{\abrevs}
-{\clearpage\printnoidxglossary[type=\acronymtype, style=acronym_long3col, nonumberlist]}
+{\clearpage\printnoidxglossary[type=\acronymtype, style=acronym_long3col, nonumberlist, title={Liste des acronymes, sigles et symboles\addcontentsline{toc}{chapter}{Liste des acronymes, sigles et symboles}}]}
 %{\clearpage\printglossaries[type=\acronymtype]}
 \makeatother
 

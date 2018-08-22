@@ -69,17 +69,19 @@ Le projet s'est déroulé comme prévu jusqu'à la fin de la période d'amélior
 
 Cependant, comme décrit \autoref{white_flag} (\autopageref{white_flag}), nous avons décidé d'interrompre ce projet pour nous consacrer au \gls{project_papud}.
 
-La figure \ref{fig:gmsnn_time_2} (\autoref{fig:gmsnn_time_2}) représente la répartition réalisée du travail. Une case de la figure correspond à une semaine de travail.
+La figure \ref{fig:gmsnn_time_2} (\autopageref{fig:gmsnn_time_2}) représente la répartition réalisée du travail. Une case de la figure correspond à une semaine de travail.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\input{plots/timeline_true_1}\caption{Répartition réalisée du travail}\label{fig:gmsnn_time_2}
 \end{figure}
 
-\pagebreak
+%\pagebreak
 \section{Outils}
-\subsection{Gestion du code}
+\subsection{Gestion du code} \label{subsec:code_gmsnn}
 Le code et les rapports ont été gérés avec le système de gestion de version Git, et ont été stockés sur les serveurs Gitlab de l'\gls{inria}.
+
+Le code et la documentation ont été rédigés en anglais, par usage, mais aussi pour maintenir une cohérence avec le code d'origine.
 
 \subsection{Langage et librairie}
 Le langage choisi pour la mise en œuvre du projet est Python, qui est abondement fourni en outils et librairies d'\gls{dl}.
@@ -91,6 +93,6 @@ Parmi ces librairies, notre choix s'est porté sur \gls{pytorch} qui, contrairem
 Pendant le déroulement du projet, le \gls{model} a été testé et entraîné sur des machines distantes.
 
 Ces machines font partie du réseau \gls{g5k}.
-\og Grid'5000 est un banc d'essai à grande échelle et polyvalent pour la recherche expérimentale dans tous les domaines de l'informatique, avec un accent sur l'informatique parallèle et distribuée, y compris Cloud, HPC et Big Data.\fg{}~\autocite{g5k}
+\og Grid'5000 est un banc d'essai à grande échelle et polyvalent pour la recherche expérimentale dans tous les domaines de l'informatique, avec un accent sur l'informatique parallèle et distribuée, y compris Cloud, HPC et Big Data\fg{} (extrait du site internet de \gls{g5k}~\autocite{g5k}).
 
 Un des avantages de cet outil est la présence de machines spécialisées équipées de \gls{gpu}\footnote{Un processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU) est un composant d'ordinateur spécialisé, qui montre d'excellentes performances dans les calculs impliquant des \glspl{matrice} (ex.~: images). Cette propriété s'applique aussi sur les \glspl{tensor}. L'utilisation de \gls{gpu} pour l'entraînement des \glspl{nn} est une pratique fréquente en \gls{dl}, car elle permet d'accélérer les calculs effectués.\label{def:gpu}}, qui sont celles que nous avons utilisées.

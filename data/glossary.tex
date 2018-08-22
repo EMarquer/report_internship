@@ -19,6 +19,7 @@
 %   Institues, Entities                                                        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{data/gls_entities}
+\input{data/gls_acr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Machine Learning                                                           %
@@ -105,35 +106,35 @@
 	description={}}
 
 \newglossaryentry{rnn}{
-	sort={{RNN}},
-	name={{RNN}},
+	sort={{Reseau de neurones recurrents}},
+	name={{Réseau de neurones récurrents (RNN)}},
 	text={{RNN}},
 	plural={{RNN}},
 	first={réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais, RNN\glsadd{rnn-})},
 	description={\defref{def:rnn}}}
 
 \newglossaryentry{rnn-}{type=\acronymtype, name={RNN}, text={RNN},
-	description={réseau de neurones récurrents (\foreign{Recurrent Neural Network} en anglais)}}
+	description={\foreign{Recurrent Neural Network} (réseau de neurones récurrents)}}
 
 \newglossaryentry{lstm}{
-	sort={{LSTM}},
-	name={{LSTM}},
+	sort={{Reseau recurrent a memoire a court et long terme}},
+	name={{Réseau récurrent à mémoire à court et long terme (LSTM)}},
 	text={{LSTM}},
 	plural={{LSTM}},
 	first={réseau récurrent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais, LSTM\glsadd{lstm-})},
 	description={\defref{def:lstm}}}
 
 \newglossaryentry{lstm-}{type=\acronymtype, name={LSTM}, text={LSTM},
-	description={réseau récurent à mémoire à court et long terme (\foreign{Long Short Term Memory} en anglais)}}
+	description={\foreign{Long Short Term Memory} (réseau récurent à mémoire à court et long terme)}}
 
 \newglossaryentry{gmsnn-}{
 	type=\acronymtype,
 	name={{GMSNN}},
 	text={{GMSNN}},
-	description={réseau de neurones récurrents multi-échelles croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais)}}
+	description={\foreign{Growing Multi-Scale Recurrent Neural Network} (réseau de neurones récurrents multi-échelles croissant)}}
 
 \newglossaryentry{gmsnn}{
-	name={{Réseau de neurones récurrents multi-échelles croissant}},
+	name={{Réseau de neurones récurrents multi-échelles croissant (GMSNN)}},
 	text={{GMSNN}},
 	first={{réseau de neurones récurrents multi-échelles croissant (\foreign{Growing Multi-Scale Recurrent Neural Network} en anglais, GMSNN)\glsadd{gmsnn-}}},
 	description={\defref{ch:gmsnn_model}}}
@@ -174,6 +175,7 @@
 %   Other technical expressions                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newglossaryentry{methodes statistiques}{
+	type=entity,
 	name={Méthodes statistiques},
 	text={méthodes statistiques},
 	description={}}
@@ -181,13 +183,19 @@
 \newglossaryentry{automatic differentiation}{
 	name={Différentiation automatique},
 	text={différentiation automatique},
-	description={}}
+	description={\defref{def:automatic differentiation}}}
+
+\newglossaryentry{backpropagation}{
+	sort={retro-propagation du gradient},
+	name={Rétro-propagation du gradient},
+	text={rétro-propagation du gradient},
+	description={\defref{def:automatic differentiation}}}
 
 \newglossaryentry{matrice}{
 	name={Matrice},
 	text={matrice},
 	plural={matrices},
-	description={}
+	description={Objet mathématique similaire à un tableau de valeurs.}
 }
 
 %\newglosacr{gpu}{GPU}
@@ -199,7 +207,7 @@
 	type=\acronymtype,
 	name={GPU},
 	text={GPU},
-	description={processeur graphique (\foreign{Graphical Processing Unit} en anglais, GPU)}}
+	description={\foreign{Graphical Processing Unit} (processeur graphique)}}
 
 \newglossaryentry{nlp-}{
 	type=\acronymtype,
@@ -208,17 +216,18 @@
 	description={traitement automatique des langues}}
 
 \newglossaryentry{gpu}{
-	name={Processeur graphique},
+	name={Processeur graphique (GPU)},
 	text={GPU\glsadd{gpu-}},
 	description={\defref{def:gpu}}}
 
 \newglossaryentry{nlp}{
-	name={Traitement automatique des langues},
+	name={Traitement automatique des langues (TAL)},
 	text={TAL\glsadd{nlp-}},
 	first={traitement automatique des langues (TAL, \foreign{Natural Language Processing} en anglais)},
 	description={\defref{def:nlp}}}
 
 \newglossaryentry{formal grammars}{
+	type=entity,
 	name={Grammaires formelles},
 	text={grammaires formelles},
 	description={}}
@@ -260,11 +269,13 @@ description={\defref{def:corpus}}}
 	description={\defref{def:weight1}}}
 
 \newglossaryentry{computational semantics}{
+	type=entity,
 	name={Sémantique computationnelle},
 	text={sémantique computationnelle},
 	description={}}
 
 \newglossaryentry{speech processing}{
+	type=entity,
 	name={Traitement de la parole},
 	text={traitement de la parole},
 	description={}}
@@ -273,7 +284,7 @@ description={\defref{def:corpus}}}
 	sort={centres de calcul},
 	name={Centres de calcul},
 	text={centres de calcul},
-	description={},
+	description={\defref{def:data centers}},
 	first={centres de calcul (\foreign{data-centers} en anglais, infrastructures spécialisées regroupant de nombreux serveurs)}}
 
 \newglossaryentry{log}{
@@ -289,7 +300,7 @@ description={\defref{def:corpus}}}
 	sort={cloud},
 	name={\foreign{Cloud}},
 	text={\foreign{cloud}},
-	description={}}
+	description={\defref{def:cloud}}}
 
 \newglossaryentry{parameter}{
 	sort={parametre},
@@ -330,6 +341,6 @@ description={\defref{def:corpus}}}
 	name={{Bogue}},
 	text={{bogue}},
 	plural={{bogues}},
-	description={%
+	description={Défaut d'un logiciel entraînant des anomalies de fonctionnement.%
 		%{Un Bogue (\foreign{bug} en anglais) est \og un défaut de conception d'un programme informatique à l'origine d'un dysfonctionnement.\fg D'après Wikipédia \autocite{bug}}
 	}}

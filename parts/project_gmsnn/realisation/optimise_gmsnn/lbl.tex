@@ -11,7 +11,7 @@ Cet algorithme est une implémentation naïve\footnote{Par \og implémentation n
 L'intuition à l'origine de notre algorithme est que pour apprendre les représentations de haut niveau, le modèle a besoin en premier lieu d'apprendre les représentations de bas niveau.
 Par exemple, sans distinguer les mots, il est difficile de construire des phrases cohérentes.
 
-En suivant ce principe, ce sont d'abord les échelles les plus proches des données doivent apprendre avant que les échelles supérieures puissent le faire à leur tour.
+En suivant ce principe, ce sont d'abord les échelles les plus proches des données qui doivent apprendre avant que les échelles supérieures puissent le faire à leur tour.
 Aussi, il semble inutile d'augmenter la charge de l'algorithme d'entraînement en entraînant des couches qui ne peuvent pas apprendre efficacement.
 
 Le fonctionnent général de cet algorithme est d'entraîner une à une les échelles du \gls{model}, en commençant par celle la plus proche des données.
@@ -20,7 +20,7 @@ Le fonctionnement détaillé de l'algorithme est décrit dans l'annexe \ref{subs
 
 \subsubsection{Performances}
 
-L'algorithme atteint l'objectif d'alléger la charge calculatoire. de fait, on obtient une réduction sensible du temps nécessaire pour l'entraînement.
+L'algorithme atteint l'objectif d'alléger la charge calculatoire. De fait, on obtient une réduction sensible du temps nécessaire pour l'entraînement.
 
 En outre, il n'y a aucune variation notable de la qualité de l'entraînement.
 
@@ -32,6 +32,6 @@ Les performances de l'algorithme sont disponibles dans le rapport de l'annexe \r
 %Justement, comme une seule échelle apprend, on pourrait s'attendre à une baisse des performances. En effet, en entraînant une seule couche, on réduit le nombre de paramètres du modèle, avec une influence négative sur la performance (Voir \autoref{subsec:optiparam} pour l'impact du nombre de paramètres, \autopageref{subsec:optiparam}).
 
 L'algorithme développé revient, en tout cas sur le début de l'entraînement, à entraîner un modèle mono-échelle.
-En effet, en entraînant une seule couche seuls les \glspl{parameter} correspondants dont mis à jour, ce qui revient à réduire le nombre de paramètres du modèle, et devrait avoir une influence négative sur la performance (Voir \autoref{subsec:optiparam} pour l'impact du nombre de paramètres, \autopageref{subsec:optiparam}).
+En effet, en entraînant une unique couche, seuls les \glspl{parameter} correspondants sont mis à jour, ce qui revient à réduire le nombre de paramètres du modèle, et aurait dû avoir une influence négative sur la performance (Voir \autoref{subsec:optiparam} pour l'impact du nombre de paramètres, \autopageref{subsec:optiparam}).
 
 Comme le \gls{model} mono-échelle apprend aussi bien que le \gls{model} multi-échelles, cela remet en question l'utilité de l'architecture \gls{gmsnn} et de ses échelles multiples.

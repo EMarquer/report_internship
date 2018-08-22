@@ -9,7 +9,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Avant-propos}{5}{Doc-Start}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Listes des tableaux, des figures et des fragments de code}{9}{chapter*.1}
+\contentsline {chapter}{Table des mati\IeC {\`e}res}{7}{section*.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Listes des tableaux, des figures et des fragments de code}{9}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Liste des acronymes, sigles et symboles}{11}{chapter*.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{13}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -113,7 +117,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1.2}Passer \IeC {\`a} l'\IeC {\'e}chelle}{31}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Plusieurs niveaux d'abstraction de l'information}{32}{figure.caption.7}
+\contentsline {subsubsection}{Plusieurs niveaux d'abstraction de l'information}{32}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1.3}Adapter le mod\IeC {\`e}le au volume de donn\IeC {\'e}es et croissance du mod\IeC {\`e}le}{33}{subsection.6.1.3}
 \defcounter {refsection}{0}\relax 
@@ -205,7 +209,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{II\hspace {1em}\Glsentrytext {project_papud}}{53}{part.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Pr\IeC {\'e}sentation d'ITEA, du projet PAPUD, et de BULL}{55}{chapter.9}
+\contentsline {chapter}{\numberline {9}Pr\IeC {\'e}sentation d'ITEA, du projet PAPUD, et de Bull}{55}{chapter.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.1}\IeC {\'E}quipe de projet}{55}{section.9.1}
 \defcounter {refsection}{0}\relax 
@@ -305,11 +309,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {15.3}Bilan personnel}{74}{section.15.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16}Bibliographie / Webographie}{75}{chapter.16}
+\contentsline {chapter}{Bibliographie / Webographie}{75}{chapter*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossaire}{81}{chapter.16}
+\contentsline {chapter}{Glossaire}{81}{chapter*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Annexes}{83}{part*.18}
+\contentsline {chapter}{Annexes}{83}{part*.20}
 \defcounter {refsection}{0}\relax 
 \etoc@depthtag {mtappendix}
 \defcounter {refsection}{0}\relax 
@@ -465,7 +469,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Plot}{108}{subsection.A.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Details}{108}{figure.caption.20}
+\contentsline {subsubsection}{Details}{108}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.9.4}Potential ameliorations \& next steps}{108}{subsection.A.9.4}
 \defcounter {refsection}{0}\relax 
@@ -483,11 +487,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{BPC/fraction of corpus}{110}{subsection.A.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ValBPC/epoch}{111}{figure.caption.21}
+\contentsline {paragraph}{ValBPC/epoch}{111}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Loss}{112}{figure.caption.22}
+\contentsline {paragraph}{Loss}{112}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Logs}{112}{figure.caption.23}
+\contentsline {subsubsection}{Logs}{112}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.10.4}Potential ameliorations \& next steps}{112}{subsection.A.10.4}
 \defcounter {refsection}{0}\relax 
@@ -505,15 +509,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Comparative analysis}{115}{subsection.A.11.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Plot}{115}{figure.caption.24}
+\contentsline {subsubsection}{Plot}{115}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{BPC/fraction of corpus}{115}{figure.caption.24}
+\contentsline {paragraph}{BPC/fraction of corpus}{115}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ValBPC/epoch}{115}{figure.caption.25}
+\contentsline {paragraph}{ValBPC/epoch}{115}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Loss}{115}{figure.caption.26}
+\contentsline {paragraph}{Loss}{115}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Logs}{116}{figure.caption.27}
+\contentsline {subsubsection}{Logs}{116}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.11.4}Potential ameliorations \& next steps}{116}{subsection.A.11.4}
 \defcounter {refsection}{0}\relax 
@@ -531,9 +535,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Comparative analysis}{120}{subsection.A.12.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Plot}{120}{figure.caption.28}
+\contentsline {subsubsection}{Plot}{120}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{BPC/fraction of corpus}{120}{figure.caption.28}
+\contentsline {paragraph}{BPC/fraction of corpus}{120}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.12.4}Potential ameliorations \& next steps}{121}{subsection.A.12.4}
 \defcounter {refsection}{0}\relax 
@@ -565,9 +569,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Memory}{124}{subsection.A.14.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{BPC / Validation BPC}{127}{figure.caption.32}
+\contentsline {subsubsection}{BPC / Validation BPC}{127}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Job restart}{128}{figure.caption.33}
+\contentsline {subsubsection}{Job restart}{128}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.14.3}Next steps}{130}{subsection.A.14.3}
 \defcounter {refsection}{0}\relax 
@@ -579,9 +583,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Results (1 epoch)}{131}{subsection.A.15.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Results (full)}{134}{figure.caption.39}
+\contentsline {subsubsection}{Results (full)}{134}{figure.caption.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ram consumption for ``last b2 10epoch''}{136}{figure.caption.41}
+\contentsline {paragraph}{Ram consumption for ``last b2 10epoch''}{136}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.15.3}Conclusion}{136}{subsection.A.15.3}
 \defcounter {refsection}{0}\relax 
@@ -633,9 +637,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Memory}{148}{table.A.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Run time (in seconds)}{149}{figure.caption.47}
+\contentsline {paragraph}{Run time (in seconds)}{149}{figure.caption.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Epoch run time}{149}{figure.caption.48}
+\contentsline {subparagraph}{Epoch run time}{149}{figure.caption.50}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.18.3}Next steps}{150}{subsection.A.18.3}
 \defcounter {refsection}{0}\relax 
@@ -699,9 +703,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{GPU memory usage}{162}{subsection.B.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Computation time}{162}{figure.caption.50}
+\contentsline {subsubsection}{Computation time}{162}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Loss and accuracy}{162}{figure.caption.50}
+\contentsline {subsubsection}{Loss and accuracy}{162}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {B.3.3}Improvements and next steps}{163}{subsection.B.3.3}
 \defcounter {refsection}{0}\relax 
@@ -717,7 +721,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{GPU memory usage}{165}{subsection.B.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Loss and accuracy}{165}{figure.caption.52}
+\contentsline {subsubsection}{Loss and accuracy}{165}{figure.caption.54}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Computation time}{166}{table.B.3}
 \defcounter {refsection}{0}\relax 

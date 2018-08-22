@@ -8,47 +8,45 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Organigramme des d\IeC {\'e}partements du LORIA, et des \IeC {\'e}quipes du D\IeC {\'e}partement 4\relax }}{22}{figure.caption.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Organigramme des d\IeC {\'e}partements du LORIA, et des \IeC {\'e}quipes du D\IeC {\'e}partement 4\relax }}{22}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces R\IeC {\'e}partition pr\IeC {\'e}vue du travail}}{27}{figure.caption.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces R\IeC {\'e}partition pr\IeC {\'e}vue du travail}}{27}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces R\IeC {\'e}partition r\IeC {\'e}alis\IeC {\'e}e du travail\relax }}{28}{figure.caption.6}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Principe de transmission de l'information d'une \IeC {\'e}chelle \IeC {\`a} la suivante\relax }}{32}{figure.caption.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Diff\IeC {\'e}rentes \IeC {\'e}chelles, et les niveaux d'abstraction attendus\relax }}{33}{figure.caption.8}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Architecture du mod\IeC {\`e}le r\IeC {\'e}-impl\IeC {\'e}ment\IeC {\'e}}}{36}{figure.caption.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Architecture du mod\IeC {\`e}le GMSNN}}{37}{figure.caption.10}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Strat\IeC {\'e}gies d'agr\IeC {\'e}gation\relax }}{41}{figure.caption.11}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Performances compar\IeC {\'e}es des strat\IeC {\'e}gies additive et par concat\IeC {\'e}nation}}{41}{figure.caption.12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces R\IeC {\'e}partition r\IeC {\'e}alis\IeC {\'e}e du travail\relax }}{27}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Principe de transmission de l'information d'une \IeC {\'e}chelle \IeC {\`a} la suivante\relax }}{32}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.1}{\ignorespaces R\IeC {\'e}partition du travail sur le projet PAPUD}}{61}{figure.caption.14}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Diff\IeC {\'e}rentes \IeC {\'e}chelles, et les niveaux d'abstraction attendus\relax }}{33}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Architecture du mod\IeC {\`e}le du projet PAPUD}}{66}{figure.caption.15}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Architecture du mod\IeC {\`e}le r\IeC {\'e}-impl\IeC {\'e}ment\IeC {\'e}}}{36}{figure.caption.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Architecture du mod\IeC {\`e}le GMSNN}}{37}{figure.caption.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Strat\IeC {\'e}gies d'agr\IeC {\'e}gation\relax }}{41}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Performances compar\IeC {\'e}es des strat\IeC {\'e}gies additive et par concat\IeC {\'e}nation}}{41}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10.1}{\ignorespaces R\IeC {\'e}partition du travail sur le projet PAPUD}}{61}{figure.caption.15}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Architecture du mod\IeC {\`e}le du projet PAPUD}}{66}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

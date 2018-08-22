@@ -1,5 +1,8 @@
 
 \nocite{*}
+\makeatletter
+\def\toclevel@chapter{-1}
+\makeatother
 \input{parts/appendix/bibliography.tex}\cleardoublepage
 %\lists
 %\cleardoublepage
@@ -13,7 +16,14 @@
 %\addtocontents{toc}{\protect\pagebreak}
 
 %\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+
+\makeatletter
+\def\toclevel@chapter{-1}
+\makeatother
 \part*{Annexes\addcontentsline{toc}{chapter}{Annexes}}
+\makeatletter
+\def\toclevel@chapter{0}
+\makeatother
 
 \cleardoublepage
 

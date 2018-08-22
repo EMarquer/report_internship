@@ -143,7 +143,7 @@ Dans le cadre d'un \gls{lm}, le contexte est l'ensemble des informations disponi
 
 On parle aussi de dépendances entre d'une part les mots ou caractères et d'autre part l'élément du contexte correspondant.
 
-Parmi les informations contenues dans le contexte d'un mot, on peut trouver aussi bien le sens des mots environnants que la structure syntaxique de la phrase, ou encore des informations plus générales comme le fait que les chats sont des mammifères.
+Parmi les informations contenues dans le contexte d'un mot, on peut trouver aussi bien le sens des mots environnants que la structure syntaxique de la phrase, ou encore des informations plus générales (comme fait que les chats soient des mammifères).
 
 %Les informations contenues dans le contexte peuvent être aussi bien les mots environnants que la structure de la phrase ou des informations comme le genre du héro d'un livre.
 
@@ -163,8 +163,8 @@ La performance d'un modèle est évaluée par trois composantes~:
 
 Afin d'évaluer la performance, des mesures ont été définies~:
 \begin{itemize}
-	\item pour mesurer la qualité du résultat, on utilise l'écart entre le résultat produit et le résultat attendu~; une mesure définie dans la littérature et utilisée dans les annexes est le BPC\footnote{Le BPC (\foreign{Bits Per Character} en anglais) \autocite{BPC} est originalement une mesure de la qualité de compression de texte, mais plusieurs papiers ont détourné cette mesure en s'en servant d'estimation de la qualité d'un \gls{lm} au niveau du caractère. Dans cet usage, le BPC est assimilable à une mesure de la précision des résultats du \gls{lm}. Plus le BPC est proche de 0 plus la qualité du \gls{lm} est élevé.}~;
-	\item pour mesurer le temps d'entraînement, on mesure le nombre d'\gls{epoch} et le temps nécessaire par \gls{epoch}, la durée totale en heures, etc.~;
+	\item pour mesurer la qualité du résultat, on utilise l'écart entre le résultat produit et le résultat attendu~; une mesure définie dans la littérature et utilisée dans les annexes est le BPC\footnote{Le BPC (\foreign{Bits Per Character} en anglais) \autocite{BPC} est originalement une mesure de la qualité de compression de texte, mais plusieurs publications ont détourné cette mesure en s'en servant d'estimation de la qualité d'un \gls{lm} au niveau du caractère. Dans cet usage, le BPC est assimilable à une mesure de la précision des résultats du \gls{lm}. Plus le BPC est proche de 0 plus la qualité du \gls{lm} est élevé.}~;
+	\item pour mesurer le temps d'entraînement, on utilise le nombre d'\glspl{epoch} et le temps nécessaire par \gls{epoch}, la durée totale en heures, etc.~;
 	\item pour mesurer la consommation de ressources, on évalue l'espace mémoire occupé (en MiB ou GiB), la puissance de calcul utilisée (pourcentage de la puissance disponible), etc.
 \end{itemize}
 \vspace{1em}
