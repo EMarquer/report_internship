@@ -29,7 +29,7 @@ L'analyse et la résolution des fuites de mémoire s'est révélée ardue. Si qu
 
 En effet, \gls{pytorch} utilise la \gls{automatic differentiation}\footnote{
 	La \gls{automatic differentiation} est un algorithme clé qui, en mettant en œuvre le principe de rétro-propagation du gradient, permet d'entraîner les \glspl{nn}.
-	En effet, la \gls{backpropagation} permet de déterminer l'implication de chaque  \glspl{parameter} dans les résultats obtenus.
+	En effet, la \gls{backpropagation} permet de déterminer l'implication de chaque \gls{parameter} dans les résultats obtenus.
 	Ainsi, on peut déterminer de quelle façon mettre à jour les \glspl{parameter} pour améliorer les résultats. \label{def:automatic differentiation} \label{def:backpropagation}}
 pour mettre à jour les \glspl{parameter} du \gls{nn}.
 Pour cela, \gls{pytorch} a besoin de connaître la suite d'opérations et l'implication des différents \glspl{parameter} du \gls{model} et se base sur un \og graphe de computation\fg{}.
@@ -45,5 +45,5 @@ Cependant, résoudre les problèmes de fuites de mémoire et de lenteur de l'ent
 On notera l'ampleur de l'optimisation par rapport à la version initiale~:
 \begin{itemize}
 	\item le temps d'entraînement a été réduit par un facteur 5~000 (de plus de 400~h à environ 5~min pour une époque)~;
-	\item la consommation de mémoire est passée d'une utilisation en constante augmentation, dépassant les 6~GiB par époque, à une consommation constante inférieure à 200~MiB.
+	\item la consommation de mémoire est passée d'une utilisation en constante augmentation, dépassant les 6~\gls{GiB-} par époque, à une consommation constante inférieure à 200~\gls{MiB-}.
 \end{itemize}\vspace{1em}

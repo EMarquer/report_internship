@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.3.20)  22 AUG 2018 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.3.20)  22 AUG 2018 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2550,11 +2550,15 @@ Overfull \hbox (17.99998pt too wide) has occurred while \output is active
 
 
 
-] [12
+]
+Overfull \hbox (17.99998pt too wide) has occurred while \output is active
+[] [] [] 
+ []
 
-] (./parts/intro.tex
+[12] (./parts/intro.tex
 Chapitre 1.
 [13
+
 
 ]) [14] (./parts/terms_concepts.tex
 Chapitre 2.
@@ -2741,7 +2745,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./plots/base_msnn_data.tex
 \mydictbox=\box106
 </home/emarquer/InternshipSynalp2018/report_internship/images/tool_translate_of
-fline_dictionary.png, id=1367, 301.125pt x 301.125pt>
+fline_dictionary.png, id=1369, 301.125pt x 301.125pt>
 File: /home/emarquer/InternshipSynalp2018/report_internship/images/tool_transla
 te_offline_dictionary.png Graphic file (type png)
 <use /home/emarquer/InternshipSynalp2018/report_internship/images/tool_translat
@@ -2778,7 +2782,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-bpc-m
-snn-det-msnn-cat_modif.png, id=1438, 462.528pt x 346.896pt>
+snn-det-msnn-cat_modif.png, id=1440, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-
 bpc-msnn-det-msnn-cat_modif.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-b
@@ -3112,7 +3116,7 @@ Overfull \hbox (5.73518pt too wide) in paragraph at lines 29--31
 
 [107]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018_4_27-20h13.p
-ng, id=2812, 462.528pt x 346.896pt>
+ng, id=2819, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018_4_27-20
 h13.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018_4_27-20h
@@ -3133,7 +3137,7 @@ Overfull \hbox (5.73518pt too wide) in paragraph at lines 45--47
 
 [109]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/detrnn-50/detrnn-
-50-bpc_2018_5_3-8h47.png, id=2832, 462.528pt x 346.896pt>
+50-bpc_2018_5_3-8h47.png, id=2839, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/detrnn-50/de
 trnn-50-bpc_2018_5_3-8h47.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/detrnn-50/det
@@ -3146,7 +3150,7 @@ e 70.
  [110 <./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/detrnn-50
 /detrnn-50-bpc_2018_5_3-8h47.png>]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/detrnn-50/detrnn-
-50-vbpc_2018_5_3-8h47.png, id=2840, 462.528pt x 346.896pt>
+50-vbpc_2018_5_3-8h47.png, id=2847, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/detrnn-50/de
 trnn-50-vbpc_2018_5_3-8h47.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/detrnn-50/det
@@ -3183,7 +3187,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [114]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-bpc-d
-et-msnn_2018_5_7-9h0.png, id=2875, 462.528pt x 346.896pt>
+et-msnn_2018_5_7-9h0.png, id=2882, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-
 bpc-det-msnn_2018_5_7-9h0.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-b
@@ -3194,7 +3198,7 @@ ut line 97.
 Package pdftex.def Info: Requested size: 462.52686pt x 346.89514pt on input lin
 e 97.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-base/msnn-bp
-c_2018_5_4-18h59.png, id=2876, 462.528pt x 346.896pt>
+c_2018_5_4-18h59.png, id=2883, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-base/ms
 nn-bpc_2018_5_4-18h59.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-base/msn
@@ -3209,7 +3213,7 @@ e 110.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-base/msnn-vb
-pc_2018_5_4-18h59.png, id=2877, 462.528pt x 346.896pt>
+pc_2018_5_4-18h59.png, id=2884, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-base/ms
 nn-vbpc_2018_5_4-18h59.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-base/msn
@@ -3241,7 +3245,7 @@ teban-latex/test_reports/msnn-base/msnn-bpc_2018_5_4-18h59.png>]
 _run_msnn_4.tex [117 <./parts/appendix/reports-gmsnn/docs_esteban-latex/test_re
 ports/msnn-base/msnn-vbpc_2018_5_4-18h59.png>] [118]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-bpc-m
-snn-det-msnn-cat.png, id=2906, 462.528pt x 346.896pt>
+snn-det-msnn-cat.png, id=2913, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-
 bpc-msnn-det-msnn-cat.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/comparative-b
@@ -3253,7 +3257,7 @@ Package pdftex.def Info: Requested size: 462.52686pt x 346.89514pt on input lin
 e 93.
  [119]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-4/2018_05_17
--13h49.png, id=2918, 462.528pt x 346.896pt>
+-13h49.png, id=2925, 462.528pt x 346.896pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-4/2018_
 05_17-13h49.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/msnn-4/2018_0
@@ -3278,7 +3282,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/2018
 -06-11_long_run_result.tex
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/memory
-.png, id=2950, 433.62pt x 433.62pt>
+.png, id=2958, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/m
 emory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/me
@@ -3292,7 +3296,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [124]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RAM_re
-start-2.png, id=2958, 1011.78pt x 433.62pt>
+start-2.png, id=2965, 1011.78pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/R
 AM_restart-2.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RA
@@ -3309,7 +3313,7 @@ t/12 log_interval
  []
 
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/frac.p
-ng, id=2959, 433.62pt x 867.24pt>
+ng, id=2966, 433.62pt x 867.24pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/f
 rac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/fr
@@ -3326,7 +3330,7 @@ Underfull \vbox (badness 1215) has occurred while \output is active []
 018-06-11/RAM_restart-2.png>] [126 <./parts/appendix/reports-gmsnn/docs_esteban
 -latex/test_reports/2018-06-11/frac.png>]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/frac_v
-al_bpc.png, id=2975, 433.62pt x 289.08pt>
+al_bpc.png, id=2982, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/f
 rac_val_bpc.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/fr
@@ -3346,7 +3350,7 @@ eports/2018-06-11/memory.png  used on input line 84. on input line 84.
 Package pdftex.def Info: Requested size: 469.47049pt x 469.49359pt on input lin
 e 84.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RAM.pn
-g, id=2982, 1011.78pt x 433.62pt>
+g, id=2989, 1011.78pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/R
 AM.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RA
@@ -3360,7 +3364,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [128]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RAM_re
-start-1.png, id=2988, 1011.78pt x 433.62pt>
+start-1.png, id=2995, 1011.78pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/R
 AM_restart-1.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-11/RA
@@ -3385,7 +3389,7 @@ e 102.
 (./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/2018
 -06-12_change_history.tex
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/histor
-y_memory_1e.png, id=3003, 433.62pt x 433.62pt>
+y_memory_1e.png, id=3010, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/h
 istory_memory_1e.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/hi
@@ -3400,7 +3404,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [131]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/histor
-y_frac_1e.png, id=3011, 433.62pt x 867.24pt>
+y_frac_1e.png, id=3018, 433.62pt x 867.24pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/h
 istory_frac_1e.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/hi
@@ -3416,7 +3420,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [132 <./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-1
 2/history_memory_1e.png>]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/histor
-y_memory.png, id=3018, 433.62pt x 433.62pt>
+y_memory.png, id=3025, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/h
 istory_memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/hi
@@ -3431,7 +3435,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [133 <./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-1
 2/history_frac_1e.png>]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/histor
-y_frac.png, id=3025, 433.62pt x 867.24pt>
+y_frac.png, id=3032, 433.62pt x 867.24pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/h
 istory_frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/hi
@@ -3446,7 +3450,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [134 <./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-1
 2/history_memory.png>]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/histor
-y_RAM.png, id=3032, 1011.78pt x 433.62pt>
+y_RAM.png, id=3039, 1011.78pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/h
 istory_RAM.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-12/hi
@@ -3464,7 +3468,7 @@ st_reports/2018-06-12/history_RAM.png>]) [137]
 (./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/2018
 -06-13_long_run_batch_1_2.tex [138]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/batch_
-1_2_frac.png, id=3060, 433.62pt x 867.24pt>
+1_2_frac.png, id=3067, 433.62pt x 867.24pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/b
 atch_1_2_frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/ba
@@ -3478,7 +3482,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [139]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/batch_
-1_2_memory.png, id=3066, 433.62pt x 433.62pt>
+1_2_memory.png, id=3073, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/b
 atch_1_2_memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-13/ba
@@ -3497,7 +3501,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018
 -06-15_batch_1_2.tex [142]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018_0
-6_15_frac.png, id=3091, 433.62pt x 1011.78pt>
+6_15_frac.png, id=3099, 433.62pt x 1011.78pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2
 018_06_15_frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/20
@@ -3512,7 +3516,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [143]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2018_0
-6_15_memory.png, id=3099, 433.62pt x 433.62pt>
+6_15_memory.png, id=3107, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/2
 018_06_15_memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-15/20
@@ -3531,7 +3535,7 @@ x/test_reports/2018-06-15/2018_06_15_memory.png>]
 (./parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/2018
 -06-19_b1a8.tex [146]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_b
-atch_epoch_1.png, id=3123, 433.62pt x 289.08pt>
+atch_epoch_1.png, id=3130, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_batch_epoch_1.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3542,7 +3546,7 @@ eports/2018-06-19/b1a8_batch_epoch_1.png  used on input line 82. on input line
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 82.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_b
-atch_epoch_10.png, id=3124, 433.62pt x 289.08pt>
+atch_epoch_10.png, id=3131, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_batch_epoch_10.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3553,7 +3557,7 @@ eports/2018-06-19/b1a8_batch_epoch_10.png  used on input line 83. on input line
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 83.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_b
-atch_epoch_15.png, id=3125, 433.62pt x 289.08pt>
+atch_epoch_15.png, id=3132, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_batch_epoch_15.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3571,7 +3575,7 @@ Underfull \vbox (badness 2495) has occurred while \output is active []
 st_reports/2018-06-19/b1a8_batch_epoch_10.png> <./parts/appendix/reports-gmsnn/
 docs_esteban-latex/test_reports/2018-06-19/b1a8_batch_epoch_15.png>]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_f
-rac.png, id=3136, 433.62pt x 289.08pt>
+rac.png, id=3143, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3581,7 +3585,7 @@ eports/2018-06-19/b1a8_frac.png  used on input line 110. on input line 110.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 110.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_2
-00.png, id=3137, 433.62pt x 289.08pt>
+00.png, id=3144, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_200.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3596,7 +3600,7 @@ Overfull \hbox (12.4852pt too wide) in paragraph at lines 109--114
  []
 
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_m
-emory.png, id=3138, 433.62pt x 433.62pt>
+emory.png, id=3145, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3606,7 +3610,7 @@ eports/2018-06-19/b1a8_memory.png  used on input line 118. on input line 118.
 Package pdftex.def Info: Requested size: 375.57782pt x 375.59885pt on input lin
 e 118.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_t
-ime.png, id=3139, 433.62pt x 433.62pt>
+ime.png, id=3146, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_time.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3623,7 +3627,7 @@ Underfull \vbox (badness 1436) has occurred while \output is active []
 s/2018-06-19/b1a8_200.png> <./parts/appendix/reports-gmsnn/docs_esteban-latex/t
 est_reports/2018-06-19/b1a8_memory.png>]
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1a8_e
-poch.png, id=3148, 433.62pt x 289.08pt>
+poch.png, id=3155, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b
 1a8_epoch.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-19/b1
@@ -3660,7 +3664,7 @@ Overfull \hbox (5.99402pt too wide) in alignment at lines 178--183
  []
 
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2_b3_
-time.png, id=3175, 433.62pt x 433.62pt>
+time.png, id=3182, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b
 2_b3_time.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2
@@ -3670,7 +3674,7 @@ eports/2018-06-27/b2_b3_time.png  used on input line 184. on input line 184.
 Package pdftex.def Info: Requested size: 211.26028pt x 211.26483pt on input lin
 e 184.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2_b3_
-epoch.png, id=3176, 433.62pt x 289.08pt>
+epoch.png, id=3183, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b
 2_b3_epoch.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2
@@ -3680,7 +3684,7 @@ eports/2018-06-27/b2_b3_epoch.png  used on input line 185. on input line 185.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 185.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_time
-.png, id=3177, 433.62pt x 433.62pt>
+.png, id=3184, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 _time.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_
@@ -3690,7 +3694,7 @@ eports/2018-06-27/l_time.png  used on input line 187. on input line 187.
 Package pdftex.def Info: Requested size: 211.26028pt x 211.26483pt on input lin
 e 187.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_epoc
-h.png, id=3178, 433.62pt x 289.08pt>
+h.png, id=3185, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 _epoch.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_
@@ -3700,7 +3704,7 @@ eports/2018-06-27/l_epoch.png  used on input line 188. on input line 188.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 188.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lbl_ti
-me.png, id=3179, 433.62pt x 433.62pt>
+me.png, id=3186, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 bl_time.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lb
@@ -3710,7 +3714,7 @@ eports/2018-06-27/lbl_time.png  used on input line 190. on input line 190.
 Package pdftex.def Info: Requested size: 211.26028pt x 211.26483pt on input lin
 e 190.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lbl_ep
-och.png, id=3180, 433.62pt x 289.08pt>
+och.png, id=3187, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 bl_epoch.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lb
@@ -3720,7 +3724,7 @@ eports/2018-06-27/lbl_epoch.png  used on input line 191. on input line 191.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 191.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/sum_ti
-me.png, id=3181, 433.62pt x 433.62pt>
+me.png, id=3188, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/s
 um_time.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/su
@@ -3730,7 +3734,7 @@ eports/2018-06-27/sum_time.png  used on input line 193. on input line 193.
 Package pdftex.def Info: Requested size: 211.26028pt x 211.26483pt on input lin
 e 193.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/sum_ep
-och.png, id=3182, 433.62pt x 289.08pt>
+och.png, id=3189, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/s
 um_epoch.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/su
@@ -3771,7 +3775,7 @@ Overfull \hbox (32.07755pt too wide) in alignment at lines 198--203
  []
 
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2_b3_
-memory.png, id=3201, 433.62pt x 433.62pt>
+memory.png, id=3208, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b
 2_b3_memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2
@@ -3781,7 +3785,7 @@ eports/2018-06-27/b2_b3_memory.png  used on input line 205. on input line 205.
 Package pdftex.def Info: Requested size: 145.5347pt x 145.53653pt on input line
  205.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2_b3_
-frac.png, id=3202, 433.62pt x 289.08pt>
+frac.png, id=3209, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b
 2_b3_frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2
@@ -3791,7 +3795,7 @@ eports/2018-06-27/b2_b3_frac.png  used on input line 206. on input line 206.
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 206.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2_b3_
-frac_full.png, id=3203, 433.62pt x 289.08pt>
+frac_full.png, id=3210, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b
 2_b3_frac_full.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/b2
@@ -3802,7 +3806,7 @@ eports/2018-06-27/b2_b3_frac_full.png  used on input line 207. on input line 20
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 207.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_memo
-ry.png, id=3204, 433.62pt x 433.62pt>
+ry.png, id=3211, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 _memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_
@@ -3812,7 +3816,7 @@ eports/2018-06-27/l_memory.png  used on input line 210. on input line 210.
 Package pdftex.def Info: Requested size: 145.5347pt x 145.53653pt on input line
  210.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_frac
-.png, id=3205, 433.62pt x 289.08pt>
+.png, id=3212, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 _frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_
@@ -3822,7 +3826,7 @@ eports/2018-06-27/l_frac.png  used on input line 211. on input line 211.
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 211.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_frac
-_full.png, id=3206, 433.62pt x 289.08pt>
+_full.png, id=3213, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 _frac_full.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l_
@@ -3832,7 +3836,7 @@ eports/2018-06-27/l_frac_full.png  used on input line 212. on input line 212.
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 212.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lbl_me
-mory.png, id=3207, 433.62pt x 433.62pt>
+mory.png, id=3214, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 bl_memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lb
@@ -3842,7 +3846,7 @@ eports/2018-06-27/lbl_memory.png  used on input line 215. on input line 215.
 Package pdftex.def Info: Requested size: 145.5347pt x 145.53653pt on input line
  215.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lbl_fr
-ac.png, id=3208, 433.62pt x 289.08pt>
+ac.png, id=3215, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 bl_frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lb
@@ -3852,7 +3856,7 @@ eports/2018-06-27/lbl_frac.png  used on input line 216. on input line 216.
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 216.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lbl_fr
-ac_full.png, id=3209, 433.62pt x 289.08pt>
+ac_full.png, id=3216, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/l
 bl_frac_full.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/lb
@@ -3863,7 +3867,7 @@ eports/2018-06-27/lbl_frac_full.png  used on input line 217. on input line 217.
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 217.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/sum_me
-mory.png, id=3210, 433.62pt x 433.62pt>
+mory.png, id=3217, 433.62pt x 433.62pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/s
 um_memory.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/su
@@ -3873,7 +3877,7 @@ eports/2018-06-27/sum_memory.png  used on input line 220. on input line 220.
 Package pdftex.def Info: Requested size: 145.5347pt x 145.53653pt on input line
  220.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/sum_fr
-ac.png, id=3211, 433.62pt x 289.08pt>
+ac.png, id=3218, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/s
 um_frac.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/su
@@ -3883,7 +3887,7 @@ eports/2018-06-27/sum_frac.png  used on input line 221. on input line 221.
 Package pdftex.def Info: Requested size: 145.5347pt x 97.02434pt on input line 
 221.
 <parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/sum_fr
-ac_full.png, id=3212, 433.62pt x 289.08pt>
+ac_full.png, id=3219, 433.62pt x 289.08pt>
 File: parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/s
 um_frac_full.png Graphic file (type png)
 <use parts/appendix/reports-gmsnn/docs_esteban-latex/test_reports/2018-06-27/su
@@ -3935,7 +3939,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/2018_07
 _09-Basic_implementation_results.tex
 <parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/memory.pn
-g, id=3270, 433.62pt x 289.08pt>
+g, id=3278, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/memo
 ry.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/memor
@@ -3945,7 +3949,7 @@ tation_results/memory.png  used on input line 28. on input line 28.
 Package pdftex.def Info: Requested size: 433.61894pt x 289.07928pt on input lin
 e 28.
 <parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/loss.png,
- id=3271, 433.62pt x 289.08pt>
+ id=3279, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/loss
 .png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/loss.
@@ -3962,8 +3966,8 @@ Underfull \vbox (badness 7704) has occurred while \output is active []
 
  [164 <./parts/appendix/reports-papud/2018_07_09-Basic_implementation_results/l
 oss.png>]
-<parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/memory.png, id=32
-94, 433.62pt x 289.08pt>
+<parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/memory.png, id=33
+01, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/memory.png G
 raphic file (type png)
 <use parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/memory.png>
@@ -3971,7 +3975,7 @@ Package pdftex.def Info: parts/appendix/reports-papud/2018_07_11-Simultaneous_b
 atches/memory.png  used on input line 40. on input line 40.
 Package pdftex.def Info: Requested size: 433.61894pt x 289.07928pt on input lin
 e 40.
-<parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss.png, id=3295
+<parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss.png, id=3302
 , 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss.png Gra
 phic file (type png)
@@ -3981,7 +3985,7 @@ atches/loss.png  used on input line 58. on input line 58.
 Package pdftex.def Info: Requested size: 140.84258pt x 93.89694pt on input line
  58.
 <parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss_train.png, i
-d=3296, 433.62pt x 289.08pt>
+d=3303, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss_train.p
 ng Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss_train.pn
@@ -3991,7 +3995,7 @@ atches/loss_train.png  used on input line 58. on input line 58.
 Package pdftex.def Info: Requested size: 140.84258pt x 93.89694pt on input line
  58.
 <parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss_valid.png, i
-d=3297, 433.62pt x 289.08pt>
+d=3304, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss_valid.p
 ng Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/loss_valid.pn
@@ -4009,7 +4013,7 @@ erty to speed up trai-ning. Mo-reo-ver, retro-propagation
  []
 
 <parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/sequence_time.png
-, id=3305, 433.62pt x 289.08pt>
+, id=3312, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/sequence_tim
 e.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/sequence_time
@@ -4019,7 +4023,7 @@ atches/sequence_time.png  used on input line 85. on input line 85.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 85.
 <parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/valid_time.png, i
-d=3306, 433.62pt x 289.08pt>
+d=3313, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/valid_time.p
 ng Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/valid_time.pn
@@ -4029,7 +4033,7 @@ atches/valid_time.png  used on input line 86. on input line 86.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 86.
 <parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/sequence_time_.pn
-g, id=3307, 433.62pt x 289.08pt>
+g, id=3314, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/sequence_tim
 e_.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/sequence_time
@@ -4039,7 +4043,7 @@ atches/sequence_time_.png  used on input line 87. on input line 87.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 87.
 <parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/valid_time_.png, 
-id=3308, 433.62pt x 289.08pt>
+id=3315, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/valid_time_.
 png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_11-Simultaneous_batches/valid_time_.p
@@ -4062,7 +4066,7 @@ lid_time_.png>]) [167]
 (./parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/2018_07_1
 8-Performance_spike_analysis.tex
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/loss_valid.
-png, id=3328, 462.528pt x 346.896pt>
+png, id=3335, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/loss_v
 alid.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/loss_va
@@ -4072,7 +4076,7 @@ ike_analysis/loss_valid.png  used on input line 22. on input line 22.
 Package pdftex.def Info: Requested size: 211.26028pt x 158.44664pt on input lin
 e 22.
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/loss_valid_
-part.png, id=3329, 462.528pt x 346.896pt>
+part.png, id=3336, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/loss_v
 alid_part.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/loss_va
@@ -4091,7 +4095,7 @@ Overfull \hbox (5.59332pt too wide) in paragraph at lines 46--48
 _valid.png> <./parts/appendix/reports-papud/2018_07_18-Performance_spike_analys
 is/loss_valid_part.png>]
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/memory_.png
-, id=3339, 462.528pt x 346.896pt>
+, id=3346, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/memory
 _.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/memory_
@@ -4101,7 +4105,7 @@ ike_analysis/memory_.png  used on input line 74. on input line 74.
 Package pdftex.def Info: Requested size: 117.36761pt x 88.02591pt on input line
  74.
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/memory.png,
- id=3340, 462.528pt x 346.896pt>
+ id=3347, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/memory
 .png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/memory.
@@ -4111,7 +4115,7 @@ ike_analysis/memory.png  used on input line 75. on input line 75.
 Package pdftex.def Info: Requested size: 117.36761pt x 88.02591pt on input line
  75.
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/kern_.png, 
-id=3341, 462.528pt x 346.896pt>
+id=3348, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/kern_.
 png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/kern_.p
@@ -4121,7 +4125,7 @@ ike_analysis/kern_.png  used on input line 76. on input line 76.
 Package pdftex.def Info: Requested size: 117.36761pt x 88.02591pt on input line
  76.
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/kern.png, i
-d=3342, 462.528pt x 346.896pt>
+d=3349, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/kern.p
 ng Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/kern.pn
@@ -4131,7 +4135,7 @@ ike_analysis/kern.png  used on input line 77. on input line 77.
 Package pdftex.def Info: Requested size: 117.36761pt x 88.02591pt on input line
  77.
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/daemon_.png
-, id=3343, 462.528pt x 346.896pt>
+, id=3350, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/daemon
 _.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/daemon_
@@ -4141,7 +4145,7 @@ ike_analysis/daemon_.png  used on input line 78. on input line 78.
 Package pdftex.def Info: Requested size: 117.36761pt x 88.02591pt on input line
  78.
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/daemon.png,
- id=3344, 462.528pt x 346.896pt>
+ id=3351, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/daemon
 .png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/daemon.
@@ -4151,7 +4155,7 @@ ike_analysis/daemon.png  used on input line 79. on input line 79.
 Package pdftex.def Info: Requested size: 117.36761pt x 88.02591pt on input line
  79.
 <parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/all.png, id
-=3345, 462.528pt x 346.896pt>
+=3352, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/all.pn
 g Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_18-Performance_spike_analysis/all.png
@@ -4174,7 +4178,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [171]
 (./parts/appendix/reports-papud/2018_07_20-500_epochs/2018_07_20-Meeting_report
 .tex
-<parts/appendix/reports-papud/2018_07_20-500_epochs/accuracy.png, id=3437, 433.
+<parts/appendix/reports-papud/2018_07_20-500_epochs/accuracy.png, id=3444, 433.
 62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_20-500_epochs/accuracy.png Graphic f
 ile (type png)
@@ -4183,7 +4187,7 @@ Package pdftex.def Info: parts/appendix/reports-papud/2018_07_20-500_epochs/acc
 uracy.png  used on input line 25. on input line 25.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 25.
-<parts/appendix/reports-papud/2018_07_20-500_epochs/accuracy_epoch.png, id=3438
+<parts/appendix/reports-papud/2018_07_20-500_epochs/accuracy_epoch.png, id=3445
 , 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_20-500_epochs/accuracy_epoch.png Gra
 phic file (type png)
@@ -4192,7 +4196,7 @@ Package pdftex.def Info: parts/appendix/reports-papud/2018_07_20-500_epochs/acc
 uracy_epoch.png  used on input line 26. on input line 26.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 26.
-<parts/appendix/reports-papud/2018_07_20-500_epochs/loss.png, id=3439, 433.62pt
+<parts/appendix/reports-papud/2018_07_20-500_epochs/loss.png, id=3446, 433.62pt
  x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_20-500_epochs/loss.png Graphic file 
 (type png)
@@ -4201,7 +4205,7 @@ Package pdftex.def Info: parts/appendix/reports-papud/2018_07_20-500_epochs/los
 s.png  used on input line 27. on input line 27.
 Package pdftex.def Info: Requested size: 211.26028pt x 140.84322pt on input lin
 e 27.
-<parts/appendix/reports-papud/2018_07_20-500_epochs/loss_epoch.png, id=3440, 43
+<parts/appendix/reports-papud/2018_07_20-500_epochs/loss_epoch.png, id=3447, 43
 3.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_20-500_epochs/loss_epoch.png Graphic
  file (type png)
@@ -4217,7 +4221,7 @@ ppendix/reports-papud/2018_07_20-500_epochs/loss.png> <./parts/appendix/reports
 (./parts/appendix/reports-papud/2018_07_23-Learning_rate_optimisation/2018_07_2
 3-Learning_rate_optimisation.tex [174]
 <parts/appendix/reports-papud/2018_07_23-Learning_rate_optimisation/lr_epoch_1_
-mul_0_2.png, id=3479, 462.528pt x 346.896pt>
+mul_0_2.png, id=3486, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_23-Learning_rate_optimisation/lr_epo
 ch_1_mul_0_2.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_23-Learning_rate_optimisation/lr_epoc
@@ -4232,7 +4236,7 @@ Overfull \hbox (3.05637pt too wide) in paragraph at lines 68--69
  []
 
 <parts/appendix/reports-papud/2018_07_23-Learning_rate_optimisation/lr_epoch_1_
-mul_0_6_best_0_216.png, id=3480, 462.528pt x 346.896pt>
+mul_0_6_best_0_216.png, id=3487, 462.528pt x 346.896pt>
 File: parts/appendix/reports-papud/2018_07_23-Learning_rate_optimisation/lr_epo
 ch_1_mul_0_6_best_0_216.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_23-Learning_rate_optimisation/lr_epoc
@@ -4259,7 +4263,7 @@ epoch_1_mul_0_6_best_0_216.png>]) [177]
 (./parts/appendix/reports-papud/2018_07_24-Learning_rate_optimisation_effect/20
 18_07_24-Learning_rate_optimisation_effect.tex
 <parts/appendix/reports-papud/2018_07_24-Learning_rate_optimisation_effect/accu
-racy.png, id=3498, 433.62pt x 289.08pt>
+racy.png, id=3505, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_24-Learning_rate_optimisation_effect
 /accuracy.png Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_24-Learning_rate_optimisation_effect/
@@ -4273,7 +4277,7 @@ ect/accuracy.png>]) [179]
 (./parts/appendix/reports-papud/2018_07_26-Binary_batch_size/2018_07_26-Binary_
 batch_size.tex
 <parts/appendix/reports-papud/2018_07_26-Binary_batch_size/time_epoch.png, id=3
-514, 433.62pt x 289.08pt>
+521, 433.62pt x 289.08pt>
 File: parts/appendix/reports-papud/2018_07_26-Binary_batch_size/time_epoch.png 
 Graphic file (type png)
 <use parts/appendix/reports-papud/2018_07_26-Binary_batch_size/time_epoch.png>
@@ -4310,7 +4314,7 @@ Underfull \vbox (badness 2359) has occurred while \output is active []
 
 ]
 Annexe C.
-<parts/appendix/convention.pdf, id=3600, pagebox=cropbox, 614.295pt x 845.1575p
+<parts/appendix/convention.pdf, id=3607, pagebox=cropbox, 614.295pt x 845.1575p
 t>
 File: parts/appendix/convention.pdf Graphic file (type pdf)
 <use parts/appendix/convention.pdf>
@@ -4324,7 +4328,7 @@ Package pdftex.def Info: parts/appendix/convention.pdf  used on input line 64.
 on input line 64.
 Package pdftex.def Info: Requested size: 614.29349pt x 845.15544pt on input lin
 e 64.
-<parts/appendix/convention.pdf, id=3603, page=1, pagebox=cropbox, 614.295pt x 8
+<parts/appendix/convention.pdf, id=3610, page=1, pagebox=cropbox, 614.295pt x 8
 45.1575pt>
 File: parts/appendix/convention.pdf Graphic file (type pdf)
 <use parts/appendix/convention.pdf, page 1>
@@ -4360,7 +4364,7 @@ ne 64. on input line 64.
 Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
  64.
  [188 <./parts/appendix/convention.pdf>]
-<parts/appendix/convention.pdf, id=3625, page=2, pagebox=cropbox, 614.295pt x 8
+<parts/appendix/convention.pdf, id=3632, page=2, pagebox=cropbox, 614.295pt x 8
 45.1575pt>
 File: parts/appendix/convention.pdf Graphic file (type pdf)
 <use parts/appendix/convention.pdf, page 2>
@@ -4381,7 +4385,7 @@ ne 64. on input line 64.
 Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
  64.
  [189 <./parts/appendix/convention.pdf>]
-<parts/appendix/convention.pdf, id=3642, page=3, pagebox=cropbox, 614.295pt x 8
+<parts/appendix/convention.pdf, id=3649, page=3, pagebox=cropbox, 614.295pt x 8
 45.1575pt>
 File: parts/appendix/convention.pdf Graphic file (type pdf)
 <use parts/appendix/convention.pdf, page 3>
@@ -4402,7 +4406,7 @@ ne 64. on input line 64.
 Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
  64.
  [190 <./parts/appendix/convention.pdf>]
-<parts/appendix/convention.pdf, id=3659, page=4, pagebox=cropbox, 614.295pt x 8
+<parts/appendix/convention.pdf, id=3667, page=4, pagebox=cropbox, 614.295pt x 8
 45.1575pt>
 File: parts/appendix/convention.pdf Graphic file (type pdf)
 <use parts/appendix/convention.pdf, page 4>
@@ -4423,7 +4427,7 @@ ne 64. on input line 64.
 Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
  64.
  [191 <./parts/appendix/convention.pdf>]
-<parts/appendix/convention.pdf, id=3678, page=5, pagebox=cropbox, 614.295pt x 8
+<parts/appendix/convention.pdf, id=3685, page=5, pagebox=cropbox, 614.295pt x 8
 45.1575pt>
 File: parts/appendix/convention.pdf Graphic file (type pdf)
 <use parts/appendix/convention.pdf, page 5>
@@ -4445,7 +4449,7 @@ Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
  64.
  [192 <./parts/appendix/convention.pdf>]
 Annexe D.
-<parts/appendix/avenant.pdf, id=3695, pagebox=cropbox, 614.295pt x 845.1575pt>
+<parts/appendix/avenant.pdf, id=3702, pagebox=cropbox, 614.295pt x 845.1575pt>
 File: parts/appendix/avenant.pdf Graphic file (type pdf)
 <use parts/appendix/avenant.pdf>
 Package pdftex.def Info: parts/appendix/avenant.pdf  used on input line 68. on 
@@ -4458,7 +4462,7 @@ Package pdftex.def Info: parts/appendix/avenant.pdf  used on input line 68. on
 input line 68.
 Package pdftex.def Info: Requested size: 614.29349pt x 845.15544pt on input lin
 e 68.
-<parts/appendix/avenant.pdf, id=3698, page=1, pagebox=cropbox, 614.295pt x 845.
+<parts/appendix/avenant.pdf, id=3705, page=1, pagebox=cropbox, 614.295pt x 845.
 1575pt>
 File: parts/appendix/avenant.pdf Graphic file (type pdf)
 <use parts/appendix/avenant.pdf, page 1>
@@ -4495,7 +4499,7 @@ Package pdftex.def Info: parts/appendix/avenant.pdf , page1 used on input line
 Package pdftex.def Info: Requested size: 597.78697pt x 822.4455pt on input line
  68.
  [194 <./parts/appendix/avenant.pdf>]
-<parts/appendix/avenant.pdf, id=3726, page=2, pagebox=cropbox, 614.295pt x 845.
+<parts/appendix/avenant.pdf, id=3733, page=2, pagebox=cropbox, 614.295pt x 845.
 1575pt>
 File: parts/appendix/avenant.pdf Graphic file (type pdf)
 <use parts/appendix/avenant.pdf, page 2>
@@ -4535,7 +4539,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
 Here is how much of TeX's memory you used:
  57708 strings out of 492990
  1239080 string characters out of 6135005
- 1985795 words of memory out of 5000000
+ 1986327 words of memory out of 5000000
  58836 multiletter control sequences out of 15000+600000
  199856 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -4626,10 +4630,10 @@ xmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zxlr
 i.pfb>
-Output written on root.pdf (197 pages, 7270234 bytes).
+Output written on root.pdf (197 pages, 7270639 bytes).
 PDF statistics:
- 4029 PDF objects out of 4296 (max. 8388607)
- 3579 compressed objects within 36 object streams
+ 4036 PDF objects out of 4296 (max. 8388607)
+ 3586 compressed objects within 36 object streams
  1046 named destinations out of 1200 (max. 500000)
  2002 words of extra memory for PDF output out of 10000 (max. 10000000)
 
